@@ -26,7 +26,9 @@ const CHIPS = [
 export const DeepDiveChat: React.FC<Props> = ({ artistName }) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(false);
+  const [inputValue, setInputValue] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const storageKey = `chat_history_${artistName.replace(/\s/g, '_')}`;
 
   // Load history
@@ -58,20 +60,26 @@ export const DeepDiveChat: React.FC<Props> = ({ artistName }) => {
     scrollToBottom();
   }, [messages, loading]);
 
-  const handleChipClick = async (chip: {id: string, label: string}) => {
+  // Unified message sender
+  const processUserMessage = async (text: string, topic?: string) => {
+    if (!text.trim() || loading) return;
+
     const userMsg: Message = { 
       id: Date.now().toString(), 
       role: 'user', 
-      text: `Tell me about ${artistName}'s ${chip.label.toLowerCase()}.`, 
-      topic: chip.id,
+      text: text, 
+      topic: topic,
       timestamp: Date.now()
     };
     
     setMessages(prev => [...prev, userMsg]);
+    setInputValue(''); // Clear input if it was used
     setLoading(true);
 
     try {
-      const responseText = await generateChatResponse(artistName, chip.label);
+      // If topic is present, use it for context, otherwise treat as general query
+      const responseText = await generateChatResponse(artistName, topic || text);
+      
       const aiMsg: Message = { 
         id: (Date.now() + 1).toString(), 
         role: 'ai', 
@@ -83,6 +91,24 @@ export const DeepDiveChat: React.FC<Props> = ({ artistName }) => {
       console.error(e);
     } finally {
       setLoading(false);
+      // Refocus input after turn
+      setTimeout(() => inputRef.current?.focus(), 100);
+    }
+  };
+
+  const handleChipClick = (chip: {id: string, label: string}) => {
+    processUserMessage(`Tell me about ${artistName}'s ${chip.label.toLowerCase()}.`, chip.label);
+  };
+
+  const handleInputSubmit = (e?: React.FormEvent) => {
+    e?.preventDefault();
+    processUserMessage(inputValue);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleInputSubmit();
     }
   };
 
@@ -92,20 +118,29 @@ export const DeepDiveChat: React.FC<Props> = ({ artistName }) => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-full md:w-[calc(100%-280px)] z-40 p-6 md:p-8 pointer-events-none flex flex-col justify-end h-[65vh]">
-      <div className="w-full max-w-2xl mx-auto pointer-events-auto flex flex-col h-full">
+    <div className="fixed bottom-0 left-0 w-full md:w-[calc(100%-280px)] z-40 p-6 md:p-8 pointer-events-none flex flex-col justify-end h-[75vh]">
+      <div className="w-full max-w-2xl mx-auto pointer-events-auto flex flex-col h-full relative">
         
         {/* Header / Clear */}
         {messages.length > 0 && (
-            <div className="flex justify-end mb-2 pr-2">
-                <button onClick={clearHistory} className="text-[8px] font-bold uppercase tracking-widest text-gray-400 hover:text-red-500 transition-colors bg-white/80 backdrop-blur px-2 py-1 rounded">
+            <div className="absolute top-0 right-0 z-10">
+                <button 
+                  onClick={clearHistory} 
+                  className="text-[8px] font-bold uppercase tracking-widest text-gray-400 hover:text-red-500 transition-colors bg-white/90 backdrop-blur px-3 py-1 rounded border border-gray-200 shadow-sm"
+                  aria-label="Clear chat history"
+                >
                     Clear History
                 </button>
             </div>
         )}
 
         {/* Messages Area */}
-        <div className="flex-grow overflow-y-auto custom-scrollbar space-y-6 pr-2 mb-6 pb-4 mask-image-gradient" style={{ scrollBehavior: 'smooth' }}>
+        <div 
+          className="flex-grow overflow-y-auto custom-scrollbar space-y-6 pr-2 mb-4 pb-4 mask-image-gradient pt-8" 
+          style={{ scrollBehavior: 'smooth' }}
+          role="log"
+          aria-label="Chat messages"
+        >
           <AnimatePresence initial={false}>
             {messages.map((msg) => (
               <motion.div 
@@ -148,25 +183,48 @@ export const DeepDiveChat: React.FC<Props> = ({ artistName }) => {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Input / Chips Row */}
-        <div className="bg-white/90 backdrop-blur-xl border border-gray-200 p-2.5 rounded-full shadow-2xl flex items-center justify-between gap-4">
-           <div className="flex gap-2 overflow-x-auto no-scrollbar px-2 w-full items-center">
-              <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 mr-2 whitespace-nowrap">Inquire:</span>
+        {/* Control Panel: Chips + Input */}
+        <div className="bg-white/90 backdrop-blur-xl border border-gray-200 p-3 rounded-3xl shadow-2xl flex flex-col gap-3">
+           
+           {/* Row 1: Chips */}
+           <div className="flex gap-2 overflow-x-auto no-scrollbar w-full items-center pb-1 border-b border-gray-100/50">
+              <span className="text-[8px] font-bold uppercase tracking-widest text-gray-400 mr-1 whitespace-nowrap pl-2">Topics:</span>
               {CHIPS.map(chip => (
                  <button
                    key={chip.id}
                    onClick={() => handleChipClick(chip)}
                    disabled={loading}
-                   className="flex-shrink-0 px-4 py-2 rounded-full border border-gray-200 bg-white text-[9px] font-bold uppercase tracking-widest text-gray-600 hover:bg-[#28317C] hover:text-white hover:border-[#28317C] transition-all disabled:opacity-50 active:scale-95"
+                   tabIndex={0}
+                   className="flex-shrink-0 px-3 py-1.5 rounded-full border border-gray-200 bg-white text-[9px] font-bold uppercase tracking-widest text-gray-600 hover:bg-[#28317C] hover:text-white hover:border-[#28317C] transition-all disabled:opacity-50 active:scale-95 focus:outline-none focus:ring-1 focus:ring-[#28317C]"
                  >
                     {chip.label}
                  </button>
               ))}
            </div>
-           <div className="w-10 h-10 flex-shrink-0 bg-[#28317C] rounded-full flex items-center justify-center text-white shadow-lg">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-              </svg>
+
+           {/* Row 2: Input */}
+           <div className="flex items-center gap-2 pl-2 pr-1">
+              <input
+                ref={inputRef}
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyDown={handleKeyDown}
+                disabled={loading}
+                placeholder="Ask specific questions..."
+                className="flex-grow bg-transparent text-sm font-sans placeholder-gray-400 text-black focus:outline-none disabled:opacity-50"
+                aria-label="Type your question"
+              />
+              <button 
+                onClick={() => handleInputSubmit()}
+                disabled={!inputValue.trim() || loading}
+                className="w-8 h-8 flex-shrink-0 bg-[#28317C] rounded-full flex items-center justify-center text-white shadow-md hover:bg-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[#28317C]"
+                aria-label="Send message"
+              >
+                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 12h14M12 5l7 7-7 7" />
+                 </svg>
+              </button>
            </div>
         </div>
 

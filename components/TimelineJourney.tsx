@@ -68,40 +68,30 @@ const RippleBackground = () => {
     };
 
     const draw = () => {
-      // Clear with a slight trail effect or just clear
       ctx.clearRect(0, 0, width, height);
       tick += 0.02;
 
-      // Create a gradient background first
       const grad = ctx.createLinearGradient(0, 0, 0, height);
       grad.addColorStop(0, '#000000');
       grad.addColorStop(1, '#0a0a0a');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, width, height);
 
-      // Optimization: Only animate heavily if mouse moved recently or just keep base wave
-      // Draw "Liquid" lines
       ctx.lineWidth = 1;
-      const lineCount = 15; // Reduced from 20 for performance
+      const lineCount = 15; 
       
       for(let i = 0; i < lineCount; i++) {
          ctx.beginPath();
          const yBase = (height / lineCount) * i;
          
-         // Optimization: Pre-calculate alpha
          const alpha = 0.03 + (i/lineCount)*0.05;
          ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
          
-         // Increase step size for performance (from 30 to 40)
          for(let x = 0; x <= width; x += 40) {
-            // Distance from mouse effect
             const dx = x - mouseRef.current.x;
-            
-            // Optimization: Skip expensive Math.sqrt/sin calculations if far from mouse
             let interaction = 0;
             if (Math.abs(dx) < 300) {
                 const dy = yBase - mouseRef.current.y;
-                // Only calculate exact dist if within vertical range roughly
                 if (Math.abs(dy) < 300) {
                     const dist = Math.sqrt(dx*dx + dy*dy);
                     const maxDist = 300;
@@ -111,9 +101,7 @@ const RippleBackground = () => {
                 }
             }
             
-            // Base wave
             const wave = Math.sin(x * 0.01 + tick + i) * 10;
-            
             const y = yBase + wave + interaction;
             
             if(x === 0) ctx.moveTo(x, y);
@@ -154,13 +142,92 @@ const RippleBackground = () => {
   return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-[15]" />;
 };
 
+// --- Detailed Event Modal ---
+interface TimelineEventModalProps {
+  event: TimelineEvent;
+  imgUrl: string | null;
+  onClose: () => void;
+}
+
+const TimelineEventModal: React.FC<TimelineEventModalProps> = ({ event, imgUrl, onClose }) => {
+  return (
+    <div className="fixed inset-0 z-[300] flex items-center justify-center p-4 md:p-8 bg-black/90 backdrop-blur-xl animate-fade-in" onClick={onClose}>
+      <div className="bg-[#0a0a0a] border border-white/20 w-full max-w-4xl max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl flex flex-col md:flex-row rounded-sm" onClick={(e) => e.stopPropagation()}>
+        
+        {/* Image Section */}
+        <div className="w-full md:w-1/2 h-[300px] md:h-auto relative bg-gray-900 border-b md:border-b-0 md:border-r border-white/10">
+          {imgUrl ? (
+            <img src={imgUrl} alt={event.title} className="w-full h-full object-cover" />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-gray-600 text-xs uppercase tracking-widest">No Visual Record</div>
+          )}
+          <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black to-transparent">
+             <span className="text-[#3B82F6] text-[10px] uppercase tracking-widest font-bold bg-black/50 backdrop-blur-sm px-2 py-1 mb-2 inline-block border border-[#3B82F6]/30">
+                {event.category}
+             </span>
+             <h2 className="text-3xl md:text-4xl font-serif text-white italic">{event.year}</h2>
+          </div>
+        </div>
+
+        {/* Content Section */}
+        <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col">
+           <div className="flex justify-between items-start mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wide leading-tight">{event.title}</h3>
+              <button onClick={onClose} className="text-gray-500 hover:text-white transition-colors">
+                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+              </button>
+           </div>
+
+           <div className="mb-8">
+              <p className="text-gray-300 font-serif text-lg leading-relaxed text-justify">
+                 {event.description}
+              </p>
+           </div>
+
+           <div className="grid grid-cols-2 gap-6 mb-8 border-t border-b border-white/10 py-6">
+              <div>
+                 <span className="block text-[9px] text-gray-500 uppercase tracking-widest mb-1">Impact Score</span>
+                 <span className="text-3xl font-mono text-white">{event.impactScore}</span>
+              </div>
+              <div>
+                 <span className="block text-[9px] text-gray-500 uppercase tracking-widest mb-1">Auction Estimate</span>
+                 <div className="flex items-baseline gap-2">
+                    <span className="text-xl font-mono text-white">{event.auctionLow || 0}</span>
+                    <span className="text-gray-600">-</span>
+                    <span className="text-xl font-mono text-white">{event.auctionHigh || 0}</span>
+                 </div>
+              </div>
+           </div>
+
+           <div className="flex-grow">
+              <span className="block text-[10px] text-[#3B82F6] uppercase tracking-widest mb-4 font-bold">Contextual Data</span>
+              {event.context ? (
+                 <div className="space-y-4">
+                    <ContextBar label="Market Value" value={event.context.marketValue} />
+                    <ContextBar label="Critical Acclaim" value={event.context.criticalAcclaim} />
+                    <ContextBar label="Historical Importance" value={event.context.historical} />
+                    <ContextBar label="Social Impact" value={event.context.socialImpact} />
+                    <ContextBar label="Institutional Support" value={event.context.institutional} />
+                 </div>
+              ) : (
+                 <p className="text-gray-600 text-xs italic">No quantitative context available.</p>
+              )}
+           </div>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
 interface TimelineCardProps {
   event: TimelineEvent; 
   yPos: number; 
   xPercent: number; 
+  onOpenModal: (event: TimelineEvent, imgUrl: string | null) => void;
 }
 
-const TimelineCard: React.FC<TimelineCardProps> = ({ event, yPos, xPercent }) => {
+const TimelineCard: React.FC<TimelineCardProps> = ({ event, yPos, xPercent, onOpenModal }) => {
   const [imgUrl, setImgUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [viewMode, setViewMode] = useState<'VISUAL' | 'CONTEXT'>('VISUAL');
@@ -222,14 +289,26 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ event, yPos, xPercent }) =>
         onMouseLeave={() => setIsHovered(false)}
         onClick={(e) => e.stopPropagation()} 
       >
-         <button 
-            onClick={(e) => { e.stopPropagation(); setLocked(false); setIsHovered(false); }}
-            className="absolute top-2 right-2 z-[60] text-white/30 hover:text-white p-2 transition-colors"
-         >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-         </button>
+         <div className="absolute top-2 right-2 z-[60] flex gap-2">
+            <button 
+               onClick={(e) => { 
+                  e.stopPropagation(); 
+                  onOpenModal(event, imgUrl);
+               }}
+               className="text-white/50 hover:text-white p-1 transition-colors border border-white/20 rounded bg-black/50"
+               title="Open Full Dossier"
+            >
+               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 4l-5-5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+            </button>
+            <button 
+               onClick={(e) => { e.stopPropagation(); setLocked(false); setIsHovered(false); }}
+               className="text-white/30 hover:text-white p-1 transition-colors"
+            >
+               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+         </div>
 
-         <div className="flex border-b border-white/10 pr-8">
+         <div className="flex border-b border-white/10 pr-16">
             <button 
               onClick={() => setViewMode('VISUAL')}
               onMouseEnter={() => setViewMode('VISUAL')}
@@ -246,7 +325,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ event, yPos, xPercent }) =>
             </button>
          </div>
 
-         <div className="h-40 relative bg-[#050505]">
+         <div className="h-40 relative bg-[#050505]" onClick={() => onOpenModal(event, imgUrl)} style={{ cursor: 'pointer' }}>
             {viewMode === 'VISUAL' ? (
                <>
                  {imgUrl ? (
@@ -276,7 +355,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ event, yPos, xPercent }) =>
             )}
          </div>
 
-         <div className="p-4 bg-[#0a0a0a] border-t border-white/10">
+         <div className="p-4 bg-[#0a0a0a] border-t border-white/10 cursor-pointer" onClick={() => onOpenModal(event, imgUrl)}>
             <div className="flex justify-between items-baseline mb-1">
               <span className="font-serif text-xl text-white italic">{event.year}</span>
               <span className="text-[7px] uppercase tracking-widest text-gray-400 border border-white/20 px-1.5 py-0.5">
@@ -287,6 +366,9 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ event, yPos, xPercent }) =>
             <p className="text-[9px] leading-relaxed text-gray-400 font-light line-clamp-2 break-keep">
               {event.description}
             </p>
+            <div className="mt-3 text-center border-t border-white/5 pt-2">
+               <span className="text-[8px] uppercase tracking-[0.2em] text-[#3B82F6] hover:text-white transition-colors">Open Dossier</span>
+            </div>
          </div>
       </div>
     </div>
@@ -341,7 +423,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({ artwork }) => {
 }
 
 export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) => {
-  // Safety check for data
+  // Data Safety Check
   if (!data || !data.eras || data.eras.length === 0) {
     return (
         <div className="fixed inset-0 z-[200] bg-black text-white flex items-center justify-center">
@@ -355,6 +437,7 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
 
   const containerRef = useRef<HTMLDivElement>(null);
   const bgGradientRef = useRef<HTMLDivElement>(null);
+  const [selectedEvent, setSelectedEvent] = useState<{ event: TimelineEvent, imgUrl: string | null } | null>(null);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -395,7 +478,6 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
     }
   }
 
-  // Responsive Constants
   const isMobile = window.innerWidth < 768;
   const HEADER_HEIGHT_PX = isMobile ? 100 : 160; 
   const FOOTER_HEIGHT_PX = isMobile ? 80 : 120; 
@@ -411,7 +493,7 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
   };
 
   const generateAreaPath = (totalWidthPixels: number, screenHeight: number) => {
-    if (!data.eras || data.eras.length === 0) return '';
+    if (!data || !data.eras) return '';
     const points: {x: number, highY: number, lowY: number}[] = [];
     const screenW = window.innerWidth;
 
@@ -465,6 +547,7 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
       
       <RippleBackground />
 
+      {/* HEADER */}
       <div className="fixed top-0 left-0 z-[150] p-6 md:p-8 w-full flex justify-between items-start pointer-events-none mix-blend-difference h-[100px] md:h-[120px]">
          <div>
            <h2 className="font-serif text-2xl md:text-4xl italic tracking-tight text-white">{artistName}</h2>
@@ -482,6 +565,7 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
         Close [ESC]
       </button>
 
+      {/* FOOTER */}
       <div className="fixed bottom-0 left-0 z-[150] w-full border-t border-white/10 bg-black/80 backdrop-blur-md h-[80px] md:h-[120px] px-6 md:px-8 flex justify-between items-center text-[8px] md:text-[9px] uppercase tracking-widest text-gray-400 pointer-events-none">
          <div className="flex gap-4 max-w-[70%] overflow-hidden whitespace-nowrap text-ellipsis">
             <span className="text-white font-bold">Sources:</span>
@@ -496,6 +580,7 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
          </div>
       </div>
 
+      {/* SCROLL CONTAINER */}
       <div 
         ref={containerRef}
         className="w-full h-full overflow-x-auto overflow-y-hidden flex items-stretch relative scroll-smooth cursor-grab active:cursor-grabbing"
@@ -597,7 +682,6 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
                const eraDuration = era.endYear - era.startYear;
                const yearOffset = event.year - era.startYear;
                const percentRaw = eraDuration > 0 ? yearOffset / eraDuration : 0.5;
-               // Map 0-1 to 10-90% of screen width
                const xPercent = 10 + (percentRaw * 80); 
                
                const yVal = calculateY(event.auctionHigh ?? event.impactScore, screenH);
@@ -608,6 +692,7 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
                    event={event} 
                    yPos={yVal} 
                    xPercent={xPercent} 
+                   onOpenModal={(e, img) => setSelectedEvent({ event: e, imgUrl: img })}
                  />
                );
             })}
@@ -664,6 +749,15 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
         </div>
 
       </div>
+
+      {/* DETAILED EVENT MODAL */}
+      {selectedEvent && (
+         <TimelineEventModal 
+            event={selectedEvent.event} 
+            imgUrl={selectedEvent.imgUrl} 
+            onClose={() => setSelectedEvent(null)} 
+         />
+      )}
     </div>
   );
 };
