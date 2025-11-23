@@ -171,10 +171,6 @@ export const App: React.FC = () => {
   useEffect(() => {
     let mounted = true;
     const loadData = async () => {
-      // Fallback: If API fails or is not called, dashboardData remains null.
-      // But we need to ensure the view renders something.
-      // We will set MOCK data as initial if dashboardData is null.
-      
       if (activeView === AppView.OVERVIEW) {
         setLoadingDashboard(true);
         try {
@@ -182,15 +178,12 @@ export const App: React.FC = () => {
           if (mounted) setDashboardData(data);
         } catch (e) {
           console.error("Dashboard Fetch Error, using mock", e);
-          // Fallback handled by displayArtist logic
         } finally {
           if (mounted) setLoadingDashboard(false);
         }
       }
     };
     
-    // Reset dashboard data when changing artists to force refresh/loading state
-    // setDashboardData(null); 
     loadData();
     return () => { mounted = false; };
   }, [selectedArtistId, activeView, baseArtistInfo.name]);
@@ -199,7 +192,6 @@ export const App: React.FC = () => {
     setLandingExiting(true);
     setTimeout(() => {
       setActiveView(AppView.OVERVIEW);
-      // If user typed something in landing, try to find that artist
       if (initialSearch) {
          const found = MOCK_ARTISTS.find(a => a.name.toLowerCase().includes(initialSearch.toLowerCase()));
          if (found) setSelectedArtistId(found.id);
@@ -210,7 +202,7 @@ export const App: React.FC = () => {
   // Trigger Masterpiece Carousel on Axis Click
   const handleAxisClick = async (axis: string) => {
     setLoadingCarousel(true);
-    setCarouselData({ metric: axis, works: [] }); // Open modal immediately with loader
+    setCarouselData({ metric: axis, works: [] }); 
     try {
       const works = await fetchMasterpiecesByMetric(baseArtistInfo.name, axis);
       setCarouselData({ metric: axis, works });
@@ -245,7 +237,6 @@ export const App: React.FC = () => {
     setActiveView(AppView.DEEP_DIVE);
   };
 
-  // Construct current display object, preferring fetched data, falling back to mock
   const displayArtist = dashboardData ? {
     ...baseArtistInfo,
     nationality: dashboardData.nationality,
@@ -383,42 +374,47 @@ export const App: React.FC = () => {
         </div>
       )}
 
-      {/* TOP NAVIGATION BAR */}
-      <header className="sticky top-0 z-50 bg-white border-b border-black">
+      {/* ================= DESKTOP HEADER (hidden on mobile) ================= */}
+      <header className="hidden md:block sticky top-0 z-50 bg-white border-b border-black shadow-sm">
         <div className="max-w-[1920px] mx-auto px-0">
           <div className="grid grid-cols-12 h-16 items-center">
-            <div className="col-span-3 md:col-span-2 lg:col-span-2 pl-6 border-r border-transparent md:border-gray-200 h-full flex items-center bg-white">
+            
+            {/* BRAND */}
+            <div className="col-span-2 pl-6 border-r border-gray-200 h-full flex items-center bg-white">
                <div className="flex items-center justify-start h-full w-full cursor-pointer" onClick={() => setActiveView(AppView.LANDING)}>
                   <div className="text-left leading-tight">
-                     <span className="font-serif italic text-2xl md:text-2xl block -mb-1">Curator's</span>
-                     <span className="font-serif italic text-xl md:text-xl block text-gray-500">Odysseia</span>
+                     <span className="font-serif italic text-2xl block -mb-1">Curator's</span>
+                     <span className="font-serif italic text-xl block text-gray-500">Odysseia</span>
                   </div>
                </div>
             </div>
-            <nav className="col-span-6 md:col-span-8 lg:col-span-8 h-full hidden md:flex items-center justify-center space-x-12 border-r border-gray-200">
-              {[
-                { id: AppView.OVERVIEW, label: 'Overview' },
-                { id: AppView.CONNECTED, label: 'Connected' },
-                { id: AppView.DEEP_DIVE, label: 'Deep Dive' },
-              ].map(item => (
-                <button
-                  key={item.id}
-                  onClick={() => setActiveView(item.id)}
-                  className={`relative h-full px-4 text-[10px] font-bold uppercase tracking-[0.25em] transition-all duration-300 
-                    ${activeView === item.id ? 'text-black' : 'text-gray-400 hover:text-black'}
-                  `}
-                >
-                  {item.label}
-                  {activeView === item.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-black"></span>
-                  )}
-                </button>
-              ))}
+
+            {/* NAVIGATION */}
+            <nav className="col-span-8 h-full flex items-center justify-center space-x-12 border-r border-gray-200 bg-white">
+              <div className="flex w-full justify-center h-full">
+                {[
+                  { id: AppView.OVERVIEW, label: 'Overview' },
+                  { id: AppView.CONNECTED, label: 'Connected' },
+                  { id: AppView.DEEP_DIVE, label: 'Deep Dive' },
+                ].map(item => (
+                  <button
+                    key={item.id}
+                    onClick={() => setActiveView(item.id)}
+                    className={`relative h-full px-4 text-[10px] font-bold uppercase tracking-[0.25em] transition-all duration-300 flex items-center whitespace-nowrap
+                      ${activeView === item.id ? 'text-black' : 'text-gray-400 hover:text-black'}
+                    `}
+                  >
+                    {item.label}
+                    {activeView === item.id && (
+                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#28317C]"></span>
+                    )}
+                  </button>
+                ))}
+              </div>
             </nav>
-            <div className="col-span-6 md:hidden h-full flex items-center justify-center border-r border-transparent">
-               <span className="text-[10px] uppercase tracking-widest font-bold">{activeView}</span>
-            </div>
-            <div className="col-span-3 md:col-span-2 lg:col-span-2 h-full flex items-center justify-end pr-6 bg-black text-white relative">
+
+            {/* ARTIST SELECTOR */}
+            <div className="col-span-2 h-full flex items-center justify-end pr-6 bg-black text-white relative">
                {activeView !== AppView.CONNECTED ? (
                  <>
                    <select 
@@ -446,6 +442,62 @@ export const App: React.FC = () => {
         </div>
       </header>
 
+      {/* ================= MOBILE HEADER (hidden on desktop) ================= */}
+      <header className="md:hidden sticky top-0 z-50 bg-white shadow-sm">
+        {/* Top Row: Brand + Artist Selector */}
+        <div className="flex justify-between items-center h-14 px-4 border-b border-gray-200 bg-white">
+           {/* Brand */}
+           <div className="flex flex-col" onClick={() => setActiveView(AppView.LANDING)}>
+              <span className="font-serif italic text-lg leading-none">Curator's</span>
+              <span className="font-serif italic text-sm text-gray-500 leading-none">Odysseia</span>
+           </div>
+           
+           {/* Artist Selector (Compact) */}
+           <div className="relative">
+              {activeView !== AppView.CONNECTED ? (
+                 <div className="flex items-center gap-2 bg-black text-white px-3 py-1.5 rounded-sm shadow-md">
+                    <select 
+                        value={selectedArtistId}
+                        onChange={(e) => setSelectedArtistId(e.target.value)}
+                        className="appearance-none bg-transparent border-none text-xs font-serif italic focus:ring-0 outline-none pr-4 w-[110px] text-right truncate"
+                    >
+                        {MOCK_ARTISTS.map(artist => (
+                        <option key={artist.id} value={artist.id} className="text-black">
+                            {artist.name}
+                        </option>
+                        ))}
+                    </select>
+                    <div className="absolute right-2 pointer-events-none">
+                        <svg className="w-2 h-2 text-white fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                    </div>
+                 </div>
+              ) : (
+                 <div className="text-[9px] uppercase tracking-widest text-gray-400 bg-gray-100 px-2 py-1">Cluster Mode</div>
+              )}
+           </div>
+        </div>
+
+        {/* Bottom Row: Tabs */}
+        <div className="flex border-b border-black bg-gray-50 overflow-x-auto no-scrollbar">
+           {[
+              { id: AppView.OVERVIEW, label: 'Overview' },
+              { id: AppView.CONNECTED, label: 'Connected' },
+              { id: AppView.DEEP_DIVE, label: 'Deep Dive' },
+           ].map(item => (
+              <button
+                 key={item.id}
+                 onClick={() => setActiveView(item.id)}
+                 className={`flex-1 py-3 text-[10px] font-bold uppercase tracking-[0.15em] whitespace-nowrap text-center transition-colors relative
+                    ${activeView === item.id ? 'bg-white text-[#28317C]' : 'text-gray-400 hover:text-black'}
+                 `}
+              >
+                 {item.label}
+                 {activeView === item.id && <div className="absolute bottom-0 left-0 w-full h-[3px] bg-[#28317C]"></div>}
+              </button>
+           ))}
+        </div>
+      </header>
+
       {/* MAIN CONTENT */}
       <main className="flex-grow w-full max-w-[1920px] mx-auto border-l border-r border-gray-200">
         
@@ -465,7 +517,7 @@ export const App: React.FC = () => {
                     <NauticalSpinner color={COLORS.primary} />
                  </div>
               )}
-              <div className="absolute bottom-0 left-0 w-full bg-white border-t border-black p-6 flex justify-between items-end">
+              <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-black p-6 flex justify-between items-end">
                 <div 
                   onClick={() => setShowRankModal(true)} 
                   className="cursor-pointer hover:opacity-70 transition-opacity"
