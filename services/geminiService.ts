@@ -238,6 +238,30 @@ export const generateMetricInsight = async (artistName: string, metric: string, 
   }
 };
 
+export const generateChatResponse = async (artistName: string, topic: string): Promise<string> => {
+  if (!API_KEY) throw new Error("Gemini API Key is missing.");
+
+  try {
+    const response = await ai.models.generateContent({
+      model: 'gemini-2.5-flash',
+      contents: `Act as an expert art curator or AI Analyst. Provide a concise, insightful commentary on "${artistName}" specifically regarding "${topic}".
+      
+      LANGUAGE: KOREAN (한국어).
+      TONE: Conversational yet Professional, like a museum docent.
+      LENGTH: 2-3 sentences max.`,
+      config: {
+        tools: [{ googleSearch: {} }],
+        temperature: 0.7,
+      },
+    });
+
+    return response.text || "분석을 생성할 수 없습니다.";
+  } catch (error) {
+    console.error("Error generating chat response:", error);
+    return "현재 대화 서비스를 이용할 수 없습니다.";
+  }
+};
+
 export const generateComparativeAnalysis = async (artist1: string, artist2: string, sharedMetric?: string): Promise<AIReportResult> => {
   if (!API_KEY) throw new Error("Gemini API Key is missing.");
 

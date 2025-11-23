@@ -4,7 +4,7 @@ import { MOCK_ARTISTS, METRIC_DETAILS, COLORS } from './constants';
 import { AppView, Artist, GroundingSource, DashboardData, Masterpiece } from './types';
 import { RadarChartComponent } from './components/RadarChartComponent';
 import { LineChartComponent } from './components/LineChartComponent';
-import { AIReport } from './components/AIReport';
+import { DeepDiveTab } from './components/DeepDiveTab';
 import { ConnectedTab } from './components/ConnectedTab';
 import { generateMetricInsight, findSimilarArtists, generateComparativeAnalysis, fetchArtistDashboardData, fetchMasterpiecesByMetric, generateEventImage } from './services/geminiService';
 import ReactMarkdown from 'react-markdown';
@@ -551,10 +551,10 @@ export const App: React.FC = () => {
           </div>
         )}
 
-        {/* DEEP DIVE VIEW (Report & Timeline) */}
+        {/* DEEP DIVE VIEW (Narrative Sync) */}
         {activeView === AppView.DEEP_DIVE && (
-          <div className="p-6 lg:p-24 max-w-[1600px] mx-auto animate-fade-in">
-             <AIReport artist={displayArtist} />
+          <div className="animate-fade-in">
+             <DeepDiveTab artist={displayArtist} />
           </div>
         )}
       </main>

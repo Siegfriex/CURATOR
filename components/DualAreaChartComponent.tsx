@@ -156,11 +156,11 @@ export const DualAreaChartComponent: React.FC<Props> = ({
                 <stop offset="95%" stopColor={isTotal ? color2 : activeMetricColor} stopOpacity={0}/>
               </linearGradient>
               
-              {/* Refined Subtle Plasma Gradient for Gap */}
+              {/* Refined Tension Field Gradient for Gap */}
               <linearGradient id="gapGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor={color1} stopOpacity={0.15} />
-                <stop offset="50%" stopColor="#ffffff" stopOpacity={0.25} />
-                <stop offset="100%" stopColor={color2} stopOpacity={0.15} />
+                <stop offset="5%" stopColor={color1} stopOpacity={0.15} />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity={0.35} />
+                <stop offset="95%" stopColor={color2} stopOpacity={0.15} />
               </linearGradient>
             </defs>
             
@@ -289,26 +289,26 @@ export const DualAreaChartComponent: React.FC<Props> = ({
                     type="monotone"
                     dataKey={key1}
                     stroke={color1}
-                    strokeWidth={3}
+                    strokeWidth={2.5}
                     dot={false}
-                    activeDot={{ r: 5, fill: color1, stroke: '#fff', strokeWidth: 2 }}
+                    activeDot={{ r: 6, fill: color1, stroke: '#fff', strokeWidth: 2 }}
                 />
                 <Line
                     yAxisId="left"
                     type="monotone"
                     dataKey={key2}
                     stroke={color2}
-                    strokeWidth={3}
+                    strokeWidth={2.5}
                     dot={false}
-                    activeDot={{ r: 5, fill: color2, stroke: '#fff', strokeWidth: 2 }}
+                    activeDot={{ r: 6, fill: color2, stroke: '#fff', strokeWidth: 2 }}
                 />
                 </>
             )}
 
              {!isTotal && (
                 <>
-                 <Line yAxisId="left" type="monotone" dataKey={key1} stroke={activeMetricColor} strokeWidth={1.5} dot={false} />
-                 <Line yAxisId="left" type="monotone" dataKey={key2} stroke={activeMetricColor} strokeWidth={1.5} strokeDasharray="4 4" dot={false} />
+                 <Line yAxisId="left" type="monotone" dataKey={key1} stroke={activeMetricColor} strokeWidth={2} dot={false} />
+                 <Line yAxisId="left" type="monotone" dataKey={key2} stroke={activeMetricColor} strokeWidth={2} strokeDasharray="4 4" dot={false} />
                 </>
              )}
 

@@ -126,20 +126,27 @@ const RippleBackground = () => {
     };
 
     const handleMouseMove = (e: MouseEvent) => {
-       // No complex logic here, just update refs
        mouseRef.current.x = e.clientX;
        mouseRef.current.y = e.clientY;
        mouseRef.current.moved = true;
     };
 
+    const handleTouchMove = (e: TouchEvent) => {
+       mouseRef.current.x = e.touches[0].clientX;
+       mouseRef.current.y = e.touches[0].clientY;
+       mouseRef.current.moved = true;
+    };
+
     window.addEventListener('resize', init);
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove);
     init();
     draw();
 
     return () => {
        window.removeEventListener('resize', init);
        window.removeEventListener('mousemove', handleMouseMove);
+       window.removeEventListener('touchmove', handleTouchMove);
        cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -194,7 +201,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ event, yPos, xPercent }) =>
       style={{ top: `${yPos}px`, left: `${xPercent}%` }}
     >
       <div 
-         className="relative flex items-center justify-center cursor-pointer group -translate-x-1/2 -translate-y-1/2 w-32 h-32" 
+         className="relative flex items-center justify-center cursor-pointer group -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32" 
          onClick={(e) => { e.stopPropagation(); setLocked(!locked); }}
          onMouseEnter={() => setIsHovered(true)}
          onMouseLeave={() => setIsHovered(false)}
@@ -205,14 +212,15 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ event, yPos, xPercent }) =>
 
       <div 
         className={`
-          absolute w-72 bg-[#0a0a0a] border border-white/20 backdrop-blur-xl
+          absolute w-64 md:w-72 bg-[#0a0a0a] border border-white/20 backdrop-blur-xl
           transform transition-all duration-500 cubic-bezier(0.19, 1, 0.22, 1)
           ${isActive ? 'opacity-100 translate-y-0 pointer-events-auto scale-100' : 'opacity-0 pointer-events-none scale-95'}
-          ${isLow ? 'bottom-12 translate-y-4' : 'top-12 -translate-y-4'} -left-36
+          ${isLow ? 'bottom-8 md:bottom-12 translate-y-4' : 'top-8 md:top-12 -translate-y-4'} -left-32 md:-left-36
           z-50 shadow-[0_20px_50px_rgba(0,0,0,0.8)] flex flex-col overflow-hidden rounded-sm
         `}
         onMouseEnter={() => setIsHovered(true)} 
         onMouseLeave={() => setIsHovered(false)}
+        onClick={(e) => e.stopPropagation()} 
       >
          <button 
             onClick={(e) => { e.stopPropagation(); setLocked(false); setIsHovered(false); }}
@@ -223,12 +231,14 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ event, yPos, xPercent }) =>
 
          <div className="flex border-b border-white/10 pr-8">
             <button 
+              onClick={() => setViewMode('VISUAL')}
               onMouseEnter={() => setViewMode('VISUAL')}
               className={`flex-1 py-3 text-[8px] uppercase tracking-[0.2em] transition-colors ${viewMode === 'VISUAL' ? 'bg-white text-black font-bold' : 'bg-transparent text-gray-500 hover:text-white'}`}
             >
               Visual
             </button>
             <button 
+              onClick={() => setViewMode('CONTEXT')}
               onMouseEnter={() => setViewMode('CONTEXT')}
               className={`flex-1 py-3 text-[8px] uppercase tracking-[0.2em] transition-colors ${viewMode === 'CONTEXT' ? 'bg-white text-black font-bold' : 'bg-transparent text-gray-500 hover:text-white'}`}
             >
@@ -314,7 +324,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({ artwork }) => {
   }, [artwork]);
 
   return (
-    <div className="flex-shrink-0 w-[300px] h-[300px] relative border border-white/10 group overflow-hidden">
+    <div className="flex-shrink-0 w-[250px] h-[250px] md:w-[300px] md:h-[300px] relative border border-white/10 group overflow-hidden">
        {loading ? (
           <div className="w-full h-full flex items-center justify-center bg-white/5">
              <div className="w-6 h-6 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
@@ -385,9 +395,11 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
     }
   }
 
-  const HEADER_HEIGHT_PX = 160; 
-  const FOOTER_HEIGHT_PX = 120; 
-  const BOTTOM_BUFFER_PX = 250; 
+  // Responsive Constants
+  const isMobile = window.innerWidth < 768;
+  const HEADER_HEIGHT_PX = isMobile ? 100 : 160; 
+  const FOOTER_HEIGHT_PX = isMobile ? 80 : 120; 
+  const BOTTOM_BUFFER_PX = isMobile ? 150 : 250; 
   
   const calculateY = (score: number, screenHeight: number) => {
     const availableHeight = screenHeight - HEADER_HEIGHT_PX - FOOTER_HEIGHT_PX - BOTTOM_BUFFER_PX;
@@ -453,33 +465,34 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
       
       <RippleBackground />
 
-      <div className="fixed top-0 left-0 z-[150] p-8 w-full flex justify-between items-start pointer-events-none mix-blend-difference h-[120px]">
+      <div className="fixed top-0 left-0 z-[150] p-6 md:p-8 w-full flex justify-between items-start pointer-events-none mix-blend-difference h-[100px] md:h-[120px]">
          <div>
-           <h2 className="font-serif text-4xl italic tracking-tight text-white">{artistName}</h2>
+           <h2 className="font-serif text-2xl md:text-4xl italic tracking-tight text-white">{artistName}</h2>
            <div className="flex items-center gap-3 mt-2">
              <div className="w-8 h-[1px] bg-white"></div>
-             <p className="text-[9px] uppercase tracking-[0.3em] text-white">Chronological Impact Analysis</p>
+             <p className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] text-white">Chronological Impact Analysis</p>
            </div>
          </div>
       </div>
 
       <button 
         onClick={onClose}
-        className="fixed top-8 right-8 z-[200] px-6 py-3 bg-white text-black border border-transparent hover:border-white hover:bg-black hover:text-white transition-all duration-300 text-[10px] uppercase tracking-widest"
+        className="fixed top-6 right-6 md:top-8 md:right-8 z-[200] px-4 py-2 md:px-6 md:py-3 bg-white text-black border border-transparent hover:border-white hover:bg-black hover:text-white transition-all duration-300 text-[9px] md:text-[10px] uppercase tracking-widest"
       >
-        Close Timeline [ESC]
+        Close [ESC]
       </button>
 
-      <div className="fixed bottom-0 left-0 z-[150] w-full border-t border-white/10 bg-black/80 backdrop-blur-md h-[120px] px-8 flex justify-between items-center text-[9px] uppercase tracking-widest text-gray-400 pointer-events-none">
-         <div className="flex gap-4">
+      <div className="fixed bottom-0 left-0 z-[150] w-full border-t border-white/10 bg-black/80 backdrop-blur-md h-[80px] md:h-[120px] px-6 md:px-8 flex justify-between items-center text-[8px] md:text-[9px] uppercase tracking-widest text-gray-400 pointer-events-none">
+         <div className="flex gap-4 max-w-[70%] overflow-hidden whitespace-nowrap text-ellipsis">
             <span className="text-white font-bold">Sources:</span>
             {(data as any).sources && (data as any).sources.length > 0 
-               ? (data as any).sources.map((s: string, i: number) => <span key={i}>{s}</span>)
-               : <span>Historical Auctions • Institutional Archives • Gemini AI</span>
+               ? (data as any).sources.map((s: string, i: number) => <span key={i} className="hidden md:inline">{s}</span>)
+               : <span>Historical Archives • Gemini AI</span>
             }
+            <span className="md:hidden">AI Analysis</span>
          </div>
          <div className="animate-pulse">
-            <span>SCROLL TO NAVIGATE ERA</span>
+            <span>SCROLL {'>'}</span>
          </div>
       </div>
 
@@ -495,7 +508,7 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
             {data.eras.map((era, index) => (
               <div key={index} className="w-[100vw] h-full relative">
                  <div className="absolute bottom-[20%] right-[10%] opacity-10 mix-blend-overlay">
-                    <span className="font-serif text-[20vw] leading-none text-white whitespace-nowrap blur-sm">
+                    <span className="font-serif text-[30vw] md:text-[20vw] leading-none text-white whitespace-nowrap blur-sm">
                        {era.ageRange}
                     </span>
                  </div>
@@ -566,23 +579,21 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
 
         {data.eras.map((era, index) => (
           <div key={index} className="w-[100vw] h-full flex-shrink-0 relative z-30">
-            <div className="absolute top-[18%] left-[10%] max-w-lg z-10 pointer-events-none">
-               <div className="flex items-center gap-4 mb-6">
-                  <div className="px-3 py-1 border border-white/30 text-[10px] uppercase tracking-widest backdrop-blur-sm text-white">
+            <div className="absolute top-[15%] md:top-[18%] left-[8%] md:left-[10%] max-w-xs md:max-w-lg z-10 pointer-events-none">
+               <div className="flex items-center gap-4 mb-4 md:mb-6">
+                  <div className="px-3 py-1 border border-white/30 text-[8px] md:text-[10px] uppercase tracking-widest backdrop-blur-sm text-white">
                     Chapter {index + 1}
                   </div>
-                  <span className="text-white/50 text-xs font-mono">{era.startYear} — {era.endYear}</span>
+                  <span className="text-white/50 text-[10px] md:text-xs font-mono">{era.startYear} — {era.endYear}</span>
                </div>
-               <h3 className="font-serif text-5xl mb-4 text-white leading-tight">{era.eraLabel}</h3>
-               <p className="text-sm font-light leading-relaxed text-gray-400 border-l border-white/30 pl-6 break-keep">
+               <h3 className="font-serif text-3xl md:text-5xl mb-4 text-white leading-tight">{era.eraLabel}</h3>
+               <p className="text-xs md:text-sm font-light leading-relaxed text-gray-400 border-l border-white/30 pl-4 md:pl-6 break-keep">
                  {era.summary}
                </p>
             </div>
 
             {era.events.map((event, evtIdx) => {
                const screenH = window.innerHeight;
-               // Re-calculate X percent for React rendering to match SVG logic
-               // Note: This duplicates logic from generateAreaPath, ideally refactor to shared helper
                const eraDuration = era.endYear - era.startYear;
                const yearOffset = event.year - era.startYear;
                const percentRaw = eraDuration > 0 ? yearOffset / eraDuration : 0.5;
@@ -605,20 +616,20 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
 
         {/* Final Sections */}
         <div className="w-[100vw] h-full flex-shrink-0 relative z-30 flex items-center justify-center bg-black border-l border-white/5">
-           <div className="max-w-6xl w-full px-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
+           <div className="max-w-6xl w-full px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
               <div className="lg:col-span-4">
-                 <h2 className="font-serif text-5xl text-white mb-6">Legacy &<br/>Critical Reception</h2>
+                 <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">Legacy &<br/>Critical Reception</h2>
                  <div className="w-12 h-1 bg-white mb-8"></div>
               </div>
               <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                  {data.critiques && data.critiques.length > 0 ? (
                    data.critiques.map((quote, i) => (
-                     <div key={i} className="border border-white/20 p-8 backdrop-blur-sm hover:bg-white/5 transition-colors">
+                     <div key={i} className="border border-white/20 p-6 md:p-8 backdrop-blur-sm hover:bg-white/5 transition-colors">
                         <div className="mb-4 text-4xl font-serif text-white/20">“</div>
-                        <p className="text-lg font-serif italic text-gray-300 mb-6 leading-relaxed break-keep">
+                        <p className="text-sm md:text-lg font-serif italic text-gray-300 mb-6 leading-relaxed break-keep">
                           {quote.text}
                         </p>
-                        <div className="flex flex-col text-[9px] uppercase tracking-widest">
+                        <div className="flex flex-col text-[8px] md:text-[9px] uppercase tracking-widest">
                            <span className="text-white font-bold">{quote.author}</span>
                            <span className="text-gray-500">{quote.source}</span>
                         </div>
@@ -634,9 +645,9 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
         </div>
 
         <div className="w-[100vw] h-full flex-shrink-0 relative z-30 flex flex-col items-center justify-center bg-[#050505] border-l border-white/5">
-           <div className="w-full max-w-[1600px] px-12">
-              <h2 className="font-serif text-4xl text-white mb-12 text-center">Masterpiece Archive</h2>
-              <div className="flex overflow-x-auto gap-12 pb-12 justify-center custom-scrollbar">
+           <div className="w-full max-w-[1600px] px-6 md:px-12">
+              <h2 className="font-serif text-3xl md:text-4xl text-white mb-12 text-center">Masterpiece Archive</h2>
+              <div className="flex overflow-x-auto gap-6 md:gap-12 pb-12 justify-start md:justify-center custom-scrollbar">
                  {data.masterpieces?.map((artwork, i) => (
                    <GalleryItem key={i} artwork={artwork} />
                  ))}
@@ -644,7 +655,7 @@ export const TimelineJourney: React.FC<Props> = ({ data, artistName, onClose }) 
               <div className="flex justify-center mt-12">
                  <button 
                     onClick={scrollToStart}
-                    className="px-8 py-4 border border-white/20 text-white text-[10px] uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all"
+                    className="px-6 py-3 md:px-8 md:py-4 border border-white/20 text-white text-[9px] md:text-[10px] uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all"
                  >
                     Return to Beginning
                  </button>
