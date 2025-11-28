@@ -80,6 +80,7 @@ export interface Masterpiece {
   title: string;
   year: string;
   visualPrompt: string;
+  imageUrl?: string; // Optional image URL for artwork
 }
 
 export interface TimelineEra {
