@@ -1,9 +1,11 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Artist, AIReportResult, ComparativeTrajectory, Masterpiece } from '../types';
 import { RadarChartComponent } from './RadarChartComponent';
 import { generateComparativeAnalysis, generateDetailedTrajectory, fetchMasterpiecesByMetric } from '../services/geminiService';
+import { fetchArtistImage } from '../services/artistImageService';
+import { fetchArtistList } from '../services/artistListService';
 import { COLORS } from '../constants';
 import { NauticalSpinner } from '../App';
 import ReactMarkdown from 'react-markdown';
@@ -15,8 +17,13 @@ interface Props {
   currentOverviewArtist: Artist;
 }
 
-export const ConnectedTab: React.FC<Props> = ({ artists, onDeepDive, currentOverviewArtist }) => {
+export const ConnectedTab: React.FC<Props> = ({ artists: initialArtists, onDeepDive, currentOverviewArtist }) => {
   const [selectedArtistId, setSelectedArtistId] = useState<string | null>(null);
+  
+  // Dynamic artist list state
+  const [artists, setArtists] = useState<Artist[]>(initialArtists);
+  const [loadingMoreArtists, setLoadingMoreArtists] = useState(false);
+  const [hasMoreArtists, setHasMoreArtists] = useState(true);
   
   // Data States
   const [comparisonResult, setComparisonResult] = useState<AIReportResult | null>(null);
@@ -27,9 +34,106 @@ export const ConnectedTab: React.FC<Props> = ({ artists, onDeepDive, currentOver
   const [loadingComparison, setLoadingComparison] = useState(false);
   const [loadingTrajectory, setLoadingTrajectory] = useState(false);
   const [loadingGallery, setLoadingGallery] = useState(false);
+  
+  // Artist images cache
+  const [artistImages, setArtistImages] = useState<Record<string, string>>({});
 
   const selectedArtist = artists.find(a => a.id === selectedArtistId);
   const containerRef = useRef<HTMLDivElement>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
+  
+  // Load more artists when scrolling to bottom
+  const loadMoreArtists = useCallback(async () => {
+    if (loadingMoreArtists || !hasMoreArtists) {
+      console.log('Skipping load: loadingMoreArtists=', loadingMoreArtists, 'hasMoreArtists=', hasMoreArtists);
+      return;
+    }
+    
+    console.log('loadMoreArtists called, current count:', artists.length);
+    setLoadingMoreArtists(true);
+    try {
+      const newArtists = await fetchArtistList(artists.length, 20);
+      console.log('Fetched new artists:', newArtists.length);
+      if (newArtists.length > 0) {
+        setArtists(prev => {
+          const updated = [...prev, ...newArtists];
+          console.log('Updated artists count:', updated.length);
+          return updated;
+        });
+      } else {
+        console.log('No more artists available');
+        setHasMoreArtists(false);
+      }
+    } catch (error) {
+      console.error('Error loading more artists:', error);
+      setHasMoreArtists(false);
+    } finally {
+      setLoadingMoreArtists(false);
+    }
+  }, [artists.length, loadingMoreArtists, hasMoreArtists]);
+  
+  // Intersection Observer for infinite scroll
+  useEffect(() => {
+    const currentRef = loadMoreRef.current;
+    if (!currentRef || !hasMoreArtists || selectedArtistId) return;
+    
+    // Cleanup previous observer
+    if (observerRef.current) {
+      observerRef.current.disconnect();
+    }
+    
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMoreArtists && !loadingMoreArtists) {
+          console.log('Intersection detected! Loading more artists...', artists.length);
+          loadMoreArtists();
+        }
+      },
+      { 
+        threshold: 0.1,
+        rootMargin: '200px' // Start loading 200px before reaching the element
+      }
+    );
+    
+    observerRef.current.observe(currentRef);
+    console.log('Intersection Observer set up for infinite scroll');
+    
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+        console.log('Intersection Observer cleaned up');
+      }
+    };
+  }, [hasMoreArtists, loadingMoreArtists, loadMoreArtists, selectedArtistId]);
+  
+  // Fetch real images for all artists
+  useEffect(() => {
+    const fetchImages = async () => {
+      // Only fetch images for newly added artists
+      const newArtists = artists.filter(artist => !artistImages[artist.id]);
+      if (newArtists.length === 0) return;
+      
+      const imagePromises = newArtists.map(async (artist) => {
+        const imageUrl = await fetchArtistImage(artist.name);
+        return { id: artist.id, imageUrl };
+      });
+      
+      const results = await Promise.all(imagePromises);
+      const newImages: Record<string, string> = {};
+      results.forEach(result => {
+        if (result) {
+          newImages[result.id] = result.imageUrl;
+        }
+      });
+      
+      if (Object.keys(newImages).length > 0) {
+        setArtistImages(prev => ({ ...prev, ...newImages }));
+      }
+    };
+    
+    fetchImages();
+  }, [artists]);
 
   const scrollToTop = () => {
     if (containerRef.current) {
@@ -40,32 +144,55 @@ export const ConnectedTab: React.FC<Props> = ({ artists, onDeepDive, currentOver
   // Trigger Data Fetching on Selection
   useEffect(() => {
     if (selectedArtist && currentOverviewArtist) {
+      // Skip if already have data for this comparison
+      const comparisonKey = `${currentOverviewArtist.name}:${selectedArtist.name}`;
+      const hasComparison = comparisonResult && 
+        (comparisonResult.text.includes(currentOverviewArtist.name) || comparisonResult.text.includes(selectedArtist.name));
+      const hasTrajectory = trajectoryData && 
+        trajectoryData.artist1 === currentOverviewArtist.name && trajectoryData.artist2 === selectedArtist.name;
+      const hasGallery = masterpieces.length > 0;
+
+      if (hasComparison && hasTrajectory && hasGallery) {
+        return;
+      }
+
       const fetchData = async () => {
-        setLoadingComparison(true);
-        setLoadingTrajectory(true);
-        setLoadingGallery(true);
-        
-        try {
-          // 1. Text Analysis
-          const compRes = await generateComparativeAnalysis(
-            currentOverviewArtist.name, 
-            selectedArtist.name, 
-            "Artistic Trajectory & Market Positioning"
-          );
-          setComparisonResult(compRes);
-        } catch(e) { console.error(e) } finally { setLoadingComparison(false) }
+        if (!hasComparison) {
+          setLoadingComparison(true);
+          try {
+            const compRes = await generateComparativeAnalysis(
+              currentOverviewArtist.name, 
+              selectedArtist.name, 
+              "Artistic Trajectory & Market Positioning"
+            );
+            setComparisonResult(compRes);
+          } catch(e) { console.error(e) } finally { setLoadingComparison(false) }
+        }
 
-        try {
-          // 2. Trajectory Data
-          const trajData = await generateDetailedTrajectory(currentOverviewArtist.name, selectedArtist.name);
-          setTrajectoryData(trajData);
-        } catch(e) { console.error(e) } finally { setLoadingTrajectory(false) }
+        if (!hasTrajectory) {
+          setLoadingTrajectory(true);
+          try {
+            const trajData = await generateDetailedTrajectory(currentOverviewArtist.name, selectedArtist.name);
+            if (trajData && trajData.data && Array.isArray(trajData.data)) {
+              setTrajectoryData(trajData);
+            } else {
+              console.error("Invalid trajectory data received:", trajData);
+            }
+          } catch(e) { 
+            console.error("Error generating trajectory:", e);
+            // Keep loading state false so fallback message shows
+          } finally { 
+            setLoadingTrajectory(false);
+          }
+        }
 
-        try {
-          // 3. Masterpieces Gallery
-          const gallery = await fetchMasterpiecesByMetric(selectedArtist.name, "Representative Works");
-          setMasterpieces(gallery);
-        } catch(e) { console.error(e) } finally { setLoadingGallery(false) }
+        if (!hasGallery) {
+          setLoadingGallery(true);
+          try {
+            const gallery = await fetchMasterpiecesByMetric(selectedArtist.name, "Representative Works");
+            setMasterpieces(gallery);
+          } catch(e) { console.error(e) } finally { setLoadingGallery(false) }
+        }
       };
       
       fetchData();
@@ -104,7 +231,7 @@ export const ConnectedTab: React.FC<Props> = ({ artists, onDeepDive, currentOver
               >
                 <motion.img 
                   layoutId={`artist-image-${artist.id}`}
-                  src={artist.imageUrl} 
+                  src={artistImages[artist.id] || artist.imageUrl} 
                   alt={artist.name} 
                   className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                 />
@@ -153,6 +280,28 @@ export const ConnectedTab: React.FC<Props> = ({ artists, onDeepDive, currentOver
               </motion.div>
             ))}
           </div>
+          
+          {/* Infinite Scroll Trigger */}
+          {hasMoreArtists && !selectedArtistId && (
+            <div ref={loadMoreRef} className="w-full py-12 flex justify-center min-h-[200px]">
+              {loadingMoreArtists ? (
+                <div className="flex flex-col items-center gap-4">
+                  <NauticalSpinner color={COLORS.primary} />
+                  <span className="text-[9px] uppercase tracking-widest text-gray-400">Loading more artists...</span>
+                </div>
+              ) : (
+                <div className="h-20 w-full" /> // Spacer for intersection observer
+              )}
+            </div>
+          )}
+          
+          {!hasMoreArtists && artists.length > 0 && !selectedArtistId && (
+            <div className="w-full py-12 text-center">
+              <span className="text-[9px] uppercase tracking-widest text-gray-400">
+                Showing {artists.length} artists
+              </span>
+            </div>
+          )}
         </div>
       )}
 
@@ -183,7 +332,7 @@ export const ConnectedTab: React.FC<Props> = ({ artists, onDeepDive, currentOver
               <div className="sticky top-0 h-screen w-full z-0 flex items-end relative">
                  <motion.img
                    layoutId={`artist-image-${selectedArtistId}`}
-                   src={selectedArtist.imageUrl}
+                   src={artistImages[selectedArtistId] || selectedArtist.imageUrl}
                    alt={selectedArtist.name}
                    className="absolute inset-0 w-full h-full object-cover opacity-50"
                  />
@@ -343,7 +492,7 @@ export const ConnectedTab: React.FC<Props> = ({ artists, onDeepDive, currentOver
                                onClick={scrollToTop}
                              >
                                 <img 
-                                  src={`https://picsum.photos/seed/${work.title}/600/${Math.floor(Math.random() * 300 + 400)}?grayscale`} 
+                                  src={work.imageUrl || `https://picsum.photos/seed/${work.title}/600/${Math.floor(Math.random() * 300 + 400)}?grayscale`} 
                                   alt={work.title} 
                                   className="w-full h-auto grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000 transform group-hover:scale-105"
                                 />

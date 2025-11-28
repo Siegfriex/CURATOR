@@ -9,7 +9,7 @@ interface Props {
 
 export const LineChartComponent: React.FC<Props> = ({ data }) => {
   return (
-    <div className="w-full h-[250px] min-w-0">
+    <div className="w-full h-[250px] min-w-0 min-h-[250px]" style={{ minHeight: '250px' }}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}

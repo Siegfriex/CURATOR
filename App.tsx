@@ -81,10 +81,12 @@ const LandingPage = ({ onEnter }: { onEnter: (artistName?: string) => void }) =>
       {/* Central Search / Entry */}
       <div className="w-full max-w-2xl px-8 z-10 opacity-0 animate-[slideUp_1s_1s_forwards]">
          <form onSubmit={handleSubmit} className="relative group">
-            <label className="block text-[9px] uppercase tracking-widest text-gray-400 mb-4 ml-1">
+            <label htmlFor="artist-search-input" className="block text-[9px] uppercase tracking-widest text-gray-400 mb-4 ml-1">
                Enter Artist Name or Keyword
             </label>
             <input 
+              id="artist-search-input"
+              name="artist-search"
               type="text" 
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
@@ -172,6 +174,11 @@ export const App: React.FC = () => {
     let mounted = true;
     const loadData = async () => {
       if (activeView === AppView.OVERVIEW) {
+        // Skip if already have data for this artist
+        if (dashboardData?.name === baseArtistInfo.name) {
+          return;
+        }
+
         setLoadingDashboard(true);
         try {
           const data = await fetchArtistDashboardData(baseArtistInfo.name);

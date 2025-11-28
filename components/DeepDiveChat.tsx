@@ -2,6 +2,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { generateChatResponse } from '../services/geminiService';
+import { collection, query, where, orderBy, onSnapshot, addDoc, serverTimestamp, deleteDoc, doc, getDocs } from 'firebase/firestore';
+import { db } from '../services/firebaseConfig';
 
 interface Props {
   artistName: string;
@@ -30,28 +32,36 @@ export const DeepDiveChat: React.FC<Props> = ({ artistName }) => {
   const [isHovered, setIsHovered] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const storageKey = `chat_history_${artistName.replace(/\s/g, '_')}`;
 
-  // Load history
+  // Load history from Firestore
   useEffect(() => {
-    const saved = localStorage.getItem(storageKey);
-    if (saved) {
-      try {
-        setMessages(JSON.parse(saved));
-      } catch (e) {
-        console.error("Failed to load chat history");
-      }
-    } else {
-        setMessages([]); 
-    }
-  }, [artistName, storageKey]);
-
-  // Save history
-  useEffect(() => {
-    if (messages.length > 0) {
-      localStorage.setItem(storageKey, JSON.stringify(messages));
-    }
-  }, [messages, storageKey]);
+    // Use a simpler query that doesn't require composite index
+    // First get all messages for the artist, then sort client-side
+    const q = query(
+      collection(db, 'chats'),
+      where('artistName', '==', artistName)
+    );
+    
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const loadedMessages: Message[] = snapshot.docs.map(doc => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          role: data.role as 'user' | 'ai',
+          text: data.text,
+          topic: data.topic || undefined,
+          timestamp: data.timestamp?.toMillis?.() || data.timestamp || Date.now()
+        };
+      });
+      // Sort by timestamp client-side
+      loadedMessages.sort((a, b) => a.timestamp - b.timestamp);
+      setMessages(loadedMessages);
+    }, (error) => {
+      console.error("Error loading chat history:", error);
+    });
+    
+    return () => unsubscribe();
+  }, [artistName]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -64,27 +74,32 @@ export const DeepDiveChat: React.FC<Props> = ({ artistName }) => {
   const processUserMessage = async (text: string, topic?: string) => {
     if (!text.trim() || loading) return;
 
-    const userMsg: Message = { 
-      id: Date.now().toString(), 
-      role: 'user', 
-      text: text, 
-      topic: topic,
-      timestamp: Date.now()
-    };
-    
-    setMessages(prev => [...prev, userMsg]);
     setInputValue('');
     setLoading(true);
 
     try {
-      const responseText = await generateChatResponse(artistName, topic || text);
-      const aiMsg: Message = { 
-        id: (Date.now() + 1).toString(), 
-        role: 'ai', 
-        text: responseText,
-        timestamp: Date.now()
+      // Save user message to Firestore
+      const messageData: any = {
+        artistName,
+        role: 'user',
+        text: text,
+        timestamp: serverTimestamp()
       };
-      setMessages(prev => [...prev, aiMsg]);
+      // Only add topic if it exists
+      if (topic) {
+        messageData.topic = topic;
+      }
+      await addDoc(collection(db, 'chats'), messageData);
+
+      const responseText = await generateChatResponse(artistName, topic || text);
+      
+      // Save AI response to Firestore
+      await addDoc(collection(db, 'chats'), {
+        artistName,
+        role: 'ai',
+        text: responseText,
+        timestamp: serverTimestamp()
+      });
     } catch (e) {
       console.error(e);
     } finally {
@@ -109,9 +124,18 @@ export const DeepDiveChat: React.FC<Props> = ({ artistName }) => {
     }
   };
 
-  const clearHistory = () => {
-    setMessages([]);
-    localStorage.removeItem(storageKey);
+  const clearHistory = async () => {
+    try {
+      const q = query(
+        collection(db, 'chats'),
+        where('artistName', '==', artistName)
+      );
+      const snapshot = await getDocs(q);
+      const deletePromises = snapshot.docs.map(doc => deleteDoc(doc.ref));
+      await Promise.all(deletePromises);
+    } catch (e) {
+      console.error("Error clearing chat history:", e);
+    }
   };
 
   return (
@@ -233,6 +257,8 @@ export const DeepDiveChat: React.FC<Props> = ({ artistName }) => {
            {/* Text Field */}
            <div className="flex items-center gap-3 bg-white rounded-full px-5 py-3 border border-black/10 focus-within:border-[#28317C] focus-within:ring-1 focus-within:ring-[#28317C]/20 transition-all shadow-sm">
               <input
+                id="chat-input"
+                name="chat-input"
                 ref={inputRef}
                 type="text"
                 value={inputValue}

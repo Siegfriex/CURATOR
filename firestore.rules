@@ -1,0 +1,84 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Cache collection - public read/write for caching
+    match /cache/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Dashboard cache
+    match /dashboard/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Report cache
+    match /report/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Timeline cache
+    match /timeline/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Insight cache
+    match /insight/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Masterpieces cache
+    match /masterpieces/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Comparison cache
+    match /comparison/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Trajectory cache
+    match /trajectory/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Images cache
+    match /images/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Artists list cache
+    match /artists/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Search cache
+    match /search/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Chats collection - public read/write for chat history
+    match /chats/{chatId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if false;
+      allow delete: if false;
+    }
+    
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+

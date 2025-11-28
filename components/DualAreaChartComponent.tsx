@@ -134,7 +134,7 @@ export const DualAreaChartComponent: React.FC<Props> = ({
       </div>
 
       {/* CHART CONTAINER */}
-      <div className="flex-grow relative min-h-[300px] min-w-0">
+      <div className="flex-grow relative min-h-[300px] min-w-0" style={{ minHeight: '300px' }}>
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart 
             data={processedData} 

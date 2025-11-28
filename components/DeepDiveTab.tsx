@@ -25,6 +25,11 @@ export const DeepDiveTab: React.FC<Props> = ({ artist }) => {
 
   // Fetch Report on Mount
   useEffect(() => {
+    // Skip if already have report data for this artist
+    if (reportData) {
+      return;
+    }
+
     const fetchReport = async () => {
       try {
         const result = await generateArtistReport(artist.name);

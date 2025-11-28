@@ -225,8 +225,9 @@ export const RadarChartComponent: React.FC<Props> = ({
         </div>
       )}
 
-      <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius={outerRadius} data={chartData}>
+      <div style={{ width: '100%', height: '100%', minHeight: '300px', minWidth: '300px' }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <RadarChart cx="50%" cy="50%" outerRadius={outerRadius} data={chartData}>
           <PolarGrid stroke={COLORS.grid} strokeWidth={isMini ? 0.5 : 1} />
           <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
           
@@ -306,7 +307,8 @@ export const RadarChartComponent: React.FC<Props> = ({
             />
           )}
         </RadarChart>
-      </ResponsiveContainer>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };
