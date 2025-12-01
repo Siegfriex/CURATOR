@@ -206,7 +206,7 @@ async function generateImage(prompt: string): Promise<string | null> {
   try {
     const ai = getAI();
     const response = await ai.models.generateImages({
-      model: 'imagen-4.0-generate-001',
+      model: 'gemini-3-pro-image-preview',
       prompt: `Artistic, high-contrast, black and white archival photography style, grainy, abstract, highly aesthetic: ${prompt}`,
       config: {
         numberOfImages: 1,
@@ -264,7 +264,7 @@ export const getArtistReport = onRequest({ cors: true }, async (req, res) => {
 
     const ai = getAI();
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-pro-preview',
       contents: `Generate a comprehensive, high-end curator report for the artist "${artistName}".
       
       OUTPUT FORMAT:
@@ -507,7 +507,7 @@ export const getMetricInsight = onRequest({ cors: true }, async (req, res) => {
 
     const ai = getAI();
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-pro-preview',
       contents: `Analyze why the artist "${artistName}" might have a score of ${score}/100 in the metric category: "${metric}".
       IMPORTANT: Output in KOREAN (한국어). Tone: Insightful, analytical, curatorial.
       Provide a concise, single-paragraph explanation citing specific recent real-world examples.`,
@@ -642,7 +642,7 @@ export const getComparativeAnalysis = onRequest({ cors: true }, async (req, res)
 
     const ai = getAI();
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-pro-preview',
       contents: `Compare the artists "${artist1}" and "${artist2}". 
       Focus specifically on why they are stylistically or conceptually similar, particularly regarding "${sharedMetric}".
       
@@ -961,7 +961,7 @@ export const getChatResponse = onRequest({ cors: true }, async (req, res) => {
   try {
     const ai = getAI();
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3-pro-preview',
       contents: `Act as an expert art curator or AI Analyst. Provide a concise, insightful commentary on "${artistName}" specifically regarding "${topic}".
       
       LANGUAGE: KOREAN (한국어).
