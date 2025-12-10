@@ -196,20 +196,30 @@ export const ConnectedTab: React.FC<Props> = ({ artists: initialArtists, onDeepD
         if (!hasTrajectory) {
           setLoadingTrajectory(true);
           try {
+            console.log(`[ConnectedTab] Fetching trajectory for: ${currentOverviewArtist.name} vs ${selectedArtist.name}`);
             const trajData = await generateDetailedTrajectory(currentOverviewArtist.name, selectedArtist.name);
+            console.log(`[ConnectedTab] Trajectory data received:`, {
+              hasData: !!trajData,
+              dataLength: trajData?.data?.length || 0,
+              hasError: !!trajData?.error,
+              artist1: trajData?.artist1,
+              artist2: trajData?.artist2
+            });
+            
             // Validate data structure and check for fallback/error data
             if (trajData && 
                 trajData.data && 
                 Array.isArray(trajData.data) && 
                 trajData.data.length > 0 &&
                 !trajData.error) { // Don't use fallback data
+              console.log(`[ConnectedTab] ✓ Valid trajectory data, setting state`);
               setTrajectoryData(trajData);
             } else {
-              console.error("Invalid trajectory data received:", trajData);
+              console.error("[ConnectedTab] Invalid trajectory data received:", trajData);
               setTrajectoryData(null);
             }
           } catch(e) { 
-            console.error("Error generating trajectory:", e);
+            console.error("[ConnectedTab] Error generating trajectory:", e);
             setTrajectoryData(null);
           } finally { 
             setLoadingTrajectory(false);
@@ -456,7 +466,7 @@ export const ConnectedTab: React.FC<Props> = ({ artists: initialArtists, onDeepD
               ) : trajectoryData && trajectoryData.data && Array.isArray(trajectoryData.data) && trajectoryData.data.length > 0 ? (
                  <div className="relative z-20 w-full" style={{ minHeight: '100vh', width: '100%' }}>
                     <TrajectoryTunnel 
-                       data={trajectoryData.data}
+                       data={trajectoryData}
                        artist1Name={currentOverviewArtist.name}
                        artist2Name={selectedArtist.name}
                        birthYear1={currentOverviewArtist.birthYear}

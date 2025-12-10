@@ -220,69 +220,98 @@ export const generateDetailedTrajectory = async (artist1: string, artist2: strin
     cacheKeyBase,
     async () => {
       // 1. 사전 주입 데이터 최우선 확인
+      let preloadedData: ComparativeTrajectory | null = null;
       try {
+        console.log(`[Trajectory] Attempting to load preloaded data for: ${artist1} vs ${artist2}`);
         const preloadedComparison = await loadComparison(artist1, artist2);
-        if (preloadedComparison && preloadedComparison.trajectoryData.length > 0) {
-          console.log('✓ Using preloaded trajectory for', artist1, artist2);
-          // 프론트엔드 형식으로 변환
-          const chartData = preloadedComparison.trajectoryData.map(point => ({
-            age: point.age,
-            a1_total: point.a1_total,
-            a1_institution: point.a1_institution,
-            a1_discourse: point.a1_discourse,
-            a1_academy: point.a1_academy,
-            a1_network: point.a1_network,
-            a1_context: point.a1_context,
-            a2_total: point.a2_total,
-            a2_institution: point.a2_institution,
-            a2_discourse: point.a2_discourse,
-            a2_academy: point.a2_academy,
-            a2_network: point.a2_network,
-            a2_context: point.a2_context,
-          }));
-          
-          return {
+        
+        if (preloadedComparison) {
+          console.log(`[Trajectory] Preloaded comparison found:`, {
             artist1: preloadedComparison.artist1Name,
             artist2: preloadedComparison.artist2Name,
-            data: chartData,
-            _source: 'preloaded'
-          } as ComparativeTrajectory;
+            dataLength: preloadedComparison.trajectoryData?.length || 0
+          });
+          
+          if (preloadedComparison.trajectoryData && preloadedComparison.trajectoryData.length > 0) {
+            console.log('✓ Using preloaded trajectory for', artist1, artist2);
+            // 프론트엔드 형식으로 변환
+            const chartData = preloadedComparison.trajectoryData.map(point => ({
+              age: point.age,
+              a1_total: point.a1_total,
+              a1_institution: point.a1_institution,
+              a1_discourse: point.a1_discourse,
+              a1_academy: point.a1_academy,
+              a1_network: point.a1_network,
+              a1_context: point.a1_context,
+              a2_total: point.a2_total,
+              a2_institution: point.a2_institution,
+              a2_discourse: point.a2_discourse,
+              a2_academy: point.a2_academy,
+              a2_network: point.a2_network,
+              a2_context: point.a2_context,
+            }));
+            
+            preloadedData = {
+              artist1: preloadedComparison.artist1Name,
+              artist2: preloadedComparison.artist2Name,
+              data: chartData,
+              _source: 'preloaded'
+            } as ComparativeTrajectory;
+            
+            console.log(`[Trajectory] Preloaded data converted successfully, data points:`, chartData.length);
+          } else {
+            console.warn('[Trajectory] Preloaded comparison found but trajectoryData is empty');
+          }
+        } else {
+          console.log(`[Trajectory] No preloaded comparison found for ${artist1} vs ${artist2}, will try API`);
         }
       } catch (error) {
-        console.warn('Failed to load preloaded trajectory:', error);
+        console.error('[Trajectory] Error loading preloaded trajectory, will try API:', error);
+      }
+      
+      // 프리로드 데이터가 있으면 즉시 반환
+      if (preloadedData && preloadedData.data && preloadedData.data.length > 0) {
+        return preloadedData;
       }
       
       // 2. Firestore 캐시 확인 (preloaded 데이터가 없을 때만)
       const cached = await getCached<ComparativeTrajectory>('trajectory', cacheKeyBase);
       if (cached && !cached.error && cached.data && Array.isArray(cached.data) && cached.data.length > 0) {
-        console.log('Using cached trajectory for', artist1, artist2);
+        console.log('[Trajectory] Using cached trajectory for', artist1, artist2);
         return cached;
       }
 
-      // 3. AI 호출
-      const response = await fetch(
-        `${FUNCTIONS_URL}/getDetailedTrajectory?artist1=${encodeURIComponent(artist1)}&artist2=${encodeURIComponent(artist2)}`
-      );
-      
-      const data = await response.json();
-      
-      // Don't cache fallback/error data
-      if (!response.ok) {
-        if (data.data && Array.isArray(data.data) && data.error) {
-          console.warn('Received fallback data, not caching:', data.error);
-          // Return fallback data but don't cache it
+      // 3. AI 호출 (프리로드와 캐시 모두 없을 때)
+      console.log('[Trajectory] Calling Gemini API for', artist1, 'vs', artist2);
+      try {
+        const response = await fetch(
+          `${FUNCTIONS_URL}/getDetailedTrajectory?artist1=${encodeURIComponent(artist1)}&artist2=${encodeURIComponent(artist2)}`
+        );
+        
+        const data = await response.json();
+        
+        // Don't cache fallback/error data
+        if (!response.ok) {
+          if (data.data && Array.isArray(data.data) && data.error) {
+            console.warn('[Trajectory] Received fallback data, not caching:', data.error);
+            // Return fallback data but don't cache it
+            return data;
+          }
+          throw new Error(`Failed to generate trajectory: ${response.statusText}`);
+        }
+        
+        // Only cache valid data without error field
+        if (data.data && Array.isArray(data.data) && data.data.length > 0 && !data.error) {
+          console.log('[Trajectory] Successfully generated trajectory, caching result');
+          await setCached('trajectory', cacheKeyBase, data);
           return data;
         }
-        throw new Error(`Failed to generate trajectory: ${response.statusText}`);
+        
+        throw new Error(`Invalid trajectory data received`);
+      } catch (error) {
+        console.error('[Trajectory] Error calling Gemini API:', error);
+        throw error;
       }
-      
-      // Only cache valid data without error field
-      if (data.data && Array.isArray(data.data) && data.data.length > 0 && !data.error) {
-        await setCached('trajectory', cacheKeyBase, data);
-        return data;
-      }
-      
-      throw new Error(`Invalid trajectory data received`);
     }
   );
 };
