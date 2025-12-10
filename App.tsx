@@ -1,11 +1,20 @@
 
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { MOCK_ARTISTS, METRIC_DETAILS, COLORS } from './constants';
-import { AppView, Artist, GroundingSource, DashboardData, Masterpiece } from './types';
+import { AppView, Artist, GroundingSource, DashboardData, Masterpiece, GameResult } from './types';
 import { RadarChartComponent } from './components/RadarChartComponent';
 import { LineChartComponent } from './components/LineChartComponent';
 import { generateMetricInsight, findSimilarArtists, generateComparativeAnalysis, fetchArtistDashboardData, fetchMasterpiecesByMetric, generateEventImage } from './services/geminiService';
 import ReactMarkdown from 'react-markdown';
+import { GameResultBanner } from './components/GameResultBanner';
+import {
+  enrichGameResult,
+  saveGameResultToStorage,
+  loadGameResultFromStorage,
+  clearGameResultFromStorage,
+  findArtistIdByName,
+  getRandomArtist
+} from './utils/gameUtils';
 
 // Lazy load heavy components
 const DeepDiveTab = lazy(() => import('./components/DeepDiveTab'));
@@ -152,6 +161,7 @@ export const App: React.FC = () => {
   // Init with Landing View
   const [activeView, setActiveView] = useState<AppView>(AppView.LANDING);
   const [landingExiting, setLandingExiting] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false); // Transition overlay state
 
   const [selectedArtistId, setSelectedArtistId] = useState<string>(MOCK_ARTISTS[0].id);
   const [showRankModal, setShowRankModal] = useState(false);
@@ -159,7 +169,7 @@ export const App: React.FC = () => {
   // Real-time Dashboard Data State
   const [dashboardData, setDashboardData] = useState<DashboardData | null>(null);
   const [loadingDashboard, setLoadingDashboard] = useState(false);
-  
+
   // State for Deep Dive Analysis (Single Metric) - Used for Point Click
   const [insightData, setInsightData] = useState<{ artist: string, metric: string, value: number, text: string } | null>(null);
   const [loadingInsight, setLoadingInsight] = useState(false);
@@ -167,6 +177,23 @@ export const App: React.FC = () => {
   // State for Masterpiece Carousel Modal (Axis Click)
   const [carouselData, setCarouselData] = useState<{ metric: string; works: Masterpiece[] } | null>(null);
   const [loadingCarousel, setLoadingCarousel] = useState(false);
+
+  // Game Integration State
+  const [gameResult, setGameResult] = useState<GameResult | null>(() => loadGameResultFromStorage());
+  const [showGame, setShowGame] = useState(true); // Show game on landing
+  const [gameKey, setGameKey] = useState(0); // Key for iframe remount (Play Again)
+  const gameIframeRef = useRef<HTMLIFrameElement>(null);
+
+  // 디버깅: 게임 표시 상태 확인
+  useEffect(() => {
+    console.log('[App] Game visibility state:', {
+      activeView,
+      showGame,
+      landingExiting,
+      shouldShowGame: (activeView === AppView.LANDING || landingExiting) && showGame,
+      gameKey
+    });
+  }, [activeView, showGame, landingExiting, gameKey]);
 
   // Base artist info for dropdown
   const baseArtistInfo = MOCK_ARTISTS.find(a => a.id === selectedArtistId) || MOCK_ARTISTS[0];
@@ -201,12 +228,125 @@ export const App: React.FC = () => {
     setLandingExiting(true);
     setTimeout(() => {
       setActiveView(AppView.OVERVIEW);
+      setShowGame(false);
       if (initialSearch) {
          const found = MOCK_ARTISTS.find(a => a.name.toLowerCase().includes(initialSearch.toLowerCase()));
          if (found) setSelectedArtistId(found.id);
       }
+      // Reset landingExiting after transition completes
+      setTimeout(() => {
+        setLandingExiting(false);
+      }, 400);
     }, 800);
   };
+
+  // Game Complete Handler - Improved transition sequence
+  const handleGameComplete = (result: GameResult) => {
+    // Enrich and save game result
+    const enriched = enrichGameResult(result);
+    saveGameResultToStorage(enriched);
+    setGameResult(enriched);
+
+    // Phase 1: Start fade out + show transition overlay
+    setLandingExiting(true);
+    setIsTransitioning(true);
+
+    // Phase 2: After fade, switch view
+    setTimeout(() => {
+      if (enriched.matchedArtistId) {
+        setSelectedArtistId(enriched.matchedArtistId);
+      }
+      setActiveView(AppView.OVERVIEW);
+      setShowGame(false);
+    }, 600);
+
+    // Phase 3: Hide transition overlay
+    setTimeout(() => {
+      setIsTransitioning(false);
+      setLandingExiting(false);
+    }, 1200);
+  };
+
+  // Game Skip Handler - Improved transition
+  const handleGameSkip = (artistName: string) => {
+    const artistId = findArtistIdByName(artistName);
+
+    // Phase 1: Fade out
+    setLandingExiting(true);
+    setIsTransitioning(true);
+
+    // Phase 2: Switch view
+    setTimeout(() => {
+      if (artistId) {
+        setSelectedArtistId(artistId);
+      } else {
+        const randomArtist = getRandomArtist();
+        setSelectedArtistId(randomArtist.id);
+      }
+      setActiveView(AppView.OVERVIEW);
+      setShowGame(false);
+      setGameResult(null);
+      clearGameResultFromStorage();
+    }, 600);
+
+    // Phase 3: Complete transition
+    setTimeout(() => {
+      setIsTransitioning(false);
+      setLandingExiting(false);
+    }, 1200);
+  };
+
+  // Play Again Handler - Restart game
+  const handlePlayAgain = () => {
+    setGameResult(null);
+    clearGameResultFromStorage();
+    setShowGame(true);
+    setGameKey(prev => prev + 1); // Force iframe remount
+    setActiveView(AppView.LANDING);
+    setLandingExiting(false);
+    setIsTransitioning(false);
+  };
+
+  // Go to Landing/Game Handler - Reset all states properly
+  const handleGoToLanding = () => {
+    // Reset all transition states
+    setLandingExiting(false);
+    setIsTransitioning(false);
+    // Show game (play again behavior when clicking brand)
+    setShowGame(true);
+    setGameKey(prev => prev + 1); // Force iframe remount for fresh start
+    setActiveView(AppView.LANDING);
+    // Clear previous game result for fresh play
+    setGameResult(null);
+    clearGameResultFromStorage();
+  };
+
+  // Game Result Dismiss Handler
+  const handleDismissGameResult = () => {
+    setGameResult(null);
+    clearGameResultFromStorage();
+  };
+
+  // Listen for game messages (GAME_COMPLETE, GAME_SKIP)
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      // Debug: Log all postMessage events from iframes
+      if (event.data && event.data.type) {
+        console.log('[App.tsx] Received message:', event.data.type, event.data);
+      }
+
+      if (event.data.type === 'GAME_COMPLETE') {
+        console.log('[App.tsx] Processing GAME_COMPLETE');
+        handleGameComplete(event.data.payload);
+      } else if (event.data.type === 'GAME_SKIP') {
+        console.log('[App.tsx] Processing GAME_SKIP');
+        handleGameSkip(event.data.payload.artistName);
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
 
   // Trigger Masterpiece Carousel on Axis Click
   const handleAxisClick = async (axis: string) => {
@@ -260,8 +400,54 @@ export const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white flex flex-col relative overflow-x-hidden">
       
-      {/* Landing View Logic */}
-      {activeView === AppView.LANDING && (
+      {/* Transition Overlay - Smooth fade between game and app */}
+      {isTransitioning && (
+        <div className="fixed inset-0 z-[400] bg-black flex items-center justify-center transition-opacity duration-500">
+          <div className="text-center">
+            <NauticalSpinner color="#fff" />
+            <p className="mt-6 text-white/60 text-[10px] uppercase tracking-[0.3em] animate-pulse">
+              Entering Archive...
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Landing View - Game Integration */}
+      {(activeView === AppView.LANDING || landingExiting) && showGame && (
+        <div
+          className={`fixed inset-0 z-[300] transition-opacity duration-600 ease-out ${landingExiting ? 'opacity-0' : 'opacity-100'}`}
+          style={{ 
+            pointerEvents: landingExiting ? 'none' : 'auto',
+            display: 'block',
+            visibility: 'visible'
+          }}
+        >
+          <iframe
+            key={gameKey}
+            ref={gameIframeRef}
+            src="/curatorgame/"
+            className="w-full h-full border-none bg-black"
+            title="Curator's Odysseia"
+            allow="camera; microphone"
+            style={{ 
+              display: 'block',
+              width: '100%',
+              height: '100%',
+              border: 'none',
+              background: '#000'
+            }}
+            onLoad={() => {
+              console.log('[App] Game iframe loaded');
+            }}
+            onError={(e) => {
+              console.error('[App] Game iframe error:', e);
+            }}
+          />
+        </div>
+      )}
+
+      {/* Fallback Landing Page (when game is disabled) */}
+      {activeView === AppView.LANDING && !showGame && (
         <div className={`fixed inset-0 z-[300] transition-opacity duration-800 ease-out ${landingExiting ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
           <LandingPage onEnter={handleEnterApp} />
         </div>
@@ -383,14 +569,15 @@ export const App: React.FC = () => {
         </div>
       )}
 
-      {/* ================= DESKTOP HEADER (hidden on mobile) ================= */}
+      {/* ================= DESKTOP HEADER (hidden on mobile and when game is showing) ================= */}
+      {!(activeView === AppView.LANDING && showGame) && (
       <header className="hidden md:block sticky top-0 z-50 bg-white border-b border-black shadow-sm">
         <div className="max-w-[1920px] mx-auto px-0">
           <div className="grid grid-cols-12 h-16 items-center">
             
             {/* BRAND */}
             <div className="col-span-2 pl-6 border-r border-gray-200 h-full flex items-center bg-white">
-               <div className="flex items-center justify-start h-full w-full cursor-pointer" onClick={() => setActiveView(AppView.LANDING)}>
+               <div className="flex items-center justify-start h-full w-full cursor-pointer" onClick={handleGoToLanding}>
                   <div className="text-left leading-tight">
                      <span className="font-serif italic text-2xl block -mb-1">Curator's</span>
                      <span className="font-serif italic text-xl block text-gray-500">Odysseia</span>
@@ -403,8 +590,8 @@ export const App: React.FC = () => {
               <div className="flex w-full justify-center h-full">
                 {[
                   { id: AppView.OVERVIEW, label: 'Overview' },
-                  { id: AppView.CONNECTED, label: 'Connected' },
                   { id: AppView.DEEP_DIVE, label: 'Deep Dive' },
+                  { id: AppView.CONNECTED, label: 'Connected' },
                 ].map(item => (
                   <button
                     key={item.id}
@@ -450,13 +637,15 @@ export const App: React.FC = () => {
           </div>
         </div>
       </header>
+      )}
 
-      {/* ================= MOBILE HEADER (hidden on desktop) ================= */}
+      {/* ================= MOBILE HEADER (hidden on desktop and when game is showing) ================= */}
+      {!(activeView === AppView.LANDING && showGame) && (
       <header className="md:hidden sticky top-0 z-50 bg-white shadow-sm">
         {/* Top Row: Brand + Artist Selector */}
         <div className="flex justify-between items-center h-14 px-4 border-b border-gray-200 bg-white">
            {/* Brand */}
-           <div className="flex flex-col" onClick={() => setActiveView(AppView.LANDING)}>
+           <div className="flex flex-col cursor-pointer" onClick={handleGoToLanding}>
               <span className="font-serif italic text-lg leading-none">Curator's</span>
               <span className="font-serif italic text-sm text-gray-500 leading-none">Odysseia</span>
            </div>
@@ -490,8 +679,8 @@ export const App: React.FC = () => {
         <div className="flex border-b border-black bg-gray-50 overflow-x-auto no-scrollbar">
            {[
               { id: AppView.OVERVIEW, label: 'Overview' },
-              { id: AppView.CONNECTED, label: 'Connected' },
               { id: AppView.DEEP_DIVE, label: 'Deep Dive' },
+              { id: AppView.CONNECTED, label: 'Connected' },
            ].map(item => (
               <button
                  key={item.id}
@@ -506,13 +695,27 @@ export const App: React.FC = () => {
            ))}
         </div>
       </header>
+      )}
 
       {/* MAIN CONTENT */}
       <main className="flex-grow w-full max-w-[1920px] mx-auto border-l border-r border-gray-200">
         
         {/* ========================== OVERVIEW VIEW ========================== */}
         {activeView === AppView.OVERVIEW && (
-          <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-64px)] animate-fade-in">
+          <div className="animate-fade-in">
+            {/* Game Result Banner */}
+            {gameResult && (
+              <GameResultBanner
+                gameResult={gameResult}
+                onExploreArtist={(artistId) => {
+                  setSelectedArtistId(artistId);
+                }}
+                onDismiss={handleDismissGameResult}
+                onPlayAgain={handlePlayAgain}
+              />
+            )}
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-64px)]">
             <div className="lg:col-span-5 relative border-b lg:border-b-0 lg:border-r border-black h-[50vh] lg:h-auto overflow-hidden group">
               <div className="absolute inset-0 bg-gray-100">
                 <img 
@@ -598,9 +801,10 @@ export const App: React.FC = () => {
                  <span>Data Updated: {new Date().toLocaleDateString()}</span>
               </div>
             </div>
+            </div>
           </div>
         )}
-        
+
         {/* CONNECTED VIEW (Visual Archive) */}
         {activeView === AppView.CONNECTED && (
           <div className="animate-fade-in min-h-[calc(100vh-64px)]">

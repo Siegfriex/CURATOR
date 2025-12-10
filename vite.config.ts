@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => {
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+        'import.meta.env.VITE_GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || env.VITE_GEMINI_API_KEY),
         'import.meta.env.VITE_FUNCTIONS_URL': JSON.stringify(env.VITE_FUNCTIONS_URL || 'https://us-central1-curatorproto.cloudfunctions.net')
       },
       resolve: {
@@ -22,6 +23,10 @@ export default defineConfig(({ mode }) => {
       },
       build: {
         rollupOptions: {
+          input: {
+            main: path.resolve(__dirname, 'index.html'),
+            curatorgame: path.resolve(__dirname, 'curatorgame/index.html'),
+          },
           output: {
             manualChunks: {
               // React 및 핵심 라이브러리

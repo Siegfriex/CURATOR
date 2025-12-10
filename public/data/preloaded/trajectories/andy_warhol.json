@@ -19,8 +19,9 @@
       "academy": 20,
       "network": 10,
       "context": "카네기 공과대학 졸업",
+      "keyEvent": "그래픽 디자인 전공 졸업",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum", "Wikipedia"]
+      "sources": ["Andy Warhol Museum", "Carnegie Mellon Archives"]
     },
     {
       "age": 22,
@@ -29,10 +30,11 @@
       "institution": 15,
       "discourse": 15,
       "academy": 25,
-      "network": 25,
+      "network": 28,
       "context": "뉴욕 이주, 상업 일러스트레이터",
+      "keyEvent": "Glamour Magazine 첫 일러스트",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum"]
+      "sources": ["Andy Warhol Museum", "MoMA"]
     },
     {
       "age": 24,
@@ -43,9 +45,9 @@
       "academy": 28,
       "network": 40,
       "context": "광고 디자인 성공",
-      "keyEvent": "I. Miller 슈즈 광고",
+      "keyEvent": "I. Miller 슈즈 광고 계약",
       "confidence": "high",
-      "sources": ["MoMA Archives"]
+      "sources": ["MoMA Archives", "Andy Warhol Museum"]
     },
     {
       "age": 26,
@@ -55,9 +57,10 @@
       "discourse": 30,
       "academy": 30,
       "network": 45,
-      "context": "상업적 성공 지속",
+      "context": "상업적 성공 지속, ADC상 수상",
+      "keyEvent": "Art Directors Club 수상",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum"]
+      "sources": ["Andy Warhol Museum", "ADC Archives"]
     },
     {
       "age": 28,
@@ -66,10 +69,11 @@
       "institution": 35,
       "discourse": 35,
       "academy": 32,
-      "network": 50,
-      "context": "순수미술 전환 모색",
+      "network": 52,
+      "context": "세계일주 여행, 순수미술 전환 모색",
+      "keyEvent": "아시아 여행, 예술적 시야 확장",
       "confidence": "high",
-      "sources": ["MoMA"]
+      "sources": ["Andy Warhol Museum", "MoMA"]
     },
     {
       "age": 30,
@@ -78,10 +82,11 @@
       "institution": 38,
       "discourse": 38,
       "academy": 35,
-      "network": 52,
-      "context": "팝 아트 탐구 시작",
+      "network": 55,
+      "context": "팝 아트 아이디어 탐구",
+      "keyEvent": "재스퍼 존스, 라우셴버그 작품 연구",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum"]
+      "sources": ["Andy Warhol Museum", "Whitney Museum"]
     },
     {
       "age": 32,
@@ -90,74 +95,76 @@
       "institution": 42,
       "discourse": 50,
       "academy": 40,
-      "network": 60,
-      "context": "광고 이미지 회화화",
+      "network": 62,
+      "context": "광고 이미지 회화화 시작",
+      "keyEvent": "만화 기반 그림 제작 (배트맨, 딕 트레이시)",
       "confidence": "high",
-      "sources": ["MoMA"]
+      "sources": ["MoMA", "Andy Warhol Museum"]
     },
     {
       "age": 34,
       "year": 1962,
       "total": 75,
       "institution": 65,
-      "discourse": 80,
+      "discourse": 85,
       "academy": 55,
-      "network": 85,
-      "context": "캠벨 수프 캔 시리즈",
-      "keyEvent": "Campbell's Soup Cans 전시",
+      "network": 88,
+      "context": "팝아트 아이콘으로 부상",
+      "keyEvent": "Campbell's Soup Cans 페러스 갤러리 전시",
       "confidence": "high",
-      "sources": ["MoMA", "Ferus Gallery", "Andy Warhol Museum"]
+      "sources": ["MoMA", "Ferus Gallery Archives", "Andy Warhol Museum"]
     },
     {
       "age": 36,
       "year": 1964,
       "total": 82,
       "institution": 75,
-      "discourse": 88,
+      "discourse": 90,
       "academy": 60,
-      "network": 92,
-      "context": "팩토리 설립",
-      "keyEvent": "The Factory 오픈",
+      "network": 94,
+      "context": "팩토리 설립, 대량생산 예술",
+      "keyEvent": "The Factory 47번가 오픈, Brillo Boxes",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum", "MoMA"]
+      "sources": ["Andy Warhol Museum", "MoMA", "Stable Gallery"]
     },
     {
       "age": 38,
       "year": 1966,
       "total": 85,
       "institution": 78,
-      "discourse": 90,
+      "discourse": 92,
       "academy": 62,
-      "network": 95,
-      "context": "벨벳 언더그라운드 프로듀싱",
-      "keyEvent": "Exploding Plastic Inevitable",
+      "network": 96,
+      "context": "멀티미디어 아티스트로 확장",
+      "keyEvent": "Exploding Plastic Inevitable, 벨벳 언더그라운드",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum"]
+      "sources": ["Andy Warhol Museum", "Whitney Museum"]
     },
     {
       "age": 40,
       "year": 1968,
-      "total": 80,
-      "institution": 75,
-      "discourse": 85,
+      "total": 78,
+      "institution": 72,
+      "discourse": 82,
       "academy": 65,
-      "network": 88,
-      "context": "발레리 솔라나스 피격",
-      "keyEvent": "암살 미수 사건",
+      "network": 85,
+      "context": "발레리 솔라나스 피격, 임사 체험",
+      "keyEvent": "총격 피습, 기적적 회복",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum", "MoMA"]
+      "sources": ["Andy Warhol Museum", "New York Times Archives"]
     },
     {
       "age": 42,
       "year": 1970,
-      "total": 78,
-      "institution": 75,
-      "discourse": 80,
+      "total": 76,
+      "institution": 74,
+      "discourse": 78,
       "academy": 68,
-      "network": 85,
-      "context": "회복기, 인터뷰 매거진",
+      "network": 82,
+      "context": "회복기, 작업 방식 변화",
+      "keyEvent": "새 팩토리 유니온 스퀘어 이전",
       "confidence": "high",
-      "sources": ["Interview Magazine"]
+      "sources": ["Andy Warhol Museum", "Interview Magazine"]
     },
     {
       "age": 44,
@@ -167,20 +174,21 @@
       "discourse": 82,
       "academy": 70,
       "network": 88,
-      "context": "마오 초상화 시리즈",
-      "keyEvent": "Mao Series",
+      "context": "마오 초상화 시리즈 제작",
+      "keyEvent": "Mao Series, 중국 개방과 연계",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum"]
+      "sources": ["Andy Warhol Museum", "Metropolitan Museum of Art"]
     },
     {
       "age": 46,
       "year": 1974,
       "total": 82,
       "institution": 80,
-      "discourse": 82,
+      "discourse": 83,
       "academy": 72,
       "network": 90,
-      "context": "타임캡슐 프로젝트",
+      "context": "타임캡슐 프로젝트 시작",
+      "keyEvent": "Time Capsules 아카이빙 시작",
       "confidence": "high",
       "sources": ["Andy Warhol Museum"]
     },
@@ -189,88 +197,130 @@
       "year": 1976,
       "total": 84,
       "institution": 82,
-      "discourse": 84,
+      "discourse": 85,
       "academy": 74,
-      "network": 90,
-      "context": "해골 시리즈",
-      "keyEvent": "Skull Series",
+      "network": 92,
+      "context": "해골 시리즈, 죽음의 주제",
+      "keyEvent": "Skull Series 제작",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum"]
+      "sources": ["Andy Warhol Museum", "Gagosian"]
     },
     {
       "age": 50,
       "year": 1978,
       "total": 85,
       "institution": 84,
-      "discourse": 85,
+      "discourse": 86,
       "academy": 76,
-      "network": 90,
-      "context": "산화 회화 시리즈",
-      "keyEvent": "Oxidation Paintings",
+      "network": 92,
+      "context": "산화 회화, 실험적 기법",
+      "keyEvent": "Oxidation Paintings (Piss Paintings)",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum"]
+      "sources": ["Andy Warhol Museum", "MoMA"]
     },
     {
       "age": 52,
       "year": 1980,
-      "total": 87,
-      "institution": 86,
-      "discourse": 86,
+      "total": 86,
+      "institution": 85,
+      "discourse": 87,
       "academy": 78,
-      "network": 92,
-      "context": "신예술 운동과 협업",
+      "network": 93,
+      "context": "신표현주의와 교류",
+      "keyEvent": "바스키아, 해링 등 젊은 작가와 교류",
       "confidence": "high",
-      "sources": ["MoMA"]
+      "sources": ["MoMA", "Andy Warhol Museum"]
     },
     {
       "age": 54,
       "year": 1982,
       "total": 88,
       "institution": 87,
-      "discourse": 88,
+      "discourse": 89,
       "academy": 80,
-      "network": 92,
-      "context": "바스키아와 협업",
-      "keyEvent": "Basquiat Collaborations",
+      "network": 94,
+      "context": "바스키아와 우정, 협업 시작",
+      "keyEvent": "Jean-Michel Basquiat 협업 시작",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum", "MoMA"]
+      "sources": ["Andy Warhol Museum", "MoMA", "Gagosian"]
     },
     {
       "age": 56,
       "year": 1984,
       "total": 89,
       "institution": 88,
-      "discourse": 88,
+      "discourse": 90,
       "academy": 82,
-      "network": 92,
-      "context": "추상화 연작",
+      "network": 94,
+      "context": "협업 회화 대규모 전시",
+      "keyEvent": "Warhol-Basquiat 협업전",
       "confidence": "high",
-      "sources": ["Andy Warhol Museum"]
+      "sources": ["Andy Warhol Museum", "Tony Shafrazi Gallery"]
     },
     {
       "age": 58,
       "year": 1986,
       "total": 90,
       "institution": 90,
-      "discourse": 90,
+      "discourse": 91,
       "academy": 85,
-      "network": 92,
-      "context": "최후의 만찬 시리즈",
-      "keyEvent": "Last Supper Series",
+      "network": 93,
+      "context": "최후의 만찬 시리즈, 종교적 주제",
+      "keyEvent": "Last Supper Series 밀라노 전시",
       "confidence": "high",
       "sources": ["Andy Warhol Museum", "Guggenheim"]
+    },
+    {
+      "age": 60,
+      "year": 1988,
+      "total": 95,
+      "institution": 95,
+      "discourse": 96,
+      "academy": 92,
+      "network": 95,
+      "context": "사후 1년, 유산 정리 시작",
+      "keyEvent": "Andy Warhol Foundation 설립 (사후)",
+      "confidence": "high",
+      "sources": ["Andy Warhol Foundation", "MoMA"]
+    },
+    {
+      "age": 70,
+      "year": 1998,
+      "total": 97,
+      "institution": 97,
+      "discourse": 98,
+      "academy": 95,
+      "network": 96,
+      "context": "사후 명성 급상승",
+      "keyEvent": "Andy Warhol Museum 피츠버그 개관 (1994)",
+      "confidence": "high",
+      "sources": ["Andy Warhol Museum", "MoMA"]
+    },
+    {
+      "age": 80,
+      "year": 2008,
+      "total": 98,
+      "institution": 98,
+      "discourse": 98,
+      "academy": 97,
+      "network": 97,
+      "context": "21세기 최고 경매가 작가 반열",
+      "keyEvent": "Eight Elvises $1억 돌파",
+      "confidence": "high",
+      "sources": ["Christie's", "Sotheby's", "Andy Warhol Museum"]
     }
   ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
     "primarySources": [
-      "Andy Warhol Museum",
+      "Andy Warhol Museum Pittsburgh",
       "MoMA Archives",
-      "Whitney Museum",
-      "Gagosian Gallery"
+      "Whitney Museum of American Art",
+      "Andy Warhol Foundation",
+      "Gagosian Gallery",
+      "Christie's Archives"
     ],
     "verificationStatus": "verified"
   }
 }
-

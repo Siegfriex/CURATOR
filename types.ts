@@ -143,3 +143,40 @@ export interface ComparativeTrajectory {
   artist2: string;
   data: TrajectoryDataPoint[];
 }
+
+// ========== Game Integration Types ==========
+
+/**
+ * Game metrics from Curator's Odysseia
+ * Mapping: inst→Institutional, net→Market Value, acad→Critical Acclaim, hist→Historical, disc→Social Impact
+ */
+export interface GameMetrics {
+  inst: number;      // → Institutional
+  net: number;       // → Market Value
+  acad: number;      // → Critical Acclaim
+  hist: number;      // → Historical
+  disc: number;      // → Social Impact
+}
+
+export interface GameTimelineEvent {
+  age: number;
+  event: string;
+}
+
+export interface GameArtifacts {
+  t1: number;  // Masterpieces
+  t2: number;  // Commercial Works
+  t3: number;  // Sketches
+}
+
+export interface GameResult {
+  metrics: GameMetrics;
+  timeline: GameTimelineEvent[];
+  artifacts: GameArtifacts;
+  score: number;
+  archetype: string;
+  match: string;           // Should match one of MOCK_ARTISTS names
+  narrative: string;
+  matchedArtistId?: string; // Computed: matched artist's ID
+  timestamp?: number;       // When the game was completed
+}
