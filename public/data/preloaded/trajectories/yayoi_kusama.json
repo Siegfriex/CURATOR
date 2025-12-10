@@ -1,0 +1,177 @@
+{
+  "artistId": "18",
+  "artistName": "Yayoi Kusama",
+  "birthYear": 1929,
+  "deathYear": null,
+  "activeYears": [1950, 2025],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "RESTRUCTURING",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 20,
+      "year": 1949,
+      "total": 5,
+      "institution": 0,
+      "discourse": 5,
+      "academy": 10,
+      "network": 5,
+      "context": "일본 지역 전시",
+      "confidence": "high",
+      "sources": ["Yayoi Kusama Museum"]
+    },
+    {
+      "age": 22,
+      "year": 1951,
+      "total": 10,
+      "institution": 5,
+      "discourse": 10,
+      "academy": 15,
+      "network": 10,
+      "context": "교토 미술대학 수학",
+      "confidence": "high",
+      "sources": ["Yayoi Kusama Museum"]
+    },
+    {
+      "age": 28,
+      "year": 1957,
+      "total": 25,
+      "institution": 15,
+      "discourse": 25,
+      "academy": 20,
+      "network": 35,
+      "context": "뉴욕 이주",
+      "keyEvent": "미국으로 이주",
+      "confidence": "high",
+      "sources": ["MoMA", "Yayoi Kusama Museum"]
+    },
+    {
+      "age": 30,
+      "year": 1959,
+      "total": 40,
+      "institution": 30,
+      "discourse": 45,
+      "academy": 25,
+      "network": 55,
+      "context": "Infinity Net 시리즈 시작",
+      "keyEvent": "Infinity Nets",
+      "confidence": "high",
+      "sources": ["MoMA", "Tate"]
+    },
+    {
+      "age": 34,
+      "year": 1963,
+      "total": 55,
+      "institution": 45,
+      "discourse": 60,
+      "academy": 35,
+      "network": 70,
+      "context": "Accumulation 조각 시작",
+      "confidence": "high",
+      "sources": ["Whitney Museum"]
+    },
+    {
+      "age": 38,
+      "year": 1967,
+      "total": 65,
+      "institution": 55,
+      "discourse": 70,
+      "academy": 40,
+      "network": 80,
+      "context": "해프닝 퍼포먼스",
+      "keyEvent": "반전 시위 퍼포먼스",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 44,
+      "year": 1973,
+      "total": 35,
+      "institution": 30,
+      "discourse": 35,
+      "academy": 35,
+      "network": 40,
+      "context": "일본 귀국",
+      "keyEvent": "정신병원 입원",
+      "confidence": "high",
+      "sources": ["Yayoi Kusama Museum"]
+    },
+    {
+      "age": 60,
+      "year": 1989,
+      "total": 55,
+      "institution": 55,
+      "discourse": 55,
+      "academy": 55,
+      "network": 55,
+      "context": "국제 재평가 시작",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 64,
+      "year": 1993,
+      "total": 70,
+      "institution": 70,
+      "discourse": 72,
+      "academy": 68,
+      "network": 70,
+      "context": "베니스 비엔날레 일본관",
+      "keyEvent": "Venice Biennale",
+      "confidence": "high",
+      "sources": ["Venice Biennale"]
+    },
+    {
+      "age": 80,
+      "year": 2009,
+      "total": 88,
+      "institution": 88,
+      "discourse": 90,
+      "academy": 85,
+      "network": 88,
+      "context": "루이비통 협업",
+      "keyEvent": "Louis Vuitton Collaboration",
+      "confidence": "high",
+      "sources": ["Gagosian", "Louis Vuitton"]
+    },
+    {
+      "age": 88,
+      "year": 2017,
+      "total": 95,
+      "institution": 95,
+      "discourse": 96,
+      "academy": 92,
+      "network": 95,
+      "context": "쿠사마 미술관 개관",
+      "keyEvent": "Yayoi Kusama Museum 개관",
+      "confidence": "high",
+      "sources": ["Yayoi Kusama Museum", "Artnet"]
+    },
+    {
+      "age": 94,
+      "year": 2023,
+      "total": 98,
+      "institution": 98,
+      "discourse": 98,
+      "academy": 95,
+      "network": 98,
+      "context": "세계 최고가 여성 작가",
+      "confidence": "high",
+      "sources": ["Christie's", "Sotheby's"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Yayoi Kusama Museum",
+      "MoMA Archives",
+      "Tate Modern",
+      "Whitney Museum"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

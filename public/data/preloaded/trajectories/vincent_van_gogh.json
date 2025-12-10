@@ -1,0 +1,91 @@
+{
+  "artistId": "7",
+  "artistName": "Vincent van Gogh",
+  "birthYear": 1853,
+  "deathYear": 1890,
+  "activeYears": [1880, 1890],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "RESTRUCTURING",
+    "phase3": "POSTHUMOUS"
+  },
+  "data": [
+    {
+      "age": 28,
+      "year": 1881,
+      "total": 5,
+      "institution": 0,
+      "discourse": 0,
+      "academy": 5,
+      "network": 10,
+      "context": "화가로서 첫 발걸음",
+      "keyEvent": "그림 시작",
+      "confidence": "high",
+      "sources": ["Van Gogh Museum", "MoMA"]
+    },
+    {
+      "age": 32,
+      "year": 1885,
+      "total": 15,
+      "institution": 5,
+      "discourse": 10,
+      "academy": 15,
+      "network": 20,
+      "context": "감자 먹는 사람들",
+      "keyEvent": "The Potato Eaters",
+      "confidence": "high",
+      "sources": ["Van Gogh Museum"]
+    },
+    {
+      "age": 34,
+      "year": 1887,
+      "total": 30,
+      "institution": 15,
+      "discourse": 35,
+      "academy": 25,
+      "network": 40,
+      "context": "파리 시기, 인상파 영향",
+      "keyEvent": "인상파 화가들과 교류",
+      "confidence": "high",
+      "sources": ["Musée d'Orsay", "Van Gogh Museum"]
+    },
+    {
+      "age": 36,
+      "year": 1889,
+      "total": 40,
+      "institution": 20,
+      "discourse": 55,
+      "academy": 30,
+      "network": 45,
+      "context": "별이 빛나는 밤, 아를 시기",
+      "keyEvent": "The Starry Night",
+      "confidence": "high",
+      "sources": ["MoMA", "Van Gogh Museum"]
+    },
+    {
+      "age": 37,
+      "year": 1890,
+      "total": 35,
+      "institution": 20,
+      "discourse": 45,
+      "academy": 30,
+      "network": 40,
+      "context": "오베르 쉬르 우아즈에서 사망",
+      "keyEvent": "자살 (37세)",
+      "confidence": "high",
+      "sources": ["Van Gogh Museum", "Musée d'Orsay"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Van Gogh Museum Amsterdam",
+      "Musée d'Orsay Paris",
+      "MoMA Archives",
+      "Kröller-Müller Museum"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

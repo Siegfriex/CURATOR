@@ -1,0 +1,228 @@
+{
+  "artistId": "6",
+  "artistName": "Pablo Picasso",
+  "birthYear": 1881,
+  "deathYear": 1973,
+  "eras": [
+    {
+      "eraLabel": "Early Career",
+      "eraLabelKo": "초기 경력",
+      "ageRange": "20s-35s",
+      "startYear": 1901,
+      "endYear": 1916,
+      "moodColor": "#E53E3E",
+      "summary": "Pablo Picasso의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1906,
+          "title": "1906년 주요 활동",
+          "titleEn": "Major Activity in 1906",
+          "category": "Exhibition",
+          "description": "Pablo Picasso이(가) 초기 경력 시기인 1906년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Pablo Picasso in 1906, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1911,
+          "title": "1911년 주요 활동",
+          "titleEn": "Major Activity in 1911",
+          "category": "Masterpiece",
+          "description": "Pablo Picasso이(가) 초기 경력 시기인 1911년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Pablo Picasso in 1911, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Mid Career",
+      "eraLabelKo": "중기 발전",
+      "ageRange": "35s-50s",
+      "startYear": 1916,
+      "endYear": 1931,
+      "moodColor": "#D69E2E",
+      "summary": "Pablo Picasso의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1921,
+          "title": "1921년 주요 활동",
+          "titleEn": "Major Activity in 1921",
+          "category": "Exhibition",
+          "description": "Pablo Picasso이(가) 중기 발전 시기인 1921년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Pablo Picasso in 1921, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1926,
+          "title": "1926년 주요 활동",
+          "titleEn": "Major Activity in 1926",
+          "category": "Masterpiece",
+          "description": "Pablo Picasso이(가) 중기 발전 시기인 1926년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Pablo Picasso in 1926, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Mature Period",
+      "eraLabelKo": "성숙기",
+      "ageRange": "50s-65s",
+      "startYear": 1931,
+      "endYear": 1946,
+      "moodColor": "#38BDF8",
+      "summary": "Pablo Picasso의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1936,
+          "title": "1936년 주요 활동",
+          "titleEn": "Major Activity in 1936",
+          "category": "Exhibition",
+          "description": "Pablo Picasso이(가) 성숙기 시기인 1936년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Pablo Picasso in 1936, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1941,
+          "title": "1941년 주요 활동",
+          "titleEn": "Major Activity in 1941",
+          "category": "Masterpiece",
+          "description": "Pablo Picasso이(가) 성숙기 시기인 1941년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Pablo Picasso in 1941, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Late Career",
+      "eraLabelKo": "후기 경력",
+      "ageRange": "65s-80s",
+      "startYear": 1946,
+      "endYear": 1961,
+      "moodColor": "#2D3748",
+      "summary": "Pablo Picasso의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1951,
+          "title": "1951년 주요 활동",
+          "titleEn": "Major Activity in 1951",
+          "category": "Exhibition",
+          "description": "Pablo Picasso이(가) 후기 경력 시기인 1951년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Pablo Picasso in 1951, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1956,
+          "title": "1956년 주요 활동",
+          "titleEn": "Major Activity in 1956",
+          "category": "Masterpiece",
+          "description": "Pablo Picasso이(가) 후기 경력 시기인 1956년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Pablo Picasso in 1956, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    }
+  ],
+  "critiques": [],
+  "masterpieces": [],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [],
+    "verificationStatus": "ai_generated"
+  }
+}

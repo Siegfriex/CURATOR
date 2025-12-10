@@ -1,0 +1,228 @@
+{
+  "artistId": "7",
+  "artistName": "Vincent van Gogh",
+  "birthYear": 1853,
+  "deathYear": 1890,
+  "eras": [
+    {
+      "eraLabel": "Early Career",
+      "eraLabelKo": "초기 경력",
+      "ageRange": "20s-24s",
+      "startYear": 1873,
+      "endYear": 1877,
+      "moodColor": "#E53E3E",
+      "summary": "Vincent van Gogh의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1874,
+          "title": "1874년 주요 활동",
+          "titleEn": "Major Activity in 1874",
+          "category": "Exhibition",
+          "description": "Vincent van Gogh이(가) 초기 경력 시기인 1874년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Vincent van Gogh in 1874, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1875,
+          "title": "1875년 주요 활동",
+          "titleEn": "Major Activity in 1875",
+          "category": "Masterpiece",
+          "description": "Vincent van Gogh이(가) 초기 경력 시기인 1875년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Vincent van Gogh in 1875, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Mid Career",
+      "eraLabelKo": "중기 발전",
+      "ageRange": "24s-28s",
+      "startYear": 1877,
+      "endYear": 1881,
+      "moodColor": "#D69E2E",
+      "summary": "Vincent van Gogh의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1878,
+          "title": "1878년 주요 활동",
+          "titleEn": "Major Activity in 1878",
+          "category": "Exhibition",
+          "description": "Vincent van Gogh이(가) 중기 발전 시기인 1878년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Vincent van Gogh in 1878, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1879,
+          "title": "1879년 주요 활동",
+          "titleEn": "Major Activity in 1879",
+          "category": "Masterpiece",
+          "description": "Vincent van Gogh이(가) 중기 발전 시기인 1879년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Vincent van Gogh in 1879, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Mature Period",
+      "eraLabelKo": "성숙기",
+      "ageRange": "28s-32s",
+      "startYear": 1881,
+      "endYear": 1885,
+      "moodColor": "#38BDF8",
+      "summary": "Vincent van Gogh의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1882,
+          "title": "1882년 주요 활동",
+          "titleEn": "Major Activity in 1882",
+          "category": "Exhibition",
+          "description": "Vincent van Gogh이(가) 성숙기 시기인 1882년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Vincent van Gogh in 1882, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1883,
+          "title": "1883년 주요 활동",
+          "titleEn": "Major Activity in 1883",
+          "category": "Masterpiece",
+          "description": "Vincent van Gogh이(가) 성숙기 시기인 1883년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Vincent van Gogh in 1883, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Late Career",
+      "eraLabelKo": "후기 경력",
+      "ageRange": "32s-36s",
+      "startYear": 1885,
+      "endYear": 1889,
+      "moodColor": "#2D3748",
+      "summary": "Vincent van Gogh의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1886,
+          "title": "1886년 주요 활동",
+          "titleEn": "Major Activity in 1886",
+          "category": "Exhibition",
+          "description": "Vincent van Gogh이(가) 후기 경력 시기인 1886년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Vincent van Gogh in 1886, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1887,
+          "title": "1887년 주요 활동",
+          "titleEn": "Major Activity in 1887",
+          "category": "Masterpiece",
+          "description": "Vincent van Gogh이(가) 후기 경력 시기인 1887년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Vincent van Gogh in 1887, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    }
+  ],
+  "critiques": [],
+  "masterpieces": [],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [],
+    "verificationStatus": "ai_generated"
+  }
+}

@@ -1,13 +1,15 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { MOCK_ARTISTS, METRIC_DETAILS, COLORS } from './constants';
 import { AppView, Artist, GroundingSource, DashboardData, Masterpiece } from './types';
 import { RadarChartComponent } from './components/RadarChartComponent';
 import { LineChartComponent } from './components/LineChartComponent';
-import { DeepDiveTab } from './components/DeepDiveTab';
-import { ConnectedTab } from './components/ConnectedTab';
 import { generateMetricInsight, findSimilarArtists, generateComparativeAnalysis, fetchArtistDashboardData, fetchMasterpiecesByMetric, generateEventImage } from './services/geminiService';
 import ReactMarkdown from 'react-markdown';
+
+// Lazy load heavy components
+const DeepDiveTab = lazy(() => import('./components/DeepDiveTab'));
+const ConnectedTab = lazy(() => import('./components/ConnectedTab'));
 
 // --- Lazy Loading Component ---
 const FadeInSection: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = "" }) => {
@@ -602,18 +604,22 @@ export const App: React.FC = () => {
         {/* CONNECTED VIEW (Visual Archive) */}
         {activeView === AppView.CONNECTED && (
           <div className="animate-fade-in min-h-[calc(100vh-64px)]">
-             <ConnectedTab 
-               artists={MOCK_ARTISTS} 
-               onDeepDive={handleConnectedDeepDive} 
-               currentOverviewArtist={displayArtist}
-             />
+            <Suspense fallback={<div className="flex items-center justify-center min-h-[calc(100vh-64px)]"><NauticalSpinner /></div>}>
+              <ConnectedTab 
+                artists={MOCK_ARTISTS} 
+                onDeepDive={handleConnectedDeepDive} 
+                currentOverviewArtist={displayArtist}
+              />
+            </Suspense>
           </div>
         )}
 
         {/* DEEP DIVE VIEW (Narrative Sync) */}
         {activeView === AppView.DEEP_DIVE && (
           <div className="animate-fade-in">
-             <DeepDiveTab artist={displayArtist} />
+            <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><NauticalSpinner /></div>}>
+              <DeepDiveTab artist={displayArtist} />
+            </Suspense>
           </div>
         )}
       </main>

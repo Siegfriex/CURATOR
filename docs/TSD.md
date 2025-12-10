@@ -736,7 +736,8 @@ export type ComparativeTrajectory = z.infer<typeof ComparativeTrajectorySchema>;
 
 ### 4.1 API 기본 정보
 
-- **Base URL**: `https://asia-northeast3-curatorproto.cloudfunctions.net`
+- **Base URL**: `https://us-central1-curatorproto.cloudfunctions.net` (기본값)
+- **참고**: 환경 변수 `VITE_FUNCTIONS_URL`로 오버라이드 가능
 - **인증**: 현재 없음 (향후 추가 예정)
 - **응답 형식**: JSON
 - **CORS**: 모든 엔드포인트에서 지원
@@ -1016,7 +1017,7 @@ const HIGH_PRIORITY_CONFIG = {
   concurrency: 80,
   timeoutSeconds: 60,
   memory: '512MiB' as const,
-  region: 'asia-northeast3',
+  region: 'us-central1',  // 기본 리전 (환경에 따라 변경 가능)
 };
 
 // 표준 함수
@@ -1027,7 +1028,7 @@ const STANDARD_CONFIG = {
   concurrency: 80,
   timeoutSeconds: 60,
   memory: '256MiB' as const,
-  region: 'asia-northeast3',
+  region: 'us-central1',  // 기본 리전 (환경에 따라 변경 가능)
 };
 ```
 

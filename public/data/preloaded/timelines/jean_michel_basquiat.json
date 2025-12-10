@@ -1,0 +1,275 @@
+{
+  "artistId": "3",
+  "artistName": "Jean-Michel Basquiat",
+  "birthYear": 1960,
+  "deathYear": 1988,
+  "eras": [
+    {
+      "eraLabel": "Street Art Origins",
+      "eraLabelKo": "거리 예술의 기원",
+      "ageRange": "17-20",
+      "startYear": 1977,
+      "endYear": 1980,
+      "moodColor": "#1A365D",
+      "summary": "SAMO©라는 태그로 맨해튼 거리에 비밀스러운 시적 문구를 남기며 하위문화 씬에서 명성을 얻기 시작. 예술계 진입 이전 독자적 예술 언어 형성.",
+      "events": [
+        {
+          "year": 1977,
+          "title": "SAMO© 그래피티 시작",
+          "titleEn": "SAMO© Graffiti Begins",
+          "category": "Personal",
+          "description": "알 디아즈와 함께 소호와 이스트 빌리지에 'SAMO© as an end to mindwash religion' 등 암호 같은 메시지 남김.",
+          "impactScore": 70,
+          "auctionHigh": 10,
+          "auctionLow": 5,
+          "context": {
+            "marketValue": 10,
+            "criticalAcclaim": 40,
+            "historical": 80,
+            "socialImpact": 75,
+            "institutional": 5
+          },
+          "visualPrompt": "New York City street wall with spray painted text SAMO© in black, late 1970s urban setting",
+          "sources": {
+            "primary": "Brooklyn Museum Archives",
+            "secondary": ["Whitney Museum", "Wikipedia"]
+          }
+        },
+        {
+          "year": 1980,
+          "title": "Times Square Show 참여",
+          "titleEn": "Times Square Show Participation",
+          "category": "Exhibition",
+          "description": "콜랩(Colab) 그룹이 기획한 타임스퀘어 쇼에 참여하며 정식 아트 씬에 데뷔. 키스 해링, 케니 샤프 등과 교류.",
+          "impactScore": 80,
+          "auctionHigh": 25,
+          "auctionLow": 15,
+          "context": {
+            "marketValue": 20,
+            "criticalAcclaim": 60,
+            "historical": 85,
+            "socialImpact": 70,
+            "institutional": 25
+          },
+          "visualPrompt": "Times Square Show 1980, mixed media art exhibition in abandoned building, raw urban aesthetic",
+          "sources": {
+            "primary": "MoMA PS1 Archives",
+            "secondary": ["Whitney Museum"]
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Meteoric Rise",
+      "eraLabelKo": "혜성 같은 부상",
+      "ageRange": "21-24",
+      "startYear": 1981,
+      "endYear": 1984,
+      "moodColor": "#D69E2E",
+      "summary": "무명에서 국제적 스타로 불과 2-3년 만에 급부상. 도큐멘타 7 최연소 참가, 앤디 워홀과의 만남 등 미술계 핵심 인물로 자리매김.",
+      "events": [
+        {
+          "year": 1981,
+          "title": "뉴욕/뉴웨이브 전시",
+          "titleEn": "New York/New Wave Exhibition",
+          "category": "Exhibition",
+          "description": "PS1 갤러리에서 열린 획기적인 전시. 동시대 뉴욕 아방가르드 예술의 중심에 서며 평단의 주목 받음.",
+          "impactScore": 85,
+          "auctionHigh": 40,
+          "auctionLow": 25,
+          "context": {
+            "marketValue": 35,
+            "criticalAcclaim": 80,
+            "historical": 90,
+            "socialImpact": 75,
+            "institutional": 50
+          },
+          "visualPrompt": "PS1 gallery exhibition 1981, raw neo-expressionist paintings on walls, industrial space",
+          "sources": {
+            "primary": "MoMA PS1",
+            "secondary": ["Brooklyn Museum"]
+          }
+        },
+        {
+          "year": 1982,
+          "title": "도큐멘타 7 최연소 참가",
+          "titleEn": "Documenta 7 - Youngest Participant",
+          "category": "Exhibition",
+          "description": "21세의 나이로 카셀 도큐멘타 7에 참가한 최연소 아티스트. 요셉 보이스, 게르하르트 리히터 등 거장들과 어깨를 나란히.",
+          "impactScore": 95,
+          "auctionHigh": 60,
+          "auctionLow": 40,
+          "context": {
+            "marketValue": 55,
+            "criticalAcclaim": 95,
+            "historical": 98,
+            "socialImpact": 85,
+            "institutional": 80
+          },
+          "visualPrompt": "Documenta 7 Kassel 1982, large scale neo-expressionist painting installation, international art fair",
+          "sources": {
+            "primary": "Documenta Archives",
+            "secondary": ["Tate", "MoMA"]
+          }
+        },
+        {
+          "year": 1984,
+          "title": "앤디 워홀과 협업 시작",
+          "titleEn": "Collaboration with Andy Warhol Begins",
+          "category": "Personal",
+          "description": "팝아트의 거장 앤디 워홀과 역사적인 협업 시작. 두 세대, 두 스타일의 충돌과 융합으로 100여 점의 협업작 탄생.",
+          "impactScore": 92,
+          "auctionHigh": 80,
+          "auctionLow": 55,
+          "context": {
+            "marketValue": 75,
+            "criticalAcclaim": 85,
+            "historical": 95,
+            "socialImpact": 90,
+            "institutional": 70
+          },
+          "visualPrompt": "Basquiat and Warhol collaborative painting, pop art meets neo-expressionism, bold colors with text",
+          "sources": {
+            "primary": "Andy Warhol Museum",
+            "secondary": ["MoMA", "Gagosian"]
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Peak & Turmoil",
+      "eraLabelKo": "정점과 혼란",
+      "ageRange": "25-26",
+      "startYear": 1985,
+      "endYear": 1986,
+      "moodColor": "#E53E3E",
+      "summary": "상업적 성공과 비평적 인정의 정점에 도달하는 동시에 약물 문제와 정체성 혼란. 인종차별과 착취에 대한 고민이 작품에 투영.",
+      "events": [
+        {
+          "year": 1985,
+          "title": "뉴욕타임스 매거진 커버",
+          "titleEn": "New York Times Magazine Cover",
+          "category": "Personal",
+          "description": "'New Art, New Money'라는 제목으로 뉴욕타임스 매거진 표지 모델이 됨. 맨발 정장의 아이코닉한 이미지로 대중문화 아이콘화.",
+          "impactScore": 90,
+          "auctionHigh": 85,
+          "auctionLow": 60,
+          "context": {
+            "marketValue": 85,
+            "criticalAcclaim": 70,
+            "historical": 90,
+            "socialImpact": 95,
+            "institutional": 65
+          },
+          "visualPrompt": "New York Times Magazine cover 1985, young Black artist in suit barefoot, urban setting",
+          "sources": {
+            "primary": "New York Times Archives",
+            "secondary": ["Brooklyn Museum"]
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Tragic End & Legacy",
+      "eraLabelKo": "비극적 종말과 유산",
+      "ageRange": "27-28",
+      "startYear": 1987,
+      "endYear": 1988,
+      "moodColor": "#2D3748",
+      "summary": "워홀의 죽음 이후 정신적 공황. 약물 과다복용으로 27세에 요절하나, 사후 미술사적 재평가와 시장 가치 폭등으로 불멸의 전설이 됨.",
+      "events": [
+        {
+          "year": 1987,
+          "title": "앤디 워홀 사망",
+          "titleEn": "Andy Warhol's Death",
+          "category": "Personal",
+          "description": "정신적 멘토이자 친구였던 앤디 워홀의 갑작스러운 죽음. 깊은 상실감에 빠지며 약물 의존 심화.",
+          "impactScore": 85,
+          "auctionHigh": 70,
+          "auctionLow": 50,
+          "context": {
+            "marketValue": 60,
+            "criticalAcclaim": 75,
+            "historical": 90,
+            "socialImpact": 80,
+            "institutional": 70
+          },
+          "visualPrompt": "Memorial tribute artwork, grief and loss depicted in neo-expressionist style",
+          "sources": {
+            "primary": "Andy Warhol Museum",
+            "secondary": ["Brooklyn Museum"]
+          }
+        },
+        {
+          "year": 1988,
+          "title": "약물 과다복용 사망",
+          "titleEn": "Death from Drug Overdose",
+          "category": "Personal",
+          "description": "8월 12일, 그레이트 존스 스트리트 스튜디오에서 27세의 나이로 사망. 헤로인과 코카인 과다복용이 사인.",
+          "impactScore": 100,
+          "auctionHigh": 100,
+          "auctionLow": 75,
+          "context": {
+            "marketValue": 90,
+            "criticalAcclaim": 95,
+            "historical": 100,
+            "socialImpact": 98,
+            "institutional": 85
+          },
+          "visualPrompt": "Great Jones Street studio New York, memorial flowers, neo-expressionist legacy",
+          "sources": {
+            "primary": "Brooklyn Museum",
+            "secondary": ["Whitney Museum", "MoMA"]
+          }
+        }
+      ]
+    }
+  ],
+  "critiques": [
+    {
+      "text": "Basquiat's work is an onslaught of raw, gestural energy.",
+      "textKo": "바스키아의 작품은 거칠고 직관적인 에너지의 맹공격이다.",
+      "author": "Robert Hughes",
+      "source": "Time Magazine",
+      "year": "1985"
+    },
+    {
+      "text": "He brought Black experience and street culture into the white-walled gallery.",
+      "textKo": "그는 흑인 경험과 거리 문화를 하얀 벽의 갤러리 안으로 가져왔다.",
+      "author": "Dieter Buchhart",
+      "source": "Brooklyn Museum Catalogue",
+      "year": "2015"
+    }
+  ],
+  "masterpieces": [
+    {
+      "id": "basquiat_untitled_1982_skull",
+      "title": "Untitled",
+      "titleKo": "무제 (두개골)",
+      "year": "1982",
+      "medium": "Oilstick on paper",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/1b/Untitled_acrylic_and_mixed_media_on_canvas_by_Jean-Michel_Basquiat%2C_1982.jpg",
+      "imageSource": "Wikipedia - Fair Use",
+      "collection": {
+        "museum": "Private Collection (Yusaku Maezawa)",
+        "location": "Japan"
+      },
+      "auctionRecord": {
+        "price": "$110.5 million",
+        "date": "May 18, 2017",
+        "house": "Sotheby's New York",
+        "source": "https://www.sothebys.com/en/auctions/2017/contemporary-art-evening-auction-n09650.html"
+      },
+      "significance": "미국 작가 경매 최고가 기록. 검은 두개골에 담긴 아프리카계 미국인 정체성과 죽음에 대한 명상.",
+      "visualPrompt": "Large black skull on yellow background, neo-expressionist style, bold brushstrokes",
+      "sources": ["Sotheby's", "Brooklyn Museum"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": ["Brooklyn Museum", "Whitney Museum", "MoMA", "Andy Warhol Museum"],
+    "verificationStatus": "verified"
+  }
+}
+

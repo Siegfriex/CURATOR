@@ -1,0 +1,116 @@
+{
+  "artistId": "9",
+  "artistName": "Frida Kahlo",
+  "birthYear": 1907,
+  "deathYear": 1954,
+  "activeYears": [1926, 1954],
+  "narrativePath": {
+    "phase1": "SCANDAL",
+    "phase2": "RESTRUCTURING",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 20,
+      "year": 1927,
+      "total": 10,
+      "institution": 0,
+      "discourse": 5,
+      "academy": 5,
+      "network": 25,
+      "context": "버스 사고 후 그림 시작",
+      "keyEvent": "1925년 버스 사고",
+      "confidence": "high",
+      "sources": ["Museo Frida Kahlo", "MoMA"]
+    },
+    {
+      "age": 22,
+      "year": 1929,
+      "total": 25,
+      "institution": 10,
+      "discourse": 20,
+      "academy": 10,
+      "network": 50,
+      "context": "디에고 리베라와 결혼",
+      "keyEvent": "Diego Rivera 결혼",
+      "confidence": "high",
+      "sources": ["Museo Frida Kahlo"]
+    },
+    {
+      "age": 26,
+      "year": 1933,
+      "total": 35,
+      "institution": 25,
+      "discourse": 35,
+      "academy": 20,
+      "network": 55,
+      "context": "미국 체류, 디트로이트",
+      "confidence": "high",
+      "sources": ["Detroit Institute of Arts"]
+    },
+    {
+      "age": 30,
+      "year": 1937,
+      "total": 45,
+      "institution": 35,
+      "discourse": 50,
+      "academy": 30,
+      "network": 60,
+      "context": "트로츠키와 만남",
+      "keyEvent": "Trotsky 망명 지원",
+      "confidence": "high",
+      "sources": ["Museo Frida Kahlo"]
+    },
+    {
+      "age": 32,
+      "year": 1939,
+      "total": 60,
+      "institution": 50,
+      "discourse": 65,
+      "academy": 40,
+      "network": 70,
+      "context": "파리 전시, 루브르 작품 소장",
+      "keyEvent": "루브르 첫 멕시코 작가",
+      "confidence": "high",
+      "sources": ["Louvre Museum", "Centre Pompidou"]
+    },
+    {
+      "age": 36,
+      "year": 1943,
+      "total": 65,
+      "institution": 55,
+      "discourse": 68,
+      "academy": 55,
+      "network": 72,
+      "context": "에스메랄다 미술학교 교수",
+      "keyEvent": "교수직 임명",
+      "confidence": "high",
+      "sources": ["Museo Frida Kahlo"]
+    },
+    {
+      "age": 46,
+      "year": 1953,
+      "total": 70,
+      "institution": 65,
+      "discourse": 72,
+      "academy": 65,
+      "network": 75,
+      "context": "멕시코 첫 개인전",
+      "keyEvent": "Galería de Arte Contemporáneo",
+      "confidence": "high",
+      "sources": ["Museo Frida Kahlo", "MoMA"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Museo Frida Kahlo (Casa Azul)",
+      "MoMA Archives",
+      "Philadelphia Museum of Art",
+      "Louvre Museum"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

@@ -141,17 +141,36 @@ export const ConnectedTab: React.FC<Props> = ({ artists: initialArtists, onDeepD
     }
   };
 
+  // Reset data when artist selection changes
+  useEffect(() => {
+    if (selectedArtistId) {
+      // Clear previous data when artist changes
+      setTrajectoryData(null);
+      setComparisonResult(null);
+      setMasterpieces([]);
+    }
+  }, [selectedArtistId, currentOverviewArtist?.name]);
+
   // Trigger Data Fetching on Selection
   useEffect(() => {
     if (selectedArtist && currentOverviewArtist) {
-      // Skip if already have data for this comparison
-      const comparisonKey = `${currentOverviewArtist.name}:${selectedArtist.name}`;
+      // Check if we already have data for this specific comparison
       const hasComparison = comparisonResult && 
-        (comparisonResult.text.includes(currentOverviewArtist.name) || comparisonResult.text.includes(selectedArtist.name));
+        comparisonResult.text && 
+        comparisonResult.text.includes(currentOverviewArtist.name) && 
+        comparisonResult.text.includes(selectedArtist.name);
+      
       const hasTrajectory = trajectoryData && 
-        trajectoryData.artist1 === currentOverviewArtist.name && trajectoryData.artist2 === selectedArtist.name;
-      const hasGallery = masterpieces.length > 0;
+        trajectoryData.artist1 === currentOverviewArtist.name && 
+        trajectoryData.artist2 === selectedArtist.name &&
+        trajectoryData.data &&
+        Array.isArray(trajectoryData.data) &&
+        trajectoryData.data.length > 0;
+      
+      const hasGallery = masterpieces.length > 0 && 
+        masterpieces.some(m => m.title && m.title !== "Masterpiece I");
 
+      // If all data is valid, skip fetching
       if (hasComparison && hasTrajectory && hasGallery) {
         return;
       }
@@ -166,21 +185,32 @@ export const ConnectedTab: React.FC<Props> = ({ artists: initialArtists, onDeepD
               "Artistic Trajectory & Market Positioning"
             );
             setComparisonResult(compRes);
-          } catch(e) { console.error(e) } finally { setLoadingComparison(false) }
+          } catch(e) { 
+            console.error("Error generating comparison:", e);
+            setComparisonResult(null);
+          } finally { 
+            setLoadingComparison(false);
+          }
         }
 
         if (!hasTrajectory) {
           setLoadingTrajectory(true);
           try {
             const trajData = await generateDetailedTrajectory(currentOverviewArtist.name, selectedArtist.name);
-            if (trajData && trajData.data && Array.isArray(trajData.data)) {
+            // Validate data structure and check for fallback/error data
+            if (trajData && 
+                trajData.data && 
+                Array.isArray(trajData.data) && 
+                trajData.data.length > 0 &&
+                !trajData.error) { // Don't use fallback data
               setTrajectoryData(trajData);
             } else {
               console.error("Invalid trajectory data received:", trajData);
+              setTrajectoryData(null);
             }
           } catch(e) { 
             console.error("Error generating trajectory:", e);
-            // Keep loading state false so fallback message shows
+            setTrajectoryData(null);
           } finally { 
             setLoadingTrajectory(false);
           }
@@ -190,14 +220,23 @@ export const ConnectedTab: React.FC<Props> = ({ artists: initialArtists, onDeepD
           setLoadingGallery(true);
           try {
             const gallery = await fetchMasterpiecesByMetric(selectedArtist.name, "Representative Works");
-            setMasterpieces(gallery);
-          } catch(e) { console.error(e) } finally { setLoadingGallery(false) }
+            if (gallery && Array.isArray(gallery) && gallery.length > 0) {
+              setMasterpieces(gallery);
+            } else {
+              setMasterpieces([]);
+            }
+          } catch(e) { 
+            console.error("Error fetching masterpieces:", e);
+            setMasterpieces([]);
+          } finally { 
+            setLoadingGallery(false);
+          }
         }
       };
       
       fetchData();
     }
-  }, [selectedArtistId, currentOverviewArtist]);
+  }, [selectedArtistId, currentOverviewArtist?.name]);
 
   return (
     <div className="w-full min-h-screen bg-white">
@@ -384,7 +423,10 @@ export const ConnectedTab: React.FC<Props> = ({ artists: initialArtists, onDeepD
                     </div>
                     
                     <div className="lg:col-span-7 h-full max-h-[60vh] flex items-center justify-center">
-                       <div className="w-full aspect-square max-w-2xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 rounded-xl p-8 md:p-12 shadow-2xl backdrop-blur-2xl relative overflow-hidden">
+                       <div 
+                          className="w-full aspect-square max-w-2xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 rounded-xl p-8 md:p-12 shadow-2xl backdrop-blur-2xl relative overflow-hidden"
+                          style={{ minHeight: '400px', minWidth: '400px', width: '100%', height: '100%' }}
+                       >
                            <div className="absolute top-6 left-6 z-20 flex flex-col gap-3">
                            </div>
 
@@ -411,10 +453,10 @@ export const ConnectedTab: React.FC<Props> = ({ artists: initialArtists, onDeepD
                         <span className="text-[10px] uppercase tracking-widest text-gray-500 animate-pulse">Calculating Lifelong Trajectory...</span>
                      </div>
                  </div>
-              ) : trajectoryData ? (
-                 <div className="relative z-20">
+              ) : trajectoryData && trajectoryData.data && Array.isArray(trajectoryData.data) && trajectoryData.data.length > 0 ? (
+                 <div className="relative z-20 w-full" style={{ minHeight: '100vh', width: '100%' }}>
                     <TrajectoryTunnel 
-                       data={trajectoryData}
+                       data={trajectoryData.data}
                        artist1Name={currentOverviewArtist.name}
                        artist2Name={selectedArtist.name}
                        birthYear1={currentOverviewArtist.birthYear}
@@ -422,8 +464,11 @@ export const ConnectedTab: React.FC<Props> = ({ artists: initialArtists, onDeepD
                     />
                  </div>
               ) : (
-                 <div className="sticky top-0 h-screen w-full z-20 bg-[#0a0a0a] flex items-center justify-center text-gray-500 font-serif italic">
-                    Trajectory unavailable.
+                 <div className="sticky top-0 h-screen w-full z-20 bg-[#0a0a0a] flex items-center justify-center">
+                    <div className="text-gray-500 font-serif italic text-center px-8">
+                       <p className="mb-4">Trajectory unavailable.</p>
+                       <p className="text-xs text-gray-600">데이터를 불러오는 중입니다...</p>
+                    </div>
                  </div>
               )}
 
@@ -520,3 +565,5 @@ export const ConnectedTab: React.FC<Props> = ({ artists: initialArtists, onDeepD
     </div>
   );
 };
+
+export default ConnectedTab;

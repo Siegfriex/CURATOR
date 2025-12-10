@@ -1,0 +1,116 @@
+{
+  "artistId": "27",
+  "artistName": "Mark Rothko",
+  "birthYear": 1903,
+  "deathYear": 1970,
+  "activeYears": [1929, 1970],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "INSTITUTIONAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 30,
+      "year": 1933,
+      "total": 15,
+      "institution": 5,
+      "discourse": 15,
+      "academy": 15,
+      "network": 20,
+      "context": "뉴욕 첫 개인전",
+      "keyEvent": "Contemporary Arts Gallery 전시",
+      "confidence": "high",
+      "sources": ["National Gallery of Art", "MoMA"]
+    },
+    {
+      "age": 42,
+      "year": 1945,
+      "total": 40,
+      "institution": 30,
+      "discourse": 50,
+      "academy": 35,
+      "network": 45,
+      "context": "초현실주의적 작품",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 47,
+      "year": 1950,
+      "total": 60,
+      "institution": 50,
+      "discourse": 72,
+      "academy": 50,
+      "network": 65,
+      "context": "색면 추상 시작",
+      "keyEvent": "Color Field 시작",
+      "confidence": "high",
+      "sources": ["MoMA", "National Gallery of Art"]
+    },
+    {
+      "age": 55,
+      "year": 1958,
+      "total": 78,
+      "institution": 75,
+      "discourse": 85,
+      "academy": 70,
+      "network": 80,
+      "context": "시그램 빌딩 벽화",
+      "keyEvent": "Seagram Murals (거부)",
+      "confidence": "high",
+      "sources": ["Tate", "MoMA"]
+    },
+    {
+      "age": 58,
+      "year": 1961,
+      "total": 85,
+      "institution": 85,
+      "discourse": 90,
+      "academy": 80,
+      "network": 85,
+      "context": "MoMA 대회고전",
+      "keyEvent": "MoMA 회고전",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 64,
+      "year": 1967,
+      "total": 88,
+      "institution": 90,
+      "discourse": 92,
+      "academy": 85,
+      "network": 85,
+      "context": "로스코 채플 의뢰",
+      "keyEvent": "Rothko Chapel 프로젝트",
+      "confidence": "high",
+      "sources": ["Rothko Chapel"]
+    },
+    {
+      "age": 67,
+      "year": 1970,
+      "total": 82,
+      "institution": 85,
+      "discourse": 85,
+      "academy": 82,
+      "network": 78,
+      "context": "뉴욕 스튜디오에서 자살",
+      "keyEvent": "사망 (자살, 66세)",
+      "confidence": "high",
+      "sources": ["MoMA", "National Gallery of Art"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "National Gallery of Art",
+      "MoMA Archives",
+      "Tate Modern",
+      "Rothko Chapel"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

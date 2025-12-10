@@ -21,28 +21,23 @@ function getStorageBucket() {
     }
     return storageInstance;
 }
-// Define environment variable for Functions 2nd gen
-// Supports multiple methods:
-// 1. .env.curatorproto file (auto-loaded by defineString)
-// 2. firebase functions:config:set gemini.api_key="YOUR_KEY"
-// 3. firebase functions:secrets:set GEMINI_API_KEY
-const geminiApiKeyParam = (0, params_1.defineString)("GEMINI_API_KEY", {
-    default: "",
-});
-// Google Custom Search API credentials
-const googleCseApiKeyParam = (0, params_1.defineString)("GOOGLE_CSE_API_KEY", {
-    default: "",
-});
-const googleCseIdParam = (0, params_1.defineString)("GOOGLE_CSE_ID", {
-    default: "",
-});
+// Define secrets for Functions 2nd gen
+// Uses Secret Manager (firebase functions:secrets:set)
+const geminiApiKeySecret = (0, params_1.defineSecret)("GEMINI_API_KEY");
+const googleCseApiKeySecret = (0, params_1.defineSecret)("GOOGLE_CSE_API_KEY");
+const googleCseIdSecret = (0, params_1.defineSecret)("GOOGLE_CSE_ID");
 // Get API key from multiple sources
 function getApiKey() {
     var _a;
-    // Try defineString first (from .env.curatorproto or deployment params)
-    const paramValue = geminiApiKeyParam.value();
-    if (paramValue)
-        return paramValue;
+    // Try Secret Manager first (most secure)
+    try {
+        const secretValue = geminiApiKeySecret.value();
+        if (secretValue)
+            return secretValue;
+    }
+    catch (e) {
+        // Secret might not be available in local dev
+    }
     // Try functions.config() (legacy but still works)
     try {
         const config = functions.config();
@@ -53,7 +48,7 @@ function getApiKey() {
     catch (e) {
         // Ignore if config is not available
     }
-    // Try process.env
+    // Try process.env (for local development)
     if (process.env.GEMINI_API_KEY) {
         return process.env.GEMINI_API_KEY;
     }
@@ -83,7 +78,10 @@ function setSecurityHeaders(res) {
     });
 }
 // Dashboard Data Function
-exports.getDashboardData = (0, https_1.onRequest)({ cors: true }, async (req, res) => {
+exports.getDashboardData = (0, https_1.onRequest)({
+    secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+    cors: true
+}, async (req, res) => {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
     setSecurityHeaders(res);
     const artistName = req.query.artistName;
@@ -140,8 +138,8 @@ exports.getDashboardData = (0, https_1.onRequest)({ cors: true }, async (req, re
             data = {};
         }
         // Try to get real artist image first
-        const cseApiKey = googleCseApiKeyParam.value() || ((_b = (_a = functions.config().google) === null || _a === void 0 ? void 0 : _a.cse) === null || _b === void 0 ? void 0 : _b.api_key) || "";
-        const cseId = googleCseIdParam.value() || ((_d = (_c = functions.config().google) === null || _c === void 0 ? void 0 : _c.cse) === null || _d === void 0 ? void 0 : _d.id) || "";
+        const cseApiKey = googleCseApiKeySecret.value() || ((_b = (_a = functions.config().google) === null || _a === void 0 ? void 0 : _a.cse) === null || _b === void 0 ? void 0 : _b.api_key) || "";
+        const cseId = googleCseIdSecret.value() || ((_d = (_c = functions.config().google) === null || _c === void 0 ? void 0 : _c.cse) === null || _d === void 0 ? void 0 : _d.id) || "";
         let imageUrl = null;
         if (cseApiKey && cseId) {
             // Try to get real artist image from Wikipedia or Google Images
@@ -224,7 +222,10 @@ async function generateImage(prompt) {
     }
 }
 // Artist Report Function
-exports.getArtistReport = (0, https_1.onRequest)({ cors: true }, async (req, res) => {
+exports.getArtistReport = (0, https_1.onRequest)({
+    secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+    cors: true
+}, async (req, res) => {
     var _a, _b, _c;
     setSecurityHeaders(res);
     const artistName = req.query.artistName;
@@ -335,8 +336,19 @@ exports.getArtistReport = (0, https_1.onRequest)({ cors: true }, async (req, res
     }
 });
 // Artist Timeline Function
-exports.getArtistTimeline = (0, https_1.onRequest)({ cors: true }, async (req, res) => {
+exports.getArtistTimeline = (0, https_1.onRequest)({
+    secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+    cors: true,
+    timeoutSeconds: 120,
+    memory: "512MiB" // 메모리 증가
+}, async (req, res) => {
     var _a, _b, _c, _d;
+    // CORS 헤더 명시적 설정 (에러 시에도 적용)
+    res.set({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type'
+    });
     setSecurityHeaders(res);
     const artistName = req.query.artistName;
     const birthYear = parseInt(req.query.birthYear);
@@ -386,16 +398,32 @@ exports.getArtistTimeline = (0, https_1.onRequest)({ cors: true }, async (req, r
             }
         });
         const text = response.text || "{}";
+        if (!text || text.trim().length === 0) {
+            logger.warn("Empty response from Gemini API");
+            res.status(500).json({ error: "Empty response from AI", eras: [] });
+            return;
+        }
         let cleanedText = text.replace(/```json/g, '').replace(/```/g, '').trim();
         const jsonMatch = cleanedText.match(/\{[\s\S]*\}/);
-        if (jsonMatch) {
-            cleanedText = jsonMatch[0];
+        if (!jsonMatch) {
+            logger.error("No JSON found in response", text.substring(0, 200));
+            res.status(500).json({ error: "Invalid JSON response", eras: [] });
+            return;
         }
+        cleanedText = jsonMatch[0];
         cleanedText = cleanedText.replace(/,\s*}/g, '}').replace(/,\s*]/g, ']');
-        const result = JSON.parse(cleanedText);
+        let result;
+        try {
+            result = JSON.parse(cleanedText);
+        }
+        catch (e) {
+            logger.error("JSON parse error", { error: e.message, text: cleanedText.substring(0, 200) });
+            res.status(500).json({ error: "Failed to parse JSON", eras: [] });
+            return;
+        }
         // Fetch real artwork images for timeline masterpieces
-        const cseApiKey = googleCseApiKeyParam.value() || ((_b = (_a = functions.config().google) === null || _a === void 0 ? void 0 : _a.cse) === null || _b === void 0 ? void 0 : _b.api_key) || "";
-        const cseId = googleCseIdParam.value() || ((_d = (_c = functions.config().google) === null || _c === void 0 ? void 0 : _c.cse) === null || _d === void 0 ? void 0 : _d.id) || "";
+        const cseApiKey = googleCseApiKeySecret.value() || ((_b = (_a = functions.config().google) === null || _a === void 0 ? void 0 : _a.cse) === null || _b === void 0 ? void 0 : _b.api_key) || "";
+        const cseId = googleCseIdSecret.value() || ((_d = (_c = functions.config().google) === null || _c === void 0 ? void 0 : _c.cse) === null || _d === void 0 ? void 0 : _d.id) || "";
         if (cseApiKey && cseId && result.eras) {
             for (const era of result.eras) {
                 if (era.events) {
@@ -447,11 +475,20 @@ exports.getArtistTimeline = (0, https_1.onRequest)({ cors: true }, async (req, r
     }
     catch (error) {
         logger.error("Error generating timeline:", error);
+        // 에러 응답에도 CORS 헤더 보장
+        res.set({
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type'
+        });
         res.status(500).json({ error: error.message || "Internal server error", eras: [] });
     }
 });
 // Metric Insight Function
-exports.getMetricInsight = (0, https_1.onRequest)({ cors: true }, async (req, res) => {
+exports.getMetricInsight = (0, https_1.onRequest)({
+    secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+    cors: true
+}, async (req, res) => {
     setSecurityHeaders(res);
     const artistName = req.query.artistName;
     const metric = req.query.metric;
@@ -489,7 +526,10 @@ exports.getMetricInsight = (0, https_1.onRequest)({ cors: true }, async (req, re
     }
 });
 // Masterpieces Function
-exports.getMasterpieces = (0, https_1.onRequest)({ cors: true }, async (req, res) => {
+exports.getMasterpieces = (0, https_1.onRequest)({
+    secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+    cors: true
+}, async (req, res) => {
     var _a, _b, _c, _d;
     setSecurityHeaders(res);
     const artistName = req.query.artistName;
@@ -532,8 +572,8 @@ exports.getMasterpieces = (0, https_1.onRequest)({ cors: true }, async (req, res
             result = [];
         }
         // Fetch real artwork images for each masterpiece
-        const cseApiKey = googleCseApiKeyParam.value() || ((_b = (_a = functions.config().google) === null || _a === void 0 ? void 0 : _a.cse) === null || _b === void 0 ? void 0 : _b.api_key) || "";
-        const cseId = googleCseIdParam.value() || ((_d = (_c = functions.config().google) === null || _c === void 0 ? void 0 : _c.cse) === null || _d === void 0 ? void 0 : _d.id) || "";
+        const cseApiKey = googleCseApiKeySecret.value() || ((_b = (_a = functions.config().google) === null || _a === void 0 ? void 0 : _a.cse) === null || _b === void 0 ? void 0 : _b.api_key) || "";
+        const cseId = googleCseIdSecret.value() || ((_d = (_c = functions.config().google) === null || _c === void 0 ? void 0 : _c.cse) === null || _d === void 0 ? void 0 : _d.id) || "";
         if (cseApiKey && cseId && result.length > 0) {
             const imagePromises = result.map(async (artwork) => {
                 if (!artwork.imageUrl) {
@@ -576,7 +616,10 @@ exports.getMasterpieces = (0, https_1.onRequest)({ cors: true }, async (req, res
     }
 });
 // Comparative Analysis Function
-exports.getComparativeAnalysis = (0, https_1.onRequest)({ cors: true }, async (req, res) => {
+exports.getComparativeAnalysis = (0, https_1.onRequest)({
+    secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+    cors: true
+}, async (req, res) => {
     var _a, _b, _c;
     setSecurityHeaders(res);
     const artist1 = req.query.artist1;
@@ -636,6 +679,7 @@ exports.getComparativeAnalysis = (0, https_1.onRequest)({ cors: true }, async (r
 });
 // Detailed Trajectory Function
 exports.getDetailedTrajectory = (0, https_1.onRequest)({
+    secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
     cors: true,
     timeoutSeconds: 300,
     memory: "512MiB",
@@ -665,8 +709,8 @@ exports.getDetailedTrajectory = (0, https_1.onRequest)({
         }
         // Perform Google Custom Search first (faster than Gemini's tool)
         let searchContext = "";
-        const cseApiKey = googleCseApiKeyParam.value() || ((_b = (_a = functions.config().google) === null || _a === void 0 ? void 0 : _a.cse) === null || _b === void 0 ? void 0 : _b.api_key) || "";
-        const cseId = googleCseIdParam.value() || ((_d = (_c = functions.config().google) === null || _c === void 0 ? void 0 : _c.cse) === null || _d === void 0 ? void 0 : _d.id) || "";
+        const cseApiKey = googleCseApiKeySecret.value() || ((_b = (_a = functions.config().google) === null || _a === void 0 ? void 0 : _a.cse) === null || _b === void 0 ? void 0 : _b.api_key) || "";
+        const cseId = googleCseIdSecret.value() || ((_d = (_c = functions.config().google) === null || _c === void 0 ? void 0 : _c.cse) === null || _d === void 0 ? void 0 : _d.id) || "";
         if (cseApiKey && cseId) {
             try {
                 // Perform parallel searches for both artists
@@ -722,31 +766,64 @@ exports.getDetailedTrajectory = (0, https_1.onRequest)({
             }
         });
         let cleanedText = response.text || "{}";
+        if (!cleanedText || cleanedText.trim().length === 0) {
+            logger.warn("Empty response from Gemini API for trajectory");
+            throw new Error("Empty response from AI");
+        }
         cleanedText = cleanedText.replace(/```json/g, '').replace(/```/g, '').trim();
         const jsonMatch = cleanedText.match(/\{[\s\S]*\}/);
-        if (jsonMatch)
-            cleanedText = jsonMatch[0];
-        const result = JSON.parse(cleanedText);
+        if (!jsonMatch) {
+            logger.error("No JSON found in trajectory response", cleanedText.substring(0, 200));
+            throw new Error("Invalid JSON response");
+        }
+        cleanedText = jsonMatch[0];
+        let result;
+        try {
+            result = JSON.parse(cleanedText);
+        }
+        catch (e) {
+            logger.error("JSON parse error for trajectory", { error: e.message, text: cleanedText.substring(0, 200) });
+            throw new Error(`Failed to parse JSON: ${e.message}`);
+        }
         await (0, cache_1.setCached)("trajectory", cacheKey, result);
         res.json(result);
     }
     catch (error) {
         logger.error("Detailed Trajectory Error", error);
+        // CORS 헤더 보장
+        res.set({
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type'
+        });
         const ages = [20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80];
         const fallback = {
             artist1: req.query.artist1,
             artist2: req.query.artist2,
             data: ages.map(age => ({
                 age,
-                a1_total: 50 + Math.random() * 40, a1_institution: 50 + Math.random() * 40, a1_discourse: 50, a1_academy: 50, a1_network: 50, a1_context: "Data unavailable",
-                a2_total: 50 + Math.random() * 40, a2_institution: 50 + Math.random() * 40, a2_discourse: 50, a2_academy: 50, a2_network: 50, a2_context: "Data unavailable"
+                a1_total: 50 + Math.random() * 40,
+                a1_institution: 50 + Math.random() * 40,
+                a1_discourse: 50,
+                a1_academy: 50,
+                a1_network: 50,
+                a1_context: "Data unavailable",
+                a2_total: 50 + Math.random() * 40,
+                a2_institution: 50 + Math.random() * 40,
+                a2_discourse: 50,
+                a2_academy: 50,
+                a2_network: 50,
+                a2_context: "Data unavailable"
             }))
         };
         res.status(500).json(Object.assign({ error: error.message || "Internal server error" }, fallback));
     }
 });
 // Image Generation Function
-exports.getArtistImage = (0, https_1.onRequest)({ cors: true }, async (req, res) => {
+exports.getArtistImage = (0, https_1.onRequest)({
+    secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+    cors: true
+}, async (req, res) => {
     setSecurityHeaders(res);
     const prompt = req.query.prompt;
     if (!prompt) {
@@ -782,6 +859,7 @@ exports.getArtistImage = (0, https_1.onRequest)({ cors: true }, async (req, res)
 });
 // Artist List Function - Generate dynamic artist recommendations
 exports.getArtistList = (0, https_1.onRequest)({
+    secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
     cors: true,
     timeoutSeconds: 120,
     memory: "512MiB"
@@ -872,7 +950,10 @@ exports.getArtistList = (0, https_1.onRequest)({
     }
 });
 // Chat Response Function (not cached as it's conversational)
-exports.getChatResponse = (0, https_1.onRequest)({ cors: true }, async (req, res) => {
+exports.getChatResponse = (0, https_1.onRequest)({
+    secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+    cors: true
+}, async (req, res) => {
     setSecurityHeaders(res);
     const artistName = req.query.artistName;
     const topic = req.query.topic;

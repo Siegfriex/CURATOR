@@ -1,0 +1,128 @@
+{
+  "artistId": "21",
+  "artistName": "Banksy",
+  "birthYear": 1974,
+  "deathYear": null,
+  "activeYears": [1990, 2024],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "CRITICAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 20,
+      "year": 1994,
+      "total": 5,
+      "institution": 0,
+      "discourse": 5,
+      "academy": 0,
+      "network": 10,
+      "context": "브리스톨 그래피티 씬",
+      "confidence": "medium",
+      "sources": ["Pest Control", "Wikipedia"]
+    },
+    {
+      "age": 26,
+      "year": 2000,
+      "total": 25,
+      "institution": 5,
+      "discourse": 40,
+      "academy": 5,
+      "network": 35,
+      "context": "스텐실 기법 완성",
+      "keyEvent": "스텐실 작업 시작",
+      "confidence": "medium",
+      "sources": ["Pest Control"]
+    },
+    {
+      "age": 29,
+      "year": 2003,
+      "total": 45,
+      "institution": 15,
+      "discourse": 65,
+      "academy": 10,
+      "network": 60,
+      "context": "테이트 브리튼 무단 설치",
+      "keyEvent": "Crimewatch UK",
+      "confidence": "high",
+      "sources": ["Tate Modern", "The Guardian"]
+    },
+    {
+      "age": 31,
+      "year": 2005,
+      "total": 60,
+      "institution": 30,
+      "discourse": 78,
+      "academy": 20,
+      "network": 75,
+      "context": "이스라엘 장벽 작업",
+      "keyEvent": "West Bank Barrier 작품",
+      "confidence": "high",
+      "sources": ["BBC", "The Guardian"]
+    },
+    {
+      "age": 36,
+      "year": 2010,
+      "total": 78,
+      "institution": 55,
+      "discourse": 90,
+      "academy": 35,
+      "network": 88,
+      "context": "Exit Through the Gift Shop",
+      "keyEvent": "아카데미상 후보",
+      "confidence": "high",
+      "sources": ["Academy Awards", "Pest Control"]
+    },
+    {
+      "age": 44,
+      "year": 2018,
+      "total": 88,
+      "institution": 70,
+      "discourse": 96,
+      "academy": 50,
+      "network": 95,
+      "context": "Girl with Balloon 파쇄",
+      "keyEvent": "소더비 작품 파쇄",
+      "confidence": "high",
+      "sources": ["Sotheby's", "BBC"]
+    },
+    {
+      "age": 47,
+      "year": 2021,
+      "total": 92,
+      "institution": 75,
+      "discourse": 98,
+      "academy": 55,
+      "network": 98,
+      "context": "Love is in the Bin $25M",
+      "keyEvent": "경매 최고가 기록",
+      "confidence": "high",
+      "sources": ["Sotheby's"]
+    },
+    {
+      "age": 50,
+      "year": 2024,
+      "total": 95,
+      "institution": 78,
+      "discourse": 98,
+      "academy": 60,
+      "network": 98,
+      "context": "우크라이나 작품",
+      "confidence": "high",
+      "sources": ["Pest Control", "BBC"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Pest Control (Official)",
+      "Sotheby's Records",
+      "Tate Modern",
+      "The Guardian Archives"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

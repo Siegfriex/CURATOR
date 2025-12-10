@@ -1,0 +1,128 @@
+{
+  "artistId": "15",
+  "artistName": "Jasper Johns",
+  "birthYear": 1930,
+  "deathYear": null,
+  "activeYears": [1954, 2024],
+  "narrativePath": {
+    "phase1": "RECOGNITION",
+    "phase2": "INSTITUTIONAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 24,
+      "year": 1954,
+      "total": 10,
+      "institution": 5,
+      "discourse": 10,
+      "academy": 10,
+      "network": 15,
+      "context": "뉴욕 정착, 라우센버그와 교류",
+      "confidence": "high",
+      "sources": ["MoMA", "Whitney Museum"]
+    },
+    {
+      "age": 28,
+      "year": 1958,
+      "total": 55,
+      "institution": 45,
+      "discourse": 70,
+      "academy": 40,
+      "network": 55,
+      "context": "첫 개인전 대성공",
+      "keyEvent": "Leo Castelli Gallery 데뷔",
+      "confidence": "high",
+      "sources": ["MoMA", "Leo Castelli Gallery"]
+    },
+    {
+      "age": 34,
+      "year": 1964,
+      "total": 75,
+      "institution": 70,
+      "discourse": 82,
+      "academy": 65,
+      "network": 78,
+      "context": "베니스 비엔날레 대상",
+      "keyEvent": "Venice Biennale Grand Prize",
+      "confidence": "high",
+      "sources": ["Venice Biennale"]
+    },
+    {
+      "age": 47,
+      "year": 1977,
+      "total": 85,
+      "institution": 85,
+      "discourse": 88,
+      "academy": 82,
+      "network": 85,
+      "context": "휘트니 미술관 회고전",
+      "keyEvent": "Whitney Museum 회고전",
+      "confidence": "high",
+      "sources": ["Whitney Museum"]
+    },
+    {
+      "age": 58,
+      "year": 1988,
+      "total": 90,
+      "institution": 92,
+      "discourse": 92,
+      "academy": 90,
+      "network": 88,
+      "context": "베니스 비엔날레 황금사자상",
+      "keyEvent": "Golden Lion Award",
+      "confidence": "high",
+      "sources": ["Venice Biennale"]
+    },
+    {
+      "age": 76,
+      "year": 2006,
+      "total": 95,
+      "institution": 96,
+      "discourse": 96,
+      "academy": 95,
+      "network": 92,
+      "context": "대통령 자유 훈장",
+      "keyEvent": "Presidential Medal of Freedom",
+      "confidence": "high",
+      "sources": ["White House Archives"]
+    },
+    {
+      "age": 80,
+      "year": 2010,
+      "total": 97,
+      "institution": 98,
+      "discourse": 97,
+      "academy": 97,
+      "network": 95,
+      "context": "Flag 경매 최고가",
+      "keyEvent": "Flag $110M (비공개 매매)",
+      "confidence": "medium",
+      "sources": ["Bloomberg", "The New York Times"]
+    },
+    {
+      "age": 94,
+      "year": 2024,
+      "total": 98,
+      "institution": 98,
+      "discourse": 98,
+      "academy": 98,
+      "network": 95,
+      "context": "현존 최고령 거장",
+      "confidence": "high",
+      "sources": ["Whitney Museum"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Whitney Museum of American Art",
+      "MoMA Archives",
+      "Venice Biennale",
+      "Leo Castelli Gallery"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

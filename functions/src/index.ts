@@ -1,5 +1,5 @@
 import { onRequest } from "firebase-functions/v2/https";
-import { defineString } from "firebase-functions/params";
+import { defineSecret } from "firebase-functions/params";
 import * as functions from "firebase-functions";
 import { initializeApp } from "firebase-admin/app";
 import { getStorage } from "firebase-admin/storage";
@@ -21,29 +21,21 @@ function getStorageBucket() {
   return storageInstance;
 }
 
-// Define environment variable for Functions 2nd gen
-// Supports multiple methods:
-// 1. .env.curatorproto file (auto-loaded by defineString)
-// 2. firebase functions:config:set gemini.api_key="YOUR_KEY"
-// 3. firebase functions:secrets:set GEMINI_API_KEY
-const geminiApiKeyParam = defineString("GEMINI_API_KEY", {
-  default: "",
-});
-
-// Google Custom Search API credentials
-const googleCseApiKeyParam = defineString("GOOGLE_CSE_API_KEY", {
-  default: "",
-});
-
-const googleCseIdParam = defineString("GOOGLE_CSE_ID", {
-  default: "",
-});
+// Define secrets for Functions 2nd gen
+// Uses Secret Manager (firebase functions:secrets:set)
+const geminiApiKeySecret = defineSecret("GEMINI_API_KEY");
+const googleCseApiKeySecret = defineSecret("GOOGLE_CSE_API_KEY");
+const googleCseIdSecret = defineSecret("GOOGLE_CSE_ID");
 
 // Get API key from multiple sources
 function getApiKey(): string {
-  // Try defineString first (from .env.curatorproto or deployment params)
-  const paramValue = geminiApiKeyParam.value();
-  if (paramValue) return paramValue;
+  // Try Secret Manager first (most secure)
+  try {
+    const secretValue = geminiApiKeySecret.value();
+    if (secretValue) return secretValue;
+  } catch (e) {
+    // Secret might not be available in local dev
+  }
   
   // Try functions.config() (legacy but still works)
   try {
@@ -55,7 +47,7 @@ function getApiKey(): string {
     // Ignore if config is not available
   }
   
-  // Try process.env
+  // Try process.env (for local development)
   if (process.env.GEMINI_API_KEY) {
     return process.env.GEMINI_API_KEY;
   }
@@ -90,7 +82,10 @@ function setSecurityHeaders(res: any) {
 }
 
 // Dashboard Data Function
-export const getDashboardData = onRequest({ cors: true }, async (req, res) => {
+export const getDashboardData = onRequest({ 
+  secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+  cors: true 
+}, async (req, res) => {
   setSecurityHeaders(res);
   
   const artistName = req.query.artistName as string;
@@ -152,8 +147,8 @@ export const getDashboardData = onRequest({ cors: true }, async (req, res) => {
     }
 
     // Try to get real artist image first
-    const cseApiKey = googleCseApiKeyParam.value() || functions.config().google?.cse?.api_key || "";
-    const cseId = googleCseIdParam.value() || functions.config().google?.cse?.id || "";
+    const cseApiKey = googleCseApiKeySecret.value() || functions.config().google?.cse?.api_key || "";
+    const cseId = googleCseIdSecret.value() || functions.config().google?.cse?.id || "";
     
     let imageUrl: string | null = null;
     if (cseApiKey && cseId) {
@@ -244,7 +239,10 @@ async function generateImage(prompt: string): Promise<string | null> {
 }
 
 // Artist Report Function
-export const getArtistReport = onRequest({ cors: true }, async (req, res) => {
+export const getArtistReport = onRequest({ 
+  secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+  cors: true 
+}, async (req, res) => {
   setSecurityHeaders(res);
   
   const artistName = req.query.artistName as string;
@@ -360,7 +358,19 @@ export const getArtistReport = onRequest({ cors: true }, async (req, res) => {
 });
 
 // Artist Timeline Function
-export const getArtistTimeline = onRequest({ cors: true }, async (req, res) => {
+export const getArtistTimeline = onRequest({ 
+  secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+  cors: true,
+  timeoutSeconds: 120, // 타임아웃 추가
+  memory: "512MiB" // 메모리 증가
+}, async (req, res) => {
+  // CORS 헤더 명시적 설정 (에러 시에도 적용)
+  res.set({
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type'
+  });
+  
   setSecurityHeaders(res);
   
   const artistName = req.query.artistName as string;
@@ -415,20 +425,36 @@ export const getArtistTimeline = onRequest({ cors: true }, async (req, res) => {
     });
 
     const text = response.text || "{}";
+    if (!text || text.trim().length === 0) {
+      logger.warn("Empty response from Gemini API");
+      res.status(500).json({ error: "Empty response from AI", eras: [] });
+      return;
+    }
+
     let cleanedText = text.replace(/```json/g, '').replace(/```/g, '').trim();
     
     const jsonMatch = cleanedText.match(/\{[\s\S]*\}/);
-    if (jsonMatch) {
-      cleanedText = jsonMatch[0];
+    if (!jsonMatch) {
+      logger.error("No JSON found in response", text.substring(0, 200));
+      res.status(500).json({ error: "Invalid JSON response", eras: [] });
+      return;
     }
+    cleanedText = jsonMatch[0];
     
     cleanedText = cleanedText.replace(/,\s*}/g, '}').replace(/,\s*]/g, ']');
 
-    const result = JSON.parse(cleanedText);
+    let result;
+    try {
+      result = JSON.parse(cleanedText);
+    } catch (e: any) {
+      logger.error("JSON parse error", { error: e.message, text: cleanedText.substring(0, 200) });
+      res.status(500).json({ error: "Failed to parse JSON", eras: [] });
+      return;
+    }
     
     // Fetch real artwork images for timeline masterpieces
-    const cseApiKey = googleCseApiKeyParam.value() || functions.config().google?.cse?.api_key || "";
-    const cseId = googleCseIdParam.value() || functions.config().google?.cse?.id || "";
+    const cseApiKey = googleCseApiKeySecret.value() || functions.config().google?.cse?.api_key || "";
+    const cseId = googleCseIdSecret.value() || functions.config().google?.cse?.id || "";
     
     if (cseApiKey && cseId && result.eras) {
       for (const era of result.eras) {
@@ -479,12 +505,21 @@ export const getArtistTimeline = onRequest({ cors: true }, async (req, res) => {
     res.json(result);
   } catch (error: any) {
     logger.error("Error generating timeline:", error);
+    // 에러 응답에도 CORS 헤더 보장
+    res.set({
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type'
+    });
     res.status(500).json({ error: error.message || "Internal server error", eras: [] });
   }
 });
 
 // Metric Insight Function
-export const getMetricInsight = onRequest({ cors: true }, async (req, res) => {
+export const getMetricInsight = onRequest({ 
+  secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+  cors: true 
+}, async (req, res) => {
   setSecurityHeaders(res);
   
   const artistName = req.query.artistName as string;
@@ -527,7 +562,10 @@ export const getMetricInsight = onRequest({ cors: true }, async (req, res) => {
 });
 
 // Masterpieces Function
-export const getMasterpieces = onRequest({ cors: true }, async (req, res) => {
+export const getMasterpieces = onRequest({ 
+  secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+  cors: true 
+}, async (req, res) => {
   setSecurityHeaders(res);
   
   const artistName = req.query.artistName as string;
@@ -574,8 +612,8 @@ export const getMasterpieces = onRequest({ cors: true }, async (req, res) => {
     }
 
     // Fetch real artwork images for each masterpiece
-    const cseApiKey = googleCseApiKeyParam.value() || functions.config().google?.cse?.api_key || "";
-    const cseId = googleCseIdParam.value() || functions.config().google?.cse?.id || "";
+    const cseApiKey = googleCseApiKeySecret.value() || functions.config().google?.cse?.api_key || "";
+    const cseId = googleCseIdSecret.value() || functions.config().google?.cse?.id || "";
     
     if (cseApiKey && cseId && result.length > 0) {
       const imagePromises = result.map(async (artwork: any) => {
@@ -619,7 +657,10 @@ export const getMasterpieces = onRequest({ cors: true }, async (req, res) => {
 });
 
 // Comparative Analysis Function
-export const getComparativeAnalysis = onRequest({ cors: true }, async (req, res) => {
+export const getComparativeAnalysis = onRequest({ 
+  secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+  cors: true 
+}, async (req, res) => {
   setSecurityHeaders(res);
   
   const artist1 = req.query.artist1 as string;
@@ -682,6 +723,7 @@ export const getComparativeAnalysis = onRequest({ cors: true }, async (req, res)
 
 // Detailed Trajectory Function
 export const getDetailedTrajectory = onRequest({ 
+  secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
   cors: true,
   timeoutSeconds: 300, // Increase timeout to 5 minutes for Google Search
   memory: "512MiB", // Increase memory for faster processing
@@ -715,8 +757,8 @@ export const getDetailedTrajectory = onRequest({
 
     // Perform Google Custom Search first (faster than Gemini's tool)
     let searchContext = "";
-    const cseApiKey = googleCseApiKeyParam.value() || functions.config().google?.cse?.api_key || "";
-    const cseId = googleCseIdParam.value() || functions.config().google?.cse?.id || "";
+    const cseApiKey = googleCseApiKeySecret.value() || functions.config().google?.cse?.api_key || "";
+    const cseId = googleCseIdSecret.value() || functions.config().google?.cse?.id || "";
     
     if (cseApiKey && cseId) {
       try {
@@ -782,23 +824,56 @@ export const getDetailedTrajectory = onRequest({
     });
 
     let cleanedText = response.text || "{}";
+    if (!cleanedText || cleanedText.trim().length === 0) {
+      logger.warn("Empty response from Gemini API for trajectory");
+      throw new Error("Empty response from AI");
+    }
+
     cleanedText = cleanedText.replace(/```json/g, '').replace(/```/g, '').trim();
     const jsonMatch = cleanedText.match(/\{[\s\S]*\}/);
-    if (jsonMatch) cleanedText = jsonMatch[0];
+    if (!jsonMatch) {
+      logger.error("No JSON found in trajectory response", cleanedText.substring(0, 200));
+      throw new Error("Invalid JSON response");
+    }
+    cleanedText = jsonMatch[0];
 
-    const result = JSON.parse(cleanedText);
+    let result;
+    try {
+      result = JSON.parse(cleanedText);
+    } catch (e: any) {
+      logger.error("JSON parse error for trajectory", { error: e.message, text: cleanedText.substring(0, 200) });
+      throw new Error(`Failed to parse JSON: ${e.message}`);
+    }
     await setCached("trajectory", cacheKey, result);
     res.json(result);
   } catch (error: any) {
     logger.error("Detailed Trajectory Error", error);
+    
+    // CORS 헤더 보장
+    res.set({
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type'
+    });
+    
     const ages = [20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80];
     const fallback = {
       artist1: req.query.artist1,
       artist2: req.query.artist2,
       data: ages.map(age => ({
         age,
-        a1_total: 50 + Math.random() * 40, a1_institution: 50 + Math.random()*40, a1_discourse: 50, a1_academy: 50, a1_network: 50, a1_context: "Data unavailable",
-        a2_total: 50 + Math.random() * 40, a2_institution: 50 + Math.random()*40, a2_discourse: 50, a2_academy: 50, a2_network: 50, a2_context: "Data unavailable"
+        a1_total: 50 + Math.random() * 40, 
+        a1_institution: 50 + Math.random()*40, 
+        a1_discourse: 50, 
+        a1_academy: 50, 
+        a1_network: 50, 
+        a1_context: "Data unavailable",
+        a2_total: 50 + Math.random() * 40, 
+        a2_institution: 50 + Math.random()*40, 
+        a2_discourse: 50, 
+        a2_academy: 50, 
+        a2_network: 50, 
+        a2_context: "Data unavailable"
       }))
     };
     res.status(500).json({ error: error.message || "Internal server error", ...fallback });
@@ -806,7 +881,10 @@ export const getDetailedTrajectory = onRequest({
 });
 
 // Image Generation Function
-export const getArtistImage = onRequest({ cors: true }, async (req, res) => {
+export const getArtistImage = onRequest({ 
+  secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+  cors: true 
+}, async (req, res) => {
   setSecurityHeaders(res);
   
   const prompt = req.query.prompt as string;
@@ -844,6 +922,7 @@ export const getArtistImage = onRequest({ cors: true }, async (req, res) => {
 
 // Artist List Function - Generate dynamic artist recommendations
 export const getArtistList = onRequest({ 
+  secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
   cors: true,
   timeoutSeconds: 120,
   memory: "512MiB"
@@ -947,7 +1026,10 @@ export const getArtistList = onRequest({
 });
 
 // Chat Response Function (not cached as it's conversational)
-export const getChatResponse = onRequest({ cors: true }, async (req, res) => {
+export const getChatResponse = onRequest({ 
+  secrets: [geminiApiKeySecret, googleCseApiKeySecret, googleCseIdSecret],
+  cors: true 
+}, async (req, res) => {
   setSecurityHeaders(res);
   
   const artistName = req.query.artistName as string;

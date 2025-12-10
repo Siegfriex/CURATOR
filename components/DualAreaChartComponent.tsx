@@ -6,6 +6,7 @@ import { COLORS } from '../constants';
 import { generateMetricInsight } from '../services/geminiService';
 import { NauticalSpinner } from '../App';
 import ReactMarkdown from 'react-markdown';
+import { ChartSkeleton } from './ChartSkeleton';
 
 interface Props {
   data: TrajectoryDataPoint[];
@@ -48,9 +49,9 @@ export const DualAreaChartComponent: React.FC<Props> = ({
   birthYear1,
   birthYear2
 }) => {
-  // Safety check for data
+  // Safety check for data with skeleton
   if (!data || data.length === 0) {
-    return <div className="w-full h-full flex items-center justify-center text-gray-500 text-xs font-mono">NO DATA AVAILABLE</div>;
+    return <ChartSkeleton variant="dual" height={400} />;
   }
 
   const [activeMetric, setActiveMetric] = useState('total');
@@ -134,8 +135,21 @@ export const DualAreaChartComponent: React.FC<Props> = ({
       </div>
 
       {/* CHART CONTAINER */}
-      <div className="flex-grow relative min-h-[300px] min-w-0" style={{ minHeight: '300px' }}>
-        <ResponsiveContainer width="100%" height="100%">
+      <div 
+        className="flex-grow relative min-w-0" 
+        style={{ 
+          minHeight: '400px', 
+          height: '400px',
+          width: '100%',
+          position: 'relative'
+        }}
+      >
+        <ResponsiveContainer 
+          width="100%" 
+          height="100%" 
+          minHeight={400} 
+          minWidth={600}
+        >
           <AreaChart 
             data={processedData} 
             margin={{ top: 10, right: 50, left: 0, bottom: 0 }}

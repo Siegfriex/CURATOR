@@ -1,0 +1,129 @@
+{
+  "artistId": "6",
+  "artistName": "Pablo Picasso",
+  "birthYear": 1881,
+  "deathYear": 1973,
+  "activeYears": [1895, 1973],
+  "narrativePath": {
+    "phase1": "RECOGNITION",
+    "phase2": "INSTITUTIONAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 20,
+      "year": 1901,
+      "total": 30,
+      "institution": 15,
+      "discourse": 35,
+      "academy": 25,
+      "network": 40,
+      "context": "청색 시대 시작, 파리 정착",
+      "keyEvent": "Blue Period 시작",
+      "confidence": "high",
+      "sources": ["Museu Picasso", "MoMA"]
+    },
+    {
+      "age": 26,
+      "year": 1907,
+      "total": 60,
+      "institution": 40,
+      "discourse": 85,
+      "academy": 45,
+      "network": 65,
+      "context": "아비뇽의 처녀들, 입체파 선언",
+      "keyEvent": "Les Demoiselles d'Avignon",
+      "confidence": "high",
+      "sources": ["MoMA", "Tate"]
+    },
+    {
+      "age": 30,
+      "year": 1911,
+      "total": 70,
+      "institution": 55,
+      "discourse": 90,
+      "academy": 60,
+      "network": 75,
+      "context": "분석적 입체파 절정",
+      "keyEvent": "Analytic Cubism",
+      "confidence": "high",
+      "sources": ["MoMA", "Centre Pompidou"]
+    },
+    {
+      "age": 36,
+      "year": 1917,
+      "total": 75,
+      "institution": 65,
+      "discourse": 85,
+      "academy": 68,
+      "network": 82,
+      "context": "발레 뤼스 협업",
+      "keyEvent": "Parade 무대 디자인",
+      "confidence": "high",
+      "sources": ["MoMA", "Centre Pompidou"]
+    },
+    {
+      "age": 56,
+      "year": 1937,
+      "total": 90,
+      "institution": 85,
+      "discourse": 98,
+      "academy": 88,
+      "network": 92,
+      "context": "게르니카 완성",
+      "keyEvent": "Guernica",
+      "confidence": "high",
+      "sources": ["Museo Reina Sofía", "MoMA"]
+    },
+    {
+      "age": 68,
+      "year": 1949,
+      "total": 92,
+      "institution": 90,
+      "discourse": 95,
+      "academy": 92,
+      "network": 92,
+      "context": "평화의 비둘기",
+      "keyEvent": "La Colombe",
+      "confidence": "high",
+      "sources": ["MoMA", "Tate"]
+    },
+    {
+      "age": 80,
+      "year": 1961,
+      "total": 95,
+      "institution": 95,
+      "discourse": 96,
+      "academy": 95,
+      "network": 94,
+      "context": "80세 기념 대규모 회고전",
+      "confidence": "high",
+      "sources": ["MoMA", "Tate"]
+    },
+    {
+      "age": 92,
+      "year": 1973,
+      "total": 98,
+      "institution": 98,
+      "discourse": 98,
+      "academy": 98,
+      "network": 98,
+      "context": "사망, 미술사적 유산",
+      "keyEvent": "사망 (91세)",
+      "confidence": "high",
+      "sources": ["Museu Picasso", "MoMA"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Museu Picasso Barcelona",
+      "MoMA Archives",
+      "Museo Reina Sofía",
+      "Centre Pompidou"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

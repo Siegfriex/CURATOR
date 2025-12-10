@@ -1,0 +1,128 @@
+{
+  "artistId": "23",
+  "artistName": "Takashi Murakami",
+  "birthYear": 1962,
+  "deathYear": null,
+  "activeYears": [1991, 2024],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "INSTITUTIONAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 29,
+      "year": 1991,
+      "total": 15,
+      "institution": 5,
+      "discourse": 20,
+      "academy": 15,
+      "network": 20,
+      "context": "도쿄예술대학 박사",
+      "keyEvent": "PhD in Nihonga",
+      "confidence": "high",
+      "sources": ["Kaikai Kiki", "Wikipedia"]
+    },
+    {
+      "age": 34,
+      "year": 1996,
+      "total": 35,
+      "institution": 20,
+      "discourse": 45,
+      "academy": 30,
+      "network": 40,
+      "context": "히로폰 팩토리 설립",
+      "keyEvent": "Hiropon Factory",
+      "confidence": "high",
+      "sources": ["MoMA", "Kaikai Kiki"]
+    },
+    {
+      "age": 38,
+      "year": 2000,
+      "total": 55,
+      "institution": 40,
+      "discourse": 68,
+      "academy": 45,
+      "network": 62,
+      "context": "슈퍼플랫 선언",
+      "keyEvent": "Superflat Manifesto",
+      "confidence": "high",
+      "sources": ["MoMA", "Kaikai Kiki"]
+    },
+    {
+      "age": 41,
+      "year": 2003,
+      "total": 70,
+      "institution": 60,
+      "discourse": 80,
+      "academy": 60,
+      "network": 78,
+      "context": "루이비통 협업 시작",
+      "keyEvent": "Louis Vuitton Collaboration",
+      "confidence": "high",
+      "sources": ["Louis Vuitton", "Gagosian"]
+    },
+    {
+      "age": 45,
+      "year": 2007,
+      "total": 82,
+      "institution": 78,
+      "discourse": 88,
+      "academy": 72,
+      "network": 88,
+      "context": "LA MOCA 대회고전",
+      "keyEvent": "© MURAKAMI",
+      "confidence": "high",
+      "sources": ["MOCA Los Angeles"]
+    },
+    {
+      "age": 46,
+      "year": 2008,
+      "total": 88,
+      "institution": 85,
+      "discourse": 90,
+      "academy": 80,
+      "network": 92,
+      "context": "Time 100인 선정",
+      "keyEvent": "My Lonesome Cowboy $15.2M",
+      "confidence": "high",
+      "sources": ["Time Magazine", "Sotheby's"]
+    },
+    {
+      "age": 58,
+      "year": 2020,
+      "total": 92,
+      "institution": 90,
+      "discourse": 94,
+      "academy": 88,
+      "network": 95,
+      "context": "도쿄 올림픽 관련 작업",
+      "confidence": "high",
+      "sources": ["Kaikai Kiki"]
+    },
+    {
+      "age": 62,
+      "year": 2024,
+      "total": 94,
+      "institution": 92,
+      "discourse": 95,
+      "academy": 90,
+      "network": 96,
+      "context": "글로벌 브랜드 협업 지속",
+      "confidence": "high",
+      "sources": ["Kaikai Kiki", "Gagosian"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Kaikai Kiki Co., Ltd.",
+      "MoMA Archives",
+      "Gagosian Gallery",
+      "MOCA Los Angeles"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

@@ -1,0 +1,117 @@
+{
+  "artistId": "12",
+  "artistName": "Salvador Dalí",
+  "birthYear": 1904,
+  "deathYear": 1989,
+  "activeYears": [1920, 1989],
+  "narrativePath": {
+    "phase1": "SCANDAL",
+    "phase2": "INSTITUTIONAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 20,
+      "year": 1924,
+      "total": 20,
+      "institution": 10,
+      "discourse": 25,
+      "academy": 25,
+      "network": 20,
+      "context": "마드리드 미술학교",
+      "keyEvent": "로르카, 부뉴엘 교류",
+      "confidence": "high",
+      "sources": ["Dalí Theatre-Museum", "MoMA"]
+    },
+    {
+      "age": 25,
+      "year": 1929,
+      "total": 55,
+      "institution": 35,
+      "discourse": 70,
+      "academy": 40,
+      "network": 65,
+      "context": "초현실주의 합류",
+      "keyEvent": "Un Chien Andalou",
+      "confidence": "high",
+      "sources": ["MoMA", "Centre Pompidou"]
+    },
+    {
+      "age": 27,
+      "year": 1931,
+      "total": 65,
+      "institution": 50,
+      "discourse": 80,
+      "academy": 50,
+      "network": 75,
+      "context": "기억의 지속 완성",
+      "keyEvent": "The Persistence of Memory",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 35,
+      "year": 1939,
+      "total": 70,
+      "institution": 60,
+      "discourse": 78,
+      "academy": 58,
+      "network": 80,
+      "context": "초현실주의 제명",
+      "keyEvent": "브르통과 결별",
+      "confidence": "high",
+      "sources": ["Centre Pompidou"]
+    },
+    {
+      "age": 50,
+      "year": 1954,
+      "total": 82,
+      "institution": 78,
+      "discourse": 85,
+      "academy": 75,
+      "network": 88,
+      "context": "원자 신비주의",
+      "keyEvent": "Corps Hypercubicus",
+      "confidence": "high",
+      "sources": ["Dalí Theatre-Museum"]
+    },
+    {
+      "age": 70,
+      "year": 1974,
+      "total": 88,
+      "institution": 88,
+      "discourse": 88,
+      "academy": 88,
+      "network": 88,
+      "context": "달리 극장 미술관 개관",
+      "keyEvent": "Dalí Theatre-Museum 개관",
+      "confidence": "high",
+      "sources": ["Dalí Theatre-Museum"]
+    },
+    {
+      "age": 85,
+      "year": 1989,
+      "total": 92,
+      "institution": 92,
+      "discourse": 92,
+      "academy": 92,
+      "network": 90,
+      "context": "피게레스에서 사망",
+      "keyEvent": "사망 (84세)",
+      "confidence": "high",
+      "sources": ["Dalí Theatre-Museum"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Dalí Theatre-Museum Figueres",
+      "MoMA Archives",
+      "Centre Pompidou",
+      "Museo Reina Sofía"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

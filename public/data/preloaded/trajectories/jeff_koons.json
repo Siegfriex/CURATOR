@@ -1,0 +1,129 @@
+{
+  "artistId": "20",
+  "artistName": "Jeff Koons",
+  "birthYear": 1955,
+  "deathYear": null,
+  "activeYears": [1978, 2024],
+  "narrativePath": {
+    "phase1": "RECOGNITION",
+    "phase2": "INSTITUTIONAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 25,
+      "year": 1980,
+      "total": 15,
+      "institution": 5,
+      "discourse": 15,
+      "academy": 10,
+      "network": 25,
+      "context": "MoMA PS1 근무",
+      "keyEvent": "Inflatables 시작",
+      "confidence": "high",
+      "sources": ["Whitney Museum", "MoMA"]
+    },
+    {
+      "age": 30,
+      "year": 1985,
+      "total": 40,
+      "institution": 25,
+      "discourse": 55,
+      "academy": 25,
+      "network": 50,
+      "context": "Equilibrium 시리즈",
+      "keyEvent": "Nike 농구공 작품",
+      "confidence": "high",
+      "sources": ["Whitney Museum", "Tate"]
+    },
+    {
+      "age": 33,
+      "year": 1988,
+      "total": 65,
+      "institution": 50,
+      "discourse": 78,
+      "academy": 40,
+      "network": 75,
+      "context": "Banality 시리즈",
+      "keyEvent": "Michael Jackson and Bubbles",
+      "confidence": "high",
+      "sources": ["SFMOMA", "Whitney Museum"]
+    },
+    {
+      "age": 36,
+      "year": 1991,
+      "total": 70,
+      "institution": 60,
+      "discourse": 80,
+      "academy": 50,
+      "network": 80,
+      "context": "Made in Heaven",
+      "keyEvent": "Cicciolina 작품 시리즈",
+      "confidence": "high",
+      "sources": ["Whitney Museum"]
+    },
+    {
+      "age": 45,
+      "year": 2000,
+      "total": 82,
+      "institution": 78,
+      "discourse": 85,
+      "academy": 70,
+      "network": 88,
+      "context": "Celebration 시리즈",
+      "keyEvent": "Balloon Dog",
+      "confidence": "high",
+      "sources": ["Whitney Museum", "Gagosian"]
+    },
+    {
+      "age": 53,
+      "year": 2008,
+      "total": 90,
+      "institution": 88,
+      "discourse": 92,
+      "academy": 82,
+      "network": 94,
+      "context": "베르사유 전시",
+      "keyEvent": "Palace of Versailles",
+      "confidence": "high",
+      "sources": ["Château de Versailles"]
+    },
+    {
+      "age": 58,
+      "year": 2013,
+      "total": 95,
+      "institution": 94,
+      "discourse": 95,
+      "academy": 88,
+      "network": 98,
+      "context": "Balloon Dog $58.4M",
+      "keyEvent": "현존 작가 최고가 경신",
+      "confidence": "high",
+      "sources": ["Christie's"]
+    },
+    {
+      "age": 65,
+      "year": 2020,
+      "total": 94,
+      "institution": 92,
+      "discourse": 94,
+      "academy": 90,
+      "network": 95,
+      "context": "COVID 시대 작업",
+      "confidence": "high",
+      "sources": ["Gagosian"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Whitney Museum of American Art",
+      "Gagosian Gallery",
+      "Christie's Records",
+      "Château de Versailles"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

@@ -1,0 +1,227 @@
+{
+  "artistId": "14",
+  "artistName": "David Hockney",
+  "birthYear": 1937,
+  "eras": [
+    {
+      "eraLabel": "Early Career",
+      "eraLabelKo": "초기 경력",
+      "ageRange": "20s-35s",
+      "startYear": 1957,
+      "endYear": 1972,
+      "moodColor": "#E53E3E",
+      "summary": "David Hockney의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1962,
+          "title": "1962년 주요 활동",
+          "titleEn": "Major Activity in 1962",
+          "category": "Exhibition",
+          "description": "David Hockney이(가) 초기 경력 시기인 1962년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "David Hockney in 1962, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1967,
+          "title": "1967년 주요 활동",
+          "titleEn": "Major Activity in 1967",
+          "category": "Masterpiece",
+          "description": "David Hockney이(가) 초기 경력 시기인 1967년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "David Hockney in 1967, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Mid Career",
+      "eraLabelKo": "중기 발전",
+      "ageRange": "35s-50s",
+      "startYear": 1972,
+      "endYear": 1987,
+      "moodColor": "#D69E2E",
+      "summary": "David Hockney의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1977,
+          "title": "1977년 주요 활동",
+          "titleEn": "Major Activity in 1977",
+          "category": "Exhibition",
+          "description": "David Hockney이(가) 중기 발전 시기인 1977년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "David Hockney in 1977, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1982,
+          "title": "1982년 주요 활동",
+          "titleEn": "Major Activity in 1982",
+          "category": "Masterpiece",
+          "description": "David Hockney이(가) 중기 발전 시기인 1982년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "David Hockney in 1982, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Mature Period",
+      "eraLabelKo": "성숙기",
+      "ageRange": "50s-65s",
+      "startYear": 1987,
+      "endYear": 2002,
+      "moodColor": "#38BDF8",
+      "summary": "David Hockney의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1992,
+          "title": "1992년 주요 활동",
+          "titleEn": "Major Activity in 1992",
+          "category": "Exhibition",
+          "description": "David Hockney이(가) 성숙기 시기인 1992년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "David Hockney in 1992, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1997,
+          "title": "1997년 주요 활동",
+          "titleEn": "Major Activity in 1997",
+          "category": "Masterpiece",
+          "description": "David Hockney이(가) 성숙기 시기인 1997년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "David Hockney in 1997, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Late Career",
+      "eraLabelKo": "후기 경력",
+      "ageRange": "65s-80s",
+      "startYear": 2002,
+      "endYear": 2017,
+      "moodColor": "#2D3748",
+      "summary": "David Hockney의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 2007,
+          "title": "2007년 주요 활동",
+          "titleEn": "Major Activity in 2007",
+          "category": "Exhibition",
+          "description": "David Hockney이(가) 후기 경력 시기인 2007년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "David Hockney in 2007, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 2012,
+          "title": "2012년 주요 활동",
+          "titleEn": "Major Activity in 2012",
+          "category": "Masterpiece",
+          "description": "David Hockney이(가) 후기 경력 시기인 2012년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "David Hockney in 2012, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    }
+  ],
+  "critiques": [],
+  "masterpieces": [],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [],
+    "verificationStatus": "ai_generated"
+  }
+}

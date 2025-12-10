@@ -1,6 +1,14 @@
 import { AIReportResult, TimelineData, DashboardData, Masterpiece, ComparativeTrajectory } from '../types';
 import { getCached, setCached } from './cacheService';
 import { deduplicateRequest } from './requestDeduplication';
+import {
+  loadArtistTimeline,
+  loadComparison,
+  loadArtistMasterpieces,
+  convertComparisonToChartData,
+  convertTimelineToJourneyData,
+  isPreloadedArtist,
+} from './preloadedDataService';
 
 const FUNCTIONS_URL = import.meta.env.VITE_FUNCTIONS_URL || 'https://us-central1-curatorproto.cloudfunctions.net';
 
@@ -61,12 +69,29 @@ export const generateArtistTimeline = async (artistName: string, birthYear: numb
     `timeline:${artistName}:${birthYear}`,
     async () => {
       const cacheKey = `timeline:${artistName}:${birthYear}`;
+      
+      // 1. 사전 주입 데이터 최우선 확인 (Firestore 캐시보다 먼저)
+      try {
+        const preloadedTimeline = await loadArtistTimeline(artistName);
+        if (preloadedTimeline) {
+          console.log('✓ Using preloaded timeline for', artistName);
+          const converted = convertTimelineToJourneyData(preloadedTimeline);
+          // Preloaded 데이터는 캐시하지 않음 (이미 정적 파일)
+          return converted as TimelineData;
+        }
+      } catch (error) {
+        console.warn('Failed to load preloaded timeline:', error);
+        // Preloaded 실패 시에만 다음 단계로 진행
+      }
+      
+      // 2. Firestore 캐시 확인 (preloaded 데이터가 없을 때만)
       const cached = await getCached<TimelineData>('timeline', cacheKey);
       if (cached) {
         console.log('Using cached timeline for', artistName);
         return cached;
       }
 
+      // 3. AI 호출 (preloaded와 캐시 모두 없을 때만)
       const response = await fetch(
         `${FUNCTIONS_URL}/getArtistTimeline?artistName=${encodeURIComponent(artistName)}&birthYear=${birthYear}`
       );
@@ -114,12 +139,37 @@ export const fetchMasterpiecesByMetric = async (artistName: string, metric: stri
     `masterpieces:${artistName}:${metric}`,
     async () => {
       const cacheKey = `masterpieces:${artistName}:${metric}`;
+      
+      // 1. 사전 주입 데이터 우선 확인
+      try {
+        const preloadedMasterpieces = await loadArtistMasterpieces(artistName);
+        if (preloadedMasterpieces && preloadedMasterpieces.length > 0) {
+          console.log('Using preloaded masterpieces for', artistName);
+          // PreloadedMasterpiece를 Masterpiece 형식으로 변환
+          return preloadedMasterpieces.map(mp => ({
+            id: mp.id,
+            title: mp.titleKo || mp.title,
+            year: mp.year,
+            imageUrl: mp.imageUrl,
+            description: mp.significance,
+            medium: mp.medium,
+            dimensions: mp.dimensions,
+            collection: mp.collection?.museum,
+            _source: 'preloaded'
+          })) as Masterpiece[];
+        }
+      } catch (error) {
+        console.warn('Failed to load preloaded masterpieces:', error);
+      }
+      
+      // 2. Firestore 캐시 확인
       const cached = await getCached<Masterpiece[]>('masterpieces', cacheKey);
       if (cached) {
         console.log('Using cached masterpieces for', artistName, metric);
         return cached;
       }
 
+      // 3. AI 호출
       const response = await fetch(
         `${FUNCTIONS_URL}/getMasterpieces?artistName=${encodeURIComponent(artistName)}&metric=${encodeURIComponent(metric)}`
       );
@@ -162,30 +212,73 @@ export const generateComparativeAnalysis = async (artist1: string, artist2: stri
 };
 
 export const generateDetailedTrajectory = async (artist1: string, artist2: string): Promise<ComparativeTrajectory> => {
+  // Normalize cache key (sort artist names for consistency)
+  const normalizedArtists = [artist1, artist2].sort();
+  const cacheKeyBase = `trajectory:${normalizedArtists[0]}:${normalizedArtists[1]}`;
+  
   return deduplicateRequest(
-    `trajectory:${artist1}:${artist2}`,
+    cacheKeyBase,
     async () => {
-      const cacheKey = `trajectory:${artist1}:${artist2}`;
-      const cached = await getCached<ComparativeTrajectory>('trajectory', cacheKey);
-      if (cached) {
+      // 1. 사전 주입 데이터 최우선 확인
+      try {
+        const preloadedComparison = await loadComparison(artist1, artist2);
+        if (preloadedComparison && preloadedComparison.trajectoryData.length > 0) {
+          console.log('✓ Using preloaded trajectory for', artist1, artist2);
+          // 프론트엔드 형식으로 변환
+          const chartData = preloadedComparison.trajectoryData.map(point => ({
+            age: point.age,
+            a1_total: point.a1_total,
+            a1_institution: point.a1_institution,
+            a1_discourse: point.a1_discourse,
+            a1_academy: point.a1_academy,
+            a1_network: point.a1_network,
+            a1_context: point.a1_context,
+            a2_total: point.a2_total,
+            a2_institution: point.a2_institution,
+            a2_discourse: point.a2_discourse,
+            a2_academy: point.a2_academy,
+            a2_network: point.a2_network,
+            a2_context: point.a2_context,
+          }));
+          
+          return {
+            artist1: preloadedComparison.artist1Name,
+            artist2: preloadedComparison.artist2Name,
+            data: chartData,
+            _source: 'preloaded'
+          } as ComparativeTrajectory;
+        }
+      } catch (error) {
+        console.warn('Failed to load preloaded trajectory:', error);
+      }
+      
+      // 2. Firestore 캐시 확인 (preloaded 데이터가 없을 때만)
+      const cached = await getCached<ComparativeTrajectory>('trajectory', cacheKeyBase);
+      if (cached && !cached.error && cached.data && Array.isArray(cached.data) && cached.data.length > 0) {
         console.log('Using cached trajectory for', artist1, artist2);
         return cached;
       }
 
+      // 3. AI 호출
       const response = await fetch(
         `${FUNCTIONS_URL}/getDetailedTrajectory?artist1=${encodeURIComponent(artist1)}&artist2=${encodeURIComponent(artist2)}`
       );
       
       const data = await response.json();
       
-      // Even if response is not ok, check if fallback data exists
-      if (!response.ok && (!data.data || !Array.isArray(data.data))) {
+      // Don't cache fallback/error data
+      if (!response.ok) {
+        if (data.data && Array.isArray(data.data) && data.error) {
+          console.warn('Received fallback data, not caching:', data.error);
+          // Return fallback data but don't cache it
+          return data;
+        }
         throw new Error(`Failed to generate trajectory: ${response.statusText}`);
       }
       
-      // Use data even if it's a fallback (has error field)
-      if (data.data && Array.isArray(data.data)) {
-        await setCached('trajectory', cacheKey, data);
+      // Only cache valid data without error field
+      if (data.data && Array.isArray(data.data) && data.data.length > 0 && !data.error) {
+        await setCached('trajectory', cacheKeyBase, data);
         return data;
       }
       

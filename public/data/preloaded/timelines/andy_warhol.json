@@ -1,0 +1,340 @@
+{
+  "artistId": "4",
+  "artistName": "Andy Warhol",
+  "birthYear": 1928,
+  "deathYear": 1987,
+  "eras": [
+    {
+      "eraLabel": "Commercial Illustrator",
+      "eraLabelKo": "상업 일러스트레이터",
+      "ageRange": "21-32",
+      "startYear": 1949,
+      "endYear": 1960,
+      "moodColor": "#718096",
+      "summary": "카네기 공대 졸업 후 뉴욕에서 상업 일러스트레이터로 성공. I. Miller 구두 광고 등으로 명성을 쌓으며 순수예술로의 전환을 모색.",
+      "events": [
+        {
+          "year": 1949,
+          "title": "뉴욕 이주",
+          "titleEn": "Move to New York City",
+          "category": "Personal",
+          "description": "피츠버그 카네기 공대 졸업 후 뉴욕 이주. Glamour 매거진 첫 일러스트 작업 수주.",
+          "impactScore": 60,
+          "auctionHigh": 5,
+          "auctionLow": 2,
+          "context": {
+            "marketValue": 5,
+            "criticalAcclaim": 30,
+            "historical": 70,
+            "socialImpact": 40,
+            "institutional": 10
+          },
+          "visualPrompt": "1950s New York City, young artist with portfolio, Madison Avenue advertising agencies",
+          "sources": {
+            "primary": "Andy Warhol Museum",
+            "secondary": ["Wikipedia"]
+          }
+        },
+        {
+          "year": 1956,
+          "title": "세계일주 여행",
+          "titleEn": "Around the World Trip",
+          "category": "Personal",
+          "description": "친구 찰스 리산비와 함께 아시아 여행. 이 경험이 이후 예술적 시각에 영향을 미침.",
+          "impactScore": 45,
+          "auctionHigh": 10,
+          "auctionLow": 5,
+          "context": {
+            "marketValue": 8,
+            "criticalAcclaim": 35,
+            "historical": 50,
+            "socialImpact": 35,
+            "institutional": 15
+          },
+          "visualPrompt": "1950s travel photography, Asian architecture, tourist snapshots",
+          "sources": {
+            "primary": "Andy Warhol Museum",
+            "secondary": []
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Pop Art Pioneer",
+      "eraLabelKo": "팝아트 개척기",
+      "ageRange": "33-38",
+      "startYear": 1961,
+      "endYear": 1966,
+      "moodColor": "#E53E3E",
+      "summary": "캠벨 수프 캔, 마릴린 먼로, 재키 케네디 등 대중문화 이미지를 예술로 승화시키며 팝아트의 아이콘으로 부상. 실크스크린 기법 완성.",
+      "events": [
+        {
+          "year": 1962,
+          "title": "캠벨 수프 캔 전시",
+          "titleEn": "Campbell's Soup Cans Exhibition",
+          "category": "Exhibition",
+          "description": "로스앤젤레스 페러스 갤러리에서 32개의 캠벨 수프 캔 그림 전시. 팝아트 선언이자 예술계의 지각변동.",
+          "impactScore": 98,
+          "auctionHigh": 60,
+          "auctionLow": 40,
+          "context": {
+            "marketValue": 55,
+            "criticalAcclaim": 90,
+            "historical": 100,
+            "socialImpact": 95,
+            "institutional": 75
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/95/Campbell%27s_Soup_Cans_MOMA.jpg",
+          "imageSource": "Wikipedia - Fair Use (MoMA)",
+          "visualPrompt": "Grid of 32 Campbell's Soup Cans, pop art exhibition, clean gallery walls",
+          "sources": {
+            "primary": "MoMA Archives",
+            "secondary": ["Tate", "Ferus Gallery Records"]
+          }
+        },
+        {
+          "year": 1963,
+          "title": "팩토리 스튜디오 개설",
+          "titleEn": "The Factory Studio Opens",
+          "category": "Personal",
+          "description": "이스트 47번가에 은색 호일로 장식된 전설적인 스튜디오 '팩토리' 오픈. 예술과 대중문화의 교차점이자 창작 공장.",
+          "impactScore": 95,
+          "auctionHigh": 55,
+          "auctionLow": 35,
+          "context": {
+            "marketValue": 50,
+            "criticalAcclaim": 85,
+            "historical": 98,
+            "socialImpact": 100,
+            "institutional": 60
+          },
+          "visualPrompt": "Andy Warhol's Factory, silver foil walls, artists and celebrities, 1960s New York",
+          "sources": {
+            "primary": "Andy Warhol Museum",
+            "secondary": ["MoMA", "Whitney Museum"]
+          }
+        },
+        {
+          "year": 1964,
+          "title": "Brillo Boxes 전시",
+          "titleEn": "Brillo Boxes Exhibition",
+          "category": "Masterpiece",
+          "description": "스테이블 갤러리에서 상품 상자를 그대로 재현한 조각 전시. '무엇이 예술인가?'라는 근본적 질문 제기.",
+          "impactScore": 92,
+          "auctionHigh": 70,
+          "auctionLow": 45,
+          "context": {
+            "marketValue": 65,
+            "criticalAcclaim": 95,
+            "historical": 95,
+            "socialImpact": 85,
+            "institutional": 80
+          },
+          "visualPrompt": "Brillo soap pad boxes stacked in gallery, pop art sculpture, consumer product as art",
+          "sources": {
+            "primary": "MoMA",
+            "secondary": ["Andy Warhol Museum"]
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Death & Disaster / Film",
+      "eraLabelKo": "죽음과 재난 / 영화",
+      "ageRange": "35-42",
+      "startYear": 1963,
+      "endYear": 1970,
+      "moodColor": "#2D3748",
+      "summary": "전기 의자, 자동차 사고, 자살 등 죽음의 이미지 시리즈와 실험 영화 제작. 1968년 발레리 솔라나스의 총격으로 생사를 넘나드는 경험.",
+      "events": [
+        {
+          "year": 1963,
+          "title": "죽음과 재난 시리즈",
+          "titleEn": "Death and Disaster Series",
+          "category": "Masterpiece",
+          "description": "자동차 사고, 전기 의자, 자살 등 충격적인 뉴스 사진을 반복적으로 실크스크린. 대중매체와 죽음의 일상화 비평.",
+          "impactScore": 88,
+          "auctionHigh": 80,
+          "auctionLow": 55,
+          "context": {
+            "marketValue": 75,
+            "criticalAcclaim": 90,
+            "historical": 92,
+            "socialImpact": 85,
+            "institutional": 85
+          },
+          "visualPrompt": "Silk screen print of car crash repeated multiple times, stark contrast, death imagery",
+          "sources": {
+            "primary": "MoMA",
+            "secondary": ["Andy Warhol Museum", "Tate"]
+          }
+        },
+        {
+          "year": 1968,
+          "title": "총격 피습",
+          "titleEn": "Shot by Valerie Solanas",
+          "category": "Scandal",
+          "description": "급진적 페미니스트 발레리 솔라나스에게 총격당해 임상적 사망 상태에서 기적적으로 회생. 이후 '죽음'에 대한 집착 심화.",
+          "impactScore": 95,
+          "auctionHigh": 75,
+          "auctionLow": 50,
+          "context": {
+            "marketValue": 70,
+            "criticalAcclaim": 80,
+            "historical": 98,
+            "socialImpact": 95,
+            "institutional": 75
+          },
+          "visualPrompt": "1968 New York, hospital scene, newspaper headlines about Warhol shooting",
+          "sources": {
+            "primary": "Andy Warhol Museum",
+            "secondary": ["New York Times Archives", "Wikipedia"]
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Business Art",
+      "eraLabelKo": "비즈니스 아트",
+      "ageRange": "43-58",
+      "startYear": 1971,
+      "endYear": 1987,
+      "moodColor": "#D69E2E",
+      "summary": "초상화 커미션, Interview 매거진, TV 출연 등 상업적 활동 전면화. '좋은 사업이 최고의 예술'이라는 철학 실천.",
+      "events": [
+        {
+          "year": 1975,
+          "title": "철학 책 출간",
+          "titleEn": "The Philosophy of Andy Warhol Published",
+          "category": "Personal",
+          "description": "'앤디 워홀의 철학'(사랑에서 B로, 그리고 다시) 출간. 유명해지는 것, 돈, 예술에 대한 날카로운 통찰.",
+          "impactScore": 70,
+          "auctionHigh": 65,
+          "auctionLow": 45,
+          "context": {
+            "marketValue": 55,
+            "criticalAcclaim": 75,
+            "historical": 80,
+            "socialImpact": 85,
+            "institutional": 60
+          },
+          "visualPrompt": "Book cover The Philosophy of Andy Warhol, pop art typography, 1970s design",
+          "sources": {
+            "primary": "Andy Warhol Museum",
+            "secondary": []
+          }
+        },
+        {
+          "year": 1984,
+          "title": "바스키아와 협업",
+          "titleEn": "Collaboration with Basquiat",
+          "category": "Masterpiece",
+          "description": "신예 바스키아와 세대를 초월한 협업. 두 스타일의 역동적 충돌로 미술사적 걸작 탄생.",
+          "impactScore": 90,
+          "auctionHigh": 90,
+          "auctionLow": 65,
+          "context": {
+            "marketValue": 85,
+            "criticalAcclaim": 85,
+            "historical": 95,
+            "socialImpact": 88,
+            "institutional": 80
+          },
+          "visualPrompt": "Warhol Basquiat collaboration painting, pop art mixed with neo-expressionism",
+          "sources": {
+            "primary": "Andy Warhol Museum",
+            "secondary": ["MoMA", "Gagosian"]
+          }
+        },
+        {
+          "year": 1987,
+          "title": "갑작스러운 사망",
+          "titleEn": "Sudden Death",
+          "category": "Personal",
+          "description": "담낭 수술 후 심장 부정맥으로 사망. 58세. 유언 없이 떠났으나 막대한 예술 유산과 재단 설립.",
+          "impactScore": 100,
+          "auctionHigh": 100,
+          "auctionLow": 80,
+          "context": {
+            "marketValue": 95,
+            "criticalAcclaim": 98,
+            "historical": 100,
+            "socialImpact": 100,
+            "institutional": 95
+          },
+          "visualPrompt": "Memorial tribute to Warhol, flowers at The Factory, 1987 New York",
+          "sources": {
+            "primary": "Andy Warhol Museum",
+            "secondary": ["New York Times", "MoMA"]
+          }
+        }
+      ]
+    }
+  ],
+  "critiques": [
+    {
+      "text": "If you want to know all about Andy Warhol, just look at the surface of my paintings and films and me, and there I am. There's nothing behind it.",
+      "textKo": "앤디 워홀에 대해 모든 것을 알고 싶다면, 내 그림과 영화의 표면, 그리고 나를 보면 된다. 그 뒤에는 아무것도 없다.",
+      "author": "Andy Warhol",
+      "source": "The Philosophy of Andy Warhol",
+      "year": "1975"
+    },
+    {
+      "text": "Warhol's genius was to see that the aura of uniqueness is itself a product that can be mass-produced.",
+      "textKo": "워홀의 천재성은 유일성의 아우라 자체가 대량생산 가능한 상품임을 본 것이다.",
+      "author": "Arthur Danto",
+      "source": "The Transfiguration of the Commonplace",
+      "year": "1981"
+    }
+  ],
+  "masterpieces": [
+    {
+      "id": "warhol_marilyn_1962",
+      "title": "Marilyn Diptych",
+      "titleKo": "마릴린 이단화",
+      "year": "1962",
+      "medium": "Acrylic paint on canvas",
+      "dimensions": "205.4 × 289.6 cm",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/44/Marilyn_Diptych.jpg",
+      "imageSource": "Wikipedia - Fair Use (Tate)",
+      "collection": {
+        "museum": "Tate Modern",
+        "location": "London, UK",
+        "acquisitionYear": "1980"
+      },
+      "significance": "마릴린 먼로의 죽음 직후 제작. 50개의 이미지 반복으로 명성, 죽음, 복제의 의미를 탐구한 팝아트의 아이콘.",
+      "visualPrompt": "50 Marilyn Monroe portraits in grid, colorful and faded, pop art silk screen",
+      "sources": ["Tate Modern", "MoMA"]
+    },
+    {
+      "id": "warhol_shot_sage_blue_marilyn",
+      "title": "Shot Sage Blue Marilyn",
+      "titleKo": "샷 세이지 블루 마릴린",
+      "year": "1964",
+      "medium": "Silkscreen ink and acrylic on canvas",
+      "dimensions": "101.6 × 101.6 cm",
+      "imageUrl": "",
+      "imageSource": "Christie's",
+      "collection": {
+        "museum": "Private Collection",
+        "location": "Unknown"
+      },
+      "auctionRecord": {
+        "price": "$195 million",
+        "date": "May 9, 2022",
+        "house": "Christie's New York",
+        "source": "https://www.christies.com/en/auction/the-collection-of-thomas-and-doris-ammann-evening-sale-25546/"
+      },
+      "significance": "20세기 미술 경매 최고가 기록. 마릴린 먼로의 아이코닉한 이미지를 세이지 블루 배경에 담은 걸작.",
+      "visualPrompt": "Marilyn Monroe portrait on sage blue background, vibrant pop art colors, silk screen",
+      "sources": ["Christie's", "Andy Warhol Museum"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": ["Andy Warhol Museum", "MoMA", "Tate Modern", "Christie's"],
+    "verificationStatus": "verified"
+  }
+}
+

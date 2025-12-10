@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:timelines": "tsx scripts/generateTimelineData.ts",
+    "generate:comparisons": "tsx scripts/generateComparisonData.ts",
+    "generate:all": "npm run generate:timelines && npm run generate:comparisons"
   },
   "dependencies": {
     "@google/genai": "^1.30.0",
@@ -21,6 +24,7 @@
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "tsx": "^4.21.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }

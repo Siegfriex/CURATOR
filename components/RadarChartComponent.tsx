@@ -3,6 +3,8 @@ import React, { useState, useMemo } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, PolarRadiusAxis, Legend, LabelList } from 'recharts';
 import { AxisData } from '../types';
 import { COLORS, METRIC_DETAILS } from '../constants';
+import { ChartSkeleton } from './ChartSkeleton';
+import { useResponsive } from '../hooks/useResponsive';
 
 type RadarVariant = 'default' | 'mini';
 
@@ -130,12 +132,24 @@ export const RadarChartComponent: React.FC<Props> = ({
   variant = 'default',
   showLegend = true
 }) => {
-  // Data safety check
-  if (!data || data.length === 0) return null;
+  // Data safety check with skeleton
+  if (!data || data.length === 0) {
+    return <ChartSkeleton variant="radar" height={isMini ? 150 : 300} />;
+  }
 
   const isMini = variant === 'mini';
+  const { isMobile, isTablet } = useResponsive();
   const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
-  const outerRadius = isMini ? '45%' : '65%'; 
+  
+  // 반응형 크기 계산
+  const chartSize = useMemo(() => {
+    if (isMini) return { minHeight: 150, minWidth: 150, outerRadius: '45%' };
+    if (isMobile) return { minHeight: 250, minWidth: 250, outerRadius: '50%' };
+    if (isTablet) return { minHeight: 300, minWidth: 300, outerRadius: '60%' };
+    return { minHeight: 350, minWidth: 350, outerRadius: '65%' };
+  }, [isMini, isMobile, isTablet]);
+  
+  const outerRadius = chartSize.outerRadius; 
 
   const { mostSimilarAxis, mostDiffAxis } = useMemo(() => {
     if (!data2) return { mostSimilarAxis: null, mostDiffAxis: null };
@@ -191,8 +205,21 @@ export const RadarChartComponent: React.FC<Props> = ({
      dynamicContext = "Primary Divergence: This metric highlights the most significant structural difference in their career trajectories.";
   }
 
+  // 반응형 크기 사용
+  const minHeight = chartSize.minHeight;
+  const minWidth = chartSize.minWidth;
+
   return (
-    <div className="w-full h-full min-h-[150px] relative min-w-0">
+    <div 
+      className="w-full h-full relative" 
+      style={{ 
+        width: '100%', 
+        height: '100%', 
+        minHeight: `${minHeight}px`, 
+        minWidth: `${minWidth}px`,
+        position: 'relative'
+      }}
+    >
       {selectedMetric && metricDetail && (
         <div 
           className="absolute inset-0 z-50 flex items-center justify-center p-4"
@@ -225,8 +252,22 @@ export const RadarChartComponent: React.FC<Props> = ({
         </div>
       )}
 
-      <div style={{ width: '100%', height: '100%', minHeight: '300px', minWidth: '300px' }}>
-        <ResponsiveContainer width="100%" height="100%">
+      <div 
+        className="w-full h-full" 
+        style={{ 
+          width: '100%', 
+          height: '100%', 
+          minHeight: `${minHeight}px`, 
+          minWidth: `${minWidth}px`,
+          position: 'relative'
+        }}
+      >
+        <ResponsiveContainer 
+          width="100%" 
+          height="100%" 
+          minHeight={minHeight} 
+          minWidth={minWidth}
+        >
           <RadarChart cx="50%" cy="50%" outerRadius={outerRadius} data={chartData}>
           <PolarGrid stroke={COLORS.grid} strokeWidth={isMini ? 0.5 : 1} />
           <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />

@@ -1,0 +1,227 @@
+{
+  "artistId": "18",
+  "artistName": "Yayoi Kusama",
+  "birthYear": 1929,
+  "eras": [
+    {
+      "eraLabel": "Early Career",
+      "eraLabelKo": "초기 경력",
+      "ageRange": "20s-35s",
+      "startYear": 1949,
+      "endYear": 1964,
+      "moodColor": "#E53E3E",
+      "summary": "Yayoi Kusama의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1954,
+          "title": "1954년 주요 활동",
+          "titleEn": "Major Activity in 1954",
+          "category": "Exhibition",
+          "description": "Yayoi Kusama이(가) 초기 경력 시기인 1954년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Yayoi Kusama in 1954, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1959,
+          "title": "1959년 주요 활동",
+          "titleEn": "Major Activity in 1959",
+          "category": "Masterpiece",
+          "description": "Yayoi Kusama이(가) 초기 경력 시기인 1959년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Yayoi Kusama in 1959, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Mid Career",
+      "eraLabelKo": "중기 발전",
+      "ageRange": "35s-50s",
+      "startYear": 1964,
+      "endYear": 1979,
+      "moodColor": "#D69E2E",
+      "summary": "Yayoi Kusama의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1969,
+          "title": "1969년 주요 활동",
+          "titleEn": "Major Activity in 1969",
+          "category": "Exhibition",
+          "description": "Yayoi Kusama이(가) 중기 발전 시기인 1969년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Yayoi Kusama in 1969, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1974,
+          "title": "1974년 주요 활동",
+          "titleEn": "Major Activity in 1974",
+          "category": "Masterpiece",
+          "description": "Yayoi Kusama이(가) 중기 발전 시기인 1974년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Yayoi Kusama in 1974, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Mature Period",
+      "eraLabelKo": "성숙기",
+      "ageRange": "50s-65s",
+      "startYear": 1979,
+      "endYear": 1994,
+      "moodColor": "#38BDF8",
+      "summary": "Yayoi Kusama의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1984,
+          "title": "1984년 주요 활동",
+          "titleEn": "Major Activity in 1984",
+          "category": "Exhibition",
+          "description": "Yayoi Kusama이(가) 성숙기 시기인 1984년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Yayoi Kusama in 1984, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1989,
+          "title": "1989년 주요 활동",
+          "titleEn": "Major Activity in 1989",
+          "category": "Masterpiece",
+          "description": "Yayoi Kusama이(가) 성숙기 시기인 1989년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Yayoi Kusama in 1989, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Late Career",
+      "eraLabelKo": "후기 경력",
+      "ageRange": "65s-80s",
+      "startYear": 1994,
+      "endYear": 2009,
+      "moodColor": "#2D3748",
+      "summary": "Yayoi Kusama의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1999,
+          "title": "1999년 주요 활동",
+          "titleEn": "Major Activity in 1999",
+          "category": "Exhibition",
+          "description": "Yayoi Kusama이(가) 후기 경력 시기인 1999년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Yayoi Kusama in 1999, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 2004,
+          "title": "2004년 주요 활동",
+          "titleEn": "Major Activity in 2004",
+          "category": "Masterpiece",
+          "description": "Yayoi Kusama이(가) 후기 경력 시기인 2004년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Yayoi Kusama in 2004, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    }
+  ],
+  "critiques": [],
+  "masterpieces": [],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [],
+    "verificationStatus": "ai_generated"
+  }
+}

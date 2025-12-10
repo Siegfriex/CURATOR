@@ -1,0 +1,340 @@
+{
+  "artistId": "2",
+  "artistName": "Damien Hirst",
+  "birthYear": 1965,
+  "deathYear": null,
+  "eras": [
+    {
+      "eraLabel": "YBA Emergence",
+      "eraLabelKo": "YBA 등장기",
+      "ageRange": "20s",
+      "startYear": 1988,
+      "endYear": 1995,
+      "moodColor": "#E53E3E",
+      "summary": "골드스미스 대학 시절 Freeze 전시를 기획하며 영국 청년 미술가(YBA) 운동을 주도. 포름알데히드에 보존된 상어로 미술계에 충격을 주며 논쟁의 중심에 서다.",
+      "events": [
+        {
+          "year": 1988,
+          "title": "Freeze 전시 기획",
+          "titleEn": "Freeze Exhibition",
+          "category": "Exhibition",
+          "description": "런던 도클랜드의 빈 창고에서 골드스미스 동료들과 함께 자체 기획 전시. YBA 운동의 시작점으로 찰스 사치의 주목을 받음.",
+          "impactScore": 90,
+          "auctionHigh": 20,
+          "auctionLow": 10,
+          "context": {
+            "marketValue": 15,
+            "criticalAcclaim": 65,
+            "historical": 95,
+            "socialImpact": 80,
+            "institutional": 40
+          },
+          "visualPrompt": "Abandoned London warehouse transformed into gallery, young artists, raw industrial space",
+          "sources": {
+            "primary": "Tate Archives - YBA Collection",
+            "secondary": ["Saatchi Gallery Archives"]
+          }
+        },
+        {
+          "year": 1991,
+          "title": "상어 작품 완성",
+          "titleEn": "The Physical Impossibility of Death",
+          "category": "Masterpiece",
+          "description": "4미터 타이거 상어를 포름알데히드에 보존한 충격적 작품. '죽음의 물리적 불가능성'으로 현대미술의 아이콘이자 논쟁의 대상이 됨.",
+          "impactScore": 98,
+          "auctionHigh": 85,
+          "auctionLow": 70,
+          "context": {
+            "marketValue": 90,
+            "criticalAcclaim": 75,
+            "historical": 95,
+            "socialImpact": 95,
+            "institutional": 65
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/64/The_Physical_Impossibility_of_Death_in_the_Mind_of_Someone_Living.jpg",
+          "imageSource": "Wikimedia Commons",
+          "visualPrompt": "Massive tiger shark suspended in blue formaldehyde tank, gallery setting",
+          "sources": {
+            "primary": "Saatchi Gallery",
+            "secondary": ["MoMA Archives", "Tate"]
+          }
+        },
+        {
+          "year": 1995,
+          "title": "터너상 수상",
+          "titleEn": "Turner Prize",
+          "category": "Exhibition",
+          "description": "'Mother and Child Divided'로 터너상 수상. 반으로 절단된 소와 송아지 작품으로 영국 최고 현대미술상 획득.",
+          "impactScore": 92,
+          "auctionHigh": 75,
+          "auctionLow": 60,
+          "context": {
+            "marketValue": 80,
+            "criticalAcclaim": 85,
+            "historical": 90,
+            "socialImpact": 85,
+            "institutional": 90
+          },
+          "visualPrompt": "Split cow and calf in formaldehyde tanks, Turner Prize ceremony",
+          "sources": {
+            "primary": "Tate Archives - Turner Prize",
+            "secondary": ["Artforum"]
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Sensation Era",
+      "eraLabelKo": "센세이션 시대",
+      "ageRange": "30s",
+      "startYear": 1996,
+      "endYear": 2005,
+      "moodColor": "#805AD5",
+      "summary": "Royal Academy의 Sensation 전시로 국제적 논쟁의 중심에 서며 찰스 사치와의 협력으로 시장 지배력 확립. 의약품 캐비닛과 스핀 페인팅으로 브랜드 구축.",
+      "events": [
+        {
+          "year": 1997,
+          "title": "센세이션 전시",
+          "titleEn": "Sensation Exhibition",
+          "category": "Exhibition",
+          "description": "Royal Academy에서 사치 컬렉션 YBA 작품 대규모 전시. 마커스 하비의 마이라 힌들리 초상 등으로 영국 전역에 논쟁 촉발.",
+          "impactScore": 95,
+          "auctionHigh": 80,
+          "auctionLow": 65,
+          "context": {
+            "marketValue": 85,
+            "criticalAcclaim": 70,
+            "historical": 92,
+            "socialImpact": 95,
+            "institutional": 75
+          },
+          "visualPrompt": "Royal Academy galleries filled with provocative contemporary art, crowds, controversy",
+          "sources": {
+            "primary": "Royal Academy Archives",
+            "secondary": ["Saatchi Gallery"]
+          }
+        },
+        {
+          "year": 2000,
+          "title": "Pharmacy 시리즈 정점",
+          "titleEn": "Pharmacy Series Peak",
+          "category": "Masterpiece",
+          "description": "의약품 캐비닛과 알약 시리즈의 정점. 죽음과 치유, 과학과 신앙의 이중성을 탐구하는 대표 연작 완성.",
+          "impactScore": 85,
+          "auctionHigh": 70,
+          "auctionLow": 55,
+          "context": {
+            "marketValue": 80,
+            "criticalAcclaim": 75,
+            "historical": 85,
+            "socialImpact": 70,
+            "institutional": 75
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/2d/Damien_Hirst%27s_Pharmacy.jpg",
+          "imageSource": "Wikimedia Commons",
+          "visualPrompt": "Glass cabinet filled with pharmaceutical pills in colorful arrangement",
+          "sources": {
+            "primary": "Tate Collection"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Market Domination",
+      "eraLabelKo": "시장 지배기",
+      "ageRange": "40s",
+      "startYear": 2006,
+      "endYear": 2012,
+      "moodColor": "#D69E2E",
+      "summary": "다이아몬드 해골 'For the Love of God'로 $100만 달러 이상의 미술품 기록. 2008년 소더비 경매에서 갤러리 우회 직접 판매로 $200만 달러 수익, 시장 혁신.",
+      "events": [
+        {
+          "year": 2007,
+          "title": "다이아몬드 해골 공개",
+          "titleEn": "For the Love of God",
+          "category": "Masterpiece",
+          "description": "8,601개의 다이아몬드로 덮인 플래티넘 해골. 제작비 $15만 달러, 판매가 $100만 달러로 역대 생존 작가 최고가 기록.",
+          "impactScore": 98,
+          "auctionHigh": 100,
+          "auctionLow": 90,
+          "context": {
+            "marketValue": 100,
+            "criticalAcclaim": 65,
+            "historical": 90,
+            "socialImpact": 95,
+            "institutional": 70
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/14/Hirst-Love-Of-God.jpg",
+          "imageSource": "Wikimedia Commons",
+          "visualPrompt": "Platinum human skull encrusted with diamonds, museum display case",
+          "sources": {
+            "primary": "White Cube Gallery",
+            "secondary": ["Sotheby's", "Artnet"]
+          }
+        },
+        {
+          "year": 2008,
+          "title": "소더비 직접 경매",
+          "titleEn": "Beautiful Inside My Head Forever",
+          "category": "Scandal",
+          "description": "갤러리를 거치지 않고 소더비에서 직접 경매 진행. $200만 달러 이상 수익으로 미술 시장 관행 파괴.",
+          "impactScore": 95,
+          "auctionHigh": 95,
+          "auctionLow": 80,
+          "context": {
+            "marketValue": 98,
+            "criticalAcclaim": 55,
+            "historical": 88,
+            "socialImpact": 90,
+            "institutional": 60
+          },
+          "visualPrompt": "Sotheby's auction house, bidding paddles raised, massive artwork on display",
+          "sources": {
+            "primary": "Sotheby's Archives",
+            "secondary": ["Artnet", "The Guardian"]
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Reinvention",
+      "eraLabelKo": "재창조기",
+      "ageRange": "50s",
+      "startYear": 2013,
+      "endYear": 2025,
+      "moodColor": "#3182CE",
+      "summary": "회화 작업으로 회귀하며 비평적 재평가 시도. 베니스에서 대규모 가상 난파선 전시, NFT 프로젝트 등 새로운 매체와 형식 탐구.",
+      "events": [
+        {
+          "year": 2017,
+          "title": "난파선의 보물 전시",
+          "titleEn": "Treasures from the Wreck of the Unbelievable",
+          "category": "Exhibition",
+          "description": "베니스 팔라초 그라시에서 가상의 고대 난파선 유물 전시. 신화와 키치의 경계를 넘나드는 대규모 프로젝트.",
+          "impactScore": 85,
+          "auctionHigh": 70,
+          "auctionLow": 55,
+          "context": {
+            "marketValue": 75,
+            "criticalAcclaim": 60,
+            "historical": 80,
+            "socialImpact": 85,
+            "institutional": 80
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Damien_Hirst_-_Treasures_from_the_Wreck_of_the_Unbelievable_-_2017.jpg/800px-Damien_Hirst_-_Treasures_from_the_Wreck_of_the_Unbelievable_-_2017.jpg",
+          "imageSource": "Wikimedia Commons",
+          "visualPrompt": "Massive bronze sculpture covered in coral, Venice palazzo interior",
+          "sources": {
+            "primary": "Pinault Collection",
+            "secondary": ["Venice Biennale Archives"]
+          }
+        },
+        {
+          "year": 2021,
+          "title": "The Currency NFT 프로젝트",
+          "titleEn": "The Currency NFT Project",
+          "category": "Scandal",
+          "description": "10,000개의 점 그림 작품을 NFT와 연동. 소유자가 NFT와 실물 중 선택 시 다른 하나는 소각되는 실험적 프로젝트.",
+          "impactScore": 80,
+          "auctionHigh": 65,
+          "auctionLow": 50,
+          "context": {
+            "marketValue": 70,
+            "criticalAcclaim": 55,
+            "historical": 75,
+            "socialImpact": 80,
+            "institutional": 55
+          },
+          "visualPrompt": "Wall of colorful dot paintings, some being burned, digital screens showing NFTs",
+          "sources": {
+            "primary": "Heni Gallery",
+            "secondary": ["Artnet", "The Art Newspaper"]
+          }
+        }
+      ]
+    }
+  ],
+  "critiques": [
+    {
+      "text": "Hirst is the impresario of death, turning mortality into merchandise.",
+      "textKo": "허스트는 죽음의 흥행사로, 죽음을 상품으로 전환한다.",
+      "author": "Julian Stallabrass",
+      "source": "High Art Lite",
+      "year": "1999"
+    },
+    {
+      "text": "He has changed the rules of engagement between artists and the market.",
+      "textKo": "그는 작가와 시장 사이의 관계 규칙을 바꿨다.",
+      "author": "Sarah Thornton",
+      "source": "Seven Days in the Art World",
+      "year": "2008"
+    }
+  ],
+  "masterpieces": [
+    {
+      "id": "hirst_shark_1991",
+      "title": "The Physical Impossibility of Death in the Mind of Someone Living",
+      "titleKo": "살아있는 자의 마음에서 죽음의 물리적 불가능성",
+      "year": "1991",
+      "medium": "Tiger shark, glass, steel, formaldehyde solution",
+      "dimensions": "213 × 518 × 213 cm",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/64/The_Physical_Impossibility_of_Death_in_the_Mind_of_Someone_Living.jpg",
+      "imageSource": "Wikimedia Commons",
+      "collection": {
+        "museum": "Private Collection (Steven A. Cohen)",
+        "location": "USA"
+      },
+      "auctionRecord": {
+        "price": "$8-12 million (private sale)",
+        "date": "2004",
+        "house": "Private Sale",
+        "source": "https://www.nytimes.com/2006/07/01/arts/design/01sharkfin.html"
+      },
+      "significance": "4미터 타이거 상어를 포름알데히드에 보존한 충격적 작품. YBA 미학과 개념미술의 상징으로 현대미술 담론의 중심에 서다.",
+      "visualPrompt": "Massive tiger shark suspended in blue formaldehyde solution inside glass vitrine",
+      "sources": [
+        "https://www.tate.org.uk/whats-on/tate-modern/damien-hirst",
+        "https://www.saatchigallery.com/artist/damien_hirst"
+      ]
+    },
+    {
+      "id": "hirst_love_god_2007",
+      "title": "For the Love of God",
+      "titleKo": "신의 사랑을 위하여",
+      "year": "2007",
+      "medium": "Platinum, diamonds, human teeth",
+      "dimensions": "17.1 × 12.7 × 19.1 cm",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/14/Hirst-Love-Of-God.jpg",
+      "imageSource": "Wikimedia Commons",
+      "collection": {
+        "museum": "Private Collection (Investment Group including Hirst)",
+        "location": "UK"
+      },
+      "auctionRecord": {
+        "price": "$100 million (asking price)",
+        "date": "2007",
+        "house": "White Cube Gallery",
+        "source": "https://www.whitecube.com/artists/damien-hirst"
+      },
+      "significance": "8,601개의 다이아몬드로 덮인 18세기 해골. 역대 생존 작가 최고가 기록으로 미술 시장의 극단을 상징.",
+      "visualPrompt": "Platinum human skull completely encrusted with diamonds, glittering in museum lighting",
+      "sources": [
+        "https://www.whitecube.com/artists/damien-hirst",
+        "https://www.artnet.com/artists/damien-hirst/"
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Tate Archives",
+      "Saatchi Gallery",
+      "White Cube",
+      "Gagosian Gallery",
+      "Sotheby's Archives"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

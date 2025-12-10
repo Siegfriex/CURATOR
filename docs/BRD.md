@@ -3158,7 +3158,7 @@ const HIGH_PRIORITY_CONFIG = {
   concurrency: 80,        // 인스턴스당 동시 처리 수
   timeoutSeconds: 60,
   memory: '512MiB' as const,
-  region: 'asia-northeast3',  // 서울 리전
+  region: 'us-central1',  // 기본 리전 (환경에 따라 변경 가능)
 };
 
 // 중간 빈도 API
@@ -3169,7 +3169,7 @@ const STANDARD_CONFIG = {
   concurrency: 80,
   timeoutSeconds: 60,
   memory: '256MiB' as const,
-  region: 'asia-northeast3',
+  region: 'us-central1',  // 기본 리전 (환경에 따라 변경 가능)
 };
 
 // 적용
@@ -3320,7 +3320,7 @@ export default defineConfig(({ mode }) => {
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
       'import.meta.env.VITE_FUNCTIONS_URL': JSON.stringify(
-        env.VITE_FUNCTIONS_URL || 'https://asia-northeast3-curatorproto.cloudfunctions.net'
+        env.VITE_FUNCTIONS_URL || 'https://us-central1-curatorproto.cloudfunctions.net'
       )
     },
     resolve: {

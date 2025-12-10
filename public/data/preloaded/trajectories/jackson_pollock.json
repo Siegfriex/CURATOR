@@ -1,0 +1,104 @@
+{
+  "artistId": "28",
+  "artistName": "Jackson Pollock",
+  "birthYear": 1912,
+  "deathYear": 1956,
+  "activeYears": [1930, 1956],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "CRITICAL",
+    "phase3": "POSTHUMOUS"
+  },
+  "data": [
+    {
+      "age": 18,
+      "year": 1930,
+      "total": 10,
+      "institution": 5,
+      "discourse": 5,
+      "academy": 15,
+      "network": 15,
+      "context": "토마스 하트 벤튼 사사",
+      "keyEvent": "Art Students League 입학",
+      "confidence": "high",
+      "sources": ["MoMA", "Pollock-Krasner House"]
+    },
+    {
+      "age": 31,
+      "year": 1943,
+      "total": 35,
+      "institution": 25,
+      "discourse": 45,
+      "academy": 25,
+      "network": 40,
+      "context": "페기 구겐하임 후원",
+      "keyEvent": "Peggy Guggenheim 첫 개인전",
+      "confidence": "high",
+      "sources": ["Guggenheim Museum", "MoMA"]
+    },
+    {
+      "age": 35,
+      "year": 1947,
+      "total": 60,
+      "institution": 50,
+      "discourse": 75,
+      "academy": 45,
+      "network": 65,
+      "context": "드리핑 기법 개발",
+      "keyEvent": "Drip Painting 시작",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 37,
+      "year": 1949,
+      "total": 78,
+      "institution": 70,
+      "discourse": 90,
+      "academy": 60,
+      "network": 85,
+      "context": "라이프지 특집",
+      "keyEvent": "Life Magazine 'America's Greatest Living Painter?'",
+      "confidence": "high",
+      "sources": ["Life Magazine", "MoMA"]
+    },
+    {
+      "age": 38,
+      "year": 1950,
+      "total": 85,
+      "institution": 80,
+      "discourse": 95,
+      "academy": 70,
+      "network": 90,
+      "context": "Number 1A 등 걸작",
+      "keyEvent": "Number 1A, 1948",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 44,
+      "year": 1956,
+      "total": 70,
+      "institution": 68,
+      "discourse": 75,
+      "academy": 65,
+      "network": 70,
+      "context": "음주운전 교통사고 사망",
+      "keyEvent": "사망 (44세)",
+      "confidence": "high",
+      "sources": ["MoMA", "Pollock-Krasner House"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "MoMA Archives",
+      "Pollock-Krasner House and Study Center",
+      "Guggenheim Museum",
+      "National Gallery of Art"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

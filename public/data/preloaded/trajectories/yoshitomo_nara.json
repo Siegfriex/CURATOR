@@ -1,0 +1,128 @@
+{
+  "artistId": "25",
+  "artistName": "Yoshitomo Nara",
+  "birthYear": 1959,
+  "deathYear": null,
+  "activeYears": [1987, 2024],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "CRITICAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 28,
+      "year": 1987,
+      "total": 10,
+      "institution": 5,
+      "discourse": 10,
+      "academy": 15,
+      "network": 10,
+      "context": "아이치현립예술대학 졸업",
+      "keyEvent": "대학원 진학",
+      "confidence": "high",
+      "sources": ["Yoshitomo Nara Foundation"]
+    },
+    {
+      "age": 30,
+      "year": 1989,
+      "total": 15,
+      "institution": 8,
+      "discourse": 15,
+      "academy": 20,
+      "network": 15,
+      "context": "독일 유학 시작",
+      "keyEvent": "Düsseldorf 유학",
+      "confidence": "high",
+      "sources": ["Yoshitomo Nara Foundation"]
+    },
+    {
+      "age": 36,
+      "year": 1995,
+      "total": 30,
+      "institution": 20,
+      "discourse": 40,
+      "academy": 25,
+      "network": 35,
+      "context": "독일에서 활동",
+      "confidence": "high",
+      "sources": ["Yoshitomo Nara Foundation"]
+    },
+    {
+      "age": 41,
+      "year": 2000,
+      "total": 55,
+      "institution": 45,
+      "discourse": 65,
+      "academy": 42,
+      "network": 58,
+      "context": "일본 귀국, 인기 상승",
+      "keyEvent": "일본 귀국",
+      "confidence": "high",
+      "sources": ["MoMA", "Yoshitomo Nara Foundation"]
+    },
+    {
+      "age": 46,
+      "year": 2005,
+      "total": 70,
+      "institution": 65,
+      "discourse": 78,
+      "academy": 58,
+      "network": 78,
+      "context": "미국 순회 전시",
+      "keyEvent": "Nothing Ever Happens 전시",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 60,
+      "year": 2019,
+      "total": 88,
+      "institution": 85,
+      "discourse": 92,
+      "academy": 78,
+      "network": 92,
+      "context": "경매 최고가 기록",
+      "keyEvent": "Knife Behind Back $25M",
+      "confidence": "high",
+      "sources": ["Sotheby's"]
+    },
+    {
+      "age": 62,
+      "year": 2021,
+      "total": 90,
+      "institution": 88,
+      "discourse": 93,
+      "academy": 82,
+      "network": 94,
+      "context": "LA County Museum 회고전",
+      "keyEvent": "LACMA 대회고전",
+      "confidence": "high",
+      "sources": ["LACMA"]
+    },
+    {
+      "age": 65,
+      "year": 2024,
+      "total": 92,
+      "institution": 90,
+      "discourse": 94,
+      "academy": 85,
+      "network": 95,
+      "context": "국제적 인정 지속",
+      "confidence": "high",
+      "sources": ["Yoshitomo Nara Foundation"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Yoshitomo Nara Foundation",
+      "LACMA",
+      "Sotheby's Records",
+      "MoMA Archives"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

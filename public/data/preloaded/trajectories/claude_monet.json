@@ -1,0 +1,115 @@
+{
+  "artistId": "8",
+  "artistName": "Claude Monet",
+  "birthYear": 1840,
+  "deathYear": 1926,
+  "activeYears": [1860, 1926],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "CRITICAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 20,
+      "year": 1860,
+      "total": 10,
+      "institution": 0,
+      "discourse": 5,
+      "academy": 15,
+      "network": 15,
+      "context": "아카데미 쉬스에서 수학",
+      "confidence": "high",
+      "sources": ["Musée d'Orsay", "MoMA"]
+    },
+    {
+      "age": 32,
+      "year": 1872,
+      "total": 35,
+      "institution": 15,
+      "discourse": 45,
+      "academy": 25,
+      "network": 45,
+      "context": "아르장퇴유 정착",
+      "confidence": "high",
+      "sources": ["Musée Marmottan Monet"]
+    },
+    {
+      "age": 34,
+      "year": 1874,
+      "total": 55,
+      "institution": 30,
+      "discourse": 75,
+      "academy": 35,
+      "network": 65,
+      "context": "인상주의 첫 전시",
+      "keyEvent": "Impression, Sunrise 전시",
+      "confidence": "high",
+      "sources": ["Musée Marmottan Monet", "Musée d'Orsay"]
+    },
+    {
+      "age": 50,
+      "year": 1890,
+      "total": 70,
+      "institution": 60,
+      "discourse": 78,
+      "academy": 65,
+      "network": 75,
+      "context": "건초더미 연작 시작",
+      "keyEvent": "Haystacks Series",
+      "confidence": "high",
+      "sources": ["Art Institute of Chicago", "MoMA"]
+    },
+    {
+      "age": 60,
+      "year": 1900,
+      "total": 82,
+      "institution": 78,
+      "discourse": 85,
+      "academy": 80,
+      "network": 82,
+      "context": "수련 연작 시작",
+      "keyEvent": "Water Lilies 시작",
+      "confidence": "high",
+      "sources": ["Musée de l'Orangerie", "MoMA"]
+    },
+    {
+      "age": 80,
+      "year": 1920,
+      "total": 92,
+      "institution": 90,
+      "discourse": 94,
+      "academy": 92,
+      "network": 90,
+      "context": "대형 수련 연작",
+      "keyEvent": "Grandes Décorations",
+      "confidence": "high",
+      "sources": ["Musée de l'Orangerie"]
+    },
+    {
+      "age": 86,
+      "year": 1926,
+      "total": 95,
+      "institution": 95,
+      "discourse": 96,
+      "academy": 95,
+      "network": 92,
+      "context": "지베르니에서 사망",
+      "keyEvent": "사망 (86세)",
+      "confidence": "high",
+      "sources": ["Musée Marmottan Monet"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Musée Marmottan Monet Paris",
+      "Musée d'Orsay Paris",
+      "Musée de l'Orangerie Paris",
+      "MoMA Archives"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

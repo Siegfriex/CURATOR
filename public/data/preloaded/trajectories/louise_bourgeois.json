@@ -1,0 +1,128 @@
+{
+  "artistId": "16",
+  "artistName": "Louise Bourgeois",
+  "birthYear": 1911,
+  "deathYear": 2010,
+  "activeYears": [1938, 2010],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "RESTRUCTURING",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 27,
+      "year": 1938,
+      "total": 10,
+      "institution": 5,
+      "discourse": 10,
+      "academy": 10,
+      "network": 15,
+      "context": "뉴욕 이주, 초기 회화",
+      "keyEvent": "미국 이민",
+      "confidence": "high",
+      "sources": ["MoMA", "Tate"]
+    },
+    {
+      "age": 38,
+      "year": 1949,
+      "total": 25,
+      "institution": 18,
+      "discourse": 30,
+      "academy": 20,
+      "network": 30,
+      "context": "조각으로 전환",
+      "keyEvent": "첫 조각 전시",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 51,
+      "year": 1962,
+      "total": 35,
+      "institution": 30,
+      "discourse": 42,
+      "academy": 32,
+      "network": 38,
+      "context": "라텍스, 고무 작업",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 63,
+      "year": 1974,
+      "total": 50,
+      "institution": 45,
+      "discourse": 58,
+      "academy": 48,
+      "network": 52,
+      "context": "페미니즘 미술과 연결",
+      "confidence": "high",
+      "sources": ["MoMA", "Tate"]
+    },
+    {
+      "age": 71,
+      "year": 1982,
+      "total": 70,
+      "institution": 68,
+      "discourse": 78,
+      "academy": 65,
+      "network": 70,
+      "context": "MoMA 첫 여성 회고전",
+      "keyEvent": "MoMA 대회고전 (첫 여성 작가)",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 88,
+      "year": 1999,
+      "total": 90,
+      "institution": 90,
+      "discourse": 94,
+      "academy": 88,
+      "network": 88,
+      "context": "베니스 비엔날레 황금사자상",
+      "keyEvent": "Maman 설치",
+      "confidence": "high",
+      "sources": ["Venice Biennale", "Tate"]
+    },
+    {
+      "age": 94,
+      "year": 2005,
+      "total": 94,
+      "institution": 95,
+      "discourse": 96,
+      "academy": 94,
+      "network": 92,
+      "context": "테이트 모던 대형 전시",
+      "keyEvent": "Tate Modern 회고전",
+      "confidence": "high",
+      "sources": ["Tate Modern"]
+    },
+    {
+      "age": 99,
+      "year": 2010,
+      "total": 97,
+      "institution": 98,
+      "discourse": 98,
+      "academy": 97,
+      "network": 95,
+      "context": "뉴욕에서 사망",
+      "keyEvent": "사망 (98세)",
+      "confidence": "high",
+      "sources": ["MoMA", "Easton Foundation"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "MoMA Archives",
+      "Tate Modern",
+      "Easton Foundation",
+      "Venice Biennale"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

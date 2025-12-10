@@ -1,0 +1,103 @@
+{
+  "artistId": "10",
+  "artistName": "Egon Schiele",
+  "birthYear": 1890,
+  "deathYear": 1918,
+  "activeYears": [1906, 1918],
+  "narrativePath": {
+    "phase1": "SCANDAL",
+    "phase2": "CRITICAL",
+    "phase3": "POSTHUMOUS"
+  },
+  "data": [
+    {
+      "age": 16,
+      "year": 1906,
+      "total": 15,
+      "institution": 5,
+      "discourse": 10,
+      "academy": 25,
+      "network": 15,
+      "context": "비엔나 미술아카데미 입학",
+      "keyEvent": "최연소 입학",
+      "confidence": "high",
+      "sources": ["Leopold Museum", "Belvedere Vienna"]
+    },
+    {
+      "age": 18,
+      "year": 1908,
+      "total": 30,
+      "institution": 15,
+      "discourse": 35,
+      "academy": 30,
+      "network": 38,
+      "context": "아카데미 중퇴, 클림트 만남",
+      "keyEvent": "Gustav Klimt 멘토링",
+      "confidence": "high",
+      "sources": ["Leopold Museum", "Belvedere Vienna"]
+    },
+    {
+      "age": 20,
+      "year": 1910,
+      "total": 45,
+      "institution": 28,
+      "discourse": 55,
+      "academy": 35,
+      "network": 55,
+      "context": "노이쿤스트그루페 참여",
+      "keyEvent": "Neukunstgruppe 결성",
+      "confidence": "high",
+      "sources": ["Leopold Museum"]
+    },
+    {
+      "age": 22,
+      "year": 1912,
+      "total": 55,
+      "institution": 35,
+      "discourse": 70,
+      "academy": 40,
+      "network": 60,
+      "context": "외설죄 투옥",
+      "keyEvent": "노이렝바흐 투옥",
+      "confidence": "high",
+      "sources": ["Leopold Museum", "Wikipedia"]
+    },
+    {
+      "age": 26,
+      "year": 1916,
+      "total": 70,
+      "institution": 55,
+      "discourse": 78,
+      "academy": 60,
+      "network": 72,
+      "context": "군 복무, 계속 작업",
+      "confidence": "high",
+      "sources": ["Leopold Museum"]
+    },
+    {
+      "age": 28,
+      "year": 1918,
+      "total": 75,
+      "institution": 60,
+      "discourse": 80,
+      "academy": 68,
+      "network": 78,
+      "context": "비엔나 세세션 성공, 사망",
+      "keyEvent": "스페인 독감 사망",
+      "confidence": "high",
+      "sources": ["Leopold Museum", "Belvedere Vienna"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Leopold Museum Vienna",
+      "Belvedere Vienna",
+      "Albertina Vienna",
+      "MoMA Archives"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

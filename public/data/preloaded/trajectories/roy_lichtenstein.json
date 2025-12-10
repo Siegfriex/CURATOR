@@ -1,0 +1,115 @@
+{
+  "artistId": "13",
+  "artistName": "Roy Lichtenstein",
+  "birthYear": 1923,
+  "deathYear": 1997,
+  "activeYears": [1949, 1997],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "INSTITUTIONAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 28,
+      "year": 1951,
+      "total": 10,
+      "institution": 5,
+      "discourse": 10,
+      "academy": 15,
+      "network": 10,
+      "context": "클리블랜드 초기 작업",
+      "confidence": "high",
+      "sources": ["Lichtenstein Foundation", "MoMA"]
+    },
+    {
+      "age": 38,
+      "year": 1961,
+      "total": 35,
+      "institution": 20,
+      "discourse": 50,
+      "academy": 25,
+      "network": 40,
+      "context": "만화 기반 작품 시작",
+      "keyEvent": "Look Mickey",
+      "confidence": "high",
+      "sources": ["National Gallery of Art", "MoMA"]
+    },
+    {
+      "age": 39,
+      "year": 1962,
+      "total": 65,
+      "institution": 50,
+      "discourse": 80,
+      "academy": 45,
+      "network": 70,
+      "context": "팝아트 운동 핵심",
+      "keyEvent": "Drowning Girl, Whaam!",
+      "confidence": "high",
+      "sources": ["MoMA", "Tate"]
+    },
+    {
+      "age": 43,
+      "year": 1966,
+      "total": 78,
+      "institution": 70,
+      "discourse": 85,
+      "academy": 68,
+      "network": 82,
+      "context": "국제 미술관 순회전",
+      "keyEvent": "유럽 순회 회고전",
+      "confidence": "high",
+      "sources": ["Tate", "Centre Pompidou"]
+    },
+    {
+      "age": 60,
+      "year": 1983,
+      "total": 88,
+      "institution": 88,
+      "discourse": 90,
+      "academy": 85,
+      "network": 88,
+      "context": "대규모 공공 조형물",
+      "confidence": "high",
+      "sources": ["Lichtenstein Foundation"]
+    },
+    {
+      "age": 70,
+      "year": 1993,
+      "total": 92,
+      "institution": 92,
+      "discourse": 94,
+      "academy": 92,
+      "network": 90,
+      "context": "구겐하임 대회고전",
+      "keyEvent": "Guggenheim 회고전",
+      "confidence": "high",
+      "sources": ["Solomon R. Guggenheim Museum"]
+    },
+    {
+      "age": 74,
+      "year": 1997,
+      "total": 95,
+      "institution": 95,
+      "discourse": 96,
+      "academy": 94,
+      "network": 94,
+      "context": "뉴욕에서 사망",
+      "keyEvent": "사망 (73세)",
+      "confidence": "high",
+      "sources": ["Lichtenstein Foundation", "MoMA"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Roy Lichtenstein Foundation",
+      "MoMA Archives",
+      "Tate Modern",
+      "National Gallery of Art"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

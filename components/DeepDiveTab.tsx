@@ -49,6 +49,7 @@ export const DeepDiveTab: React.FC<Props> = ({ artist }) => {
       let index = 0;
       const fullText = reportData.text;
       const totalLength = fullText.length;
+      let timeoutId: NodeJS.Timeout | null = null;
       
       // Variable Speed Logic
       const typeChar = () => {
@@ -69,13 +70,20 @@ export const DeepDiveTab: React.FC<Props> = ({ artist }) => {
              return; 
           }
           
-          setTimeout(typeChar, delay);
+          timeoutId = setTimeout(typeChar, delay);
         } else {
           setViewState('HUD_ACTIVE');
         }
       };
       
       typeChar();
+      
+      // Cleanup function
+      return () => {
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
+      };
     }
   }, [viewState, reportData]);
 
@@ -169,3 +177,5 @@ export const DeepDiveTab: React.FC<Props> = ({ artist }) => {
     </div>
   );
 };
+
+export default DeepDiveTab;

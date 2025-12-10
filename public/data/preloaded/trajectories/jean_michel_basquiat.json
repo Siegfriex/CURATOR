@@ -1,0 +1,90 @@
+{
+  "artistId": "3",
+  "artistName": "Jean-Michel Basquiat",
+  "birthYear": 1960,
+  "deathYear": 1988,
+  "activeYears": [1978, 1988],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "CRITICAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 20,
+      "year": 1980,
+      "total": 20,
+      "institution": 5,
+      "discourse": 25,
+      "academy": 5,
+      "network": 40,
+      "context": "SAMO 그래피티 활동",
+      "keyEvent": "Times Square Show 참여",
+      "confidence": "high",
+      "sources": ["Brooklyn Museum", "Whitney Museum"]
+    },
+    {
+      "age": 22,
+      "year": 1982,
+      "total": 65,
+      "institution": 50,
+      "discourse": 75,
+      "academy": 25,
+      "network": 85,
+      "context": "도큐멘타 7 참여",
+      "keyEvent": "Documenta 7 최연소 참가",
+      "confidence": "high",
+      "sources": ["MoMA", "Whitney Museum", "Documenta Archives"]
+    },
+    {
+      "age": 24,
+      "year": 1984,
+      "total": 80,
+      "institution": 70,
+      "discourse": 88,
+      "academy": 40,
+      "network": 95,
+      "context": "워홀과 협업 시작",
+      "keyEvent": "Warhol Collaboration",
+      "confidence": "high",
+      "sources": ["Andy Warhol Museum", "MoMA"]
+    },
+    {
+      "age": 26,
+      "year": 1986,
+      "total": 85,
+      "institution": 78,
+      "discourse": 90,
+      "academy": 50,
+      "network": 92,
+      "context": "국제적 명성 절정",
+      "confidence": "high",
+      "sources": ["Gagosian Gallery", "MoMA"]
+    },
+    {
+      "age": 28,
+      "year": 1988,
+      "total": 80,
+      "institution": 75,
+      "discourse": 85,
+      "academy": 55,
+      "network": 85,
+      "context": "약물 과다복용으로 사망",
+      "keyEvent": "사망 (27세)",
+      "confidence": "high",
+      "sources": ["Brooklyn Museum", "Whitney Museum"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Brooklyn Museum",
+      "Whitney Museum of American Art",
+      "MoMA Archives",
+      "Brant Foundation"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

@@ -19,6 +19,25 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              // React 및 핵심 라이브러리
+              'react-vendor': ['react', 'react-dom'],
+              // 차트 라이브러리
+              'charts': ['recharts'],
+              // 애니메이션 라이브러리
+              'animation': ['framer-motion'],
+              // 마크다운 라이브러리
+              'markdown': ['react-markdown'],
+              // 오디오 라이브러리
+              'audio': ['tone'],
+            }
+          }
+        },
+        chunkSizeWarningLimit: 1000, // 경고 임계값 상향
       }
     };
 });

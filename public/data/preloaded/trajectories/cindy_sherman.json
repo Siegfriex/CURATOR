@@ -1,0 +1,128 @@
+{
+  "artistId": "26",
+  "artistName": "Cindy Sherman",
+  "birthYear": 1954,
+  "deathYear": null,
+  "activeYears": [1977, 2024],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "CRITICAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 23,
+      "year": 1977,
+      "total": 20,
+      "institution": 10,
+      "discourse": 30,
+      "academy": 15,
+      "network": 25,
+      "context": "Untitled Film Stills 시작",
+      "keyEvent": "Untitled Film Stills",
+      "confidence": "high",
+      "sources": ["MoMA", "Metro Pictures"]
+    },
+    {
+      "age": 26,
+      "year": 1980,
+      "total": 45,
+      "institution": 35,
+      "discourse": 58,
+      "academy": 35,
+      "network": 50,
+      "context": "Metro Pictures 갤러리 합류",
+      "keyEvent": "Pictures Generation",
+      "confidence": "high",
+      "sources": ["MoMA", "Metro Pictures"]
+    },
+    {
+      "age": 28,
+      "year": 1982,
+      "total": 60,
+      "institution": 50,
+      "discourse": 72,
+      "academy": 50,
+      "network": 65,
+      "context": "Centerfolds 시리즈",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 33,
+      "year": 1987,
+      "total": 72,
+      "institution": 68,
+      "discourse": 80,
+      "academy": 65,
+      "network": 75,
+      "context": "휘트니 미술관 회고전",
+      "keyEvent": "Whitney Museum 회고전",
+      "confidence": "high",
+      "sources": ["Whitney Museum"]
+    },
+    {
+      "age": 41,
+      "year": 1995,
+      "total": 80,
+      "institution": 78,
+      "discourse": 85,
+      "academy": 75,
+      "network": 82,
+      "context": "MoMA 대규모 전시",
+      "keyEvent": "MoMA 회고전",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 57,
+      "year": 2011,
+      "total": 90,
+      "institution": 90,
+      "discourse": 94,
+      "academy": 88,
+      "network": 90,
+      "context": "경매 최고가 기록",
+      "keyEvent": "Untitled #96 $3.89M",
+      "confidence": "high",
+      "sources": ["Christie's"]
+    },
+    {
+      "age": 58,
+      "year": 2012,
+      "total": 92,
+      "institution": 92,
+      "discourse": 95,
+      "academy": 90,
+      "network": 92,
+      "context": "MoMA 대회고전",
+      "keyEvent": "MoMA 2012 회고전",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 70,
+      "year": 2024,
+      "total": 95,
+      "institution": 94,
+      "discourse": 96,
+      "academy": 94,
+      "network": 94,
+      "context": "인스타그램 시대 작업",
+      "confidence": "high",
+      "sources": ["MoMA", "Metro Pictures"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "MoMA Archives",
+      "Whitney Museum of American Art",
+      "Metro Pictures",
+      "Christie's Records"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

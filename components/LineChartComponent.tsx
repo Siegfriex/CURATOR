@@ -2,15 +2,38 @@ import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceDot, Label } from 'recharts';
 import { TimeSeriesPoint } from '../types';
 import { COLORS } from '../constants';
+import { ChartSkeleton } from './ChartSkeleton';
 
 interface Props {
   data: TimeSeriesPoint[];
 }
 
 export const LineChartComponent: React.FC<Props> = ({ data }) => {
+  const minHeight = 250;
+  const minWidth = 300;
+
+  // Data safety check with skeleton
+  if (!data || data.length === 0) {
+    return <ChartSkeleton variant="line" height={minHeight} />;
+  }
+
   return (
-    <div className="w-full h-[250px] min-w-0 min-h-[250px]" style={{ minHeight: '250px' }}>
-      <ResponsiveContainer width="100%" height="100%">
+    <div 
+      className="w-full min-w-0" 
+      style={{ 
+        width: '100%', 
+        height: '250px', 
+        minHeight: `${minHeight}px`,
+        minWidth: `${minWidth}px`,
+        position: 'relative'
+      }}
+    >
+      <ResponsiveContainer 
+        width="100%" 
+        height="100%" 
+        minHeight={minHeight} 
+        minWidth={minWidth}
+      >
         <LineChart
           data={data}
           margin={{ top: 20, right: 30, left: 20, bottom: 20 }}

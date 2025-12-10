@@ -1,0 +1,116 @@
+{
+  "artistId": "17",
+  "artistName": "Francis Bacon",
+  "birthYear": 1909,
+  "deathYear": 1992,
+  "activeYears": [1929, 1992],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "CRITICAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 20,
+      "year": 1929,
+      "total": 5,
+      "institution": 0,
+      "discourse": 5,
+      "academy": 0,
+      "network": 10,
+      "context": "런던 정착, 가구 디자인",
+      "confidence": "high",
+      "sources": ["Tate", "MoMA"]
+    },
+    {
+      "age": 35,
+      "year": 1944,
+      "total": 40,
+      "institution": 25,
+      "discourse": 55,
+      "academy": 20,
+      "network": 50,
+      "context": "Three Studies 돌파",
+      "keyEvent": "Three Studies for Figures at the Base of a Crucifixion",
+      "confidence": "high",
+      "sources": ["Tate"]
+    },
+    {
+      "age": 40,
+      "year": 1949,
+      "total": 55,
+      "institution": 45,
+      "discourse": 68,
+      "academy": 35,
+      "network": 60,
+      "context": "교황 시리즈 시작",
+      "keyEvent": "Head VI (Pope)",
+      "confidence": "high",
+      "sources": ["Tate", "MoMA"]
+    },
+    {
+      "age": 53,
+      "year": 1962,
+      "total": 75,
+      "institution": 72,
+      "discourse": 82,
+      "academy": 60,
+      "network": 78,
+      "context": "테이트 갤러리 회고전",
+      "keyEvent": "Tate 대회고전",
+      "confidence": "high",
+      "sources": ["Tate"]
+    },
+    {
+      "age": 62,
+      "year": 1971,
+      "total": 85,
+      "institution": 85,
+      "discourse": 90,
+      "academy": 75,
+      "network": 88,
+      "context": "파리 그랑팔레 회고전",
+      "keyEvent": "Grand Palais 회고전",
+      "confidence": "high",
+      "sources": ["Centre Pompidou"]
+    },
+    {
+      "age": 76,
+      "year": 1985,
+      "total": 90,
+      "institution": 92,
+      "discourse": 92,
+      "academy": 88,
+      "network": 88,
+      "context": "국제적 명성 절정",
+      "keyEvent": "Tate 2차 회고전",
+      "confidence": "high",
+      "sources": ["Tate"]
+    },
+    {
+      "age": 83,
+      "year": 1992,
+      "total": 92,
+      "institution": 94,
+      "discourse": 94,
+      "academy": 92,
+      "network": 88,
+      "context": "마드리드에서 사망",
+      "keyEvent": "사망 (82세)",
+      "confidence": "high",
+      "sources": ["Tate", "MoMA"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Tate Britain",
+      "MoMA Archives",
+      "Centre Pompidou",
+      "Francis Bacon MB Art Foundation"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

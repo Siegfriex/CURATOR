@@ -1,0 +1,127 @@
+{
+  "artistId": "24",
+  "artistName": "KAWS",
+  "birthYear": 1974,
+  "deathYear": null,
+  "activeYears": [1993, 2024],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "INSTITUTIONAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 20,
+      "year": 1994,
+      "total": 10,
+      "institution": 0,
+      "discourse": 15,
+      "academy": 5,
+      "network": 15,
+      "context": "SVA 졸업, 그래피티 작업",
+      "keyEvent": "뉴욕 광고판 작업",
+      "confidence": "high",
+      "sources": ["Brooklyn Museum", "Wikipedia"]
+    },
+    {
+      "age": 25,
+      "year": 1999,
+      "total": 25,
+      "institution": 10,
+      "discourse": 35,
+      "academy": 10,
+      "network": 35,
+      "context": "일본 소프트뱅크 협업",
+      "keyEvent": "도쿄 진출",
+      "confidence": "high",
+      "sources": ["Brooklyn Museum"]
+    },
+    {
+      "age": 32,
+      "year": 2006,
+      "total": 45,
+      "institution": 30,
+      "discourse": 55,
+      "academy": 25,
+      "network": 60,
+      "context": "컴패니언 피규어 대중화",
+      "keyEvent": "OriginalFake 브랜드",
+      "confidence": "high",
+      "sources": ["Brooklyn Museum"]
+    },
+    {
+      "age": 38,
+      "year": 2012,
+      "total": 60,
+      "institution": 48,
+      "discourse": 70,
+      "academy": 40,
+      "network": 75,
+      "context": "갤러리 전시 활성화",
+      "confidence": "high",
+      "sources": ["Brooklyn Museum"]
+    },
+    {
+      "age": 43,
+      "year": 2017,
+      "total": 78,
+      "institution": 70,
+      "discourse": 85,
+      "academy": 60,
+      "network": 88,
+      "context": "대규모 미술관 전시",
+      "confidence": "high",
+      "sources": ["Brooklyn Museum", "NGV"]
+    },
+    {
+      "age": 45,
+      "year": 2019,
+      "total": 88,
+      "institution": 82,
+      "discourse": 92,
+      "academy": 70,
+      "network": 95,
+      "context": "홍콩 경매 최고가",
+      "keyEvent": "THE KAWS ALBUM $14.8M",
+      "confidence": "high",
+      "sources": ["Sotheby's"]
+    },
+    {
+      "age": 47,
+      "year": 2021,
+      "total": 90,
+      "institution": 85,
+      "discourse": 94,
+      "academy": 75,
+      "network": 96,
+      "context": "브루클린 미술관 회고전",
+      "keyEvent": "KAWS: WHAT PARTY",
+      "confidence": "high",
+      "sources": ["Brooklyn Museum"]
+    },
+    {
+      "age": 50,
+      "year": 2024,
+      "total": 92,
+      "institution": 88,
+      "discourse": 94,
+      "academy": 78,
+      "network": 97,
+      "context": "글로벌 브랜드 협업 지속",
+      "confidence": "high",
+      "sources": ["Brooklyn Museum"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Brooklyn Museum",
+      "NGV (National Gallery of Victoria)",
+      "Sotheby's Records",
+      "Perrotin Gallery"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

@@ -1,0 +1,228 @@
+{
+  "artistId": "9",
+  "artistName": "Frida Kahlo",
+  "birthYear": 1907,
+  "deathYear": 1954,
+  "eras": [
+    {
+      "eraLabel": "Early Career",
+      "eraLabelKo": "초기 경력",
+      "ageRange": "20s-26s",
+      "startYear": 1927,
+      "endYear": 1933,
+      "moodColor": "#E53E3E",
+      "summary": "Frida Kahlo의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1929,
+          "title": "1929년 주요 활동",
+          "titleEn": "Major Activity in 1929",
+          "category": "Exhibition",
+          "description": "Frida Kahlo이(가) 초기 경력 시기인 1929년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Frida Kahlo in 1929, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1931,
+          "title": "1931년 주요 활동",
+          "titleEn": "Major Activity in 1931",
+          "category": "Masterpiece",
+          "description": "Frida Kahlo이(가) 초기 경력 시기인 1931년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Frida Kahlo in 1931, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Mid Career",
+      "eraLabelKo": "중기 발전",
+      "ageRange": "26s-32s",
+      "startYear": 1933,
+      "endYear": 1939,
+      "moodColor": "#D69E2E",
+      "summary": "Frida Kahlo의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1935,
+          "title": "1935년 주요 활동",
+          "titleEn": "Major Activity in 1935",
+          "category": "Exhibition",
+          "description": "Frida Kahlo이(가) 중기 발전 시기인 1935년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Frida Kahlo in 1935, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1937,
+          "title": "1937년 주요 활동",
+          "titleEn": "Major Activity in 1937",
+          "category": "Masterpiece",
+          "description": "Frida Kahlo이(가) 중기 발전 시기인 1937년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Frida Kahlo in 1937, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Mature Period",
+      "eraLabelKo": "성숙기",
+      "ageRange": "32s-38s",
+      "startYear": 1939,
+      "endYear": 1945,
+      "moodColor": "#38BDF8",
+      "summary": "Frida Kahlo의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1941,
+          "title": "1941년 주요 활동",
+          "titleEn": "Major Activity in 1941",
+          "category": "Exhibition",
+          "description": "Frida Kahlo이(가) 성숙기 시기인 1941년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Frida Kahlo in 1941, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1943,
+          "title": "1943년 주요 활동",
+          "titleEn": "Major Activity in 1943",
+          "category": "Masterpiece",
+          "description": "Frida Kahlo이(가) 성숙기 시기인 1943년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Frida Kahlo in 1943, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Late Career",
+      "eraLabelKo": "후기 경력",
+      "ageRange": "38s-44s",
+      "startYear": 1945,
+      "endYear": 1951,
+      "moodColor": "#2D3748",
+      "summary": "Frida Kahlo의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "events": [
+        {
+          "year": 1947,
+          "title": "1947년 주요 활동",
+          "titleEn": "Major Activity in 1947",
+          "category": "Exhibition",
+          "description": "Frida Kahlo이(가) 후기 경력 시기인 1947년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 50,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 50,
+            "socialImpact": 30,
+            "institutional": 40
+          },
+          "visualPrompt": "Frida Kahlo in 1947, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        },
+        {
+          "year": 1949,
+          "title": "1949년 주요 활동",
+          "titleEn": "Major Activity in 1949",
+          "category": "Masterpiece",
+          "description": "Frida Kahlo이(가) 후기 경력 시기인 1949년에 주요 활동을 펼쳤습니다.",
+          "impactScore": 60,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 50,
+            "historical": 60,
+            "socialImpact": 45,
+            "institutional": 50
+          },
+          "visualPrompt": "Frida Kahlo in 1949, undefined period",
+          "sources": {
+            "primary": "Generated Template"
+          }
+        }
+      ]
+    }
+  ],
+  "critiques": [],
+  "masterpieces": [],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [],
+    "verificationStatus": "ai_generated"
+  }
+}

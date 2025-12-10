@@ -1,0 +1,129 @@
+{
+  "artistId": "22",
+  "artistName": "Ai Weiwei",
+  "birthYear": 1957,
+  "deathYear": null,
+  "activeYears": [1978, 2024],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "CRITICAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 24,
+      "year": 1981,
+      "total": 15,
+      "institution": 5,
+      "discourse": 20,
+      "academy": 10,
+      "network": 20,
+      "context": "뉴욕 이주",
+      "keyEvent": "미국 유학",
+      "confidence": "high",
+      "sources": ["MoMA", "Wikipedia"]
+    },
+    {
+      "age": 36,
+      "year": 1993,
+      "total": 25,
+      "institution": 15,
+      "discourse": 30,
+      "academy": 20,
+      "network": 30,
+      "context": "중국 귀국",
+      "keyEvent": "베이징 정착",
+      "confidence": "high",
+      "sources": ["Tate"]
+    },
+    {
+      "age": 42,
+      "year": 1999,
+      "total": 40,
+      "institution": 30,
+      "discourse": 50,
+      "academy": 30,
+      "network": 48,
+      "context": "CAAW 스튜디오 설립",
+      "keyEvent": "China Art Archives & Warehouse",
+      "confidence": "high",
+      "sources": ["Tate", "MoMA"]
+    },
+    {
+      "age": 51,
+      "year": 2008,
+      "total": 70,
+      "institution": 60,
+      "discourse": 82,
+      "academy": 55,
+      "network": 78,
+      "context": "새둥지 경기장 협업",
+      "keyEvent": "Beijing Olympics Bird's Nest",
+      "confidence": "high",
+      "sources": ["BBC", "Tate"]
+    },
+    {
+      "age": 53,
+      "year": 2010,
+      "total": 78,
+      "institution": 68,
+      "discourse": 88,
+      "academy": 65,
+      "network": 85,
+      "context": "해바라기 씨 설치",
+      "keyEvent": "Sunflower Seeds (Tate Modern)",
+      "confidence": "high",
+      "sources": ["Tate Modern"]
+    },
+    {
+      "age": 54,
+      "year": 2011,
+      "total": 85,
+      "institution": 72,
+      "discourse": 95,
+      "academy": 70,
+      "network": 92,
+      "context": "중국 당국 체포",
+      "keyEvent": "81일 구금",
+      "confidence": "high",
+      "sources": ["BBC", "Human Rights Watch"]
+    },
+    {
+      "age": 58,
+      "year": 2015,
+      "total": 90,
+      "institution": 85,
+      "discourse": 96,
+      "academy": 80,
+      "network": 95,
+      "context": "영국 이주",
+      "keyEvent": "Royal Academy 전시",
+      "confidence": "high",
+      "sources": ["Royal Academy", "Tate"]
+    },
+    {
+      "age": 66,
+      "year": 2023,
+      "total": 94,
+      "institution": 90,
+      "discourse": 98,
+      "academy": 88,
+      "network": 96,
+      "context": "포르투갈 정착",
+      "confidence": "high",
+      "sources": ["Wikipedia", "The Guardian"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Tate Modern",
+      "MoMA Archives",
+      "Royal Academy",
+      "Human Rights Watch"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

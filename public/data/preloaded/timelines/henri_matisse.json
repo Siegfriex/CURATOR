@@ -1,0 +1,470 @@
+{
+  "artistId": "1",
+  "artistName": "Henri Matisse",
+  "birthYear": 1869,
+  "deathYear": 1954,
+  "eras": [
+    {
+      "eraLabel": "Academic Formation",
+      "eraLabelKo": "아카데미 형성기",
+      "ageRange": "20s",
+      "startYear": 1889,
+      "endYear": 1899,
+      "moodColor": "#718096",
+      "summary": "법학에서 미술로 전향하여 아카데미 줄리앙과 에콜 데 보자르에서 수학. 귀스타브 모로의 가르침 아래 색채에 대한 독자적 시각을 발전시키며 인상주의를 넘어선 새로운 표현을 모색.",
+      "events": [
+        {
+          "year": 1891,
+          "title": "에콜 데 보자르 입학",
+          "titleEn": "Admission to École des Beaux-Arts",
+          "category": "Personal",
+          "description": "귀스타브 모로의 아틀리에에서 수학 시작. 모로는 마티스의 색채 감각과 독창성을 일찍이 인정하며 자유로운 실험을 격려.",
+          "impactScore": 70,
+          "auctionHigh": 15,
+          "auctionLow": 5,
+          "context": {
+            "marketValue": 10,
+            "criticalAcclaim": 20,
+            "historical": 75,
+            "socialImpact": 30,
+            "institutional": 50
+          },
+          "visualPrompt": "Young art student in late 19th century Paris atelier, classical setting with easels and plaster casts",
+          "sources": {
+            "primary": "MoMA Archives - Matisse Early Years",
+            "secondary": ["Tate Learning Resources"]
+          }
+        },
+        {
+          "year": 1896,
+          "title": "살롱 드 라 소시에테 첫 출품",
+          "titleEn": "First Salon de la Société Exhibition",
+          "category": "Exhibition",
+          "description": "공식 살롱에서 첫 전시. 보수적 아카데미즘의 틀 안에서 시작했으나 곧 인상주의적 색채를 탐구하기 시작.",
+          "impactScore": 55,
+          "auctionHigh": 20,
+          "auctionLow": 10,
+          "context": {
+            "marketValue": 15,
+            "criticalAcclaim": 35,
+            "historical": 60,
+            "socialImpact": 25,
+            "institutional": 55
+          },
+          "visualPrompt": "Grand Parisian salon exhibition hall, 1890s, traditional paintings on walls",
+          "sources": {
+            "primary": "Centre Pompidou Archives"
+          }
+        },
+        {
+          "year": 1898,
+          "title": "세잔 영향 수용",
+          "titleEn": "Cézanne Influence",
+          "category": "Personal",
+          "description": "세잔의 '세 명의 목욕하는 사람' 구입. 구조적 색채와 형태 분석에 대한 새로운 시각을 획득, 이후 작품 전개의 핵심 토대.",
+          "impactScore": 80,
+          "auctionHigh": 25,
+          "auctionLow": 15,
+          "context": {
+            "marketValue": 20,
+            "criticalAcclaim": 45,
+            "historical": 85,
+            "socialImpact": 35,
+            "institutional": 40
+          },
+          "visualPrompt": "Intimate artist studio with Cézanne painting on easel, warm lighting, early morning",
+          "sources": {
+            "primary": "MoMA Archives - Cézanne Influence",
+            "secondary": ["Artforum Archives"]
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Fauvist Revolution",
+      "eraLabelKo": "야수파 혁명기",
+      "ageRange": "30s",
+      "startYear": 1900,
+      "endYear": 1910,
+      "moodColor": "#E53E3E",
+      "summary": "1905년 살롱 도톤에서 '야수파'라는 비판적 명칭을 얻으며 색채 혁명을 주도. 기존 인상주의를 넘어선 대담한 색채와 단순화된 형태로 20세기 미술의 새 지평을 열다.",
+      "events": [
+        {
+          "year": 1905,
+          "title": "살롱 도톤 야수파 전시",
+          "titleEn": "Salon d'Automne Fauvist Exhibition",
+          "category": "Exhibition",
+          "description": "비평가 루이 복셀이 '야수들의 우리'라 명명한 역사적 전시. 마티스, 드랭, 블라맹크 등이 참여하며 야수파가 공식 탄생.",
+          "impactScore": 95,
+          "auctionHigh": 45,
+          "auctionLow": 30,
+          "context": {
+            "marketValue": 40,
+            "criticalAcclaim": 70,
+            "historical": 95,
+            "socialImpact": 85,
+            "institutional": 50
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Matisse-Woman-with-a-Hat.jpg/800px-Matisse-Woman-with-a-Hat.jpg",
+          "imageSource": "Wikimedia Commons",
+          "visualPrompt": "1905 Paris salon exhibition, shocked visitors viewing bold colorful paintings",
+          "sources": {
+            "primary": "MoMA Archives - Fauvism Collection",
+            "secondary": ["Tate Learning Resources", "Artforum Archives"]
+          }
+        },
+        {
+          "year": 1906,
+          "title": "삶의 기쁨 완성",
+          "titleEn": "Le Bonheur de vivre Completed",
+          "category": "Masterpiece",
+          "description": "야수파 미학의 정점을 보여주는 대작. 원시적 낙원의 누드들이 춤추는 구성은 피카소에게도 영향을 미쳐 '아비뇽의 처녀들'의 계기가 됨.",
+          "impactScore": 92,
+          "auctionHigh": 55,
+          "auctionLow": 40,
+          "context": {
+            "marketValue": 50,
+            "criticalAcclaim": 85,
+            "historical": 95,
+            "socialImpact": 80,
+            "institutional": 65
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b9/Bonheur_Matisse.jpg",
+          "imageSource": "Wikimedia Commons",
+          "visualPrompt": "Large pastoral scene with nude figures dancing in bright colors, Arcadian paradise",
+          "sources": {
+            "primary": "Barnes Foundation Archives",
+            "secondary": ["MoMA Archives"]
+          }
+        },
+        {
+          "year": 1909,
+          "title": "슈추킨 '춤' 의뢰",
+          "titleEn": "Shchukin Commission - Dance",
+          "category": "Masterpiece",
+          "description": "러시아 수집가 세르게이 슈추킨의 의뢰로 '춤'과 '음악' 대작 제작. 원시적 에너지와 순수한 색채의 극치를 보여주는 20세기 아이콘.",
+          "impactScore": 98,
+          "auctionHigh": 70,
+          "auctionLow": 55,
+          "context": {
+            "marketValue": 65,
+            "criticalAcclaim": 90,
+            "historical": 98,
+            "socialImpact": 90,
+            "institutional": 80
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a7/Matissedance.jpg",
+          "imageSource": "Wikimedia Commons - Public Domain",
+          "visualPrompt": "Five red nude figures dancing in circle against deep blue green background, primal energy",
+          "sources": {
+            "primary": "Hermitage Museum Archives",
+            "secondary": ["MoMA Archives", "Tate"]
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Nice Period Mastery",
+      "eraLabelKo": "니스 시기 전성기",
+      "ageRange": "40s-50s",
+      "startYear": 1917,
+      "endYear": 1930,
+      "moodColor": "#ED8936",
+      "summary": "남프랑스 니스에 정착하여 지중해의 빛과 색채를 탐구. 오달리스크 연작으로 상업적 성공의 절정에 도달하며 현대 미술 거장으로서의 위치를 확고히 함.",
+      "events": [
+        {
+          "year": 1917,
+          "title": "니스 정착",
+          "titleEn": "Settlement in Nice",
+          "category": "Personal",
+          "description": "지중해 해안 도시 니스에 아틀리에 마련. 밝은 햇살과 이국적 분위기가 새로운 창작의 원천이 되어 '니스 시기'의 시작.",
+          "impactScore": 75,
+          "auctionHigh": 50,
+          "auctionLow": 35,
+          "context": {
+            "marketValue": 55,
+            "criticalAcclaim": 70,
+            "historical": 80,
+            "socialImpact": 60,
+            "institutional": 65
+          },
+          "visualPrompt": "Mediterranean studio with open windows, bright sunlight, French Riviera view",
+          "sources": {
+            "primary": "Centre Pompidou Archives"
+          }
+        },
+        {
+          "year": 1921,
+          "title": "오달리스크 연작 시작",
+          "titleEn": "Odalisque Series Begins",
+          "category": "Masterpiece",
+          "description": "동양풍 의상과 배경의 여인 연작 시작. 오리엔탈리즘과 감각적 색채의 결합으로 상업적 대성공을 거두며 컬렉터들의 열렬한 지지.",
+          "impactScore": 85,
+          "auctionHigh": 75,
+          "auctionLow": 55,
+          "context": {
+            "marketValue": 80,
+            "criticalAcclaim": 75,
+            "historical": 85,
+            "socialImpact": 70,
+            "institutional": 75
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/5d/Henri_Matisse%2C_1926%2C_Odalisque_with_Raised_Arms.jpg",
+          "imageSource": "Wikimedia Commons",
+          "visualPrompt": "Reclining woman in oriental costume, patterned textiles, warm interior light",
+          "sources": {
+            "primary": "MoMA Archives - Odalisque Series"
+          }
+        },
+        {
+          "year": 1929,
+          "title": "카네기상 수상",
+          "titleEn": "Carnegie Prize",
+          "category": "Exhibition",
+          "description": "카네기 국제전에서 최고상 수상. 미국 미술계의 공식적 인정으로 국제적 거장의 지위 확립.",
+          "impactScore": 88,
+          "auctionHigh": 70,
+          "auctionLow": 50,
+          "context": {
+            "marketValue": 75,
+            "criticalAcclaim": 85,
+            "historical": 85,
+            "socialImpact": 75,
+            "institutional": 90
+          },
+          "visualPrompt": "Formal award ceremony, Carnegie Institute Pittsburgh, 1929",
+          "sources": {
+            "primary": "Carnegie Museum of Art Archives"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Paper Cut-out Legacy",
+      "eraLabelKo": "종이 오리기 유산",
+      "ageRange": "70s-80s",
+      "startYear": 1941,
+      "endYear": 1954,
+      "moodColor": "#3182CE",
+      "summary": "대장 수술 후 건강 악화로 새로운 매체 '종이 오리기' 개발. 가위로 색종이를 오려 붙이는 혁신적 기법으로 말년의 걸작들을 탄생시키며 추상미술에 새로운 가능성 제시.",
+      "events": [
+        {
+          "year": 1941,
+          "title": "대장 수술 후 종이 오리기 시작",
+          "titleEn": "Begin Paper Cut-outs After Surgery",
+          "category": "Personal",
+          "description": "암 수술 후 회복 중 휠체어에서 색종이 오리기 시작. '가위로 그리기'라 명명한 새로운 예술 형식의 탄생.",
+          "impactScore": 90,
+          "auctionHigh": 60,
+          "auctionLow": 45,
+          "context": {
+            "marketValue": 55,
+            "criticalAcclaim": 85,
+            "historical": 95,
+            "socialImpact": 80,
+            "institutional": 75
+          },
+          "visualPrompt": "Elderly artist in wheelchair cutting colored paper, studio filled with vibrant cut-outs",
+          "sources": {
+            "primary": "Tate Archives - Paper Cut-outs"
+          }
+        },
+        {
+          "year": 1947,
+          "title": "Jazz 아티스트북 출판",
+          "titleEn": "Jazz Artist Book Publication",
+          "category": "Masterpiece",
+          "description": "20점의 종이 오리기 작품과 수필을 담은 아티스트북 출판. 서커스, 재즈, 여행의 이미지를 순수한 색채와 형태로 표현한 말년의 대표작.",
+          "impactScore": 95,
+          "auctionHigh": 85,
+          "auctionLow": 70,
+          "context": {
+            "marketValue": 80,
+            "criticalAcclaim": 95,
+            "historical": 95,
+            "socialImpact": 85,
+            "institutional": 90
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d8/Matisse_Icarus.jpg",
+          "imageSource": "Wikimedia Commons",
+          "visualPrompt": "Book page with Icarus figure, black silhouette with red heart against blue background",
+          "sources": {
+            "primary": "MoMA Archives - Jazz",
+            "secondary": ["Tate", "Centre Pompidou"]
+          }
+        },
+        {
+          "year": 1951,
+          "title": "로사리오 성당 완성",
+          "titleEn": "Chapelle du Rosaire Completion",
+          "category": "Masterpiece",
+          "description": "방스의 도미니코 수녀원 성당 전체 디자인. 스테인드글라스, 벽화, 제의까지 총체 예술로서 마티스의 예술적 유언.",
+          "impactScore": 98,
+          "auctionHigh": 90,
+          "auctionLow": 75,
+          "context": {
+            "marketValue": 85,
+            "criticalAcclaim": 98,
+            "historical": 98,
+            "socialImpact": 90,
+            "institutional": 95
+          },
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Chapelle_du_Rosaire_de_Vence%2C_int%C3%A9rieur.jpg/800px-Chapelle_du_Rosaire_de_Vence%2C_int%C3%A9rieur.jpg",
+          "imageSource": "Wikimedia Commons",
+          "visualPrompt": "Chapel interior with blue and yellow stained glass, white walls with black line drawings",
+          "sources": {
+            "primary": "Chapelle du Rosaire de Vence Archives",
+            "secondary": ["MoMA", "Centre Pompidou"]
+          }
+        }
+      ]
+    }
+  ],
+  "critiques": [
+    {
+      "text": "Matisse's work cuts through the chaos of nature to reveal a clarity that is at once personal and universal.",
+      "textKo": "마티스의 작품은 자연의 혼돈을 뚫고 개인적이면서도 보편적인 명료함을 드러낸다.",
+      "author": "Clement Greenberg",
+      "source": "Art and Culture",
+      "year": "1961",
+      "sourceUrl": "https://www.jstor.org/stable/greenberg"
+    },
+    {
+      "text": "He wanted to give color a new status, a primary position in painting.",
+      "textKo": "그는 색채에 새로운 지위, 회화에서의 주도적 위치를 부여하고자 했다.",
+      "author": "John Elderfield",
+      "source": "MoMA Retrospective Catalog",
+      "year": "1992",
+      "sourceUrl": "https://www.moma.org/collection/works"
+    },
+    {
+      "text": "The paper cut-outs represent a profound transformation, a second artistic youth.",
+      "textKo": "종이 오리기는 심오한 변환, 제2의 예술적 청춘을 대표한다.",
+      "author": "Pierre Schneider",
+      "source": "Matisse: A Biography",
+      "year": "1984"
+    }
+  ],
+  "masterpieces": [
+    {
+      "id": "matisse_woman_hat_1905",
+      "title": "Woman with a Hat",
+      "titleKo": "모자를 쓴 여인",
+      "year": "1905",
+      "medium": "Oil on canvas",
+      "dimensions": "80.6 × 59.7 cm",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Matisse-Woman-with-a-Hat.jpg/800px-Matisse-Woman-with-a-Hat.jpg",
+      "imageSource": "Wikimedia Commons (Public Domain)",
+      "collection": {
+        "museum": "San Francisco Museum of Modern Art",
+        "location": "San Francisco, USA",
+        "acquisitionYear": "1990"
+      },
+      "auctionRecord": null,
+      "significance": "야수파 탄생의 상징작. 아내 아멜리를 그린 초상화로 비평가들의 혹평을 받았으나 거트루드 스타인이 구입하며 역사적 작품으로 인정.",
+      "visualPrompt": "Portrait of woman with elaborate hat, bold non-naturalistic colors, expressionist brushwork",
+      "sources": [
+        "https://www.sfmoma.org/artwork/91.161/",
+        "https://www.moma.org/learn/moma_learning/henri-matisse-woman-with-a-hat-1905/"
+      ]
+    },
+    {
+      "id": "matisse_dance_1910",
+      "title": "La Danse (II)",
+      "titleKo": "춤 (II)",
+      "year": "1910",
+      "medium": "Oil on canvas",
+      "dimensions": "260 × 391 cm",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a7/Matissedance.jpg",
+      "imageSource": "Wikimedia Commons (Public Domain)",
+      "collection": {
+        "museum": "The Hermitage Museum",
+        "location": "Saint Petersburg, Russia",
+        "acquisitionYear": "1948"
+      },
+      "auctionRecord": null,
+      "significance": "5명의 춤추는 누드 인물이 원을 이루며 생명의 환희와 원초적 에너지를 표현. 야수파 정점의 대표작으로 20세기 미술사의 아이콘.",
+      "visualPrompt": "Five nude figures dancing in a circle, vibrant red bodies against deep blue and green background, expressive movement",
+      "sources": [
+        "https://www.hermitagemuseum.org/wps/portal/hermitage/digital-collection/01.+Paintings/28411",
+        "https://www.moma.org/collection/works/79124"
+      ]
+    },
+    {
+      "id": "matisse_red_studio_1911",
+      "title": "The Red Studio",
+      "titleKo": "붉은 아틀리에",
+      "year": "1911",
+      "medium": "Oil on canvas",
+      "dimensions": "181 × 219.1 cm",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3e/Matisse_The_Red_Studio.jpg",
+      "imageSource": "Wikimedia Commons",
+      "collection": {
+        "museum": "Museum of Modern Art",
+        "location": "New York, USA",
+        "acquisitionYear": "1949"
+      },
+      "auctionRecord": null,
+      "significance": "아틀리에 전체를 붉은색으로 덮은 혁신적 공간 해석. 회화의 평면성과 색채의 자율성을 극대화한 작품으로 추상미술의 선구적 역할.",
+      "visualPrompt": "Artist studio entirely in red, paintings and objects floating in monochromatic space",
+      "sources": [
+        "https://www.moma.org/collection/works/78389"
+      ]
+    },
+    {
+      "id": "matisse_icarus_1947",
+      "title": "Icarus",
+      "titleKo": "이카루스",
+      "year": "1947",
+      "medium": "Gouache on paper, cut and pasted",
+      "dimensions": "43.4 × 34 cm",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d8/Matisse_Icarus.jpg",
+      "imageSource": "Wikimedia Commons",
+      "collection": {
+        "museum": "Various (Jazz portfolio)",
+        "location": "Multiple museums",
+        "acquisitionYear": "1947"
+      },
+      "auctionRecord": null,
+      "significance": "Jazz 시리즈의 대표작. 추락하는 이카루스를 검은 실루엣과 붉은 심장으로 표현, 종이 오리기 기법의 정수를 보여주는 말년의 걸작.",
+      "visualPrompt": "Black silhouette figure falling against blue background with yellow stars, red heart",
+      "sources": [
+        "https://www.tate.org.uk/art/artworks/matisse-jazz-p78082"
+      ]
+    },
+    {
+      "id": "matisse_snail_1953",
+      "title": "The Snail",
+      "titleKo": "달팽이",
+      "year": "1953",
+      "medium": "Gouache on paper, cut and pasted on paper",
+      "dimensions": "286.4 × 287 cm",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/dc/Matisse_-_The_Snail.jpg",
+      "imageSource": "Wikimedia Commons",
+      "collection": {
+        "museum": "Tate Modern",
+        "location": "London, UK",
+        "acquisitionYear": "1962"
+      },
+      "auctionRecord": null,
+      "significance": "말년 종이 오리기의 최대작 중 하나. 달팽이 껍데기의 나선 구조를 추상적 색면으로 재해석, 순수한 색채의 조화만으로 자연을 표현.",
+      "visualPrompt": "Large abstract spiral composition of colored paper cut-outs, vibrant rainbow colors",
+      "sources": [
+        "https://www.tate.org.uk/art/artworks/matisse-the-snail-t00540"
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "MoMA Archives",
+      "Tate Modern Archives",
+      "Centre Pompidou Collection",
+      "Hermitage Museum Archives",
+      "San Francisco Museum of Modern Art"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+

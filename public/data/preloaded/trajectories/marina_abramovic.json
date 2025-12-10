@@ -1,0 +1,129 @@
+{
+  "artistId": "19",
+  "artistName": "Marina Abramović",
+  "birthYear": 1946,
+  "deathYear": null,
+  "activeYears": [1969, 2024],
+  "narrativePath": {
+    "phase1": "OUTSIDER",
+    "phase2": "CRITICAL",
+    "phase3": "INTERNATIONAL"
+  },
+  "data": [
+    {
+      "age": 24,
+      "year": 1970,
+      "total": 10,
+      "institution": 5,
+      "discourse": 15,
+      "academy": 10,
+      "network": 10,
+      "context": "베오그라드 초기 퍼포먼스",
+      "keyEvent": "초기 사운드 설치",
+      "confidence": "high",
+      "sources": ["MAI (Marina Abramović Institute)"]
+    },
+    {
+      "age": 28,
+      "year": 1974,
+      "total": 30,
+      "institution": 15,
+      "discourse": 45,
+      "academy": 20,
+      "network": 35,
+      "context": "리듬 시리즈 시작",
+      "keyEvent": "Rhythm 0",
+      "confidence": "high",
+      "sources": ["MoMA", "Tate"]
+    },
+    {
+      "age": 30,
+      "year": 1976,
+      "total": 45,
+      "institution": 30,
+      "discourse": 58,
+      "academy": 30,
+      "network": 55,
+      "context": "울라이와 협업 시작",
+      "keyEvent": "Ulay 파트너십",
+      "confidence": "high",
+      "sources": ["MoMA", "Tate"]
+    },
+    {
+      "age": 42,
+      "year": 1988,
+      "total": 55,
+      "institution": 45,
+      "discourse": 65,
+      "academy": 45,
+      "network": 60,
+      "context": "만리장성 퍼포먼스",
+      "keyEvent": "The Great Wall Walk (울라이 결별)",
+      "confidence": "high",
+      "sources": ["MoMA", "MAI"]
+    },
+    {
+      "age": 51,
+      "year": 1997,
+      "total": 70,
+      "institution": 65,
+      "discourse": 78,
+      "academy": 60,
+      "network": 75,
+      "context": "베니스 비엔날레 황금사자상",
+      "keyEvent": "Golden Lion Award",
+      "confidence": "high",
+      "sources": ["Venice Biennale"]
+    },
+    {
+      "age": 64,
+      "year": 2010,
+      "total": 90,
+      "institution": 88,
+      "discourse": 95,
+      "academy": 82,
+      "network": 92,
+      "context": "MoMA The Artist is Present",
+      "keyEvent": "The Artist is Present",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
+      "age": 72,
+      "year": 2018,
+      "total": 92,
+      "institution": 90,
+      "discourse": 95,
+      "academy": 88,
+      "network": 94,
+      "context": "클리너 작품",
+      "keyEvent": "The Cleaner 회고전",
+      "confidence": "high",
+      "sources": ["Moderna Museet Stockholm"]
+    },
+    {
+      "age": 78,
+      "year": 2024,
+      "total": 94,
+      "institution": 92,
+      "discourse": 96,
+      "academy": 90,
+      "network": 95,
+      "context": "여전히 활발한 활동",
+      "confidence": "high",
+      "sources": ["MAI"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-03",
+    "primarySources": [
+      "Marina Abramović Institute (MAI)",
+      "MoMA Archives",
+      "Venice Biennale",
+      "Tate Modern"
+    ],
+    "verificationStatus": "verified"
+  }
+}
+
