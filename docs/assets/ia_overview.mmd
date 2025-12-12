@@ -1,0 +1,59 @@
+flowchart TB
+  %% IA Overview - Curator's Odysseia (Rendered to PNG for DOCX)
+  %% Focus: Information Architecture (objects, channels, state, outputs)
+
+  subgraph Client["Client (Browser)"]
+    subgraph WebApp["Web App (React)"]
+      App["App.tsx\n- Landing/Game iframe\n- GAME_COMPLETE 처리\n- Overview/DeepDive/Connected"]
+      Storage["LocalStorage\n- curator_game_result"]
+      Utils["utils/gameUtils.ts\n- enrichGameResult()\n- metric mapping"]
+    end
+
+    subgraph GameApp["Game App (React)"]
+      CG["curatorgame/index.tsx\n- inner iframe host\n- GAME_OVER 처리\n- REPORT_GENERATED 송신\n- GAME_COMPLETE forward"]
+      Hand["HandController.tsx\n(MediaPipe)\nnormalizedInput, active"]
+    end
+
+    subgraph Engine["Game Engine (Three.js)"]
+      HTML["gemini3.html\nSTATE(metrics,timeline,artifacts,score)\nGates/Artifacts/Physics"]
+    end
+
+    subgraph Physical["(Optional) Physical Twin"]
+      Serial["Web Serial\nesp32PhysicalTwin.ts\n{ x, active } → JSONL"]
+      ESP32["ESP32\nServo+LED\n(Phase1: IMU reserved)"]
+    end
+  end
+
+  subgraph External["External Services"]
+    Gemini["Gemini API\nreport: {archetype,match,narrative}"]
+  end
+
+  %% Channels / Relations
+  App -->|iframe: /curatorgame/| CG
+  CG -->|iframe: ./init/gemini3.html| HTML
+
+  Hand -->|onInput(x, active)| CG
+  CG -->|postMessage: INPUT_UPDATE| HTML
+
+  HTML -->|postMessage: GAME_OVER (STATE)| CG
+  CG -->|HTTP: generateContent| Gemini
+  Gemini -->|report JSON| CG
+  CG -->|postMessage: REPORT_GENERATED| HTML
+
+  HTML -->|postMessage: GAME_COMPLETE (GameResult)| CG
+  CG -->|postMessage forward: GAME_COMPLETE| App
+
+  App -->|enrichGameResult()| Utils
+  Utils -->|save| Storage
+
+  Hand -.->|syncShipPosition(x,active)| Serial -.-> ESP32
+
+  %% Styling
+  classDef box fill:#FFFFFF,stroke:#111,rx:10,ry:10;
+  classDef ext fill:#F0FDF4,stroke:#16A34A,stroke-width:2px,rx:10,ry:10;
+  classDef opt fill:#FFFFFF,stroke:#888,stroke-dasharray:4 4,rx:10,ry:10;
+
+  class App,Storage,Utils,CG,Hand,HTML box;
+  class Gemini ext;
+  class Serial,ESP32 opt;
+

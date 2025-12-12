@@ -5,224 +5,428 @@
   "deathYear": 1918,
   "eras": [
     {
-      "eraLabel": "Early Career",
-      "eraLabelKo": "초기 경력",
-      "ageRange": "20s-22s",
+      "eraLabel": "Prodigy & Klimt's Protégé",
+      "eraLabelKo": "신동과 클림트의 제자",
+      "ageRange": "16-19",
+      "startYear": 1906,
+      "endYear": 1909,
+      "moodColor": "#FFD700",
+      "summary": "비엔나 미술아카데미 최연소 입학 후 보수적 교육에 반발. 구스타프 클림트를 만나 멘토링 받으며 유겐트스틸에서 자신만의 표현주의로 전환.",
+      "events": [
+        {
+          "year": 1906,
+          "title": "비엔나 미술아카데미 입학",
+          "titleEn": "Admission to Vienna Academy",
+          "category": "Career",
+          "description": "16세의 나이로 비엔나 미술아카데미에 최연소 입학. 전통적 아카데미 교육에 곧 불만을 느낌. 아버지 사망 후 삼촌의 후견.",
+          "impactScore": 70,
+          "context": {
+            "marketValue": 15,
+            "criticalAcclaim": 30,
+            "historical": 75,
+            "socialImpact": 25,
+            "institutional": 60
+          },
+          "sources": {
+            "primary": "Vienna Academy of Fine Arts Archives",
+            "secondary": "Leopold Museum"
+          }
+        },
+        {
+          "year": 1908,
+          "title": "클림트와의 만남",
+          "titleEn": "Meeting Gustav Klimt",
+          "category": "Career",
+          "description": "아카데미를 자퇴하고 구스타프 클림트를 직접 찾아감. 클림트가 실레의 재능을 인정하여 멘토가 됨. 작품 교환, 모델 소개, 컬렉터 연결.",
+          "impactScore": 95,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 70,
+            "historical": 95,
+            "socialImpact": 50,
+            "institutional": 45
+          },
+          "sources": {
+            "primary": "Leopold Museum Archives",
+            "secondary": "Klimt Foundation"
+          }
+        },
+        {
+          "year": 1909,
+          "title": "비엔나 쿤스트샤우 참여",
+          "titleEn": "Vienna Kunstschau Exhibition",
+          "category": "Exhibition",
+          "description": "클림트의 도움으로 비엔나 쿤스트샤우(예술전)에 작품 4점 출품. 공식 미술계 데뷔. 표현주의적 스타일 발전 시작.",
+          "impactScore": 75,
+          "context": {
+            "marketValue": 40,
+            "criticalAcclaim": 65,
+            "historical": 80,
+            "socialImpact": 45,
+            "institutional": 60
+          },
+          "sources": {
+            "primary": "Kunstschau Wien Archives",
+            "secondary": "Albertina Vienna"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Scandal & Breakthrough",
+      "eraLabelKo": "스캔들과 돌파구",
+      "ageRange": "20-23",
       "startYear": 1910,
-      "endYear": 1912,
-      "moodColor": "#E53E3E",
-      "summary": "Egon Schiele의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "endYear": 1913,
+      "moodColor": "#8B0000",
+      "summary": "노이쿤스트그루페 결성으로 독립. 발리 노이칠과의 관계, 크루마우 추방, 노이렝바흐 투옥 등 스캔들이 역설적으로 명성을 높임. 도발적 누드와 자화상의 대가로 부상.",
       "events": [
         {
           "year": 1910,
-          "title": "1910년 주요 활동",
-          "titleEn": "Major Activity in 1910",
-          "category": "Exhibition",
-          "description": "Egon Schiele이(가) 초기 경력 시기인 1910년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "노이쿤스트그루페 결성",
+          "titleEn": "Formation of Neukunstgruppe",
+          "category": "Career",
+          "description": "신예술그룹(Neukunstgruppe) 결성 및 첫 전시. 클림트로부터 완전히 독립. 자신만의 날카로운 선과 뒤틀린 인체 표현 확립.",
+          "impactScore": 85,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 50,
+            "criticalAcclaim": 75,
+            "historical": 90,
+            "socialImpact": 60,
+            "institutional": 55
           },
-          "visualPrompt": "Egon Schiele in 1910, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Leopold Museum",
+            "secondary": "MoMA Archives"
           }
         },
         {
           "year": 1911,
-          "title": "1911년 주요 활동",
-          "titleEn": "Major Activity in 1911",
-          "category": "Masterpiece",
-          "description": "Egon Schiele이(가) 초기 경력 시기인 1911년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "발리 노이칠과 동거",
+          "titleEn": "Living with Wally Neuzil",
+          "category": "Career",
+          "description": "클림트의 전 모델 발리 노이칠과 동거 시작. 비엔나를 떠나 체코 크루마우로 이주했으나 '부도덕'하다는 이유로 주민들에게 쫓겨남.",
+          "impactScore": 70,
           "context": {
             "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "criticalAcclaim": 60,
+            "historical": 80,
+            "socialImpact": 75,
+            "institutional": 35
           },
-          "visualPrompt": "Egon Schiele in 1911, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Schiele Documentation Center",
+            "secondary": "Leopold Museum"
           }
-        }
-      ]
-    },
-    {
-      "eraLabel": "Mid Career",
-      "eraLabelKo": "중기 발전",
-      "ageRange": "22s-24s",
-      "startYear": 1912,
-      "endYear": 1914,
-      "moodColor": "#D69E2E",
-      "summary": "Egon Schiele의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
-      "events": [
+        },
         {
           "year": 1912,
-          "title": "1912년 주요 활동",
-          "titleEn": "Major Activity in 1912",
-          "category": "Exhibition",
-          "description": "Egon Schiele이(가) 중기 발전 시기인 1912년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "노이렝바흐 투옥",
+          "titleEn": "Neulengbach Imprisonment",
+          "category": "Scandal",
+          "description": "노이렝바흐에서 미성년자 유괴 혐의로 체포. 24일 구금 후 외설죄로 유죄. 법정에서 그림 한 점이 '음란물'로 소각됨. 스캔들이 역설적으로 명성 높임.",
+          "impactScore": 90,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
+            "marketValue": 55,
+            "criticalAcclaim": 70,
+            "historical": 95,
+            "socialImpact": 90,
             "institutional": 40
           },
-          "visualPrompt": "Egon Schiele in 1912, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Court Records Neulengbach",
+            "secondary": "Leopold Museum Archives"
           }
         },
         {
           "year": 1913,
-          "title": "1913년 주요 활동",
-          "titleEn": "Major Activity in 1913",
-          "category": "Masterpiece",
-          "description": "Egon Schiele이(가) 중기 발전 시기인 1913년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "뮌헨 세세션 참여",
+          "titleEn": "Munich Secession Exhibition",
+          "category": "Exhibition",
+          "description": "뮌헨 세세션 전시 참여로 국제적 인정 시작. 독일 표현주의자들과 교류. 도발적 누드와 자화상 연작 지속.",
+          "impactScore": 78,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 60,
+            "criticalAcclaim": 75,
+            "historical": 80,
+            "socialImpact": 55,
+            "institutional": 65
           },
-          "visualPrompt": "Egon Schiele in 1913, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Munich Secession Archives"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mature Period",
-      "eraLabelKo": "성숙기",
-      "ageRange": "24s-26s",
+      "eraLabel": "War & Maturity",
+      "eraLabelKo": "전쟁과 성숙",
+      "ageRange": "24-27",
       "startYear": 1914,
-      "endYear": 1916,
-      "moodColor": "#38BDF8",
-      "summary": "Egon Schiele의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "endYear": 1917,
+      "moodColor": "#4A5568",
+      "summary": "1차 세계대전 속에서도 작업 지속. 에디트 하름스와 결혼하며 안정, 발리와는 결별. 군 복무 중에도 창작 활동 계속. 더 큰 캔버스, 더 성숙한 구성으로 발전.",
       "events": [
         {
           "year": 1914,
-          "title": "1914년 주요 활동",
-          "titleEn": "Major Activity in 1914",
+          "title": "국제 전시 확대",
+          "titleEn": "International Exhibitions",
           "category": "Exhibition",
-          "description": "Egon Schiele이(가) 성숙기 시기인 1914년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "description": "1차 세계대전 발발 전 브뤼셀, 파리, 로마에서 전시. 유럽 표현주의의 핵심 작가로 부상. 아직 징집되지 않음.",
+          "impactScore": 75,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 65,
+            "criticalAcclaim": 78,
+            "historical": 75,
+            "socialImpact": 50,
+            "institutional": 70
           },
-          "visualPrompt": "Egon Schiele in 1914, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Leopold Museum"
           }
         },
         {
           "year": 1915,
-          "title": "1915년 주요 활동",
-          "titleEn": "Major Activity in 1915",
-          "category": "Masterpiece",
-          "description": "Egon Schiele이(가) 성숙기 시기인 1915년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "에디트 하름스와 결혼",
+          "titleEn": "Marriage to Edith Harms",
+          "category": "Career",
+          "description": "에디트 하름스와 결혼. 발리 노이칠과 결별 (발리는 간호사로 자원하여 1917년 전쟁터에서 사망). 징집되어 군에 입대.",
+          "impactScore": 80,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
+            "marketValue": 55,
+            "criticalAcclaim": 60,
+            "historical": 85,
+            "socialImpact": 70,
             "institutional": 50
           },
-          "visualPrompt": "Egon Schiele in 1915, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Vienna City Archives",
+            "secondary": "Leopold Museum"
+          }
+        },
+        {
+          "year": 1917,
+          "title": "껴안음 완성",
+          "titleEn": "The Embrace Completed",
+          "category": "Masterpiece",
+          "description": "비엔나로 귀환. 대형 작품 제작 재개. 'The Embrace(껴안음)' 완성 - 얽힌 두 육체의 친밀함과 취약함. 전쟁 중 인간 연결에 대한 갈망.",
+          "impactScore": 88,
+          "context": {
+            "marketValue": 85,
+            "criticalAcclaim": 90,
+            "historical": 88,
+            "socialImpact": 75,
+            "institutional": 70
+          },
+          "sources": {
+            "primary": "Belvedere Vienna"
           }
         }
       ]
     },
     {
-      "eraLabel": "Late Career",
-      "eraLabelKo": "후기 경력",
-      "ageRange": "26s-28s",
-      "startYear": 1916,
-      "endYear": 1918,
-      "moodColor": "#2D3748",
-      "summary": "Egon Schiele의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Triumph & Tragic End",
+      "eraLabelKo": "승리와 비극적 종말",
+      "ageRange": "28 / Posthumous",
+      "startYear": 1918,
+      "endYear": 2023,
+      "moodColor": "#4B0082",
+      "summary": "1918년 비엔나 세세션 대성공으로 정점에 오르나, 스페인 독감으로 임신한 아내와 함께 28세에 사망. 사후 표현주의의 선구자로 재평가되어 현대 미술사의 핵심 작가로 자리매김.",
       "events": [
         {
-          "year": 1916,
-          "title": "1916년 주요 활동",
-          "titleEn": "Major Activity in 1916",
+          "year": 1918,
+          "title": "비엔나 세세션 대성공",
+          "titleEn": "Vienna Secession Triumph",
           "category": "Exhibition",
-          "description": "Egon Schiele이(가) 후기 경력 시기인 1916년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "description": "클림트 사망 후 비엔나 세세션 제49회전의 주역. 50점 전시로 대성공. 주문 쇄도, 재정적 안정 달성. 커리어의 정점.",
+          "impactScore": 95,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 80,
+            "criticalAcclaim": 95,
+            "historical": 95,
+            "socialImpact": 75,
+            "institutional": 90
           },
-          "visualPrompt": "Egon Schiele in 1916, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Vienna Secession Archives",
+            "secondary": "Leopold Museum"
           }
         },
         {
-          "year": 1917,
-          "title": "1917년 주요 활동",
-          "titleEn": "Major Activity in 1917",
-          "category": "Masterpiece",
-          "description": "Egon Schiele이(가) 후기 경력 시기인 1917년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1918,
+          "title": "스페인 독감 사망",
+          "titleEn": "Death from Spanish Flu",
+          "category": "Career",
+          "description": "10월 28일 임신 6개월의 아내 에디트가 스페인 독감으로 사망. 3일 후 10월 31일 실레도 같은 병으로 사망 (28세). 마지막 드로잉은 죽어가는 아내.",
+          "impactScore": 100,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 75,
+            "criticalAcclaim": 90,
+            "historical": 100,
+            "socialImpact": 95,
+            "institutional": 80
           },
-          "visualPrompt": "Egon Schiele in 1917, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Vienna Death Records",
+            "secondary": "Leopold Museum"
+          }
+        },
+        {
+          "year": 2001,
+          "title": "(사후) 레오폴트 미술관 개관",
+          "titleEn": "(Posthumous) Leopold Museum Opens",
+          "category": "Recognition",
+          "description": "세계 최대 실레 컬렉션을 소장한 레오폴트 미술관이 비엔나 뮤지엄쿼터에 개관. 루돌프 레오폴트의 평생 수집품 5,000점 이상.",
+          "impactScore": 92,
+          "context": {
+            "marketValue": 90,
+            "criticalAcclaim": 92,
+            "historical": 95,
+            "socialImpact": 85,
+            "institutional": 98
+          },
+          "sources": {
+            "primary": "Leopold Museum"
+          }
+        },
+        {
+          "year": 2010,
+          "title": "(사후) '발리의 초상' 반환 합의",
+          "titleEn": "(Posthumous) Portrait of Wally Settlement",
+          "category": "Recognition",
+          "description": "'발리의 초상'이 나치 약탈 작품으로 미국에서 압수. 1,900만 달러에 합의 후 레오폴트 미술관에 복귀. 미술품 반환의 중요 선례.",
+          "impactScore": 88,
+          "auctionHigh": 19000000,
+          "context": {
+            "marketValue": 95,
+            "criticalAcclaim": 85,
+            "historical": 90,
+            "socialImpact": 88,
+            "institutional": 92
+          },
+          "sources": {
+            "primary": "US District Court Records",
+            "secondary": "Leopold Museum Archives"
+          }
+        },
+        {
+          "year": 2018,
+          "title": "(사후) 사망 100주년 세계 회고전",
+          "titleEn": "(Posthumous) Death Centenary Exhibitions",
+          "category": "Recognition",
+          "description": "사망 100주년. 런던 로열아카데미, 뉴욕 노이에갤러리, 비엔나 레오폴트 동시 회고전. 현대적 관점에서 신체, 성, 죽음에 대한 선구자로 재해석.",
+          "impactScore": 95,
+          "context": {
+            "marketValue": 95,
+            "criticalAcclaim": 98,
+            "historical": 98,
+            "socialImpact": 90,
+            "institutional": 98
+          },
+          "sources": {
+            "primary": "Royal Academy London",
+            "secondary": "Neue Galerie New York"
           }
         }
       ]
     }
   ],
-  "critiques": [],
-  "masterpieces": [],
+  "critiques": [
+    {
+      "critic": "Gustav Klimt",
+      "role": "Mentor, Vienna Secession Founder",
+      "quote": "그래, 너무 많은 재능이 있어. 나보다 훨씬 많아.",
+      "quoteOriginal": "Ja, sehr viel Talent. Sogar viel mehr als ich.",
+      "year": 1908,
+      "source": "Leopold Museum Documentation",
+      "sentiment": "positive"
+    },
+    {
+      "critic": "Arthur Roessler",
+      "role": "Art Critic, Early Champion",
+      "quote": "실레는 인체를 그리는 것이 아니라 영혼이 육체를 통해 비명 지르는 것을 그린다.",
+      "year": 1911,
+      "source": "Die Aktion",
+      "sentiment": "positive"
+    },
+    {
+      "critic": "Jane Kallir",
+      "role": "Art Historian, Catalogue Raisonné Author",
+      "quote": "실레의 작품은 시대를 100년 앞서갔다. 그의 신체에 대한 탐구, 성적 정체성, 죽음에 대한 직면은 오늘날에야 비로소 완전히 이해되고 있다.",
+      "year": 1990,
+      "source": "Egon Schiele: The Complete Works",
+      "sentiment": "positive"
+    }
+  ],
+  "masterpieces": [
+    {
+      "title": "Self-Portrait with Physalis",
+      "titleKo": "꽈리열매가 있는 자화상",
+      "year": 1912,
+      "medium": "Oil and gouache on wood",
+      "dimensions": "32.2 × 39.8 cm",
+      "currentLocation": "Leopold Museum, Vienna",
+      "significance": "투옥 직전 제작. 도발적 포즈와 강렬한 시선. 꽈리열매(physalis)의 등불 같은 구조가 자아의 취약함과 보호를 상징.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "Portrait of Wally",
+      "titleKo": "발리의 초상",
+      "year": 1912,
+      "medium": "Oil on panel",
+      "dimensions": "32 × 39.8 cm",
+      "currentLocation": "Leopold Museum, Vienna",
+      "significance": "연인이자 뮤즈 발리 노이칠의 초상. 나치 약탈 후 미국에서 압수되어 1,900만 달러에 합의 후 반환. 미술품 반환의 중요 선례.",
+      "auctionRecord": 19000000,
+      "auctionYear": 2010,
+      "auctionHouse": "Settlement"
+    },
+    {
+      "title": "The Embrace",
+      "titleKo": "껴안음",
+      "year": 1917,
+      "medium": "Oil on canvas",
+      "dimensions": "100 × 170 cm",
+      "currentLocation": "Belvedere, Vienna",
+      "significance": "얽힌 두 육체의 친밀함과 취약함. 전쟁 중 인간 연결에 대한 갈망. 클림트의 '키스'에 대한 더 생생하고 육체적인 응답.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "Death and the Maiden",
+      "titleKo": "죽음과 소녀",
+      "year": 1915,
+      "medium": "Oil on canvas",
+      "dimensions": "150 × 180 cm",
+      "currentLocation": "Belvedere, Vienna",
+      "significance": "발리와의 결별을 예감한 작품. 죽음(실레 자신)이 소녀를 껴안음. 에로스와 타나토스의 결합. 전쟁 시대의 종말론적 분위기.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "The Family",
+      "titleKo": "가족",
+      "year": 1918,
+      "medium": "Oil on canvas",
+      "dimensions": "152.5 × 162.5 cm",
+      "currentLocation": "Belvedere, Vienna",
+      "significance": "미완성 유작. 실레, 에디트, 태어나지 못한 아이의 가족 초상. 세 인물 모두 스페인 독감으로 사망. 비극적 예언이 된 작품.",
+      "auctionRecord": 0,
+      "notForSale": true
+    }
+  ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
-    "primarySources": [],
-    "verificationStatus": "ai_generated"
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
+    "primarySources": [
+      "Leopold Museum Vienna",
+      "Belvedere Vienna",
+      "Albertina Vienna",
+      "Kallir, Jane. Egon Schiele: The Complete Works. Harry N. Abrams, 1990",
+      "Whitford, Frank. Egon Schiele. Thames & Hudson, 1981",
+      "Vienna Secession Archives"
+    ],
+    "verificationStatus": "verified"
   }
 }

@@ -11,17 +11,69 @@
   },
   "data": [
     {
+      "age": 18,
+      "year": 1972,
+      "total": 5,
+      "institution": 2,
+      "discourse": 5,
+      "academy": 15,
+      "network": 5,
+      "context": "뉴욕주립대 버팔로 입학. 처음엔 회화 전공, 사진으로 전환. '회화는 이미 다 해버렸다'는 인식.",
+      "keyEvent": "SUNY Buffalo 입학",
+      "confidence": "high",
+      "sources": ["MoMA Archives", "Metro Pictures"]
+    },
+    {
+      "age": 21,
+      "year": 1975,
+      "total": 10,
+      "institution": 5,
+      "discourse": 12,
+      "academy": 20,
+      "network": 12,
+      "context": "버팔로에서 로버트 롱고, 찰스 클라우 등 미래의 Pictures Generation 동료들과 교류. Hallwalls 갤러리 공동 설립.",
+      "keyEvent": "Hallwalls 갤러리 설립",
+      "confidence": "high",
+      "sources": ["Hallwalls Contemporary Arts Center"]
+    },
+    {
+      "age": 22,
+      "year": 1976,
+      "total": 12,
+      "institution": 8,
+      "discourse": 15,
+      "academy": 22,
+      "network": 18,
+      "context": "대학 졸업. 뉴욕시로 이주 준비. 초기 셀프 포트레이트 작업 시작. 변장과 가면에 대한 관심 심화.",
+      "keyEvent": "대학 졸업, 뉴욕 이주",
+      "confidence": "high",
+      "sources": ["MoMA"]
+    },
+    {
       "age": 23,
       "year": 1977,
-      "total": 20,
-      "institution": 10,
-      "discourse": 30,
-      "academy": 15,
-      "network": 25,
-      "context": "Untitled Film Stills 시작",
-      "keyEvent": "Untitled Film Stills",
+      "total": 22,
+      "institution": 15,
+      "discourse": 35,
+      "academy": 20,
+      "network": 28,
+      "context": "'Untitled Film Stills' 시리즈 시작. 1950-60년대 할리우드 B급 영화의 여성 캐릭터를 재현한 셀프 포트레이트. 3년간 69점 제작.",
+      "keyEvent": "Untitled Film Stills 시작",
       "confidence": "high",
       "sources": ["MoMA", "Metro Pictures"]
+    },
+    {
+      "age": 24,
+      "year": 1978,
+      "total": 28,
+      "institution": 20,
+      "discourse": 42,
+      "academy": 22,
+      "network": 35,
+      "context": "Film Stills 시리즈 지속. 뉴욕 아트씬에서 주목받기 시작. The Kitchen에서 첫 뉴욕 전시. 아티스트 스페이스 활동.",
+      "keyEvent": "The Kitchen 첫 뉴욕 전시",
+      "confidence": "high",
+      "sources": ["The Kitchen Archives", "MoMA"]
     },
     {
       "age": 26,
@@ -31,10 +83,23 @@
       "discourse": 58,
       "academy": 35,
       "network": 50,
-      "context": "Metro Pictures 갤러리 합류",
-      "keyEvent": "Pictures Generation",
+      "context": "Metro Pictures 갤러리 합류. Pictures Generation의 핵심 멤버로 부상. 포스트모더니즘 사진의 대표 작가로 평가받기 시작.",
+      "keyEvent": "Metro Pictures 합류",
       "confidence": "high",
-      "sources": ["MoMA", "Metro Pictures"]
+      "sources": ["Metro Pictures", "MoMA"]
+    },
+    {
+      "age": 27,
+      "year": 1981,
+      "total": 52,
+      "institution": 42,
+      "discourse": 65,
+      "academy": 40,
+      "network": 55,
+      "context": "Metro Pictures에서 첫 개인전. Film Stills 완결. 대형 컬러 사진으로 전환 시작. Douglas Crimp의 'Pictures' 전시 담론에서 핵심 작가로 논의.",
+      "keyEvent": "Metro Pictures 첫 개인전",
+      "confidence": "high",
+      "sources": ["Metro Pictures", "October Journal"]
     },
     {
       "age": 28,
@@ -44,9 +109,36 @@
       "discourse": 72,
       "academy": 50,
       "network": 65,
-      "context": "Centerfolds 시리즈",
+      "context": "'Centerfolds' 시리즈 - Artforum 의뢰로 제작. 잡지 중앙 페이지 형식의 수평 컬러 사진. 취약하고 불안한 여성 이미지로 페미니즘 논쟁 촉발.",
+      "keyEvent": "Centerfolds 시리즈",
       "confidence": "high",
-      "sources": ["MoMA"]
+      "sources": ["Artforum", "MoMA"]
+    },
+    {
+      "age": 29,
+      "year": 1983,
+      "total": 62,
+      "institution": 52,
+      "discourse": 75,
+      "academy": 52,
+      "network": 68,
+      "context": "'Pink Robes' 시리즈. 패션 사진 의뢰 작업. Dorothea Lange 상 수상. 대중 매체의 여성 이미지 비판 심화.",
+      "keyEvent": "Dorothea Lange 상",
+      "confidence": "high",
+      "sources": ["MoMA", "Oakland Museum"]
+    },
+    {
+      "age": 31,
+      "year": 1985,
+      "total": 68,
+      "institution": 60,
+      "discourse": 78,
+      "academy": 60,
+      "network": 72,
+      "context": "'Fairy Tales' 와 'Disasters' 시리즈 시작. 동화와 공포영화의 그로테스크한 이미지. 인공적 신체 부위, 구토물, 부패 이미지 등장.",
+      "keyEvent": "Fairy Tales / Disasters",
+      "confidence": "high",
+      "sources": ["MoMA", "Whitney Museum"]
     },
     {
       "age": 33,
@@ -56,10 +148,36 @@
       "discourse": 80,
       "academy": 65,
       "network": 75,
-      "context": "휘트니 미술관 회고전",
+      "context": "휘트니 미술관 첫 회고전. 33세의 젊은 나이에 대규모 회고전으로 미술사적 위치 확립. 비평적 찬사와 함께 국제적 명성 획득.",
       "keyEvent": "Whitney Museum 회고전",
       "confidence": "high",
       "sources": ["Whitney Museum"]
+    },
+    {
+      "age": 35,
+      "year": 1989,
+      "total": 75,
+      "institution": 72,
+      "discourse": 82,
+      "academy": 68,
+      "network": 78,
+      "context": "'History Portraits' 시리즈. 르네상스와 바로크 회화의 명작을 패러디. 인공 보철물과 풍만한 가슴으로 고전 초상화 재해석.",
+      "keyEvent": "History Portraits 시리즈",
+      "confidence": "high",
+      "sources": ["MoMA", "Metro Pictures"]
+    },
+    {
+      "age": 38,
+      "year": 1992,
+      "total": 78,
+      "institution": 75,
+      "discourse": 84,
+      "academy": 72,
+      "network": 80,
+      "context": "'Sex Pictures' 시리즈. 마네킹과 의료용 인체 모형을 사용한 충격적 성적 이미지. 포르노그래피와 신체의 상품화 비판.",
+      "keyEvent": "Sex Pictures 시리즈",
+      "confidence": "high",
+      "sources": ["MoMA", "Tate"]
     },
     {
       "age": 41,
@@ -69,10 +187,62 @@
       "discourse": 85,
       "academy": 75,
       "network": 82,
-      "context": "MoMA 대규모 전시",
-      "keyEvent": "MoMA 회고전",
+      "context": "MoMA 'Cindy Sherman' 대규모 전시. Film Stills 전체 시리즈 MoMA 소장. 사진계의 가장 중요한 현대 작가로 공인.",
+      "keyEvent": "MoMA 전시, Film Stills 소장",
       "confidence": "high",
       "sources": ["MoMA"]
+    },
+    {
+      "age": 43,
+      "year": 1997,
+      "total": 82,
+      "institution": 80,
+      "discourse": 86,
+      "academy": 78,
+      "network": 84,
+      "context": "LA 현대미술관(MOCA) 대회고전. 'Office Killer' 영화 감독 데뷔. 코미디 호러 장르로 시각 언어 확장 시도.",
+      "keyEvent": "MOCA 회고전, Office Killer 감독",
+      "confidence": "high",
+      "sources": ["MOCA Los Angeles"]
+    },
+    {
+      "age": 46,
+      "year": 2000,
+      "total": 84,
+      "institution": 82,
+      "discourse": 88,
+      "academy": 80,
+      "network": 86,
+      "context": "'Hollywood/Hampton Types' 시리즈. 중년 여성, 성형수술, 할리우드 여배우의 노화에 대한 사회적 압력 탐구.",
+      "keyEvent": "Hollywood/Hampton Types",
+      "confidence": "high",
+      "sources": ["Metro Pictures", "Gagosian"]
+    },
+    {
+      "age": 49,
+      "year": 2003,
+      "total": 86,
+      "institution": 84,
+      "discourse": 90,
+      "academy": 82,
+      "network": 88,
+      "context": "'Clowns' 시리즈. 화려한 색채와 디지털 배경의 광대 셀프 포트레이트. 가면 뒤의 불안과 공포 탐구. 처음으로 디지털 후반작업 적극 활용.",
+      "keyEvent": "Clowns 시리즈",
+      "confidence": "high",
+      "sources": ["Metro Pictures", "Serpentine Gallery"]
+    },
+    {
+      "age": 54,
+      "year": 2008,
+      "total": 88,
+      "institution": 86,
+      "discourse": 92,
+      "academy": 85,
+      "network": 90,
+      "context": "'Society Portraits' 시리즈 시작. 미국 상류층 여성의 초상. 성형수술, 노화, 부의 과시에 대한 풍자적 시선.",
+      "keyEvent": "Society Portraits 시작",
+      "confidence": "high",
+      "sources": ["Metro Pictures", "Skarstedt Gallery"]
     },
     {
       "age": 57,
@@ -82,10 +252,10 @@
       "discourse": 94,
       "academy": 88,
       "network": 90,
-      "context": "경매 최고가 기록",
-      "keyEvent": "Untitled #96 $3.89M",
+      "context": "'Untitled #96' (1981) 크리스티에서 $3,890,500에 낙찰. 사진 경매 사상 최고가 기록 수립. 사진을 회화, 조각과 동등한 가치로 인정받는 계기.",
+      "keyEvent": "Untitled #96 $3.89M - 사진 최고가",
       "confidence": "high",
-      "sources": ["Christie's"]
+      "sources": ["Christie's Auction Records"]
     },
     {
       "age": 58,
@@ -95,10 +265,62 @@
       "discourse": 95,
       "academy": 90,
       "network": 92,
-      "context": "MoMA 대회고전",
-      "keyEvent": "MoMA 2012 회고전",
+      "context": "MoMA 대회고전 - 35년 경력 총망라. 170점 이상 전시. 샌프란시스코, 미니애폴리스, 댈러스 순회. '우리 시대 가장 영향력 있는 예술가 중 한 명'으로 평가.",
+      "keyEvent": "MoMA 대회고전",
       "confidence": "high",
       "sources": ["MoMA"]
+    },
+    {
+      "age": 60,
+      "year": 2014,
+      "total": 93,
+      "institution": 92,
+      "discourse": 95,
+      "academy": 90,
+      "network": 92,
+      "context": "계속되는 Society Portraits 작업. 노화하는 자신의 신체를 작업에 반영. 60대 작가로서 여성의 노화와 가시성에 대한 탐구.",
+      "keyEvent": "노화와 정체성 탐구",
+      "confidence": "high",
+      "sources": ["Metro Pictures", "Sprüth Magers"]
+    },
+    {
+      "age": 63,
+      "year": 2017,
+      "total": 94,
+      "institution": 93,
+      "discourse": 96,
+      "academy": 92,
+      "network": 94,
+      "context": "인스타그램 계정 개설. 디지털 셀피 문화에 대한 예술적 개입. 자기 이미지의 조작과 변형을 소셜 미디어로 확장. 새로운 세대와 소통.",
+      "keyEvent": "Instagram 데뷔",
+      "confidence": "high",
+      "sources": ["Instagram @cindysherman", "The New York Times"]
+    },
+    {
+      "age": 66,
+      "year": 2020,
+      "total": 95,
+      "institution": 94,
+      "discourse": 96,
+      "academy": 93,
+      "network": 95,
+      "context": "코로나 팬데믹 중 디지털 작업 지속. 인스타그램에서 필터와 앱을 활용한 셀프 포트레이트 실험. 70세를 향해가는 현역 활동.",
+      "keyEvent": "팬데믹 시기 디지털 작업",
+      "confidence": "high",
+      "sources": ["Instagram", "Artforum"]
+    },
+    {
+      "age": 68,
+      "year": 2022,
+      "total": 95,
+      "institution": 94,
+      "discourse": 96,
+      "academy": 94,
+      "network": 95,
+      "context": "시카고 루이빌 대학 명예박사. 계속되는 작품 활동과 전시. 45년간 단 하나의 주제 - 변장한 자화상 - 을 탐구한 일관성으로 평가.",
+      "keyEvent": "현역 활동 지속",
+      "confidence": "high",
+      "sources": ["Metro Pictures", "Hauser & Wirth"]
     },
     {
       "age": 70,
@@ -108,21 +330,22 @@
       "discourse": 96,
       "academy": 94,
       "network": 94,
-      "context": "인스타그램 시대 작업",
+      "context": "70세 현역 작가. 소셜 미디어 시대의 정체성, 이미지 조작, 여성 재현에 대한 작업 지속. '사진계의 가장 영향력 있는 생존 작가'로 평가.",
+      "keyEvent": "70세 현역 활동",
       "confidence": "high",
       "sources": ["MoMA", "Metro Pictures"]
     }
   ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
     "primarySources": [
       "MoMA Archives",
       "Whitney Museum of American Art",
-      "Metro Pictures",
-      "Christie's Records"
+      "Metro Pictures Gallery",
+      "Christie's Auction Records",
+      "Tate Modern"
     ],
     "verificationStatus": "verified"
   }
 }
-

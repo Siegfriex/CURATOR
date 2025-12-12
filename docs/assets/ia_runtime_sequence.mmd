@@ -1,0 +1,40 @@
+sequenceDiagram
+  %% IA Runtime Sequence - Curator's Odysseia
+  autonumber
+  actor User as 사용자
+  participant App as Web App (App.tsx)
+  participant CG as Game Wrapper (curatorgame/index.tsx)
+  participant Hand as HandController (MediaPipe)
+  participant HTML as Game Engine (gemini3.html)
+  participant Gemini as Gemini API
+  participant ESP as (Optional) ESP32
+
+  User->>App: 랜딩 진입
+  App->>CG: iframe 로드 (/curatorgame/)
+  CG->>HTML: inner iframe 로드 (./init/gemini3.html)
+
+  loop 매 프레임/결과 콜백
+    Hand->>CG: onInput(x, active)
+    CG->>HTML: postMessage INPUT_UPDATE {x,isActive}
+    alt (선택) 피지컬 트윈 연결됨
+      Hand->>ESP: Web Serial write {"x":x,"active":1|0}\n
+    end
+  end
+
+  loop 게임 플레이
+    HTML->>HTML: STATE 누적(artifacts/metrics/timeline)
+    alt 게이트 통과
+      HTML->>HTML: timeline push + metricsΔ 적용
+    end
+  end
+
+  HTML-->>CG: postMessage GAME_OVER payload=STATE
+  CG->>Gemini: generateContent(prompt+STATE)
+  Gemini-->>CG: report JSON {archetype,match,narrative}
+  CG-->>HTML: postMessage REPORT_GENERATED payload=report
+  User->>HTML: Continue to Archive 클릭
+  HTML-->>CG: postMessage GAME_COMPLETE payload=GameResult
+  CG-->>App: postMessage forward GAME_COMPLETE
+  App->>App: enrichGameResult() → matchedArtistId
+  App->>App: LocalStorage 저장 + Overview 전환
+

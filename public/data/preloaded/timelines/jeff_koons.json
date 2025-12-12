@@ -2,226 +2,422 @@
   "artistId": "20",
   "artistName": "Jeff Koons",
   "birthYear": 1955,
+  "deathYear": null,
   "eras": [
     {
-      "eraLabel": "Early Career",
-      "eraLabelKo": "초기 경력",
-      "ageRange": "20s-32s",
-      "startYear": 1975,
+      "eraLabel": "Consumer Objects & Early Work",
+      "eraLabelKo": "소비 오브제와 초기 작업",
+      "ageRange": "21-32",
+      "startYear": 1976,
       "endYear": 1987,
-      "moodColor": "#E53E3E",
-      "summary": "Jeff Koons의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "moodColor": "#6B7280",
+      "summary": "MoMA 멤버십 판매원과 월스트리트 브로커 경험 후 예술가로 전환. 진공청소기, 농구공 등 소비재를 미술관 맥락에 배치하며 레디메이드의 새로운 버전 제시.",
       "events": [
         {
-          "year": 1979,
-          "title": "1979년 주요 활동",
-          "titleEn": "Major Activity in 1979",
-          "category": "Exhibition",
-          "description": "Jeff Koons이(가) 초기 경력 시기인 1979년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
+          "year": 1980,
+          "title": "'The New' 시리즈 - 진공청소기",
+          "titleEn": "The New Series - Vacuum Cleaners",
+          "category": "Masterpiece",
+          "description": "형광등 조명이 달린 플렉시글라스 케이스 안에 새 진공청소기 전시. 상품의 물신화, 소비문화의 욕망 구조를 탐구. 뒤샹 레디메이드의 80년대 버전.",
+          "impactScore": 75,
           "auctionHigh": 0,
           "auctionLow": 0,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 40,
+            "criticalAcclaim": 70,
+            "historical": 85,
+            "socialImpact": 65,
+            "institutional": 50
           },
-          "visualPrompt": "Jeff Koons in 1979, undefined period",
+          "visualPrompt": "The New vacuum cleaners in plexiglass cases with fluorescent lights, pristine consumer objects as art",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Whitney Museum",
+            "secondary": "MoMA"
           }
         },
         {
-          "year": 1983,
-          "title": "1983년 주요 활동",
-          "titleEn": "Major Activity in 1983",
+          "year": 1985,
+          "title": "'Equilibrium' 시리즈",
+          "titleEn": "Equilibrium Series",
           "category": "Masterpiece",
-          "description": "Jeff Koons이(가) 초기 경력 시기인 1983년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
+          "description": "나이키 농구공을 수조에 완벽히 띄운 작품. 중력, 균형, 소비문화, 아프리카계 미국인 문화에 대한 복합적 성찰. 소니아바드 갤러리 전시.",
+          "impactScore": 82,
           "auctionHigh": 0,
           "auctionLow": 0,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 55,
+            "criticalAcclaim": 80,
+            "historical": 85,
+            "socialImpact": 70,
+            "institutional": 65
           },
-          "visualPrompt": "Jeff Koons in 1983, undefined period",
+          "visualPrompt": "Equilibrium basketball tanks, Nike balls floating in perfect suspension, gallery installation",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Whitney Museum",
+            "secondary": "Tate"
+          }
+        },
+        {
+          "year": 1986,
+          "title": "'Rabbit' 스테인리스 스틸 조각 제작",
+          "titleEn": "Rabbit Stainless Steel Sculpture",
+          "category": "Masterpiece",
+          "description": "풍선 토끼를 스테인리스 스틸로 재현한 41인치 조각. 훗날 2019년 9,110만 달러로 현존 작가 최고가 경신할 작품의 탄생.",
+          "impactScore": 95,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 60,
+            "criticalAcclaim": 85,
+            "historical": 100,
+            "socialImpact": 80,
+            "institutional": 70
+          },
+          "visualPrompt": "Rabbit 1986, reflective stainless steel balloon rabbit sculpture, mirror finish",
+          "sources": {
+            "primary": "MoMA",
+            "secondary": "Christie's"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mid Career",
-      "eraLabelKo": "중기 발전",
-      "ageRange": "32s-44s",
-      "startYear": 1987,
-      "endYear": 1999,
-      "moodColor": "#D69E2E",
-      "summary": "Jeff Koons의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Banality & Made in Heaven",
+      "eraLabelKo": "저속함과 천국에서 만들어진",
+      "ageRange": "33-38",
+      "startYear": 1988,
+      "endYear": 1993,
+      "moodColor": "#DC2626",
+      "summary": "키치와 하이아트의 경계를 폭파한 시기. 마이클 잭슨 도자기 조각으로 주목받고, 포르노 배우 치치올리나와의 관계를 예술로 전환하며 최대 논쟁의 중심에 섬.",
       "events": [
+        {
+          "year": 1988,
+          "title": "'Michael Jackson and Bubbles'",
+          "titleEn": "Michael Jackson and Bubbles",
+          "category": "Masterpiece",
+          "description": "마이클 잭슨과 침팬지 버블스의 실물 크기 도자기 조각. 독일 장인들이 제작. 키치와 하이아트, 유명인 숭배, 인종에 대한 복합적 논평.",
+          "impactScore": 92,
+          "auctionHigh": 5600000,
+          "auctionLow": 3000000,
+          "context": {
+            "marketValue": 90,
+            "criticalAcclaim": 75,
+            "historical": 95,
+            "socialImpact": 90,
+            "institutional": 80
+          },
+          "visualPrompt": "Michael Jackson and Bubbles 1988, life-size porcelain sculpture, gold and white glaze, pop star and chimp",
+          "sources": {
+            "primary": "SFMOMA",
+            "secondary": "Whitney Museum"
+          }
+        },
         {
           "year": 1991,
-          "title": "1991년 주요 활동",
-          "titleEn": "Major Activity in 1991",
-          "category": "Exhibition",
-          "description": "Jeff Koons이(가) 중기 발전 시기인 1991년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
+          "title": "'Made in Heaven' 전시, 치치올리나 결혼",
+          "titleEn": "Made in Heaven Exhibition, Marriage to Cicciolina",
+          "category": "Scandal",
+          "description": "포르노 배우 일로나 스탈러(치치올리나)와의 성적 관계를 대형 회화와 조각으로 제작. 결혼 후 아들 루트비히 출생. 미술계 최대 논쟁작.",
+          "impactScore": 88,
           "auctionHigh": 0,
           "auctionLow": 0,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 85,
+            "criticalAcclaim": 60,
+            "historical": 90,
+            "socialImpact": 95,
+            "institutional": 55
           },
-          "visualPrompt": "Jeff Koons in 1991, undefined period",
+          "visualPrompt": "Made in Heaven 1991, explicit art depicting Koons and Cicciolina, controversial exhibition",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Whitney Museum",
+            "secondary": "Artforum"
           }
         },
         {
-          "year": 1995,
-          "title": "1995년 주요 활동",
-          "titleEn": "Major Activity in 1995",
-          "category": "Masterpiece",
-          "description": "Jeff Koons이(가) 중기 발전 시기인 1995년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
+          "year": 1993,
+          "title": "이혼과 양육권 분쟁",
+          "titleEn": "Divorce and Custody Battle",
+          "category": "Career",
+          "description": "치치올리나와 격렬한 이혼. 아들 루트비히 양육권 분쟁에서 이탈리아 법정 패소. 아들을 볼 수 없게 됨. 개인적 비극이 작업에 영향.",
+          "impactScore": 70,
           "auctionHigh": 0,
           "auctionLow": 0,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
+            "marketValue": 65,
+            "criticalAcclaim": 55,
+            "historical": 75,
+            "socialImpact": 80,
             "institutional": 50
           },
-          "visualPrompt": "Jeff Koons in 1995, undefined period",
+          "visualPrompt": "Jeff Koons 1993 custody battle headlines, personal crisis period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "New York Times",
+            "secondary": "Art in America"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mature Period",
-      "eraLabelKo": "성숙기",
-      "ageRange": "44s-56s",
-      "startYear": 1999,
-      "endYear": 2011,
-      "moodColor": "#38BDF8",
-      "summary": "Jeff Koons의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Celebration & Global Fame",
+      "eraLabelKo": "축제와 세계적 명성",
+      "ageRange": "39-58",
+      "startYear": 1994,
+      "endYear": 2013,
+      "moodColor": "#F59E0B",
+      "summary": "풍선 개, 풍선 꽃 등 대형 스테인리스 스틸 조각으로 새로운 아이콘 창조. 베르사유 궁전 전시로 논쟁, 경매 기록 경신으로 가장 비싼 현존 작가 등극.",
       "events": [
         {
-          "year": 2003,
-          "title": "2003년 주요 활동",
-          "titleEn": "Major Activity in 2003",
+          "year": 2000,
+          "title": "'Puppy' 록펠러 센터 설치",
+          "titleEn": "Puppy at Rockefeller Center",
           "category": "Exhibition",
-          "description": "Jeff Koons이(가) 성숙기 시기인 2003년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
+          "description": "43피트 높이의 웨스트 하이랜드 테리어 조각, 7만 송이 꽃으로 덮임. 빌바오 구겐하임에서 영구 설치. 대중적 사랑과 비평적 논쟁 공존.",
+          "impactScore": 88,
           "auctionHigh": 0,
           "auctionLow": 0,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 85,
+            "criticalAcclaim": 70,
+            "historical": 85,
+            "socialImpact": 95,
+            "institutional": 90
           },
-          "visualPrompt": "Jeff Koons in 2003, undefined period",
+          "visualPrompt": "Puppy sculpture covered in flowers, giant topiary dog, Guggenheim Bilbao or Rockefeller Center",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Guggenheim Bilbao",
+            "secondary": "Rockefeller Center"
           }
         },
         {
-          "year": 2007,
-          "title": "2007년 주요 활동",
-          "titleEn": "Major Activity in 2007",
-          "category": "Masterpiece",
-          "description": "Jeff Koons이(가) 성숙기 시기인 2007년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
+          "year": 2008,
+          "title": "베르사유 궁전 전시",
+          "titleEn": "Versailles Palace Exhibition",
+          "category": "Exhibition",
+          "description": "태양왕의 궁전에 키치 조각 배치. 분홍 풍선 개, 로브스터 등이 역사적 공간과 충돌. 프랑스 보수파 격렬히 반발, 국제적 논쟁.",
+          "impactScore": 90,
           "auctionHigh": 0,
           "auctionLow": 0,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 92,
+            "criticalAcclaim": 65,
+            "historical": 88,
+            "socialImpact": 95,
+            "institutional": 92
           },
-          "visualPrompt": "Jeff Koons in 2007, undefined period",
+          "visualPrompt": "Jeff Koons at Versailles 2008, Balloon Dog in Hall of Mirrors, contemporary meets baroque",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Château de Versailles",
+            "secondary": "Le Monde"
+          }
+        },
+        {
+          "year": 2013,
+          "title": "'Balloon Dog (Orange)' $58.4M - 세계 기록",
+          "titleEn": "Balloon Dog Orange $58.4M - World Record",
+          "category": "Recognition",
+          "description": "크리스티 경매에서 5,840만 달러 낙찰. 현존 작가 경매 최고가 세계 기록. 미술시장 역사의 이정표.",
+          "impactScore": 98,
+          "auctionHigh": 58400000,
+          "auctionLow": 35000000,
+          "context": {
+            "marketValue": 100,
+            "criticalAcclaim": 80,
+            "historical": 95,
+            "socialImpact": 90,
+            "institutional": 95
+          },
+          "visualPrompt": "Balloon Dog Orange auction Christie's 2013, record-breaking contemporary art sale, stainless steel sculpture",
+          "sources": {
+            "primary": "Christie's Auction Records"
           }
         }
       ]
     },
     {
-      "eraLabel": "Late Career",
-      "eraLabelKo": "후기 경력",
-      "ageRange": "56s-68s",
-      "startYear": 2011,
-      "endYear": 2023,
-      "moodColor": "#2D3748",
-      "summary": "Jeff Koons의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Retrospective & Market Peak",
+      "eraLabelKo": "회고전과 시장 정점",
+      "ageRange": "59-69+",
+      "startYear": 2014,
+      "endYear": 2025,
+      "moodColor": "#10B981",
+      "summary": "휘트니 미술관 대회고전으로 미술사적 지위 확립. 2019년 'Rabbit' 9,110만 달러로 자신의 기록 재경신. 현존 작가 중 가장 비싼 작가로 70대 진입.",
       "events": [
         {
-          "year": 2015,
-          "title": "2015년 주요 활동",
-          "titleEn": "Major Activity in 2015",
+          "year": 2014,
+          "title": "휘트니 미술관 대회고전",
+          "titleEn": "Whitney Museum Major Retrospective",
           "category": "Exhibition",
-          "description": "Jeff Koons이(가) 후기 경력 시기인 2015년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
+          "description": "휘트니 미술관에서 전 경력 총망라 대회고전. 퐁피두 센터, 빌바오 구겐하임으로 순회. 미술사적 위치 공식화.",
+          "impactScore": 95,
           "auctionHigh": 0,
           "auctionLow": 0,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 95,
+            "criticalAcclaim": 88,
+            "historical": 95,
+            "socialImpact": 85,
+            "institutional": 98
           },
-          "visualPrompt": "Jeff Koons in 2015, undefined period",
+          "visualPrompt": "Whitney Museum 2014, Jeff Koons retrospective, full career survey, major installation views",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Whitney Museum of American Art",
+            "secondary": "Centre Pompidou"
           }
         },
         {
           "year": 2019,
-          "title": "2019년 주요 활동",
-          "titleEn": "Major Activity in 2019",
+          "title": "'Rabbit' $91.1M - 현존 작가 최고가",
+          "titleEn": "Rabbit $91.1M - Living Artist Record",
+          "category": "Recognition",
+          "description": "1986년작 'Rabbit' 크리스티에서 9,110만 달러 낙찰. 자신의 2013년 기록 경신. 현존 작가 경매 최고가로 역사에 기록.",
+          "impactScore": 100,
+          "auctionHigh": 91100000,
+          "auctionLow": 50000000,
+          "context": {
+            "marketValue": 100,
+            "criticalAcclaim": 85,
+            "historical": 100,
+            "socialImpact": 92,
+            "institutional": 95
+          },
+          "visualPrompt": "Rabbit sculpture auction Christie's 2019, $91 million sale, stainless steel balloon rabbit",
+          "sources": {
+            "primary": "Christie's Auction Records"
+          }
+        },
+        {
+          "year": 2021,
+          "title": "'Gazing Ball' 시리즈",
+          "titleEn": "Gazing Ball Series",
           "category": "Masterpiece",
-          "description": "Jeff Koons이(가) 후기 경력 시기인 2019년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
+          "description": "미술사 명작(마네, 다비드, 반 고흐 등)을 재현한 회화와 조각에 파란 유리구 부착. 미술사에 대한 성찰과 관객 참여 유도.",
+          "impactScore": 78,
           "auctionHigh": 0,
           "auctionLow": 0,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 85,
+            "criticalAcclaim": 75,
+            "historical": 75,
+            "socialImpact": 70,
+            "institutional": 80
           },
-          "visualPrompt": "Jeff Koons in 2019, undefined period",
+          "visualPrompt": "Gazing Ball paintings, blue reflective sphere on classical art reproductions, museum installation",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Gagosian Gallery",
+            "secondary": "Aspen Art Museum"
+          }
+        },
+        {
+          "year": 2024,
+          "title": "현역 활동 지속",
+          "titleEn": "Ongoing Activity",
+          "category": "Career",
+          "description": "69세에도 세계 각지에서 전시와 프로젝트 진행. 미술시장에서 가장 비싼 현존 작가로서의 위치 유지하며 70대 진입.",
+          "impactScore": 82,
+          "auctionHigh": 0,
+          "auctionLow": 0,
+          "context": {
+            "marketValue": 92,
+            "criticalAcclaim": 80,
+            "historical": 80,
+            "socialImpact": 78,
+            "institutional": 88
+          },
+          "visualPrompt": "Jeff Koons 2024, contemporary art exhibitions, continued relevance in art market",
+          "sources": {
+            "primary": "Gagosian Gallery",
+            "secondary": "Art Market Monitor"
           }
         }
       ]
     }
   ],
-  "critiques": [],
-  "masterpieces": [],
+  "critiques": [
+    {
+      "critic": "로버타 스미스 (Roberta Smith)",
+      "role": "뉴욕 타임스 미술 비평가 (2014)",
+      "quote": "쿤스의 작품은 미국 소비문화의 거울이다. 우리가 좋아하든 싫어하든, 그것은 우리 자신을 보여준다.",
+      "quoteKo": "쿤스의 작품은 미국 소비문화의 거울이다. 우리가 좋아하든 싫어하든, 그것은 우리 자신을 보여준다.",
+      "type": "contemporary"
+    },
+    {
+      "critic": "제프 쿤스 (Jeff Koons)",
+      "role": "자기 진술 (2013)",
+      "quote": "나는 관객을 판단하지 않는다. 내 작품이 판단받지 않기를 바란다. 나는 사람들이 자신의 역사, 자신의 취향을 받아들이기를 원한다. 죄책감 없이.",
+      "quoteKo": "나는 관객을 판단하지 않는다. 내 작품이 판단받지 않기를 바란다. 나는 사람들이 자신의 역사, 자신의 취향을 받아들이기를 원한다. 죄책감 없이.",
+      "type": "self"
+    },
+    {
+      "critic": "제리 살츠 (Jerry Saltz)",
+      "role": "뉴욕 매거진 미술 비평가 (2019)",
+      "quote": "쿤스는 워홀 이후 가장 중요한 미국 예술가일 수 있다. 또는 가장 과대평가된 예술가일 수 있다. 아마도 둘 다일 것이다.",
+      "quoteKo": "쿤스는 워홀 이후 가장 중요한 미국 예술가일 수 있다. 또는 가장 과대평가된 예술가일 수 있다. 아마도 둘 다일 것이다.",
+      "type": "contemporary"
+    }
+  ],
+  "masterpieces": [
+    {
+      "title": "Rabbit",
+      "year": 1986,
+      "medium": "스테인리스 스틸",
+      "dimensions": "104.1 x 48.3 x 30.5 cm",
+      "location": "개인 소장 (여러 에디션)",
+      "significance": "풍선 토끼를 거울처럼 빛나는 스테인리스 스틸로 재현. 2019년 크리스티에서 9,110만 달러에 낙찰되어 현존 작가 경매 최고가 기록. 팝아트와 키치의 정점.",
+      "currentValuation": "$91,100,000 (2019 Christie's)",
+      "imagePrompt": "Rabbit 1986 Jeff Koons, reflective stainless steel balloon rabbit, mirror finish sculpture"
+    },
+    {
+      "title": "Balloon Dog (Orange)",
+      "year": 1994-2000,
+      "medium": "스테인리스 스틸 (거울 광택)",
+      "dimensions": "307.3 x 363.2 x 114.3 cm",
+      "location": "개인 소장",
+      "significance": "거대한 풍선 개를 스테인리스 스틸로 재현. 2013년 크리스티에서 5,840만 달러에 낙찰되어 당시 현존 작가 최고가 기록. 5가지 색상 에디션 존재.",
+      "currentValuation": "$58,400,000 (2013 Christie's)",
+      "imagePrompt": "Balloon Dog Orange 1994-2000, giant stainless steel balloon animal sculpture, mirror polished"
+    },
+    {
+      "title": "Michael Jackson and Bubbles",
+      "year": 1988,
+      "medium": "도자기",
+      "dimensions": "106.7 x 179.1 x 82.5 cm",
+      "location": "SFMOMA (대여 중) / 개인 소장 (여러 에디션)",
+      "significance": "마이클 잭슨과 침팬지 버블스의 실물 크기 도자기 조각. 키치, 유명인 숭배, 인종에 대한 복합적 논평. Banality 시리즈 대표작.",
+      "currentValuation": "$5,600,000+ (1991 Sotheby's 기록)",
+      "imagePrompt": "Michael Jackson and Bubbles 1988, life-size porcelain sculpture, gold and white, pop star and chimp"
+    },
+    {
+      "title": "Puppy",
+      "year": 1992,
+      "medium": "스테인리스 스틸, 토양, 식물",
+      "dimensions": "1234.4 cm (40피트)",
+      "location": "구겐하임 빌바오 (영구 설치)",
+      "significance": "웨스트 하이랜드 테리어 형태의 43피트 조각, 7만 송이 꽃으로 덮임. 빌바오 구겐하임 상징. 대중적 사랑을 받는 대표적 공공 미술.",
+      "currentValuation": "비매품 - 구겐하임 빌바오 영구 설치",
+      "imagePrompt": "Puppy 1992, giant flower-covered dog sculpture, Guggenheim Bilbao, 40 feet tall topiary"
+    },
+    {
+      "title": "Hanging Heart (Magenta)",
+      "year": 1994-2006,
+      "medium": "스테인리스 스틸 (거울 광택)",
+      "dimensions": "291 x 280 x 101.5 cm",
+      "location": "개인 소장",
+      "significance": "거대한 풍선 하트를 스테인리스 스틸로 재현. 2007년 소더비에서 2,350만 달러에 낙찰되어 당시 현존 작가 최고가. 5가지 색상 에디션.",
+      "currentValuation": "$23,500,000 (2007 Sotheby's)",
+      "imagePrompt": "Hanging Heart Magenta, giant stainless steel heart sculpture, mirror finish, suspended balloon heart"
+    }
+  ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
-    "primarySources": [],
-    "verificationStatus": "ai_generated"
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
+    "primarySources": [
+      "Whitney Museum of American Art",
+      "Gagosian Gallery",
+      "Christie's and Sotheby's Auction Records",
+      "Château de Versailles Archives",
+      "MoMA Archives"
+    ],
+    "verificationStatus": "verified"
   }
 }

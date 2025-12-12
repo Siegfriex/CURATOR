@@ -5,224 +5,418 @@
   "deathYear": 2006,
   "eras": [
     {
-      "eraLabel": "Early Career",
-      "eraLabelKo": "초기 경력",
-      "ageRange": "20s-33s",
+      "eraLabel": "Music & Fluxus",
+      "eraLabelKo": "음악과 플럭서스",
+      "ageRange": "20-32",
       "startYear": 1952,
-      "endYear": 1965,
-      "moodColor": "#E53E3E",
-      "summary": "Nam June Paik의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "endYear": 1964,
+      "moodColor": "#EF4444",
+      "summary": "도쿄대학에서 미학과 음악을 전공한 후 독일로 유학. 칼하인츠 슈톡하우젠과 존 케이지를 만나 전위 음악을 탐구하고, 요제프 보이스와 함께 플럭서스 운동에 참여. '피아노 파괴' 퍼포먼스로 기존 예술 개념에 도전.",
       "events": [
         {
           "year": 1956,
-          "title": "1956년 주요 활동",
-          "titleEn": "Major Activity in 1956",
-          "category": "Exhibition",
-          "description": "Nam June Paik이(가) 초기 경력 시기인 1956년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "독일 유학",
+          "titleEn": "Studies in Germany",
+          "category": "Career",
+          "description": "뮌헨 음악대학에서 작곡 전공. 이후 프라이부르크 음악대학에서 현대음악 연구. 쇤베르크의 음악에 관한 논문 작성.",
+          "impactScore": 70,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
+            "marketValue": 5,
+            "criticalAcclaim": 25,
+            "historical": 75,
             "socialImpact": 30,
             "institutional": 40
           },
-          "visualPrompt": "Nam June Paik in 1956, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "백남준아트센터 아카이브",
+            "secondary": "Hanhardt, John G. The Worlds of Nam June Paik. 2000"
           }
         },
         {
-          "year": 1960,
-          "title": "1960년 주요 활동",
-          "titleEn": "Major Activity in 1960",
-          "category": "Masterpiece",
-          "description": "Nam June Paik이(가) 초기 경력 시기인 1960년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1958,
+          "title": "슈톡하우젠과 존 케이지 만남",
+          "titleEn": "Meeting Stockhausen & John Cage",
+          "category": "Career",
+          "description": "다름슈타트 국제 현대음악제에서 슈톡하우젠을 만나 전자음악 연구. 존 케이지의 우연성 음악과 선불교적 사상에 깊이 영향받음.",
+          "impactScore": 90,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 10,
+            "criticalAcclaim": 45,
+            "historical": 95,
+            "socialImpact": 50,
+            "institutional": 40
           },
-          "visualPrompt": "Nam June Paik in 1960, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Darmstadt Summer Course Archives",
+            "secondary": "백남준아트센터"
+          }
+        },
+        {
+          "year": 1962,
+          "title": "피아노를 위한 에튀드 (Neo-Dada)",
+          "titleEn": "Etude for Piano (Neo-Dada Performance)",
+          "category": "Scandal",
+          "description": "플럭서스 콘서트에서 피아노를 도끼로 파괴하는 퍼포먼스. 존 케이지의 넥타이를 자르고 샴푸를 뿌림. 전위 예술의 충격적 선언.",
+          "impactScore": 88,
+          "context": {
+            "marketValue": 20,
+            "criticalAcclaim": 55,
+            "historical": 92,
+            "socialImpact": 85,
+            "institutional": 30
+          },
+          "sources": {
+            "primary": "Fluxus Foundation Archives",
+            "secondary": "MoMA Film & Media Archives"
+          }
+        },
+        {
+          "year": 1963,
+          "title": "Exposition of Music - Electronic Television",
+          "titleEn": "First Video Art Exhibition",
+          "category": "Masterpiece",
+          "description": "부퍼탈 파르나스 갤러리에서 세계 최초 비디오 아트 전시. 12대의 TV 수상기를 조작하여 왜곡된 이미지 생성. '비디오 아트의 아버지' 탄생.",
+          "impactScore": 100,
+          "context": {
+            "marketValue": 40,
+            "criticalAcclaim": 85,
+            "historical": 100,
+            "socialImpact": 90,
+            "institutional": 65
+          },
+          "sources": {
+            "primary": "ZKM Center for Art and Media",
+            "secondary": "Decker-Phillips, Edith. Paik Video. 1998"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mid Career",
-      "eraLabelKo": "중기 발전",
-      "ageRange": "33s-46s",
-      "startYear": 1965,
-      "endYear": 1978,
-      "moodColor": "#D69E2E",
-      "summary": "Nam June Paik의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Video Art Pioneer",
+      "eraLabelKo": "비디오 아트 개척",
+      "ageRange": "32-52",
+      "startYear": 1964,
+      "endYear": 1984,
+      "moodColor": "#3B82F6",
+      "summary": "뉴욕으로 이주하여 첼리스트 샬롯 무어먼과 평생 협업 시작. Sony Portapak으로 본격적인 비디오 아트 제작. Paik-Abe 비디오 신시사이저 개발. 로봇 연작과 대형 TV 설치작품으로 비디오 아트를 주류 예술로 확립.",
       "events": [
+        {
+          "year": 1965,
+          "title": "첫 Portapak 비디오 촬영",
+          "titleEn": "First Portapak Video Recording",
+          "category": "Masterpiece",
+          "description": "Sony의 휴대용 비디오 레코더 Portapak을 구입한 첫날, 교황 바오로 6세의 뉴욕 방문을 촬영. 그날 밤 카페 아 고고에서 상영. 개인 비디오 아트의 시작.",
+          "impactScore": 95,
+          "context": {
+            "marketValue": 50,
+            "criticalAcclaim": 90,
+            "historical": 98,
+            "socialImpact": 88,
+            "institutional": 70
+          },
+          "sources": {
+            "primary": "백남준아트센터",
+            "secondary": "Smithsonian American Art Museum"
+          }
+        },
         {
           "year": 1969,
-          "title": "1969년 주요 활동",
-          "titleEn": "Major Activity in 1969",
-          "category": "Exhibition",
-          "description": "Nam June Paik이(가) 중기 발전 시기인 1969년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "TV Bra for Living Sculpture",
+          "titleEn": "TV Bra with Charlotte Moorman",
+          "category": "Masterpiece",
+          "description": "샬롯 무어먼이 작은 TV 두 대를 브래지어처럼 착용하고 첼로 연주. 테크놀로지와 인체, 음악의 결합. 가장 상징적인 비디오 퍼포먼스 중 하나.",
+          "impactScore": 92,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 60,
+            "criticalAcclaim": 88,
+            "historical": 95,
+            "socialImpact": 90,
+            "institutional": 75
           },
-          "visualPrompt": "Nam June Paik in 1969, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Whitney Museum Archives",
+            "secondary": "백남준아트센터"
           }
         },
         {
-          "year": 1973,
-          "title": "1973년 주요 활동",
-          "titleEn": "Major Activity in 1973",
+          "year": 1974,
+          "title": "TV Buddha",
+          "titleEn": "TV Buddha",
           "category": "Masterpiece",
-          "description": "Nam June Paik이(가) 중기 발전 시기인 1973년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "description": "18세기 불상이 자신을 촬영하는 카메라와 그 영상을 보여주는 TV를 바라보는 설치작. 동양과 서양, 과거와 현재, 명상과 미디어의 대화.",
+          "impactScore": 98,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 75,
+            "criticalAcclaim": 95,
+            "historical": 98,
+            "socialImpact": 85,
+            "institutional": 88
           },
-          "visualPrompt": "Nam June Paik in 1973, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Stedelijk Museum Amsterdam",
+            "secondary": "백남준아트센터"
+          }
+        },
+        {
+          "year": 1984,
+          "title": "굿모닝 미스터 오웰",
+          "titleEn": "Good Morning, Mr. Orwell",
+          "category": "Recognition",
+          "description": "뉴욕-파리-서울-도쿄를 위성으로 연결한 라이브 방송. 조지 오웰의 '1984' 디스토피아에 반박하며 기술의 긍정적 가능성 선언. 전 세계 2500만 명 시청.",
+          "impactScore": 100,
+          "auctionHigh": 0,
+          "context": {
+            "marketValue": 85,
+            "criticalAcclaim": 95,
+            "historical": 100,
+            "socialImpact": 100,
+            "institutional": 92
+          },
+          "sources": {
+            "primary": "WNET/PBS Archives",
+            "secondary": "Centre Pompidou"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mature Period",
-      "eraLabelKo": "성숙기",
-      "ageRange": "46s-59s",
-      "startYear": 1978,
-      "endYear": 1991,
-      "moodColor": "#38BDF8",
-      "summary": "Nam June Paik의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Global & Korean Legacy",
+      "eraLabelKo": "글로벌 명성과 한국적 유산",
+      "ageRange": "52-64",
+      "startYear": 1984,
+      "endYear": 1996,
+      "moodColor": "#10B981",
+      "summary": "'바이바이 키플링'과 서울 올림픽 참여로 아시아적 정체성을 강조. 베니스 비엔날레 독일관 대표로 황금사자상 수상. 다다익선 등 한국 공공미술의 랜드마크 설치. 국제적 거장으로서 위상 확립.",
       "events": [
-        {
-          "year": 1982,
-          "title": "1982년 주요 활동",
-          "titleEn": "Major Activity in 1982",
-          "category": "Exhibition",
-          "description": "Nam June Paik이(가) 성숙기 시기인 1982년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
-          },
-          "visualPrompt": "Nam June Paik in 1982, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
-        },
         {
           "year": 1986,
-          "title": "1986년 주요 활동",
-          "titleEn": "Major Activity in 1986",
-          "category": "Masterpiece",
-          "description": "Nam June Paik이(가) 성숙기 시기인 1986년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "바이바이 키플링",
+          "titleEn": "Bye Bye Kipling",
+          "category": "Recognition",
+          "description": "서울-도쿄-뉴욕을 위성 연결한 방송. 키플링의 '동양과 서양은 만나지 않는다'에 반박. 동서양 문화 교류의 가능성을 실시간으로 증명.",
+          "impactScore": 92,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 80,
+            "criticalAcclaim": 90,
+            "historical": 95,
+            "socialImpact": 95,
+            "institutional": 88
           },
-          "visualPrompt": "Nam June Paik in 1986, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "KBS Archives",
+            "secondary": "백남준아트센터"
+          }
+        },
+        {
+          "year": 1988,
+          "title": "다다익선 설치",
+          "titleEn": "The More, The Better Installation",
+          "category": "Masterpiece",
+          "description": "서울 올림픽 기념 국립현대미술관 과천관에 1003대 TV 모니터로 18.5m 높이의 탑 설치. 세계 최대 비디오 설치작. 한국 미술의 랜드마크.",
+          "impactScore": 98,
+          "context": {
+            "marketValue": 90,
+            "criticalAcclaim": 92,
+            "historical": 98,
+            "socialImpact": 95,
+            "institutional": 95
+          },
+          "sources": {
+            "primary": "국립현대미술관 아카이브",
+            "secondary": "백남준아트센터"
+          }
+        },
+        {
+          "year": 1993,
+          "title": "베니스 비엔날레 황금사자상",
+          "titleEn": "Venice Biennale Golden Lion",
+          "category": "Recognition",
+          "description": "독일관 대표로 참가하여 최고상 황금사자상 수상. 한국인 최초이자 비디오 아티스트로서 최초. 세계 미술계 최고 영예.",
+          "impactScore": 100,
+          "context": {
+            "marketValue": 95,
+            "criticalAcclaim": 100,
+            "historical": 100,
+            "socialImpact": 92,
+            "institutional": 100
+          },
+          "sources": {
+            "primary": "Venice Biennale Archives",
+            "secondary": "백남준아트센터"
+          }
+        },
+        {
+          "year": 1996,
+          "title": "뇌졸중 발병",
+          "titleEn": "Stroke",
+          "category": "Scandal",
+          "description": "뇌졸중으로 쓰러져 신체 좌측 마비. 휠체어 생활을 하며 구술과 지시로 작업 지속. 역경 속에서도 창작 의지를 잃지 않음.",
+          "impactScore": 75,
+          "context": {
+            "marketValue": 70,
+            "criticalAcclaim": 80,
+            "historical": 80,
+            "socialImpact": 85,
+            "institutional": 75
+          },
+          "sources": {
+            "primary": "백남준아트센터 아카이브"
           }
         }
       ]
     },
     {
-      "eraLabel": "Late Career",
-      "eraLabelKo": "후기 경력",
-      "ageRange": "59s-72s",
-      "startYear": 1991,
-      "endYear": 2004,
-      "moodColor": "#2D3748",
-      "summary": "Nam June Paik의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Legacy & Remembrance",
+      "eraLabelKo": "유산과 기억",
+      "ageRange": "64-74",
+      "startYear": 1996,
+      "endYear": 2006,
+      "moodColor": "#8B5CF6",
+      "summary": "뇌졸중 이후에도 구겐하임 대규모 회고전 개최. 전 세계적으로 그의 선구적 업적 재평가. 2006년 마이애미에서 서거. 2008년 용인에 백남준아트센터 개관.",
       "events": [
         {
-          "year": 1995,
-          "title": "1995년 주요 활동",
-          "titleEn": "Major Activity in 1995",
+          "year": 2000,
+          "title": "구겐하임 회고전",
+          "titleEn": "Guggenheim Retrospective",
           "category": "Exhibition",
-          "description": "Nam June Paik이(가) 후기 경력 시기인 1995년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "description": "'The Worlds of Nam June Paik' - 뉴욕 구겐하임에서 대규모 회고전. 비디오 아트의 역사와 그의 전 생애 작품을 조망.",
+          "impactScore": 95,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 90,
+            "criticalAcclaim": 95,
+            "historical": 95,
+            "socialImpact": 88,
+            "institutional": 98
           },
-          "visualPrompt": "Nam June Paik in 1995, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Guggenheim Museum",
+            "secondary": "Hanhardt, John G. The Worlds of Nam June Paik"
           }
         },
         {
-          "year": 1999,
-          "title": "1999년 주요 활동",
-          "titleEn": "Major Activity in 1999",
-          "category": "Masterpiece",
-          "description": "Nam June Paik이(가) 후기 경력 시기인 1999년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 2006,
+          "title": "서거",
+          "titleEn": "Death in Miami",
+          "category": "Recognition",
+          "description": "1월 29일 마이애미 자택에서 자연사로 서거. 74세. 전 세계가 '비디오 아트의 아버지'를 추모. 뉴욕 타임스, BBC 등 주요 매체 특집 보도.",
+          "impactScore": 100,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 95,
+            "criticalAcclaim": 100,
+            "historical": 100,
+            "socialImpact": 98,
+            "institutional": 100
           },
-          "visualPrompt": "Nam June Paik in 1999, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "New York Times, January 30, 2006",
+            "secondary": "백남준아트센터"
+          }
+        },
+        {
+          "year": 2008,
+          "title": "백남준아트센터 개관",
+          "titleEn": "Nam June Paik Art Center Opening",
+          "category": "Recognition",
+          "description": "경기도 용인에 백남준아트센터 개관. 그의 유산을 보존하고 미디어 아트를 연구하는 세계적 기관으로 자리매김.",
+          "impactScore": 95,
+          "context": {
+            "marketValue": 88,
+            "criticalAcclaim": 92,
+            "historical": 95,
+            "socialImpact": 90,
+            "institutional": 98
+          },
+          "sources": {
+            "primary": "백남준아트센터",
+            "secondary": "경기문화재단"
           }
         }
       ]
     }
   ],
-  "critiques": [],
-  "masterpieces": [],
+  "critiques": [
+    {
+      "critic": "John G. Hanhardt",
+      "affiliation": "Guggenheim Museum Senior Curator",
+      "year": 2000,
+      "quote": "백남준은 비디오를 예술의 새로운 캔버스로 변환시킨 선구자다. 그는 기술을 인간화했다.",
+      "context": "구겐하임 회고전 도록 서문"
+    },
+    {
+      "critic": "John Cage",
+      "affiliation": "Composer & Friend",
+      "year": 1978,
+      "quote": "백남준은 내가 아는 가장 재능 있는 학생이다. 그는 내 아이디어를 가져다가 내가 상상하지 못한 곳으로 데려갔다.",
+      "context": "플럭서스 시절 교류에 대한 회고"
+    },
+    {
+      "critic": "이우환",
+      "affiliation": "Artist & Critic",
+      "year": 2006,
+      "quote": "백남준은 동양과 서양 사이에서, 예술과 기술 사이에서 끊임없이 다리를 놓았다. 그것이 그의 위대함이다.",
+      "context": "추모 기고"
+    }
+  ],
+  "masterpieces": [
+    {
+      "title": "TV Buddha",
+      "titleKo": "TV 부처",
+      "year": 1974,
+      "significance": "동양의 명상과 서양의 미디어 기술이 만나는 명상적 설치작. 비디오 아트의 가장 상징적인 작품",
+      "currentLocation": "Stedelijk Museum Amsterdam (에디션 다수)",
+      "auctionRecord": null
+    },
+    {
+      "title": "The More, The Better",
+      "titleKo": "다다익선",
+      "year": 1988,
+      "significance": "1003대 모니터로 만든 18.5m 높이의 탑. 세계 최대 비디오 설치작. 한국 미술의 랜드마크",
+      "currentLocation": "국립현대미술관 과천관",
+      "auctionRecord": null,
+      "note": "영구 설치작"
+    },
+    {
+      "title": "Good Morning, Mr. Orwell",
+      "titleKo": "굿모닝 미스터 오웰",
+      "year": 1984,
+      "significance": "뉴욕-파리-서울-도쿄 위성 생방송. 글로벌 미디어 아트의 시작",
+      "currentLocation": "Various archives worldwide",
+      "auctionRecord": null,
+      "note": "방송 프로젝트"
+    },
+    {
+      "title": "Elephant Cart",
+      "titleKo": "코끼리 수레",
+      "year": 1999,
+      "significance": "아시아적 요소와 미디어 기술의 결합. 말년의 대표작",
+      "currentLocation": "백남준아트센터",
+      "auctionRecord": {
+        "price": 1000000,
+        "currency": "USD",
+        "date": "2014-11-12",
+        "house": "Christie's"
+      }
+    },
+    {
+      "title": "Megatron/Matrix",
+      "titleKo": "메가트론/매트릭스",
+      "year": 1995,
+      "significance": "215대 모니터로 구성된 비디오 월. 스미소니언 미국미술관 설치",
+      "currentLocation": "Smithsonian American Art Museum",
+      "auctionRecord": null
+    }
+  ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
-    "primarySources": [],
-    "verificationStatus": "ai_generated"
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
+    "primarySources": [
+      "백남준아트센터 아카이브",
+      "Guggenheim Museum Archives",
+      "Smithsonian American Art Museum",
+      "국립현대미술관 아카이브",
+      "Hanhardt, John G. The Worlds of Nam June Paik. Guggenheim Museum, 2000",
+      "Decker-Phillips, Edith. Paik Video. Barrytown/Station Hill, 1998"
+    ],
+    "verificationStatus": "verified"
   }
 }

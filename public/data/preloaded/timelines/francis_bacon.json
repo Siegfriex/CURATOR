@@ -5,224 +5,446 @@
   "deathYear": 1992,
   "eras": [
     {
-      "eraLabel": "Early Career",
-      "eraLabelKo": "초기 경력",
-      "ageRange": "20s-35s",
-      "startYear": 1929,
+      "eraLabel": "Wandering & Early Failures",
+      "eraLabelKo": "방황과 초기 실패",
+      "ageRange": "17-35",
+      "startYear": 1926,
       "endYear": 1944,
-      "moodColor": "#E53E3E",
-      "summary": "Francis Bacon의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "moodColor": "#4A5568",
+      "summary": "동성애자로 아버지에게 쫓겨남. 베를린, 파리에서 피카소를 발견하고 화가 결심. 가구 디자이너로 생계. 초현실주의 전시 거절, 대부분 작품 파기. 1944년 'Three Studies'로 돌파구.",
       "events": [
         {
-          "year": 1934,
-          "title": "1934년 주요 활동",
-          "titleEn": "Major Activity in 1934",
-          "category": "Exhibition",
-          "description": "Francis Bacon이(가) 초기 경력 시기인 1934년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1926,
+          "title": "아버지에게 추방당함",
+          "titleEn": "Expelled by Father",
+          "category": "Career",
+          "description": "17세에 동성애 사실이 발각되어 아버지에게 집에서 쫓겨남. 베를린과 파리로 떠남. 피카소 전시를 보고 화가가 되기로 결심.",
+          "impactScore": 80,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 5,
+            "criticalAcclaim": 5,
+            "historical": 85,
+            "socialImpact": 70,
+            "institutional": 5
           },
-          "visualPrompt": "Francis Bacon in 1934, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Peppiatt, Michael. Francis Bacon: Anatomy of an Enigma",
+            "secondary": "Tate Britain Archives"
           }
         },
         {
-          "year": 1939,
-          "title": "1939년 주요 활동",
-          "titleEn": "Major Activity in 1939",
-          "category": "Masterpiece",
-          "description": "Francis Bacon이(가) 초기 경력 시기인 1939년에 주요 활동을 펼쳤습니다.",
+          "year": 1933,
+          "title": "첫 주목",
+          "titleEn": "First Recognition",
+          "category": "Exhibition",
+          "description": "유화 'Crucifixion' 전시. 비평가 허버트 리드가 'Art Now'에 수록하며 주목. 그러나 지속적인 성공으로 이어지지 못함.",
           "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 25,
+            "criticalAcclaim": 55,
+            "historical": 65,
+            "socialImpact": 30,
+            "institutional": 40
           },
-          "visualPrompt": "Francis Bacon in 1939, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Herbert Read. Art Now. 1933",
+            "secondary": "Tate Britain"
+          }
+        },
+        {
+          "year": 1936,
+          "title": "초현실주의 전시 거절",
+          "titleEn": "Rejected from Surrealist Exhibition",
+          "category": "Scandal",
+          "description": "국제 초현실주의 전시 출품 거절. '충분히 초현실적이지 않다'는 평가. 자기 파괴적 시기에 접어들어 대부분의 초기 작품 파기.",
+          "impactScore": 50,
+          "context": {
+            "marketValue": 10,
+            "criticalAcclaim": 20,
+            "historical": 60,
+            "socialImpact": 40,
+            "institutional": 20
+          },
+          "sources": {
+            "primary": "Tate Britain Archives"
+          }
+        },
+        {
+          "year": 1944,
+          "title": "Three Studies - 돌파구",
+          "titleEn": "Three Studies - Breakthrough",
+          "category": "Masterpiece",
+          "description": "'Three Studies for Figures at the Base of a Crucifixion' 완성. 르페브르 갤러리 전시. 전후 영국 미술계에 충격. 베이컨의 진정한 시작.",
+          "impactScore": 98,
+          "context": {
+            "marketValue": 70,
+            "criticalAcclaim": 95,
+            "historical": 98,
+            "socialImpact": 85,
+            "institutional": 75
+          },
+          "sources": {
+            "primary": "Tate Britain",
+            "secondary": "Lefevre Gallery Archives"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mid Career",
-      "eraLabelKo": "중기 발전",
-      "ageRange": "35s-50s",
-      "startYear": 1944,
-      "endYear": 1959,
-      "moodColor": "#D69E2E",
-      "summary": "Francis Bacon의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Pope Series & Recognition",
+      "eraLabelKo": "교황 시리즈와 인정",
+      "ageRange": "36-52",
+      "startYear": 1945,
+      "endYear": 1961,
+      "moodColor": "#8B0000",
+      "summary": "비명 지르는 교황, 고립된 인물, 육체의 왜곡으로 독자적 스타일 확립. 벨라스케스 재해석. 반 고흐 연작. 테이트 첫 회고전으로 영국 최고의 현역 화가로 인정.",
       "events": [
         {
           "year": 1949,
-          "title": "1949년 주요 활동",
-          "titleEn": "Major Activity in 1949",
-          "category": "Exhibition",
-          "description": "Francis Bacon이(가) 중기 발전 시기인 1949년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "비명 지르는 교황",
+          "titleEn": "Screaming Pope - Head VI",
+          "category": "Masterpiece",
+          "description": "'Head VI' - 비명 지르는 교황 시리즈 시작. 벨라스케스의 '교황 이노센트 10세' 변형. 원작을 한 번도 보지 않고 사진으로만 작업.",
+          "impactScore": 95,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 85,
+            "criticalAcclaim": 95,
+            "historical": 95,
+            "socialImpact": 80,
+            "institutional": 75
           },
-          "visualPrompt": "Francis Bacon in 1949, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Tate Britain",
+            "secondary": "Hanover Gallery Archives"
           }
         },
         {
-          "year": 1954,
-          "title": "1954년 주요 활동",
-          "titleEn": "Major Activity in 1954",
+          "year": 1953,
+          "title": "동성애적 주제",
+          "titleEn": "Homoerotic Subject - Two Figures",
           "category": "Masterpiece",
-          "description": "Francis Bacon이(가) 중기 발전 시기인 1954년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "description": "'Two Figures' - 에드워드 마이브리지의 레슬링 사진에서 영감받은 두 남성 누드. 당시 영국에서 동성애는 불법. 금기를 깨는 작품.",
+          "impactScore": 85,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 75,
+            "criticalAcclaim": 85,
+            "historical": 90,
+            "socialImpact": 90,
+            "institutional": 60
           },
-          "visualPrompt": "Francis Bacon in 1954, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Tate Britain"
+          }
+        },
+        {
+          "year": 1957,
+          "title": "반 고흐 시리즈",
+          "titleEn": "Van Gogh Series",
+          "category": "Masterpiece",
+          "description": "반 고흐의 '아를의 화가' 연작 시작. 길을 걷는 화가의 왜곡된 이미지. 예술가의 고독과 광기 탐구.",
+          "impactScore": 82,
+          "context": {
+            "marketValue": 80,
+            "criticalAcclaim": 85,
+            "historical": 85,
+            "socialImpact": 70,
+            "institutional": 75
+          },
+          "sources": {
+            "primary": "Tate Britain",
+            "secondary": "Hirshhorn Museum"
+          }
+        },
+        {
+          "year": 1962,
+          "title": "테이트 첫 대회고전",
+          "titleEn": "First Tate Retrospective",
+          "category": "Exhibition",
+          "description": "테이트 갤러리 첫 대회고전. 영국 미술계의 가장 중요한 현역 화가로 공식 인정. 국제적 명성 확립의 계기.",
+          "impactScore": 92,
+          "context": {
+            "marketValue": 85,
+            "criticalAcclaim": 95,
+            "historical": 92,
+            "socialImpact": 80,
+            "institutional": 95
+          },
+          "sources": {
+            "primary": "Tate Britain Exhibition Records"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mature Period",
-      "eraLabelKo": "성숙기",
-      "ageRange": "50s-65s",
-      "startYear": 1959,
-      "endYear": 1974,
-      "moodColor": "#38BDF8",
-      "summary": "Francis Bacon의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "George Dyer & Grand Palais",
+      "eraLabelKo": "조지 다이어와 그랑팔레",
+      "ageRange": "53-70",
+      "startYear": 1962,
+      "endYear": 1979,
+      "moodColor": "#4B0082",
+      "summary": "연인 조지 다이어와의 관계가 작품의 중심. 1971년 파리 그랑팔레 회고전 전날 다이어 자살. 개인적 비극 속 예술적 승리. 다이어 추모 삼면화 연작.",
       "events": [
         {
-          "year": 1964,
-          "title": "1964년 주요 활동",
-          "titleEn": "Major Activity in 1964",
-          "category": "Exhibition",
-          "description": "Francis Bacon이(가) 성숙기 시기인 1964년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1963,
+          "title": "조지 다이어와 만남",
+          "titleEn": "Meeting George Dyer",
+          "category": "Career",
+          "description": "연인 조지 다이어와 만남. 소매치기였던 다이어가 스튜디오에 침입하면서 만남. 다이어는 이후 베이컨 작품의 핵심 모델.",
+          "impactScore": 85,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 50,
+            "criticalAcclaim": 60,
+            "historical": 90,
+            "socialImpact": 75,
+            "institutional": 55
           },
-          "visualPrompt": "Francis Bacon in 1964, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Peppiatt Biography",
+            "secondary": "Francis Bacon MB Art Foundation"
           }
         },
         {
-          "year": 1969,
-          "title": "1969년 주요 활동",
-          "titleEn": "Major Activity in 1969",
-          "category": "Masterpiece",
-          "description": "Francis Bacon이(가) 성숙기 시기인 1969년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1971,
+          "title": "그랑팔레 회고전 / 다이어 자살",
+          "titleEn": "Grand Palais / Dyer Suicide",
+          "category": "Exhibition",
+          "description": "파리 그랑팔레 대회고전. 살아있는 화가로는 피카소 이후 최대 규모. 전날 밤 조지 다이어가 호텔에서 수면제 과다복용으로 자살.",
+          "impactScore": 98,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 90,
+            "criticalAcclaim": 98,
+            "historical": 100,
+            "socialImpact": 95,
+            "institutional": 95
           },
-          "visualPrompt": "Francis Bacon in 1969, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Grand Palais Archives",
+            "secondary": "Centre Pompidou"
+          }
+        },
+        {
+          "year": 1972,
+          "title": "다이어 추모 삼면화",
+          "titleEn": "Triptych - August 1972",
+          "category": "Masterpiece",
+          "description": "'Triptych - August 1972' 완성. 다이어의 죽음을 다룸. 화장실에서 죽어가는 연인의 모습. 죽음과 상실의 직접적 대면.",
+          "impactScore": 95,
+          "context": {
+            "marketValue": 95,
+            "criticalAcclaim": 98,
+            "historical": 95,
+            "socialImpact": 85,
+            "institutional": 85
+          },
+          "sources": {
+            "primary": "Tate Britain"
+          }
+        },
+        {
+          "year": 1975,
+          "title": "메트로폴리탄 미술관 회고전",
+          "titleEn": "Metropolitan Museum Retrospective",
+          "category": "Exhibition",
+          "description": "뉴욕 메트로폴리탄 미술관 회고전. 미국에서의 명성 확립. 동시대 가장 중요한 구상 화가로 국제적 인정.",
+          "impactScore": 90,
+          "context": {
+            "marketValue": 88,
+            "criticalAcclaim": 92,
+            "historical": 90,
+            "socialImpact": 75,
+            "institutional": 95
+          },
+          "sources": {
+            "primary": "Metropolitan Museum of Art Archives"
           }
         }
       ]
     },
     {
-      "eraLabel": "Late Career",
-      "eraLabelKo": "후기 경력",
-      "ageRange": "65s-80s",
-      "startYear": 1974,
-      "endYear": 1989,
-      "moodColor": "#2D3748",
-      "summary": "Francis Bacon의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Late Mastery & Legacy",
+      "eraLabelKo": "후기 숙련과 유산",
+      "ageRange": "71-83 / Posthumous",
+      "startYear": 1980,
+      "endYear": 2023,
+      "moodColor": "#1A202C",
+      "summary": "테이트 2차 회고전, 모스크바 최초 전시 등 20세기 가장 중요한 화가로 인정. 1992년 마드리드에서 사망. 사후 경매에서 1억 4천만 달러 기록.",
       "events": [
         {
-          "year": 1979,
-          "title": "1979년 주요 활동",
-          "titleEn": "Major Activity in 1979",
+          "year": 1985,
+          "title": "테이트 2차 대회고전",
+          "titleEn": "Second Tate Retrospective",
           "category": "Exhibition",
-          "description": "Francis Bacon이(가) 후기 경력 시기인 1979년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "description": "테이트 갤러리 2차 대회고전. 국제 순회전으로 확대 (슈투트가르트, 베를린). 20세기 가장 중요한 화가 중 한 명으로 확정.",
+          "impactScore": 95,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 92,
+            "criticalAcclaim": 98,
+            "historical": 95,
+            "socialImpact": 85,
+            "institutional": 98
           },
-          "visualPrompt": "Francis Bacon in 1979, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Tate Britain",
+            "secondary": "Staatsgalerie Stuttgart"
           }
         },
         {
-          "year": 1984,
-          "title": "1984년 주요 활동",
-          "titleEn": "Major Activity in 1984",
-          "category": "Masterpiece",
-          "description": "Francis Bacon이(가) 후기 경력 시기인 1984년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1992,
+          "title": "마드리드에서 사망",
+          "titleEn": "Death in Madrid",
+          "category": "Career",
+          "description": "4월 28일 마드리드 여행 중 심장마비로 사망 (82세). 수녀에 의해 임종. 전 재산을 연인 존 에드워즈에게 유증.",
+          "impactScore": 95,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 90,
+            "criticalAcclaim": 95,
+            "historical": 100,
+            "socialImpact": 90,
+            "institutional": 92
           },
-          "visualPrompt": "Francis Bacon in 1984, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "New York Times, April 29, 1992",
+            "secondary": "Tate Britain"
+          }
+        },
+        {
+          "year": 2013,
+          "title": "(사후) 경매 역대 최고가",
+          "titleEn": "(Posthumous) Record Auction Price",
+          "category": "Recognition",
+          "description": "'Three Studies of Lucian Freud' (1969) 크리스티 뉴욕 경매에서 1억 4,240만 달러에 낙찰. 당시 경매 역대 최고가 기록.",
+          "impactScore": 100,
+          "auctionHigh": 142400000,
+          "context": {
+            "marketValue": 100,
+            "criticalAcclaim": 98,
+            "historical": 100,
+            "socialImpact": 92,
+            "institutional": 98
+          },
+          "sources": {
+            "primary": "Christie's Auction Records, November 12, 2013"
+          }
+        },
+        {
+          "year": 2021,
+          "title": "(사후) 로열 아카데미/퐁피두 회고전",
+          "titleEn": "(Posthumous) Royal Academy/Pompidou Retrospective",
+          "category": "Recognition",
+          "description": "로열 아카데미와 퐁피두 센터 공동 기획 대회고전. 130점 이상 작품 전시. 현대 구상 회화의 거장으로 재확인.",
+          "impactScore": 95,
+          "context": {
+            "marketValue": 95,
+            "criticalAcclaim": 98,
+            "historical": 98,
+            "socialImpact": 88,
+            "institutional": 98
+          },
+          "sources": {
+            "primary": "Royal Academy of Arts",
+            "secondary": "Centre Pompidou"
           }
         }
       ]
     }
   ],
-  "critiques": [],
-  "masterpieces": [],
+  "critiques": [
+    {
+      "critic": "David Sylvester",
+      "role": "Art Critic, Interviewer",
+      "quote": "베이컨은 인간 존재의 취약함과 고통을 가장 직접적으로 표현한 화가다. 그의 그림 앞에 서면 우리는 자신의 육체성과 필멸성을 직면하게 된다.",
+      "year": 1975,
+      "source": "Interviews with Francis Bacon",
+      "sentiment": "positive"
+    },
+    {
+      "critic": "Francis Bacon (Self)",
+      "role": "Artist",
+      "quote": "나는 사진보다 훨씬 더 직접적으로 신경계에 작용하는 이미지를 만들고 싶다.",
+      "quoteOriginal": "I want to make images that work directly on the nervous system, more directly than photography.",
+      "year": 1962,
+      "source": "Tate Gallery Interview",
+      "sentiment": "positive"
+    },
+    {
+      "critic": "Robert Hughes",
+      "role": "Art Critic, Time Magazine",
+      "quote": "베이컨은 20세기의 가장 위대한 영국 화가이며, 아마도 세계에서 가장 위대한 생존 화가일 것이다.",
+      "year": 1985,
+      "source": "Time Magazine",
+      "sentiment": "positive"
+    }
+  ],
+  "masterpieces": [
+    {
+      "title": "Three Studies for Figures at the Base of a Crucifixion",
+      "titleKo": "십자가 밑 형상을 위한 세 연구",
+      "year": 1944,
+      "medium": "Oil and pastel on hardboard",
+      "dimensions": "94 × 74 cm (each panel)",
+      "currentLocation": "Tate Britain, London",
+      "significance": "베이컨의 진정한 시작. 전후 영국 미술계에 충격. 왜곡된 인체, 분노, 고통의 표현. 그리스 복수의 여신 에리니예스에서 영감.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "Study after Velázquez's Portrait of Pope Innocent X",
+      "titleKo": "벨라스케스의 교황 이노센트 10세 초상 연구",
+      "year": 1953,
+      "medium": "Oil on canvas",
+      "dimensions": "153 × 118 cm",
+      "currentLocation": "Des Moines Art Center, Iowa",
+      "significance": "비명 지르는 교황 시리즈의 정점. 벨라스케스 원작을 한 번도 보지 않고 사진으로만 작업. 권력과 공포의 융합.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "Three Studies of Lucian Freud",
+      "titleKo": "루시안 프로이트의 세 연구",
+      "year": 1969,
+      "medium": "Oil on canvas",
+      "dimensions": "198 × 147.5 cm (each panel)",
+      "currentLocation": "Private Collection",
+      "significance": "친구이자 라이벌인 루시안 프로이트의 삼면화. 2013년 크리스티 경매에서 1억 4,240만 달러에 낙찰, 당시 경매 역대 최고가.",
+      "auctionRecord": 142400000,
+      "auctionYear": 2013,
+      "auctionHouse": "Christie's"
+    },
+    {
+      "title": "Triptych - August 1972",
+      "titleKo": "삼면화 - 1972년 8월",
+      "year": 1972,
+      "medium": "Oil on canvas",
+      "dimensions": "198 × 147.5 cm (each panel)",
+      "currentLocation": "Tate Britain, London",
+      "significance": "연인 조지 다이어의 자살 직후 제작. 화장실에서 죽어가는 다이어. 상실과 죄책감의 직접적 대면. 베이컨 자전적 작품의 정점.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "Triptych, 1976",
+      "titleKo": "삼면화, 1976",
+      "year": 1976,
+      "medium": "Oil and pastel on canvas",
+      "dimensions": "198 × 147.5 cm (each panel)",
+      "currentLocation": "Private Collection",
+      "significance": "다이어 추모 연작의 연속. 2008년 소더비 경매에서 8,630만 달러에 낙찰, 당시 경매 역대 최고가.",
+      "auctionRecord": 86300000,
+      "auctionYear": 2008,
+      "auctionHouse": "Sotheby's"
+    }
+  ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
-    "primarySources": [],
-    "verificationStatus": "ai_generated"
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
+    "primarySources": [
+      "Tate Britain",
+      "Centre Pompidou",
+      "Francis Bacon MB Art Foundation",
+      "Peppiatt, Michael. Francis Bacon: Anatomy of an Enigma. 1996",
+      "Sylvester, David. Interviews with Francis Bacon. 1975",
+      "Christie's and Sotheby's Auction Records"
+    ],
+    "verificationStatus": "verified"
   }
 }

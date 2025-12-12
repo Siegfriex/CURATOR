@@ -2,226 +2,301 @@
   "artistId": "25",
   "artistName": "Yoshitomo Nara",
   "birthYear": 1959,
+  "deathYear": null,
   "eras": [
     {
-      "eraLabel": "Early Career",
-      "eraLabelKo": "초기 경력",
-      "ageRange": "20s-31s",
-      "startYear": 1979,
-      "endYear": 1990,
-      "moodColor": "#E53E3E",
-      "summary": "Yoshitomo Nara의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "German Years",
+      "eraLabelKo": "독일 시대",
+      "ageRange": "29-40",
+      "startYear": 1988,
+      "endYear": 1999,
+      "moodColor": "#4A5568",
+      "summary": "일본에서의 답답함을 벗어나 뒤셀도르프 예술아카데미로 유학. 12년간 독일에 머물며 고독한 아이 캐릭터의 원형을 완성했다. A.R. 펭크 사사 아래 네오 익스프레셔니즘의 자유로움을 흡수하고, 펑크록과 반항 정신을 담은 독자적 시각 언어를 구축했다.",
       "events": [
         {
-          "year": 1982,
-          "title": "1982년 주요 활동",
-          "titleEn": "Major Activity in 1982",
-          "category": "Exhibition",
-          "description": "Yoshitomo Nara이(가) 초기 경력 시기인 1982년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
-          },
-          "visualPrompt": "Yoshitomo Nara in 1982, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "year": 1988,
+          "age": 29,
+          "title": "뒤셀도르프 유학",
+          "titleKo": "뒤셀도르프 예술아카데미 입학",
+          "category": "Career",
+          "significance": "high",
+          "description": "A.R. 펭크 사사. 네오 익스프레셔니즘의 중심지에서 자유로운 표현 탐구 시작."
         },
         {
-          "year": 1986,
-          "title": "1986년 주요 활동",
-          "titleEn": "Major Activity in 1986",
+          "year": 1991,
+          "age": 32,
+          "title": "마이스터슐러 취득",
+          "titleKo": "마이스터슐러 취득",
+          "category": "Career",
+          "significance": "high",
+          "description": "뒤셀도르프 아카데미 최고 학위. 고독한 아이 캐릭터의 원형 확립."
+        },
+        {
+          "year": 1995,
+          "age": 36,
+          "title": "시그니처 스타일 확립",
+          "titleKo": "큰 눈 소녀 시리즈 - 스타일 확립",
           "category": "Masterpiece",
-          "description": "Yoshitomo Nara이(가) 초기 경력 시기인 1986년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
-          },
-          "visualPrompt": "Yoshitomo Nara in 1986, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "significance": "high",
+          "description": "'In the Deepest Puddle' 등 귀여우면서도 불길한 분위기의 독특한 미학 형성."
+        },
+        {
+          "year": 1999,
+          "age": 40,
+          "title": "Slash with a Knife",
+          "titleKo": "칼을 든 소녀 - 슈퍼플랫 세대",
+          "category": "Masterpiece",
+          "significance": "high",
+          "description": "무라카미 타카시와 함께 슈퍼플랫 세대로 주목. 미국 진출 시작."
         }
       ]
     },
     {
-      "eraLabel": "Mid Career",
-      "eraLabelKo": "중기 발전",
-      "ageRange": "31s-42s",
-      "startYear": 1990,
-      "endYear": 2001,
-      "moodColor": "#D69E2E",
-      "summary": "Yoshitomo Nara의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Return & Pop Star",
+      "eraLabelKo": "귀국과 스타덤",
+      "ageRange": "41-49",
+      "startYear": 2000,
+      "endYear": 2008,
+      "moodColor": "#ED64A6",
+      "summary": "12년간의 독일 생활을 마치고 일본 귀국. 'I DON'T MIND, IF YOU FORGET ME' 전시로 25만 명을 동원하며 현대미술 스타로 등극했다. 그라프 팀과의 협업으로 오두막집 설치작업을 시작하고, 록 음악 팬으로서의 개인사를 공개하며 대중과 깊은 교감을 나눴다.",
       "events": [
         {
-          "year": 1993,
-          "title": "1993년 주요 활동",
-          "titleEn": "Major Activity in 1993",
-          "category": "Exhibition",
-          "description": "Yoshitomo Nara이(가) 중기 발전 시기인 1993년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
-          },
-          "visualPrompt": "Yoshitomo Nara in 1993, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "year": 2000,
+          "age": 41,
+          "title": "일본 귀국",
+          "titleKo": "12년 만의 귀국 - Walk On",
+          "category": "Career",
+          "significance": "high",
+          "description": "독일 생활 마치고 일본 귀국. 도쿄 스튜디오 설립. 대중적 인기 급상승."
         },
         {
-          "year": 1997,
-          "title": "1997년 주요 활동",
-          "titleEn": "Major Activity in 1997",
-          "category": "Masterpiece",
-          "description": "Yoshitomo Nara이(가) 중기 발전 시기인 1997년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
-          },
-          "visualPrompt": "Yoshitomo Nara in 1997, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "year": 2001,
+          "age": 42,
+          "title": "I DON'T MIND IF YOU FORGET ME",
+          "titleKo": "25만 명 동원 - 팝스타 급 인기",
+          "category": "Exhibition",
+          "significance": "high",
+          "description": "요코하마 미술관 전시. 일본 현대미술 관객 동원 기록 수립."
+        },
+        {
+          "year": 2003,
+          "age": 44,
+          "title": "그라프 협업 시작",
+          "titleKo": "오두막 설치 - 친밀한 관람 경험",
+          "category": "Career",
+          "significance": "medium",
+          "description": "관객이 들어갈 수 있는 작은 집 안에 그림 배치. 새로운 관람 방식 창조."
+        },
+        {
+          "year": 2005,
+          "age": 46,
+          "title": "From the Depth of My Drawer",
+          "titleKo": "서랍 속에서 - 개인사 공개",
+          "category": "Exhibition",
+          "significance": "high",
+          "description": "일본 전역 순회전. 개인 드로잉과 일기장, 록 음악 컬렉션 공개."
         }
       ]
     },
     {
-      "eraLabel": "Mature Period",
-      "eraLabelKo": "성숙기",
-      "ageRange": "42s-53s",
-      "startYear": 2001,
-      "endYear": 2012,
-      "moodColor": "#38BDF8",
-      "summary": "Yoshitomo Nara의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Introspection",
+      "eraLabelKo": "내면의 성찰",
+      "ageRange": "50-59",
+      "startYear": 2009,
+      "endYear": 2018,
+      "moodColor": "#667EEA",
+      "summary": "동일본 대지진 이후 작품 세계에 깊은 성찰이 찾아왔다. 반항적이고 도발적이던 아이들이 조용하고 명상적인 존재로 변화했다. 대형 조각 작업을 시작하고, 고향 아오모리와의 관계를 재조명하며 작가적 성숙을 이룩했다.",
       "events": [
         {
-          "year": 2004,
-          "title": "2004년 주요 활동",
-          "titleEn": "Major Activity in 2004",
-          "category": "Exhibition",
-          "description": "Yoshitomo Nara이(가) 성숙기 시기인 2004년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
-          },
-          "visualPrompt": "Yoshitomo Nara in 2004, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "year": 2011,
+          "age": 52,
+          "title": "동일본 대지진 성찰",
+          "titleKo": "지진 후 작품 변화 - Midnight Truth",
+          "category": "Career",
+          "significance": "high",
+          "description": "반항적 아이에서 조용하고 명상적인 이미지로 전환. 'Midnight Truth' 시리즈."
         },
         {
-          "year": 2008,
-          "title": "2008년 주요 활동",
-          "titleEn": "Major Activity in 2008",
+          "year": 2014,
+          "age": 55,
+          "title": "요코하마 회고전",
+          "titleKo": "너는 나의 것이 아니다 - 작가적 성숙",
+          "category": "Exhibition",
+          "significance": "high",
+          "description": "요코하마 미술관에서 초기작부터 최신작까지 망라한 회고전."
+        },
+        {
+          "year": 2017,
+          "age": 58,
+          "title": "대형 조각 시리즈",
+          "titleKo": "3차원 확장 - 대형 조각",
           "category": "Masterpiece",
-          "description": "Yoshitomo Nara이(가) 성숙기 시기인 2008년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
-          },
-          "visualPrompt": "Yoshitomo Nara in 2008, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "significance": "medium",
+          "description": "도요타 시립미술관. 청동, 유리섬유 등 다양한 재료로 아이 형상 3차원화."
         }
       ]
     },
     {
-      "eraLabel": "Late Career",
-      "eraLabelKo": "후기 경력",
-      "ageRange": "53s-64s",
-      "startYear": 2012,
-      "endYear": 2023,
-      "moodColor": "#2D3748",
-      "summary": "Yoshitomo Nara의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Global Master",
+      "eraLabelKo": "글로벌 마스터",
+      "ageRange": "60-65",
+      "startYear": 2019,
+      "endYear": 2024,
+      "moodColor": "#48BB78",
+      "summary": "경매에서 $25M을 돌파하며 아시아 현대미술의 정점에 올랐다. LACMA 대회고전으로 미국에서 미술사적 위상을 확립하고, 반항의 아이콘에서 성찰과 평화의 아이콘으로 진화했다. 65세 현역으로서 아시아 현대미술을 대표하는 작가로 자리매김했다.",
       "events": [
-        {
-          "year": 2015,
-          "title": "2015년 주요 활동",
-          "titleEn": "Major Activity in 2015",
-          "category": "Exhibition",
-          "description": "Yoshitomo Nara이(가) 후기 경력 시기인 2015년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
-          },
-          "visualPrompt": "Yoshitomo Nara in 2015, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
-        },
         {
           "year": 2019,
-          "title": "2019년 주요 활동",
-          "titleEn": "Major Activity in 2019",
-          "category": "Masterpiece",
-          "description": "Yoshitomo Nara이(가) 후기 경력 시기인 2019년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
-          },
-          "visualPrompt": "Yoshitomo Nara in 2019, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "age": 60,
+          "title": "Knife Behind Back $25M",
+          "titleKo": "경매 최고가 - 일본 현대미술 기록",
+          "category": "Recognition",
+          "significance": "high",
+          "description": "소더비 홍콩에서 $24,956,250 낙찰. 일본 현대미술가 경매 최고가."
+        },
+        {
+          "year": 2021,
+          "age": 62,
+          "title": "LACMA 대회고전",
+          "titleKo": "LACMA - 미국 최대 규모",
+          "category": "Exhibition",
+          "significance": "high",
+          "description": "30년 경력 총망라. 고독한 아이에서 평화로운 아이로의 변화 조명."
+        },
+        {
+          "year": 2024,
+          "age": 65,
+          "title": "현역 활동 지속",
+          "titleKo": "65세 현역 - 성찰의 아이콘",
+          "category": "Career",
+          "significance": "medium",
+          "description": "도쿄와 아오모리를 오가며 작업. 아시아 현대미술 대표 작가."
         }
       ]
     }
   ],
-  "critiques": [],
-  "masterpieces": [],
+  "critiques": [
+    {
+      "id": "critique-1",
+      "critic": "Mika Yoshitake",
+      "criticKo": "요시타케 미카",
+      "role": "LACMA Curator",
+      "roleKo": "LACMA 큐레이터",
+      "year": 2021,
+      "quote": "Nara's work has evolved from a punk attitude of rebellion to a profound meditation on solitude, memory, and the inner life of the individual.",
+      "quoteKo": "나라의 작품은 펑크적 반항의 태도에서 고독, 기억, 개인의 내면에 대한 깊은 명상으로 진화했다.",
+      "significance": "high"
+    },
+    {
+      "id": "critique-2",
+      "critic": "Yoshitomo Nara",
+      "criticKo": "나라 요시토모",
+      "role": "Self-statement",
+      "roleKo": "자기 진술",
+      "year": 2001,
+      "quote": "The children in my paintings are not really children but small adults who have not yet lost their innocence. They carry knives and cigarettes, but they are not violent - they are just defending themselves in a world they don't understand.",
+      "quoteKo": "내 그림 속 아이들은 진짜 아이들이 아니라 아직 순수함을 잃지 않은 작은 어른들이다. 그들이 칼과 담배를 들고 있지만 폭력적인 것이 아니라, 이해할 수 없는 세상에서 자신을 방어하는 것이다.",
+      "significance": "high"
+    },
+    {
+      "id": "critique-3",
+      "critic": "Midori Matsui",
+      "criticKo": "마쓰이 미도리",
+      "role": "Art Critic",
+      "roleKo": "미술 비평가",
+      "year": 2005,
+      "quote": "Nara's figures embody the paradox of cute aggression - they are simultaneously adorable and menacing, innocent and knowing.",
+      "quoteKo": "나라의 형상들은 귀여운 공격성의 역설을 구현한다 - 동시에 사랑스럽고 위협적이며, 순수하면서도 세상을 아는.",
+      "significance": "medium"
+    }
+  ],
+  "masterpieces": [
+    {
+      "id": "mp-1",
+      "title": "Knife Behind Back",
+      "titleKo": "등 뒤의 칼",
+      "year": 2000,
+      "medium": "Acrylic on canvas",
+      "mediumKo": "캔버스에 아크릴",
+      "dimensions": "234 × 208 cm",
+      "currentLocation": "Private Collection",
+      "currentLocationKo": "개인 소장",
+      "significance": "2019년 소더비 홍콩에서 $24,956,250에 낙찰. 일본 현대미술가 경매 최고가 기록. 등 뒤에 칼을 숨긴 소녀의 불온한 귀여움.",
+      "auctionHistory": [
+        {
+          "house": "Sotheby's Hong Kong",
+          "date": "2019-10-06",
+          "currency": "USD",
+          "amount": 24956250,
+          "adjustedAmount": 28000000,
+          "result": "sold"
+        }
+      ],
+      "imageId": "nara_knife_behind_back"
+    },
+    {
+      "id": "mp-2",
+      "title": "Sleepless Night (Sitting)",
+      "titleKo": "잠 못 드는 밤 (앉아 있는)",
+      "year": 2007,
+      "medium": "Fiberglass, resin, and lacquer",
+      "mediumKo": "유리섬유, 레진, 래커",
+      "dimensions": "180 × 110 × 97 cm",
+      "currentLocation": "Various Collections",
+      "currentLocationKo": "여러 컬렉션",
+      "significance": "거대한 눈을 가진 명상적인 아이 조각. 2D 캐릭터의 3D 확장. 성찰기 작품의 대표작.",
+      "imageId": "nara_sleepless_night"
+    },
+    {
+      "id": "mp-3",
+      "title": "In the Deepest Puddle",
+      "titleKo": "가장 깊은 웅덩이 속에서",
+      "year": 1995,
+      "medium": "Acrylic on canvas",
+      "mediumKo": "캔버스에 아크릴",
+      "dimensions": "120 × 110 cm",
+      "currentLocation": "Private Collection",
+      "currentLocationKo": "개인 소장",
+      "significance": "독일 시대 대표작. 시그니처 스타일 확립. 귀여우면서도 불길한 분위기의 원형.",
+      "imageId": "nara_deepest_puddle"
+    },
+    {
+      "id": "mp-4",
+      "title": "Miss Forest / Thinker",
+      "titleKo": "미스 포레스트 / 사색가",
+      "year": 2017,
+      "medium": "Bronze",
+      "mediumKo": "청동",
+      "dimensions": "500 cm height",
+      "currentLocation": "Various Installations",
+      "currentLocationKo": "다양한 설치 장소",
+      "significance": "5미터 높이 대형 청동 조각. 거대한 머리와 작은 몸의 아이. 공공미술로서의 나라 확장.",
+      "imageId": "nara_miss_forest"
+    },
+    {
+      "id": "mp-5",
+      "title": "Midnight Truth",
+      "titleKo": "한밤중의 진실",
+      "year": 2017,
+      "medium": "Acrylic on canvas",
+      "mediumKo": "캔버스에 아크릴",
+      "dimensions": "227.3 × 181.8 cm",
+      "currentLocation": "Private Collection",
+      "currentLocationKo": "개인 소장",
+      "significance": "동일본 대지진 이후 명상적 전환을 보여주는 대표작. 조용하고 성찰적인 눈빛의 소녀.",
+      "imageId": "nara_midnight_truth"
+    }
+  ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
-    "primarySources": [],
-    "verificationStatus": "ai_generated"
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
+    "curator": "Art History Research Team",
+    "primarySources": [
+      "Yoshitomo Nara Foundation",
+      "LACMA",
+      "Sotheby's Records",
+      "Yokohama Museum of Art",
+      "Blum & Poe Gallery"
+    ]
   }
 }

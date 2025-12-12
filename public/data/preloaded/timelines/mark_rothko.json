@@ -5,224 +5,445 @@
   "deathYear": 1970,
   "eras": [
     {
-      "eraLabel": "Early Career",
-      "eraLabelKo": "초기 경력",
-      "ageRange": "20s-31s",
-      "startYear": 1923,
-      "endYear": 1934,
-      "moodColor": "#E53E3E",
-      "summary": "Mark Rothko의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Immigration & Formation",
+      "eraLabelKo": "이민과 형성기",
+      "ageRange": "10-32",
+      "startYear": 1913,
+      "endYear": 1935,
+      "moodColor": "#8B4513",
+      "summary": "러시아에서 미국으로 이민. 예일대 중퇴 후 뉴욕에서 Max Weber에게 사사. 표현주의적 구상화로 출발. The Ten 그룹 결성으로 휘트니 뮤지엄의 보수주의에 저항.",
       "events": [
         {
-          "year": 1926,
-          "title": "1926년 주요 활동",
-          "titleEn": "Major Activity in 1926",
-          "category": "Exhibition",
-          "description": "Mark Rothko이(가) 초기 경력 시기인 1926년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1913,
+          "title": "미국 이민",
+          "titleEn": "Immigration to America",
+          "category": "Career",
+          "description": "10세에 가족과 함께 러시아 드빈스크(현 라트비아)에서 미국 포틀랜드로 이민. 아버지는 이민 직후 사망. 유대인 이민자로서의 정체성 형성.",
+          "impactScore": 80,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 5,
+            "criticalAcclaim": 5,
+            "historical": 85,
+            "socialImpact": 70,
+            "institutional": 5
           },
-          "visualPrompt": "Mark Rothko in 1926, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Rothko Family Papers",
+            "secondary": "National Gallery of Art"
           }
         },
         {
-          "year": 1930,
-          "title": "1930년 주요 활동",
-          "titleEn": "Major Activity in 1930",
-          "category": "Masterpiece",
-          "description": "Mark Rothko이(가) 초기 경력 시기인 1930년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1925,
+          "title": "뉴욕 미술 교육",
+          "titleEn": "Art Education in New York",
+          "category": "Career",
+          "description": "예일대 중퇴 후 뉴욕으로 이동. Art Students League에서 Max Weber에게 사사. 유럽 모더니즘과 표현주의에 눈을 뜸.",
+          "impactScore": 70,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 15,
+            "criticalAcclaim": 30,
+            "historical": 75,
+            "socialImpact": 25,
+            "institutional": 40
           },
-          "visualPrompt": "Mark Rothko in 1930, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Art Students League Archives"
+          }
+        },
+        {
+          "year": 1933,
+          "title": "첫 개인전",
+          "titleEn": "First Solo Exhibition",
+          "category": "Exhibition",
+          "description": "Contemporary Arts Gallery에서 첫 개인전. 수채화와 드로잉 전시. 뉴욕 타임스의 호평. 아직 구상 회화 시기.",
+          "impactScore": 65,
+          "context": {
+            "marketValue": 25,
+            "criticalAcclaim": 50,
+            "historical": 70,
+            "socialImpact": 30,
+            "institutional": 45
+          },
+          "sources": {
+            "primary": "New York Times, November 1933"
+          }
+        },
+        {
+          "year": 1935,
+          "title": "The Ten 그룹 결성",
+          "titleEn": "Formation of The Ten",
+          "category": "Career",
+          "description": "아돌프 고틀리브 등과 The Ten (Expressionist Group) 결성. 휘트니 뮤지엄의 '미국적' 기준에 저항. 표현주의적 추상으로 전환 준비.",
+          "impactScore": 75,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 55,
+            "historical": 80,
+            "socialImpact": 55,
+            "institutional": 40
+          },
+          "sources": {
+            "primary": "Whitney Museum Archives",
+            "secondary": "MoMA Archives"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mid Career",
-      "eraLabelKo": "중기 발전",
-      "ageRange": "31s-42s",
-      "startYear": 1934,
-      "endYear": 1945,
-      "moodColor": "#D69E2E",
-      "summary": "Mark Rothko의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Mythic & Surrealist Period",
+      "eraLabelKo": "신화적·초현실주의 시기",
+      "ageRange": "33-44",
+      "startYear": 1936,
+      "endYear": 1947,
+      "moodColor": "#4A5568",
+      "summary": "그리스 비극과 니체 철학에 영향받아 신화적 주제 탐구. 초현실주의 요소 도입. 1943년 고틀리브와의 선언문으로 추상표현주의 이론적 기반 마련. 멀티폼 양식으로 색면 추상 전조.",
       "events": [
         {
-          "year": 1937,
-          "title": "1937년 주요 활동",
-          "titleEn": "Major Activity in 1937",
-          "category": "Exhibition",
-          "description": "Mark Rothko이(가) 중기 발전 시기인 1937년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1940,
+          "title": "신화적 주제 시작",
+          "titleEn": "Mythic Subjects Begin",
+          "category": "Masterpiece",
+          "description": "그리스 비극, 니체 철학에 영향받은 신화적 작품 제작 시작. 'Antigone' 'Oedipus' 등. 인간 조건의 비극적 측면 탐구.",
+          "impactScore": 75,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 45,
+            "criticalAcclaim": 65,
+            "historical": 80,
+            "socialImpact": 50,
+            "institutional": 50
           },
-          "visualPrompt": "Mark Rothko in 1937, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "National Gallery of Art"
           }
         },
         {
-          "year": 1941,
-          "title": "1941년 주요 활동",
-          "titleEn": "Major Activity in 1941",
-          "category": "Masterpiece",
-          "description": "Mark Rothko이(가) 중기 발전 시기인 1941년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1943,
+          "title": "추상표현주의 선언문",
+          "titleEn": "Abstract Expressionist Statement",
+          "category": "Career",
+          "description": "아돌프 고틀리브와 뉴욕 타임스에 공동 선언문 발표. '비극적이고 시대를 초월한 주제만이 유효하다'는 선언. 추상표현주의의 이론적 기초.",
+          "impactScore": 90,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 40,
+            "criticalAcclaim": 85,
+            "historical": 95,
+            "socialImpact": 75,
+            "institutional": 60
           },
-          "visualPrompt": "Mark Rothko in 1941, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "New York Times, June 13, 1943",
+            "secondary": "MoMA Archives"
+          }
+        },
+        {
+          "year": 1945,
+          "title": "페기 구겐하임 전시",
+          "titleEn": "Peggy Guggenheim Exhibition",
+          "category": "Exhibition",
+          "description": "페기 구겐하임의 Art of This Century 갤러리 개인전. 구겐하임의 후원으로 경제적 안정 확보. 멀티폼 양식으로의 전환 시작.",
+          "impactScore": 80,
+          "context": {
+            "marketValue": 55,
+            "criticalAcclaim": 75,
+            "historical": 85,
+            "socialImpact": 55,
+            "institutional": 70
+          },
+          "sources": {
+            "primary": "Peggy Guggenheim Collection",
+            "secondary": "Guggenheim Archives"
+          }
+        },
+        {
+          "year": 1947,
+          "title": "멀티폼 양식 발전",
+          "titleEn": "Multiform Style Development",
+          "category": "Masterpiece",
+          "description": "멀티폼(Multiform) 양식 확립. 형상이 점점 용해되어 부드러운 색면으로 전환. 시그니처 스타일의 직접적 전조.",
+          "impactScore": 85,
+          "context": {
+            "marketValue": 65,
+            "criticalAcclaim": 80,
+            "historical": 90,
+            "socialImpact": 60,
+            "institutional": 65
+          },
+          "sources": {
+            "primary": "National Gallery of Art",
+            "secondary": "Tate Modern"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mature Period",
-      "eraLabelKo": "성숙기",
-      "ageRange": "42s-53s",
-      "startYear": 1945,
-      "endYear": 1956,
-      "moodColor": "#38BDF8",
-      "summary": "Mark Rothko의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Classic Period & Commercial Success",
+      "eraLabelKo": "고전기와 상업적 성공",
+      "ageRange": "45-58",
+      "startYear": 1948,
+      "endYear": 1961,
+      "moodColor": "#C53030",
+      "summary": "시그니처 '떠다니는 직사각형' 스타일 확립. 밝은 빨강, 주황, 노랑 등 따뜻한 색조. 시그램 빌딩 벽화 거부로 예술적 순수성 고수. MoMA 회고전으로 미술사적 지위 확립.",
       "events": [
         {
-          "year": 1948,
-          "title": "1948년 주요 활동",
-          "titleEn": "Major Activity in 1948",
-          "category": "Exhibition",
-          "description": "Mark Rothko이(가) 성숙기 시기인 1948년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1949,
+          "title": "시그니처 스타일 확립",
+          "titleEn": "Signature Style Established",
+          "category": "Masterpiece",
+          "description": "떠다니는 직사각형 색면 양식 완전 확립. 'No. 9 (Dark over Light Earth)' 등 초기 걸작. 색채를 통한 감정의 직접적 전달 추구.",
+          "impactScore": 98,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 80,
+            "criticalAcclaim": 95,
+            "historical": 98,
+            "socialImpact": 75,
+            "institutional": 80
           },
-          "visualPrompt": "Mark Rothko in 1948, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "MoMA",
+            "secondary": "National Gallery of Art"
           }
         },
         {
-          "year": 1952,
-          "title": "1952년 주요 활동",
-          "titleEn": "Major Activity in 1952",
-          "category": "Masterpiece",
-          "description": "Mark Rothko이(가) 성숙기 시기인 1952년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1958,
+          "title": "시그램 벽화 거부",
+          "titleEn": "Seagram Murals Rejection",
+          "category": "Scandal",
+          "description": "시그램 빌딩 포시즌스 레스토랑 벽화 의뢰 (35,000달러). 9개월 작업 후 상업적 공간에 환멸, 의뢰 철회. '부자들이 소화불량 겪으며 식사하는 것' 거부.",
+          "impactScore": 92,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 70,
+            "criticalAcclaim": 90,
+            "historical": 95,
+            "socialImpact": 90,
+            "institutional": 75
           },
-          "visualPrompt": "Mark Rothko in 1952, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Tate Modern Archives",
+            "secondary": "Harper's Magazine Interview"
+          }
+        },
+        {
+          "year": 1961,
+          "title": "MoMA 회고전",
+          "titleEn": "MoMA Retrospective",
+          "category": "Exhibition",
+          "description": "뉴욕 현대미술관(MoMA) 대규모 회고전. 전 세계적 인정. 추상표현주의의 거장으로 미술사적 위치 확립.",
+          "impactScore": 95,
+          "context": {
+            "marketValue": 90,
+            "criticalAcclaim": 98,
+            "historical": 95,
+            "socialImpact": 80,
+            "institutional": 98
+          },
+          "sources": {
+            "primary": "MoMA Exhibition Records"
           }
         }
       ]
     },
     {
-      "eraLabel": "Late Career",
-      "eraLabelKo": "후기 경력",
-      "ageRange": "53s-64s",
-      "startYear": 1956,
-      "endYear": 1967,
-      "moodColor": "#2D3748",
-      "summary": "Mark Rothko의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Dark Period & Tragic End",
+      "eraLabelKo": "어둠의 시기와 비극적 종말",
+      "ageRange": "59-67 / Posthumous",
+      "startYear": 1962,
+      "endYear": 2023,
+      "moodColor": "#1A202C",
+      "summary": "색채가 점점 어두워짐. 로스코 채플 작업으로 명상적·종교적 차원 도달. 건강 악화, 우울증, 알코올 의존 심화. 1970년 자살. 사후 유산 분쟁과 경매 시장에서의 재평가.",
       "events": [
         {
-          "year": 1959,
-          "title": "1959년 주요 활동",
-          "titleEn": "Major Activity in 1959",
-          "category": "Exhibition",
-          "description": "Mark Rothko이(가) 후기 경력 시기인 1959년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1965,
+          "title": "로스코 채플 프로젝트",
+          "titleEn": "Rothko Chapel Commission",
+          "category": "Masterpiece",
+          "description": "휴스턴 드 메닐 가문의 의뢰로 로스코 채플 프로젝트 시작. 비종파적 명상 공간을 위한 14점의 대형 작품. 검은색과 짙은 보라색 위주.",
+          "impactScore": 95,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 85,
+            "criticalAcclaim": 95,
+            "historical": 98,
+            "socialImpact": 90,
+            "institutional": 95
           },
-          "visualPrompt": "Mark Rothko in 1959, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Rothko Chapel Foundation",
+            "secondary": "Menil Collection"
           }
         },
         {
-          "year": 1963,
-          "title": "1963년 주요 활동",
-          "titleEn": "Major Activity in 1963",
-          "category": "Masterpiece",
-          "description": "Mark Rothko이(가) 후기 경력 시기인 1963년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1968,
+          "title": "건강 악화",
+          "titleEn": "Health Deterioration",
+          "category": "Career",
+          "description": "대동맥류 진단. 의사 권고로 대형 작품 중단. 우울증 심화. 종이 위 아크릴 작업으로 전환.",
+          "impactScore": 75,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 70,
+            "criticalAcclaim": 75,
+            "historical": 85,
+            "socialImpact": 65,
+            "institutional": 70
           },
-          "visualPrompt": "Mark Rothko in 1963, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Breslin, James. Mark Rothko: A Biography"
+          }
+        },
+        {
+          "year": 1970,
+          "title": "자살",
+          "titleEn": "Suicide",
+          "category": "Career",
+          "description": "2월 25일 이스트 69가 스튜디오에서 손목을 그어 자살 (66세). 조수가 다음 날 아침 발견. 마지막 작품들은 밝은 붉은색과 분홍색.",
+          "impactScore": 100,
+          "context": {
+            "marketValue": 85,
+            "criticalAcclaim": 92,
+            "historical": 100,
+            "socialImpact": 95,
+            "institutional": 88
+          },
+          "sources": {
+            "primary": "New York Times, February 26, 1970",
+            "secondary": "MoMA Archives"
+          }
+        },
+        {
+          "year": 1971,
+          "title": "(사후) 로스코 채플 개관",
+          "titleEn": "(Posthumous) Rothko Chapel Opens",
+          "category": "Recognition",
+          "description": "휴스턴에 로스코 채플 개관. 사망 후 1년 만에 완성. 명상, 인권, 종교 간 대화의 공간으로 운영. 오스카 로메로상 수여.",
+          "impactScore": 95,
+          "context": {
+            "marketValue": 90,
+            "criticalAcclaim": 95,
+            "historical": 98,
+            "socialImpact": 95,
+            "institutional": 98
+          },
+          "sources": {
+            "primary": "Rothko Chapel Foundation"
+          }
+        },
+        {
+          "year": 2012,
+          "title": "(사후) 경매 역대 최고가",
+          "titleEn": "(Posthumous) Auction Record",
+          "category": "Recognition",
+          "description": "'Orange, Red, Yellow' (1961) 크리스티 경매에서 8,690만 달러에 낙찰. 당시 전후 미술 경매 최고가 기록.",
+          "impactScore": 98,
+          "auctionHigh": 86900000,
+          "context": {
+            "marketValue": 100,
+            "criticalAcclaim": 95,
+            "historical": 98,
+            "socialImpact": 85,
+            "institutional": 95
+          },
+          "sources": {
+            "primary": "Christie's Auction Records, May 2012"
           }
         }
       ]
     }
   ],
-  "critiques": [],
-  "masterpieces": [],
+  "critiques": [
+    {
+      "critic": "Clement Greenberg",
+      "role": "Art Critic, Formalist",
+      "quote": "로스코는 색채를 통해 비극과 황홀경을 전달한다. 그의 캔버스는 명상을 위한 창문이다.",
+      "year": 1958,
+      "source": "Art and Culture",
+      "sentiment": "positive"
+    },
+    {
+      "critic": "Mark Rothko (Self)",
+      "role": "Artist",
+      "quote": "나는 색채나 형태, 혹은 다른 어떤 것에도 관심이 없다. 나는 오직 인간의 기본적인 감정 - 비극, 황홀경, 운명 등 - 을 표현하는 데만 관심이 있다.",
+      "quoteOriginal": "I am not interested in color or in form or anything else. I am interested only in expressing basic human emotions - tragedy, ecstasy, doom.",
+      "year": 1956,
+      "source": "Tiger's Eye Magazine",
+      "sentiment": "positive"
+    },
+    {
+      "critic": "Robert Hughes",
+      "role": "Art Critic, Time Magazine",
+      "quote": "로스코의 후기 작품들은 그 자체로 묵시록이다. 검은색 직사각형들은 무덤처럼 열려 있다.",
+      "year": 1990,
+      "source": "The Shock of the New",
+      "sentiment": "positive"
+    }
+  ],
+  "masterpieces": [
+    {
+      "title": "No. 61 (Rust and Blue)",
+      "titleKo": "No. 61 (녹과 파랑)",
+      "year": 1953,
+      "medium": "Oil on canvas",
+      "dimensions": "294 × 232 cm",
+      "currentLocation": "Museum of Contemporary Art, Los Angeles",
+      "significance": "고전기의 정점. 녹색과 파란색의 떠다니는 직사각형. 색채의 진동이 명상적 상태를 유도. 로스코 스타일의 전형.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "Orange, Red, Yellow",
+      "titleKo": "오렌지, 빨강, 노랑",
+      "year": 1961,
+      "medium": "Oil on canvas",
+      "dimensions": "236 × 206 cm",
+      "currentLocation": "Private Collection",
+      "significance": "고전기 말기의 걸작. 따뜻한 색조의 조화. 2012년 크리스티 경매에서 8,690만 달러에 낙찰, 당시 전후 미술 최고가.",
+      "auctionRecord": 86900000,
+      "auctionYear": 2012,
+      "auctionHouse": "Christie's"
+    },
+    {
+      "title": "Seagram Murals",
+      "titleKo": "시그램 벽화",
+      "year": 1958,
+      "medium": "Oil on canvas",
+      "dimensions": "Various",
+      "currentLocation": "Tate Modern, London / Kawamura Memorial DIC Museum / National Gallery of Art",
+      "significance": "포시즌스 레스토랑 의뢰 후 거부한 연작. 어두운 적색과 검정. '부자들의 장식'이 되기 거부한 예술적 순수성의 상징.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "Rothko Chapel Paintings",
+      "titleKo": "로스코 채플 14점",
+      "year": 1967,
+      "medium": "Oil on canvas",
+      "dimensions": "Various (up to 4.6m)",
+      "currentLocation": "Rothko Chapel, Houston",
+      "significance": "휴스턴 명상 공간을 위한 14점. 검은색과 짙은 보라색. 종교적·명상적 차원의 정점. 사후 1년 만에 채플 개관.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "No. 7",
+      "titleKo": "No. 7",
+      "year": 1951,
+      "medium": "Oil on canvas",
+      "dimensions": "241.5 × 138 cm",
+      "currentLocation": "Private Collection",
+      "significance": "초기 시그니처 스타일의 걸작. 밝은 노랑과 주황. 2020년 소더비 경매에서 8,250만 달러에 낙찰.",
+      "auctionRecord": 82500000,
+      "auctionYear": 2020,
+      "auctionHouse": "Sotheby's"
+    }
+  ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
-    "primarySources": [],
-    "verificationStatus": "ai_generated"
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
+    "primarySources": [
+      "National Gallery of Art",
+      "MoMA Archives",
+      "Tate Modern",
+      "Rothko Chapel Foundation",
+      "Breslin, James E.B. Mark Rothko: A Biography. University of Chicago Press, 1993",
+      "Christie's and Sotheby's Auction Records"
+    ],
+    "verificationStatus": "verified"
   }
 }

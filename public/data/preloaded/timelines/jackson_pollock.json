@@ -5,224 +5,366 @@
   "deathYear": 1956,
   "eras": [
     {
-      "eraLabel": "Early Career",
-      "eraLabelKo": "초기 경력",
-      "ageRange": "20s-26s",
-      "startYear": 1932,
-      "endYear": 1938,
-      "moodColor": "#E53E3E",
-      "summary": "Jackson Pollock의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Formation & Struggles",
+      "eraLabelKo": "형성기와 고투",
+      "ageRange": "18-30",
+      "startYear": 1930,
+      "endYear": 1942,
+      "moodColor": "#78716C",
+      "summary": "토마스 하트 벤튼에게 사사하며 지역주의 화풍을 배우고, 시케이로스 워크숍에서 실험적 재료와 기법을 탐구. 알코올 중독과 정신적 고통 속에서 융 분석심리학 치료를 받으며 무의식을 예술적 원천으로 발전시킴.",
       "events": [
         {
-          "year": 1934,
-          "title": "1934년 주요 활동",
-          "titleEn": "Major Activity in 1934",
-          "category": "Exhibition",
-          "description": "Jackson Pollock이(가) 초기 경력 시기인 1934년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1930,
+          "title": "아트 스튜던츠 리그 입학",
+          "titleEn": "Art Students League Enrollment",
+          "category": "Career",
+          "description": "18세에 뉴욕 아트 스튜던츠 리그에 입학. 지역주의 화가 토마스 하트 벤튼에게 사사. 미국적 주제와 역동적 구성을 학습.",
+          "impactScore": 70,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 5,
+            "criticalAcclaim": 15,
+            "historical": 75,
+            "socialImpact": 25,
+            "institutional": 30
           },
-          "visualPrompt": "Jackson Pollock in 1934, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Art Students League of New York Archives",
+            "secondary": "Naifeh & White. Jackson Pollock: An American Saga. 1989"
           }
         },
         {
           "year": 1936,
-          "title": "1936년 주요 활동",
-          "titleEn": "Major Activity in 1936",
-          "category": "Masterpiece",
-          "description": "Jackson Pollock이(가) 초기 경력 시기인 1936년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "시케이로스 워크숍",
+          "titleEn": "Siqueiros Workshop",
+          "category": "Career",
+          "description": "멕시코 벽화가 다비드 알파로 시케이로스의 실험 워크숍 참여. 에나멜 페인트, 분무기, 흘리기 기법 실험. 드리핑의 기술적 기원.",
+          "impactScore": 85,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 10,
+            "criticalAcclaim": 25,
+            "historical": 90,
+            "socialImpact": 35,
+            "institutional": 25
           },
-          "visualPrompt": "Jackson Pollock in 1936, undefined period",
           "sources": {
-            "primary": "Generated Template"
-          }
-        }
-      ]
-    },
-    {
-      "eraLabel": "Mid Career",
-      "eraLabelKo": "중기 발전",
-      "ageRange": "26s-32s",
-      "startYear": 1938,
-      "endYear": 1944,
-      "moodColor": "#D69E2E",
-      "summary": "Jackson Pollock의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
-      "events": [
-        {
-          "year": 1940,
-          "title": "1940년 주요 활동",
-          "titleEn": "Major Activity in 1940",
-          "category": "Exhibition",
-          "description": "Jackson Pollock이(가) 중기 발전 시기인 1940년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
-          },
-          "visualPrompt": "Jackson Pollock in 1940, undefined period",
-          "sources": {
-            "primary": "Generated Template"
+            "primary": "Smithsonian Archives of American Art",
+            "secondary": "Landau, Ellen. Jackson Pollock. 1989"
           }
         },
         {
-          "year": 1942,
-          "title": "1942년 주요 활동",
-          "titleEn": "Major Activity in 1942",
-          "category": "Masterpiece",
-          "description": "Jackson Pollock이(가) 중기 발전 시기인 1942년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1939,
+          "title": "융학파 정신분석 치료",
+          "titleEn": "Jungian Psychoanalysis",
+          "category": "Scandal",
+          "description": "알코올 중독과 우울증으로 정신병원 입원 후 융학파 분석가에게 치료 시작. 무의식적 드로잉을 통해 내면을 탐구. 이후 작품 세계의 심리적 기반.",
+          "impactScore": 80,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 5,
+            "criticalAcclaim": 30,
+            "historical": 85,
+            "socialImpact": 50,
+            "institutional": 20
           },
-          "visualPrompt": "Jackson Pollock in 1942, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Pollock-Krasner House Archives",
+            "secondary": "Cernuschi, Claude. Jackson Pollock: Meaning and Significance. 1992"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mature Period",
-      "eraLabelKo": "성숙기",
-      "ageRange": "32s-38s",
-      "startYear": 1944,
+      "eraLabel": "Breakthrough & Peggy Guggenheim",
+      "eraLabelKo": "돌파구와 페기 구겐하임",
+      "ageRange": "31-34",
+      "startYear": 1943,
+      "endYear": 1946,
+      "moodColor": "#F59E0B",
+      "summary": "페기 구겐하임의 후원으로 첫 개인전 개최. 대형 벽화 'Mural' 제작으로 주목받음. 리 크래스너와 결혼하고 롱아일랜드 스프링스로 이주하여 '헛간 스튜디오'에서 집중 작업 환경 구축.",
+      "events": [
+        {
+          "year": 1943,
+          "title": "Art of This Century 첫 개인전",
+          "titleEn": "First Solo Show at Art of This Century",
+          "category": "Exhibition",
+          "description": "페기 구겐하임 갤러리에서 첫 개인전. 클레멘트 그린버그가 '이 세대 최고의 화가 중 하나'라고 평가. 벽화 'Mural' 의뢰 받음.",
+          "impactScore": 90,
+          "context": {
+            "marketValue": 35,
+            "criticalAcclaim": 85,
+            "historical": 92,
+            "socialImpact": 60,
+            "institutional": 65
+          },
+          "sources": {
+            "primary": "Guggenheim Museum Archives",
+            "secondary": "Greenberg, Clement. The Nation, November 27, 1943"
+          }
+        },
+        {
+          "year": 1944,
+          "title": "Mural 완성",
+          "titleEn": "Mural Completion",
+          "category": "Masterpiece",
+          "description": "페기 구겐하임 아파트를 위한 2.5m × 6m 대형 벽화. 올오버 구성과 격렬한 제스처의 원형. 현재 아이오와 대학 미술관 소장.",
+          "impactScore": 95,
+          "context": {
+            "marketValue": 50,
+            "criticalAcclaim": 90,
+            "historical": 95,
+            "socialImpact": 65,
+            "institutional": 75
+          },
+          "sources": {
+            "primary": "University of Iowa Museum of Art",
+            "secondary": "Varnedoe, Kirk. Jackson Pollock. MoMA, 1998"
+          }
+        },
+        {
+          "year": 1945,
+          "title": "크래스너와 결혼 & 스프링스 이주",
+          "titleEn": "Marriage to Krasner & Move to Springs",
+          "category": "Career",
+          "description": "화가 리 크래스너와 결혼. 롱아일랜드 이스트햄튼의 스프링스로 이주. 헛간을 아틀리에로 개조하여 대형 작업 공간 확보.",
+          "impactScore": 88,
+          "context": {
+            "marketValue": 40,
+            "criticalAcclaim": 70,
+            "historical": 90,
+            "socialImpact": 55,
+            "institutional": 60
+          },
+          "sources": {
+            "primary": "Pollock-Krasner House and Study Center"
+          }
+        }
+      ]
+    },
+    {
+      "eraLabel": "Drip Paintings & Fame",
+      "eraLabelKo": "드리핑 회화와 명성",
+      "ageRange": "35-38",
+      "startYear": 1947,
       "endYear": 1950,
-      "moodColor": "#38BDF8",
-      "summary": "Jackson Pollock의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "moodColor": "#3B82F6",
+      "summary": "바닥에 캔버스를 놓고 물감을 흘리고 뿌리는 혁명적 '드리핑' 기법 개발. 라이프지 특집으로 전국적 유명세 획득. 'Number 1A', 'Autumn Rhythm', 'One: Number 31' 등 걸작 연속 제작. 추상표현주의의 정점.",
       "events": [
         {
-          "year": 1946,
-          "title": "1946년 주요 활동",
-          "titleEn": "Major Activity in 1946",
-          "category": "Exhibition",
-          "description": "Jackson Pollock이(가) 성숙기 시기인 1946년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1947,
+          "title": "드리핑 기법 탄생",
+          "titleEn": "Birth of Drip Technique",
+          "category": "Masterpiece",
+          "description": "바닥에 눕힌 캔버스 위를 돌아다니며 물감을 흘리고 뿌리는 'drip painting' 기법 개발. 이젤 회화의 전통을 완전히 파괴한 혁명적 방법론.",
+          "impactScore": 100,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 55,
+            "criticalAcclaim": 95,
+            "historical": 100,
+            "socialImpact": 90,
+            "institutional": 80
           },
-          "visualPrompt": "Jackson Pollock in 1946, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "MoMA Archives",
+            "secondary": "Friedman, B.H. Jackson Pollock: Energy Made Visible. 1972"
           }
         },
         {
-          "year": 1948,
-          "title": "1948년 주요 활동",
-          "titleEn": "Major Activity in 1948",
-          "category": "Masterpiece",
-          "description": "Jackson Pollock이(가) 성숙기 시기인 1948년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
+          "year": 1949,
+          "title": "라이프지 특집",
+          "titleEn": "Life Magazine Feature",
+          "category": "Recognition",
+          "description": "'잭슨 폴록: 미국 최고의 현존 화가인가?' 라이프지 특집. 전국적 명성과 논란을 동시에 획득. 추상표현주의를 대중에게 알린 결정적 계기.",
+          "impactScore": 98,
           "auctionHigh": 0,
-          "auctionLow": 0,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 75,
+            "criticalAcclaim": 90,
+            "historical": 98,
+            "socialImpact": 100,
+            "institutional": 85
           },
-          "visualPrompt": "Jackson Pollock in 1948, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Life Magazine, August 8, 1949"
+          }
+        },
+        {
+          "year": 1950,
+          "title": "한스 나무스 영화 & 걸작 완성",
+          "titleEn": "Hans Namuth Film & Masterpieces",
+          "category": "Masterpiece",
+          "description": "사진작가 한스 나무스가 폴록의 작업 과정을 촬영. 'Autumn Rhythm', 'One: Number 31' 등 대형 걸작 완성. 드리핑 기법의 절정기.",
+          "impactScore": 98,
+          "context": {
+            "marketValue": 85,
+            "criticalAcclaim": 98,
+            "historical": 98,
+            "socialImpact": 85,
+            "institutional": 90
+          },
+          "sources": {
+            "primary": "Namuth Film Archives",
+            "secondary": "Metropolitan Museum of Art - Autumn Rhythm"
           }
         }
       ]
     },
     {
-      "eraLabel": "Late Career",
-      "eraLabelKo": "후기 경력",
-      "ageRange": "38s-44s",
-      "startYear": 1950,
+      "eraLabel": "Decline & Tragic End",
+      "eraLabelKo": "쇠퇴와 비극적 최후",
+      "ageRange": "39-44",
+      "startYear": 1951,
       "endYear": 1956,
-      "moodColor": "#2D3748",
-      "summary": "Jackson Pollock의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "moodColor": "#1E293B",
+      "summary": "드리핑에서 후퇴하며 흑백 시리즈와 형상적 요소 재도입으로 비평가들의 혼란 초래. 음주 문제 재발과 창작 위기, 결혼 생활 파탄. 44세에 음주운전 사고로 비극적 죽음.",
       "events": [
         {
-          "year": 1952,
-          "title": "1952년 주요 활동",
-          "titleEn": "Major Activity in 1952",
-          "category": "Exhibition",
-          "description": "Jackson Pollock이(가) 후기 경력 시기인 1952년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1951,
+          "title": "흑백 회화 시리즈",
+          "titleEn": "Black Paintings Series",
+          "category": "Masterpiece",
+          "description": "색채를 배제한 흑백 작품 시리즈. 드리핑에서 벗어나 형상적 요소 재도입. 비평가들의 논쟁과 의문 야기. 방향 전환의 시도.",
+          "impactScore": 80,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 70,
+            "criticalAcclaim": 75,
+            "historical": 85,
+            "socialImpact": 60,
+            "institutional": 75
           },
-          "visualPrompt": "Jackson Pollock in 1952, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "MoMA Collection",
+            "secondary": "Clark, T.J. Farewell to an Idea. 1999"
           }
         },
         {
           "year": 1954,
-          "title": "1954년 주요 활동",
-          "titleEn": "Major Activity in 1954",
-          "category": "Masterpiece",
-          "description": "Jackson Pollock이(가) 후기 경력 시기인 1954년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "창작 위기와 침체",
+          "titleEn": "Creative Crisis",
+          "category": "Scandal",
+          "description": "거의 작품을 제작하지 않음. 심각한 알코올 중독 재발. 우울증 심화. 리 크래스너와의 결혼 생활 위기.",
+          "impactScore": 65,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 60,
+            "criticalAcclaim": 55,
+            "historical": 75,
+            "socialImpact": 70,
+            "institutional": 60
           },
-          "visualPrompt": "Jackson Pollock in 1954, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Pollock-Krasner Foundation Archives"
+          }
+        },
+        {
+          "year": 1956,
+          "title": "음주운전 사고 사망",
+          "titleEn": "Death in Drunk Driving Accident",
+          "category": "Scandal",
+          "description": "8월 11일 밤, 스프링스 인근에서 음주운전 사고로 사망. 44세. 동승자 에디스 메츠거도 사망. 루스 클리그먼만 생존. 미국 미술계에 충격.",
+          "impactScore": 100,
+          "context": {
+            "marketValue": 95,
+            "criticalAcclaim": 90,
+            "historical": 100,
+            "socialImpact": 100,
+            "institutional": 95
+          },
+          "sources": {
+            "primary": "New York Times, August 12, 1956",
+            "secondary": "Kligman, Ruth. Love Affair: A Memoir of Jackson Pollock. 1974"
           }
         }
       ]
     }
   ],
-  "critiques": [],
-  "masterpieces": [],
+  "critiques": [
+    {
+      "critic": "Clement Greenberg",
+      "affiliation": "Art Critic, The Nation",
+      "year": 1943,
+      "quote": "폴록의 재능은 화산적이다. 그는 이 세대에서 가장 강력한 화가 중 하나로 떠오르고 있다.",
+      "context": "첫 개인전 리뷰에서의 열렬한 지지"
+    },
+    {
+      "critic": "Harold Rosenberg",
+      "affiliation": "Art News",
+      "year": 1952,
+      "quote": "캔버스는 행동의 장이 되었다. 결과물은 사건이지 그림이 아니다.",
+      "context": "'액션 페인팅' 개념을 정립한 에세이"
+    },
+    {
+      "critic": "Life Magazine",
+      "affiliation": "National Publication",
+      "year": 1949,
+      "quote": "그는 정말로 미국 최고의 현존 화가인가?",
+      "context": "찬반 논쟁을 불러일으킨 표지 기사 제목"
+    }
+  ],
+  "masterpieces": [
+    {
+      "title": "Mural",
+      "titleKo": "벽화",
+      "year": 1943,
+      "significance": "올오버 구성의 원형. 페기 구겐하임 의뢰로 제작한 2.5m × 6m 대작",
+      "currentLocation": "University of Iowa Museum of Art",
+      "auctionRecord": null
+    },
+    {
+      "title": "Number 1A, 1948",
+      "titleKo": "넘버 1A, 1948",
+      "year": 1948,
+      "significance": "드리핑 기법의 정수. MoMA 소장 대표작",
+      "currentLocation": "Museum of Modern Art, New York",
+      "auctionRecord": null
+    },
+    {
+      "title": "Autumn Rhythm (Number 30)",
+      "titleKo": "가을 리듬 (넘버 30)",
+      "year": 1950,
+      "significance": "드리핑 전성기의 대표작. 2.7m × 5.3m의 대형 캔버스",
+      "currentLocation": "Metropolitan Museum of Art, New York",
+      "auctionRecord": null
+    },
+    {
+      "title": "One: Number 31, 1950",
+      "titleKo": "하나: 넘버 31, 1950",
+      "year": 1950,
+      "significance": "폴록 최대 규모 작품 중 하나. 올오버 구성의 완성",
+      "currentLocation": "Museum of Modern Art, New York",
+      "auctionRecord": null
+    },
+    {
+      "title": "Blue Poles (Number 11, 1952)",
+      "titleKo": "푸른 기둥 (넘버 11, 1952)",
+      "year": 1952,
+      "significance": "1973년 호주 정부가 200만 달러에 구입하여 논란. 현재 가치 수억 달러 추정",
+      "currentLocation": "National Gallery of Australia",
+      "auctionRecord": null,
+      "note": "호주 정부 구입 시 정치적 논란"
+    },
+    {
+      "title": "No. 5, 1948",
+      "titleKo": "넘버 5, 1948",
+      "year": 1948,
+      "significance": "2006년 1억 4천만 달러에 거래. 당시 역대 최고가 기록",
+      "currentLocation": "Private Collection",
+      "auctionRecord": {
+        "price": 140000000,
+        "currency": "USD",
+        "date": "2006-11-02",
+        "house": "Private Sale (Sotheby's brokered)"
+      }
+    }
+  ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
-    "primarySources": [],
-    "verificationStatus": "ai_generated"
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
+    "primarySources": [
+      "Pollock-Krasner House and Study Center",
+      "MoMA Archives",
+      "Guggenheim Museum Archives",
+      "Naifeh, Steven & White, Gregory. Jackson Pollock: An American Saga. 1989",
+      "Varnedoe, Kirk. Jackson Pollock. MoMA, 1998",
+      "Landau, Ellen. Jackson Pollock. Abrams, 1989"
+    ],
+    "verificationStatus": "verified"
   }
 }

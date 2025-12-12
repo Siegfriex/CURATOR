@@ -1,0 +1,46 @@
+﻿flowchart LR
+  %% Curator's Odysseia - Task Flow (Rendered to PNG for DOCX)
+
+  %% --- Nodes ---
+  U0["전시 시작\n(사용자)"]
+  W0["웹 앱 로드\n(App.tsx)"]
+  G0["게임 시작\n(/curatorgame/ iframe)"]
+  H0["핸드 트래킹\n(MediaPipe)"]
+  I0["입력 전달\nINPUT_UPDATE"]
+
+  A0["아티팩트 수집\n(t1/t2/t3)"]
+  GA0["게이트 선택/통과\n(20s/40s/60s)"]
+  M0["메트릭 누적\ninst/net/acad/hist/disc"]
+
+  END0["게임 종료\n(era=3)"]
+  MSG0["GAME_OVER 전송\npayload=STATE"]
+  AI0["AI 리포트 생성\n(Gemini API)"]
+  RPT0["REPORT_GENERATED 수신\n결과 화면 표시"]
+  CTA0["Continue to Archive"]
+  GC0["GAME_COMPLETE 전송\npayload=GameResult"]
+  ENR0["웹 앱 보강\n(enrichGameResult)"]
+  OV0["Overview 탭 전환\n작가 대시보드 로드"]
+
+  SK0["(대안) GAME_SKIP\n바로 Overview"]
+
+  PH0["(선택) 피지컬 트윈\nESP32 서보/LED"]
+
+  %% --- Main Flow ---
+  U0 --> W0 --> G0 --> H0 --> I0 --> A0 --> GA0 --> M0 --> END0 --> MSG0 --> AI0 --> RPT0 --> CTA0 --> GC0 --> ENR0 --> OV0
+
+  %% --- Optional / Branches ---
+  G0 -. "스킵 선택" .-> SK0 --> OV0
+  H0 -. "동기화(단방향)\nWeb Serial" .-> PH0
+
+  %% --- Styling (Info Design) ---
+  classDef user fill:#EAF2FF,stroke:#3B82F6,stroke-width:2px,rx:10,ry:10,color:#111;
+  classDef web fill:#F4F4F4,stroke:#111,stroke-width:1px,rx:10,ry:10,color:#111;
+  classDef game fill:#FFF7E6,stroke:#F59E0B,stroke-width:2px,rx:10,ry:10,color:#111;
+  classDef ai fill:#F0FDF4,stroke:#16A34A,stroke-width:2px,rx:10,ry:10,color:#111;
+  classDef optional fill:#FFFFFF,stroke:#888,stroke-dasharray:4 4,rx:10,ry:10,color:#111;
+
+  class U0 user;
+  class W0,ENR0,OV0 web;
+  class G0,H0,I0,A0,GA0,M0,END0,MSG0,RPT0,CTA0,GC0 game;
+  class AI0 ai;
+  class SK0,PH0 optional;

@@ -1,0 +1,22 @@
+flowchart LR
+  %% IA Data Contracts - Events & Payloads (Rendered to PNG for DOCX)
+
+  subgraph Events["postMessage 이벤트"]
+    I["INPUT_UPDATE\n{ x:number, isActive:boolean }"]
+    P["PAUSE_GAME\nboolean"]
+    O["GAME_OVER\npayload=STATE"]
+    R["REPORT_GENERATED\n{ archetype, match, narrative }"]
+    C["GAME_COMPLETE\npayload=GameResult"]
+    S["GAME_SKIP\n{ artistName }"]
+  end
+
+  subgraph Schemas["핵심 데이터 스키마"]
+    STATE["STATE\nmetrics{inst,net,acad,hist,disc}\nartifacts{t1,t2,t3}\ntimeline[{age,event}]\nscore, era, handActive, input"]
+    GR["GameResult\nmetrics+timeline+artifacts+score\n+ archetype/match/narrative\n(+ matchedArtistId, timestamp)"]
+  end
+
+  I -->|게임 엔진 입력| STATE
+  O -->|AI 프롬프트 입력| STATE
+  R -->|리포트 합성| GR
+  C -->|웹 앱 전달| GR
+

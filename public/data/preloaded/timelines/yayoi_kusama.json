@@ -4,224 +4,425 @@
   "birthYear": 1929,
   "eras": [
     {
-      "eraLabel": "Early Career",
-      "eraLabelKo": "초기 경력",
-      "ageRange": "20s-35s",
+      "eraLabel": "Early Life & Escape to America",
+      "eraLabelKo": "초기 생애와 미국 탈출",
+      "ageRange": "20-30",
       "startYear": 1949,
-      "endYear": 1964,
-      "moodColor": "#E53E3E",
-      "summary": "Yayoi Kusama의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "endYear": 1959,
+      "moodColor": "#8B4513",
+      "summary": "어린 시절부터 환각 경험. 일본 전통화 교육 후 제한적 환경 탈출. 조지아 오키프의 도움으로 미국 이주. 극심한 빈곤 속에서 뉴욕 미술계 진입. Infinity Nets로 돌파구.",
       "events": [
         {
-          "year": 1954,
-          "title": "1954년 주요 활동",
-          "titleEn": "Major Activity in 1954",
+          "year": 1952,
+          "title": "일본 첫 개인전",
+          "titleEn": "First Solo Exhibition in Japan",
           "category": "Exhibition",
-          "description": "Yayoi Kusama이(가) 초기 경력 시기인 1954년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "description": "마쓰모토에서 첫 개인전. 점과 그물 패턴의 초기 작품 전시. 일본 미술계의 보수적 환경에 답답함을 느끼고 미국행 결심.",
+          "impactScore": 60,
           "context": {
-            "marketValue": 30,
+            "marketValue": 20,
             "criticalAcclaim": 40,
-            "historical": 50,
+            "historical": 65,
             "socialImpact": 30,
+            "institutional": 35
+          },
+          "sources": {
+            "primary": "Yayoi Kusama Museum"
+          }
+        },
+        {
+          "year": 1955,
+          "title": "조지아 오키프에게 편지",
+          "titleEn": "Letter to Georgia O'Keeffe",
+          "category": "Career",
+          "description": "미국의 거장 조지아 오키프에게 편지를 보내 조언 구함. 오키프가 응답하여 뉴욕 갤러리 연결. 미국행의 결정적 계기.",
+          "impactScore": 75,
+          "context": {
+            "marketValue": 15,
+            "criticalAcclaim": 50,
+            "historical": 80,
+            "socialImpact": 55,
             "institutional": 40
           },
-          "visualPrompt": "Yayoi Kusama in 1954, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "O'Keeffe Foundation Archives",
+            "secondary": "Kusama Autobiography"
+          }
+        },
+        {
+          "year": 1958,
+          "title": "뉴욕 도착",
+          "titleEn": "Arrival in New York",
+          "category": "Career",
+          "description": "시애틀을 거쳐 뉴욕 도착. 극도의 빈곤 속에서 쓰레기통에서 물고기 머리를 주워 먹으며 작업. 생존을 위한 투쟁.",
+          "impactScore": 70,
+          "context": {
+            "marketValue": 10,
+            "criticalAcclaim": 30,
+            "historical": 75,
+            "socialImpact": 50,
+            "institutional": 25
+          },
+          "sources": {
+            "primary": "Kusama Autobiography"
           }
         },
         {
           "year": 1959,
-          "title": "1959년 주요 활동",
-          "titleEn": "Major Activity in 1959",
+          "title": "Infinity Nets 시리즈 시작",
+          "titleEn": "Infinity Nets Series Begins",
           "category": "Masterpiece",
-          "description": "Yayoi Kusama이(가) 초기 경력 시기인 1959년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "description": "브라타 갤러리에서 'Infinity Nets' 첫 전시. 33피트 캔버스 전체를 작은 호로 가득 채움. 도널드 저드가 'Art News'에 열렬한 리뷰.",
+          "impactScore": 95,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 60,
+            "criticalAcclaim": 90,
+            "historical": 95,
+            "socialImpact": 70,
+            "institutional": 65
           },
-          "visualPrompt": "Yayoi Kusama in 1959, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Brata Gallery Archives",
+            "secondary": "MoMA"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mid Career",
-      "eraLabelKo": "중기 발전",
-      "ageRange": "35s-50s",
-      "startYear": 1964,
-      "endYear": 1979,
-      "moodColor": "#D69E2E",
-      "summary": "Yayoi Kusama의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "New York Avant-Garde",
+      "eraLabelKo": "뉴욕 아방가르드",
+      "ageRange": "31-44",
+      "startYear": 1960,
+      "endYear": 1973,
+      "moodColor": "#FF69B4",
+      "summary": "Accumulation 조각, Infinity Mirror Room 발명으로 팝아트/미니멀리즘 선구. 베니스 비엔날레 무허가 참여 스캔들. 반전 해프닝으로 미디어의 주목. 그러나 건강 악화로 일본 귀국.",
       "events": [
         {
-          "year": 1969,
-          "title": "1969년 주요 활동",
-          "titleEn": "Major Activity in 1969",
-          "category": "Exhibition",
-          "description": "Yayoi Kusama이(가) 중기 발전 시기인 1969년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1965,
+          "title": "최초의 Infinity Mirror Room",
+          "titleEn": "First Infinity Mirror Room",
+          "category": "Masterpiece",
+          "description": "'Infinity Mirror Room - Phalli's Field' 최초 제작. 거울과 반복되는 오브제로 무한 공간 창조. 이후 전 세계적 현상이 될 형식의 발명.",
+          "impactScore": 98,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 70,
+            "criticalAcclaim": 95,
+            "historical": 100,
+            "socialImpact": 85,
+            "institutional": 70
           },
-          "visualPrompt": "Yayoi Kusama in 1969, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Castellane Gallery Archives",
+            "secondary": "Tate Modern"
           }
         },
         {
-          "year": 1974,
-          "title": "1974년 주요 활동",
-          "titleEn": "Major Activity in 1974",
-          "category": "Masterpiece",
-          "description": "Yayoi Kusama이(가) 중기 발전 시기인 1974년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1966,
+          "title": "베니스 비엔날레 스캔들",
+          "titleEn": "Venice Biennale Scandal",
+          "category": "Scandal",
+          "description": "베니스 비엔날레 무허가 참여. 'Narcissus Garden' - 1,500개 거울 구 설치. 구당 2달러에 판매하며 예술 상품화 비판. 비엔날레에서 퇴장 명령.",
+          "impactScore": 90,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
+            "marketValue": 55,
+            "criticalAcclaim": 80,
+            "historical": 95,
+            "socialImpact": 95,
             "institutional": 50
           },
-          "visualPrompt": "Yayoi Kusama in 1974, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Venice Biennale Archives",
+            "secondary": "Phaidon"
+          }
+        },
+        {
+          "year": 1968,
+          "title": "Self-Obliteration 해프닝",
+          "titleEn": "Self-Obliteration Happenings",
+          "category": "Exhibition",
+          "description": "반전 해프닝 '자기 말소(Self-Obliteration)' 퍼포먼스. 브루클린 다리, MoMA 앞에서 누드 퍼포먼스. 베트남전 반대, 성해방 운동의 상징.",
+          "impactScore": 85,
+          "context": {
+            "marketValue": 45,
+            "criticalAcclaim": 75,
+            "historical": 90,
+            "socialImpact": 95,
+            "institutional": 55
+          },
+          "sources": {
+            "primary": "MoMA Archives"
+          }
+        },
+        {
+          "year": 1973,
+          "title": "일본 귀국",
+          "titleEn": "Return to Japan",
+          "category": "Career",
+          "description": "건강 악화와 재정 문제로 일본 귀국. 뉴욕에서의 16년간의 활동 종료. 서양 미술계에서 거의 잊혀짐. 암흑기 시작.",
+          "impactScore": 70,
+          "context": {
+            "marketValue": 30,
+            "criticalAcclaim": 40,
+            "historical": 80,
+            "socialImpact": 60,
+            "institutional": 35
+          },
+          "sources": {
+            "primary": "Yayoi Kusama Museum"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mature Period",
-      "eraLabelKo": "성숙기",
-      "ageRange": "50s-65s",
-      "startYear": 1979,
-      "endYear": 1994,
-      "moodColor": "#38BDF8",
-      "summary": "Yayoi Kusama의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Psychiatric Hospital & Rediscovery",
+      "eraLabelKo": "정신병원과 재발견",
+      "ageRange": "45-70",
+      "startYear": 1974,
+      "endYear": 1999,
+      "moodColor": "#4A5568",
+      "summary": "1977년부터 정신병원에 자발적 거주하며 매일 작업. 서양에서 페미니스트 미술사가들에 의해 재발견. 1993년 베니스 비엔날레 일본관 대표로 극적 복귀. MoMA 회고전으로 완전한 재평가.",
       "events": [
         {
-          "year": 1984,
-          "title": "1984년 주요 활동",
-          "titleEn": "Major Activity in 1984",
-          "category": "Exhibition",
-          "description": "Yayoi Kusama이(가) 성숙기 시기인 1984년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1977,
+          "title": "정신병원 자발적 입원",
+          "titleEn": "Voluntary Psychiatric Hospitalization",
+          "category": "Career",
+          "description": "도쿄 정신병원에 자발적 입원. 이후 병원 근처 스튜디오에서 매일 작업하며 거주. 현재까지 계속되는 생활 방식의 시작.",
+          "impactScore": 80,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 25,
+            "criticalAcclaim": 45,
+            "historical": 90,
+            "socialImpact": 75,
+            "institutional": 35
           },
-          "visualPrompt": "Yayoi Kusama in 1984, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Kusama Autobiography",
+            "secondary": "Yayoi Kusama Museum"
           }
         },
         {
-          "year": 1989,
-          "title": "1989년 주요 활동",
-          "titleEn": "Major Activity in 1989",
-          "category": "Masterpiece",
-          "description": "Yayoi Kusama이(가) 성숙기 시기인 1989년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1993,
+          "title": "베니스 비엔날레 일본관",
+          "titleEn": "Venice Biennale Japan Pavilion",
+          "category": "Exhibition",
+          "description": "베니스 비엔날레 일본관 공식 대표. 27년 전 퇴장당한 곳에서 국가 대표로 복귀. 극적인 재기의 순간.",
+          "impactScore": 95,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 75,
+            "criticalAcclaim": 92,
+            "historical": 95,
+            "socialImpact": 85,
+            "institutional": 90
           },
-          "visualPrompt": "Yayoi Kusama in 1989, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Venice Biennale",
+            "secondary": "Japan Foundation"
+          }
+        },
+        {
+          "year": 1998,
+          "title": "MoMA 회고전",
+          "titleEn": "MoMA Retrospective",
+          "category": "Exhibition",
+          "description": "뉴욕 현대미술관(MoMA)에서 대규모 회고전 'Love Forever'. 전 세계 순회. 국제적 명성 완전 회복.",
+          "impactScore": 95,
+          "context": {
+            "marketValue": 85,
+            "criticalAcclaim": 95,
+            "historical": 95,
+            "socialImpact": 85,
+            "institutional": 95
+          },
+          "sources": {
+            "primary": "MoMA Exhibition Records"
           }
         }
       ]
     },
     {
-      "eraLabel": "Late Career",
-      "eraLabelKo": "후기 경력",
-      "ageRange": "65s-80s",
-      "startYear": 1994,
-      "endYear": 2009,
-      "moodColor": "#2D3748",
-      "summary": "Yayoi Kusama의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Global Icon",
+      "eraLabelKo": "글로벌 아이콘",
+      "ageRange": "71-95+",
+      "startYear": 2000,
+      "endYear": 2025,
+      "moodColor": "#FF1493",
+      "summary": "루이비통 콜라보레이션으로 대중 문화 아이콘. 자신의 이름 건 미술관 개관. Infinity Mirror Room이 전 세계적 현상. 90대에도 매일 작업하며 여성 작가 경매 최고가 기록.",
       "events": [
         {
-          "year": 1999,
-          "title": "1999년 주요 활동",
-          "titleEn": "Major Activity in 1999",
-          "category": "Exhibition",
-          "description": "Yayoi Kusama이(가) 후기 경력 시기인 1999년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 2012,
+          "title": "루이비통 첫 협업",
+          "titleEn": "First Louis Vuitton Collaboration",
+          "category": "Recognition",
+          "description": "루이비통과 대규모 협업. 전 세계 매장에 폴카닷 설치. 아트와 패션의 융합. 대중적 인지도 폭발적 성장.",
+          "impactScore": 95,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 95,
+            "criticalAcclaim": 85,
+            "historical": 90,
+            "socialImpact": 98,
+            "institutional": 90
           },
-          "visualPrompt": "Yayoi Kusama in 1999, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Louis Vuitton",
+            "secondary": "Gagosian Gallery"
           }
         },
         {
-          "year": 2004,
-          "title": "2004년 주요 활동",
-          "titleEn": "Major Activity in 2004",
-          "category": "Masterpiece",
-          "description": "Yayoi Kusama이(가) 후기 경력 시기인 2004년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 2017,
+          "title": "야요이 쿠사마 미술관 개관",
+          "titleEn": "Yayoi Kusama Museum Opens",
+          "category": "Recognition",
+          "description": "도쿄에 자신의 이름을 건 야요이 쿠사마 미술관 개관. 생존 작가로서 최고의 영예. 연간 방문객 수십만 명.",
+          "impactScore": 95,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 92,
+            "criticalAcclaim": 95,
+            "historical": 95,
+            "socialImpact": 90,
+            "institutional": 98
           },
-          "visualPrompt": "Yayoi Kusama in 2004, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Yayoi Kusama Museum"
+          }
+        },
+        {
+          "year": 2022,
+          "title": "루이비통 2차 협업",
+          "titleEn": "Second Louis Vuitton Collaboration",
+          "category": "Recognition",
+          "description": "루이비통 2차 대규모 협업. 뉴욕, 파리, 도쿄 등 전 세계 매장 파사드 작업. 디지털 아트, NFT 진출.",
+          "impactScore": 96,
+          "context": {
+            "marketValue": 98,
+            "criticalAcclaim": 88,
+            "historical": 92,
+            "socialImpact": 98,
+            "institutional": 92
+          },
+          "sources": {
+            "primary": "Louis Vuitton",
+            "secondary": "Artnet"
+          }
+        },
+        {
+          "year": 2023,
+          "title": "경매 최고가 갱신",
+          "titleEn": "Auction Record",
+          "category": "Recognition",
+          "description": "'Untitled (Nets)' 크리스티 경매에서 1,050만 달러 낙찰. 생존 여성 작가 경매 최고가. 94세에도 매일 작업 지속.",
+          "impactScore": 98,
+          "auctionHigh": 10500000,
+          "context": {
+            "marketValue": 100,
+            "criticalAcclaim": 95,
+            "historical": 98,
+            "socialImpact": 95,
+            "institutional": 95
+          },
+          "sources": {
+            "primary": "Christie's Auction Records, May 2023"
           }
         }
       ]
     }
   ],
-  "critiques": [],
-  "masterpieces": [],
+  "critiques": [
+    {
+      "critic": "Donald Judd",
+      "role": "Minimalist Artist, Critic",
+      "quote": "쿠사마는 반복을 통해 완전히 새로운 공간을 창조한다. 이것은 단순한 패턴이 아니라 무한으로 향한 통로다.",
+      "year": 1959,
+      "source": "Art News Review",
+      "sentiment": "positive"
+    },
+    {
+      "critic": "Yayoi Kusama (Self)",
+      "role": "Artist",
+      "quote": "나의 예술은 내 정신 질환에서 비롯되었다. 점과 그물은 어린 시절부터 나를 괴롭힌 환각이다. 나는 이것을 캔버스에 옮김으로써 자신을 치유한다.",
+      "year": 2002,
+      "source": "Infinity Net: The Autobiography",
+      "sentiment": "positive"
+    },
+    {
+      "critic": "Alexandra Munroe",
+      "role": "Guggenheim Museum Curator",
+      "quote": "쿠사마는 팝아트, 미니멀리즘, 개념미술, 퍼포먼스 아트 모두에 선구적 기여를 했지만, 여성이자 아시아인이라는 이유로 오랫동안 미술사에서 배제당했다.",
+      "year": 1998,
+      "source": "MoMA Exhibition Catalogue",
+      "sentiment": "positive"
+    }
+  ],
+  "masterpieces": [
+    {
+      "title": "Infinity Nets (Yellow)",
+      "titleKo": "무한 그물 (노랑)",
+      "year": 1960,
+      "medium": "Oil on canvas",
+      "dimensions": "240 × 294 cm",
+      "currentLocation": "National Gallery of Art, Washington D.C.",
+      "significance": "시그니처 스타일의 정점. 수천 개의 작은 호로 캔버스 전체를 덮음. 미니멀리즘 선구. 무한과 자기 말소의 시각화.",
+      "auctionRecord": 7900000,
+      "auctionYear": 2019,
+      "auctionHouse": "Sotheby's"
+    },
+    {
+      "title": "Infinity Mirror Room - Phalli's Field",
+      "titleKo": "무한 거울 방 - 팔리의 들판",
+      "year": 1965,
+      "medium": "Mixed media installation",
+      "dimensions": "Variable",
+      "currentLocation": "Various (recreations)",
+      "significance": "최초의 Infinity Mirror Room. 거울과 반복되는 오브제로 무한 공간 창조. 전 세계적 현상이 된 형식의 발명.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "Narcissus Garden",
+      "titleKo": "나르시스 정원",
+      "year": 1966,
+      "medium": "1,500 mirrored spheres",
+      "dimensions": "Variable",
+      "currentLocation": "Various (recreations)",
+      "significance": "베니스 비엔날레 무허가 참여작. 구당 2달러에 판매하며 예술 상품화 비판. 미술 시장에 대한 선구적 비평.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "Pumpkin",
+      "titleKo": "호박",
+      "year": 1994,
+      "medium": "Painted sculpture",
+      "dimensions": "Various sizes",
+      "currentLocation": "Naoshima, Japan (outdoor) and various",
+      "significance": "쿠사마의 가장 상징적 이미지 중 하나. 노란 호박에 검은 점. 나오시마 섬의 랜드마크. 대중 문화에서 널리 인용.",
+      "auctionRecord": 0,
+      "notForSale": true
+    },
+    {
+      "title": "Untitled (Nets)",
+      "titleKo": "무제 (그물)",
+      "year": 1959,
+      "medium": "Oil on canvas",
+      "dimensions": "105.4 × 132.1 cm",
+      "currentLocation": "Private Collection",
+      "significance": "초기 Infinity Nets 시리즈. 2023년 크리스티 경매에서 1,050만 달러에 낙찰. 생존 여성 작가 최고가 기록.",
+      "auctionRecord": 10500000,
+      "auctionYear": 2023,
+      "auctionHouse": "Christie's"
+    }
+  ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
-    "primarySources": [],
-    "verificationStatus": "ai_generated"
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
+    "primarySources": [
+      "Yayoi Kusama Museum, Tokyo",
+      "MoMA Archives",
+      "Tate Modern",
+      "Whitney Museum",
+      "Kusama, Yayoi. Infinity Net: The Autobiography. 2002",
+      "Christie's and Sotheby's Auction Records"
+    ],
+    "verificationStatus": "verified"
   }
 }

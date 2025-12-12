@@ -1,0 +1,24 @@
+flowchart LR
+  %% Curator's Odysseia - Game Web ↔ Web App Architecture (Rendered to PNG for DOCX)
+  subgraph B["사용자 브라우저 (Chrome/Edge)"]
+    A["웹 앱 (React)\nApp.tsx"]
+    G["게임 앱 래퍼 (React)\ncuratorgame/index.tsx"]
+    E["게임 엔진 (Three.js)\ncuratorgame/init/gemini3.html"]
+    H["HandController (MediaPipe)\ncuratorgame/HandController.tsx"]
+    P["(선택) ESP32 피지컬 트윈\nWeb Serial → esp32PhysicalTwin.ts"]
+  end
+
+  A -- "iframe 로드: /curatorgame/" --> G
+  G -- "iframe 로드: ./init/gemini3.html" --> E
+
+  H -- "onInput(x, active)" --> G
+  G -- "postMessage: INPUT_UPDATE\n{ x, isActive }" --> E
+
+  E -- "postMessage: GAME_OVER\npayload=STATE" --> G
+  G -- "Gemini API 호출 → report 생성\n(archetype/match/narrative)" --> G
+  G -- "postMessage: REPORT_GENERATED\npayload=report" --> E
+  E -- "postMessage: GAME_COMPLETE\npayload=GameResult" --> G
+  G -- "postMessage forward: GAME_COMPLETE" --> A
+
+  H -. "syncShipPosition(x, active)\n(단방향)" .-> P
+

@@ -11,16 +11,69 @@
   },
   "data": [
     {
+      "age": 19,
+      "year": 1949,
+      "total": 5,
+      "institution": 2,
+      "discourse": 5,
+      "academy": 10,
+      "network": 5,
+      "context": "사우스캐롤라이나 대학 입학. 3학기 수강 후 중퇴. 뉴욕으로 이주 결심.",
+      "keyEvent": "대학 중퇴, 뉴욕 이주 결심",
+      "confidence": "high",
+      "sources": ["Whitney Museum", "MoMA Archives"]
+    },
+    {
+      "age": 22,
+      "year": 1952,
+      "total": 8,
+      "institution": 5,
+      "discourse": 8,
+      "academy": 8,
+      "network": 10,
+      "context": "뉴욕 정착. 군복무 후 다양한 직업으로 생계. 아직 예술적 방향 모색 중.",
+      "keyEvent": "뉴욕 정착",
+      "confidence": "high",
+      "sources": ["MoMA Archives"]
+    },
+    {
       "age": 24,
       "year": 1954,
-      "total": 10,
-      "institution": 5,
-      "discourse": 10,
+      "total": 15,
+      "institution": 8,
+      "discourse": 15,
       "academy": 10,
-      "network": 15,
-      "context": "뉴욕 정착, 라우센버그와 교류",
+      "network": 22,
+      "context": "로버트 라우센버그 만남 - 작업과 삶의 동반자. 이전 작품 모두 파기. 'Flag' 작업 시작. '꿈에서 미국 국기를 그리는 자신을 봤다.'",
+      "keyEvent": "라우센버그 만남, Flag 시작",
       "confidence": "high",
-      "sources": ["MoMA", "Whitney Museum"]
+      "sources": ["MoMA", "Leo Castelli Gallery"]
+    },
+    {
+      "age": 25,
+      "year": 1955,
+      "total": 22,
+      "institution": 12,
+      "discourse": 28,
+      "academy": 15,
+      "network": 30,
+      "context": "'Flag' (1954-55) 완성. 밀랍 화법(엔카우스틱)으로 성조기 제작. 숫자, 표적, 알파벳 등 '이미 알려진 것들' 주제로 작업 시작.",
+      "keyEvent": "Flag 완성",
+      "confidence": "high",
+      "sources": ["MoMA (소장)", "Whitney Museum"]
+    },
+    {
+      "age": 27,
+      "year": 1957,
+      "total": 32,
+      "institution": 22,
+      "discourse": 45,
+      "academy": 25,
+      "network": 40,
+      "context": "레오 카스텔리가 라우센버그 스튜디오 방문 중 존스의 작품 발견. 강렬한 인상. '내가 찾던 것을 발견했다.'",
+      "keyEvent": "레오 카스텔리 발견",
+      "confidence": "high",
+      "sources": ["Leo Castelli Gallery Archives"]
     },
     {
       "age": 28,
@@ -30,10 +83,36 @@
       "discourse": 70,
       "academy": 40,
       "network": 55,
-      "context": "첫 개인전 대성공",
-      "keyEvent": "Leo Castelli Gallery 데뷔",
+      "context": "레오 카스텔리 갤러리 첫 개인전 - 미술계 센세이션. MoMA가 전시에서 3점 즉시 구매. 알프레드 바어: '우리 시대 가장 흥미로운 젊은 화가.' 추상표현주의 이후 새로운 방향 제시.",
+      "keyEvent": "Leo Castelli 데뷔 - MoMA 3점 구매",
       "confidence": "high",
       "sources": ["MoMA", "Leo Castelli Gallery"]
+    },
+    {
+      "age": 29,
+      "year": 1959,
+      "total": 62,
+      "institution": 55,
+      "discourse": 75,
+      "academy": 48,
+      "network": 62,
+      "context": "'Target with Four Faces' MoMA 구매. 뉴스위크 표지 등장. 28세에 이미 미국 미술계의 핵심 인물로 부상.",
+      "keyEvent": "Target with Four Faces - MoMA",
+      "confidence": "high",
+      "sources": ["MoMA", "Newsweek"]
+    },
+    {
+      "age": 30,
+      "year": 1960,
+      "total": 68,
+      "institution": 62,
+      "discourse": 78,
+      "academy": 55,
+      "network": 68,
+      "context": "'0 through 9' 시리즈. 숫자를 겹쳐 그린 복잡한 구성. 팝아트 등장과 함께 네오-다다의 선구자로 재평가.",
+      "keyEvent": "0 through 9 시리즈",
+      "confidence": "high",
+      "sources": ["MoMA", "Whitney Museum"]
     },
     {
       "age": 34,
@@ -43,10 +122,36 @@
       "discourse": 82,
       "academy": 65,
       "network": 78,
-      "context": "베니스 비엔날레 대상",
-      "keyEvent": "Venice Biennale Grand Prize",
+      "context": "베니스 비엔날레 대상 수상 - 라우센버그와 함께 미국 현대미술의 국제적 승리. 34세에 세계 최고 권위의 미술상 수상.",
+      "keyEvent": "Venice Biennale 대상",
       "confidence": "high",
-      "sources": ["Venice Biennale"]
+      "sources": ["Venice Biennale Archives"]
+    },
+    {
+      "age": 37,
+      "year": 1967,
+      "total": 78,
+      "institution": 75,
+      "discourse": 85,
+      "academy": 72,
+      "network": 80,
+      "context": "'Harlem Light' 등 더 복잡하고 어두운 작업으로 전환. 라우센버그와의 관계 종료. 작업에서 보다 내성적인 방향 탐구.",
+      "keyEvent": "작업 방향 전환",
+      "confidence": "high",
+      "sources": ["Whitney Museum", "MoMA"]
+    },
+    {
+      "age": 43,
+      "year": 1973,
+      "total": 82,
+      "institution": 80,
+      "discourse": 88,
+      "academy": 78,
+      "network": 82,
+      "context": "'Crosshatch' 패턴 시리즈 시작. 유대인 박물관 첫 회고전. 60년대 이후 새로운 시각 언어 탐구.",
+      "keyEvent": "Crosshatch 시리즈, 첫 회고전",
+      "confidence": "high",
+      "sources": ["Jewish Museum", "MoMA"]
     },
     {
       "age": 47,
@@ -56,10 +161,23 @@
       "discourse": 88,
       "academy": 82,
       "network": 85,
-      "context": "휘트니 미술관 회고전",
-      "keyEvent": "Whitney Museum 회고전",
+      "context": "휘트니 미술관 대회고전 - 미국 현대미술의 살아있는 거장으로 공식 인정. 샌프란시스코, 쾰른, 파리, 런던, 도쿄 순회.",
+      "keyEvent": "Whitney Museum 대회고전",
       "confidence": "high",
       "sources": ["Whitney Museum"]
+    },
+    {
+      "age": 52,
+      "year": 1982,
+      "total": 86,
+      "institution": 86,
+      "discourse": 88,
+      "academy": 84,
+      "network": 86,
+      "context": "'In the Studio' 시리즈 - 작업실 내부와 이전 작품들을 인용한 자기반영적 작업. 성숙기의 복잡하고 다층적인 회화.",
+      "keyEvent": "In the Studio 시리즈",
+      "confidence": "high",
+      "sources": ["MoMA", "Leo Castelli Gallery"]
     },
     {
       "age": 58,
@@ -69,10 +187,36 @@
       "discourse": 92,
       "academy": 90,
       "network": 88,
-      "context": "베니스 비엔날레 황금사자상",
-      "keyEvent": "Golden Lion Award",
+      "context": "베니스 비엔날레 황금사자상 수상. 24년 만에 두 번째 베니스 최고상. 미술사적 위상 재확인.",
+      "keyEvent": "Venice Biennale 황금사자상",
       "confidence": "high",
       "sources": ["Venice Biennale"]
+    },
+    {
+      "age": 60,
+      "year": 1990,
+      "total": 91,
+      "institution": 92,
+      "discourse": 92,
+      "academy": 90,
+      "network": 89,
+      "context": "국가예술훈장(National Medal of Arts) 수상. 미국 정부가 수여하는 최고 예술 영예.",
+      "keyEvent": "National Medal of Arts",
+      "confidence": "high",
+      "sources": ["National Endowment for the Arts"]
+    },
+    {
+      "age": 66,
+      "year": 1996,
+      "total": 93,
+      "institution": 94,
+      "discourse": 94,
+      "academy": 92,
+      "network": 90,
+      "context": "MoMA 대회고전 - 40년 경력 총망라. '20세기 후반 가장 중요한 미국 작가' 평가. 쾰른 루트비히 미술관 순회.",
+      "keyEvent": "MoMA 대회고전",
+      "confidence": "high",
+      "sources": ["MoMA", "Museum Ludwig"]
     },
     {
       "age": 76,
@@ -82,7 +226,7 @@
       "discourse": 96,
       "academy": 95,
       "network": 92,
-      "context": "대통령 자유 훈장",
+      "context": "대통령 자유 훈장(Presidential Medal of Freedom) 수상. 미국 시민에게 주어지는 최고 영예. 76세의 살아있는 전설.",
       "keyEvent": "Presidential Medal of Freedom",
       "confidence": "high",
       "sources": ["White House Archives"]
@@ -95,10 +239,49 @@
       "discourse": 97,
       "academy": 97,
       "network": 95,
-      "context": "Flag 경매 최고가",
-      "keyEvent": "Flag $110M (비공개 매매)",
+      "context": "'Flag' (1958) 비공개 매매로 약 $110,000,000에 거래 추정. 역사상 가장 비싼 생존 미국 작가 작품. 미술시장의 정점.",
+      "keyEvent": "Flag $110M 추정 (비공개)",
       "confidence": "medium",
       "sources": ["Bloomberg", "The New York Times"]
+    },
+    {
+      "age": 84,
+      "year": 2014,
+      "total": 97,
+      "institution": 98,
+      "discourse": 97,
+      "academy": 97,
+      "network": 94,
+      "context": "휘트니 미술관에서 두 번째 대회고전 '레그레시언 시리즈' (2007-2012) 발표. 84세에도 새로운 작품 발표하는 현역.",
+      "keyEvent": "Whitney 두 번째 대회고전",
+      "confidence": "high",
+      "sources": ["Whitney Museum"]
+    },
+    {
+      "age": 87,
+      "year": 2017,
+      "total": 97,
+      "institution": 98,
+      "discourse": 97,
+      "academy": 97,
+      "network": 93,
+      "context": "로열 아카데미에서 대규모 회고전. 영국에서의 첫 대규모 전시. 87세 현역 활동 지속.",
+      "keyEvent": "Royal Academy 회고전",
+      "confidence": "high",
+      "sources": ["Royal Academy of Arts"]
+    },
+    {
+      "age": 91,
+      "year": 2021,
+      "total": 98,
+      "institution": 98,
+      "discourse": 97,
+      "academy": 97,
+      "network": 95,
+      "context": "필라델피아 미술관과 휘트니 공동 회고전 'Mind/Mirror' - 두 미술관에서 동시 개최. 70년 경력 총망라. '미국 미술의 살아있는 국보.'",
+      "keyEvent": "Mind/Mirror 대회고전",
+      "confidence": "high",
+      "sources": ["Philadelphia Museum of Art", "Whitney Museum"]
     },
     {
       "age": 94,
@@ -108,21 +291,22 @@
       "discourse": 98,
       "academy": 98,
       "network": 95,
-      "context": "현존 최고령 거장",
+      "context": "94세 현존 최고령 거장. 70년간 일관된 탐구 - 깃발, 표적, 숫자, 지도. '그리기란 무엇인가'에 대한 평생의 질문. 미국 미술의 살아있는 역사.",
+      "keyEvent": "94세 현역 - 살아있는 전설",
       "confidence": "high",
-      "sources": ["Whitney Museum"]
+      "sources": ["Whitney Museum", "MoMA"]
     }
   ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
     "primarySources": [
       "Whitney Museum of American Art",
       "MoMA Archives",
-      "Venice Biennale",
-      "Leo Castelli Gallery"
+      "Venice Biennale Archives",
+      "Leo Castelli Gallery",
+      "Royal Academy of Arts"
     ],
     "verificationStatus": "verified"
   }
 }
-

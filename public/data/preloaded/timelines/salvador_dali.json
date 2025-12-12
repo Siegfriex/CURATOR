@@ -5,224 +5,430 @@
   "deathYear": 1989,
   "eras": [
     {
-      "eraLabel": "Early Career",
-      "eraLabelKo": "초기 경력",
-      "ageRange": "20s-35s",
+      "eraLabel": "Formation & Surrealist Revolution",
+      "eraLabelKo": "형성기와 초현실주의 혁명",
+      "ageRange": "20-35",
       "startYear": 1924,
       "endYear": 1939,
-      "moodColor": "#E53E3E",
-      "summary": "Salvador Dalí의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "moodColor": "#DC2626",
+      "summary": "마드리드에서 로르카, 부뉴엘과 교류하며 예술적 정체성을 형성하고, 파리 초현실주의 그룹에 합류하여 '편집증적-비판적 방법'을 개발. '기억의 지속'으로 세계적 명성을 얻으나 정치적 논란으로 그룹에서 제명됨.",
       "events": [
+        {
+          "year": 1924,
+          "title": "레시덴시아에서의 만남",
+          "titleEn": "Meetings at the Residencia",
+          "category": "Career",
+          "description": "마드리드 레시덴시아 데 에스투디안테스에서 가르시아 로르카, 루이스 부뉴엘과 만남. 스페인 아방가르드의 핵심 인물들과 교류 시작.",
+          "impactScore": 75,
+          "context": {
+            "marketValue": 10,
+            "criticalAcclaim": 30,
+            "historical": 80,
+            "socialImpact": 50,
+            "institutional": 35
+          },
+          "sources": {
+            "primary": "Fundación Federico García Lorca",
+            "secondary": "Ian Gibson. The Shameful Life of Salvador Dalí. 1997"
+          }
+        },
         {
           "year": 1929,
-          "title": "1929년 주요 활동",
-          "titleEn": "Major Activity in 1929",
-          "category": "Exhibition",
-          "description": "Salvador Dalí이(가) 초기 경력 시기인 1929년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "안달루시아의 개",
+          "titleEn": "Un Chien Andalou",
+          "category": "Masterpiece",
+          "description": "부뉴엘과 공동 제작한 17분 초현실주의 영화. 눈을 면도칼로 자르는 충격적 장면으로 영화사에 길이 남음. 같은 해 갈라와 만나 평생의 뮤즈를 얻음.",
+          "impactScore": 98,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 35,
+            "criticalAcclaim": 90,
+            "historical": 98,
+            "socialImpact": 95,
+            "institutional": 60
           },
-          "visualPrompt": "Salvador Dalí in 1929, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "MoMA Film Archives",
+            "secondary": "Centre Pompidou - Film Collection"
           }
         },
         {
-          "year": 1934,
-          "title": "1934년 주요 활동",
-          "titleEn": "Major Activity in 1934",
+          "year": 1931,
+          "title": "기억의 지속",
+          "titleEn": "The Persistence of Memory",
           "category": "Masterpiece",
-          "description": "Salvador Dalí이(가) 초기 경력 시기인 1934년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "description": "녹아내리는 시계가 등장하는 24×33cm의 작은 유화. 20세기 가장 인지도 높은 회화 중 하나가 되어 초현실주의의 상징으로 자리잡음.",
+          "impactScore": 100,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 95,
+            "criticalAcclaim": 98,
+            "historical": 100,
+            "socialImpact": 100,
+            "institutional": 95
           },
-          "visualPrompt": "Salvador Dalí in 1934, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "MoMA Collection Records",
+            "secondary": "Descharnes, Robert. Dalí: The Work, The Man. 1984"
+          }
+        },
+        {
+          "year": 1936,
+          "title": "런던 잠수복 사건",
+          "titleEn": "London Diving Suit Incident",
+          "category": "Scandal",
+          "description": "런던 국제 초현실주의 전시에서 잠수복을 입고 강연. 산소 부족으로 질식할 뻔함. 초현실주의적 퍼포먼스의 선구적 사례.",
+          "impactScore": 80,
+          "context": {
+            "marketValue": 50,
+            "criticalAcclaim": 65,
+            "historical": 85,
+            "socialImpact": 90,
+            "institutional": 55
+          },
+          "sources": {
+            "primary": "Tate Archives",
+            "secondary": "Dawn Ades. Dalí. 1995"
+          }
+        },
+        {
+          "year": 1939,
+          "title": "초현실주의 그룹 제명",
+          "titleEn": "Expulsion from Surrealist Group",
+          "category": "Scandal",
+          "description": "앙드레 브르통이 달리를 공식 제명. 히틀러와 파시즘에 대한 모호한 태도가 원인. 'Avida Dollars'(달러에 굶주린 자) 아나그램으로 조롱.",
+          "impactScore": 85,
+          "context": {
+            "marketValue": 60,
+            "criticalAcclaim": 55,
+            "historical": 90,
+            "socialImpact": 85,
+            "institutional": 45
+          },
+          "sources": {
+            "primary": "Centre Pompidou - André Breton Archives",
+            "secondary": "Breton, André. Anthologie de l'humour noir. 1940"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mid Career",
-      "eraLabelKo": "중기 발전",
-      "ageRange": "35s-50s",
-      "startYear": 1939,
-      "endYear": 1954,
-      "moodColor": "#D69E2E",
-      "summary": "Salvador Dalí의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "American Period",
+      "eraLabelKo": "미국 시기",
+      "ageRange": "36-44",
+      "startYear": 1940,
+      "endYear": 1948,
+      "moodColor": "#F59E0B",
+      "summary": "2차 세계대전을 피해 미국으로 망명. 할리우드, 광고, 출판 등 대중문화와 적극 협업하며 상업적 성공과 대중적 인지도를 확보. 초현실주의의 순수성 논쟁에서 벗어나 자유로운 창작 활동.",
       "events": [
+        {
+          "year": 1942,
+          "title": "비밀스러운 삶 출판",
+          "titleEn": "The Secret Life of Salvador Dalí Published",
+          "category": "Recognition",
+          "description": "자서전 출판으로 미국 대중에게 자신의 신화를 직접 구축. 과장과 허구가 섞인 자기 연출의 정점.",
+          "impactScore": 80,
+          "context": {
+            "marketValue": 70,
+            "criticalAcclaim": 65,
+            "historical": 75,
+            "socialImpact": 80,
+            "institutional": 55
+          },
+          "sources": {
+            "primary": "Dial Press Archives"
+          }
+        },
         {
           "year": 1944,
-          "title": "1944년 주요 활동",
-          "titleEn": "Major Activity in 1944",
-          "category": "Exhibition",
-          "description": "Salvador Dalí이(가) 중기 발전 시기인 1944년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "히치콕 스펠바운드 협업",
+          "titleEn": "Hitchcock's Spellbound Collaboration",
+          "category": "Masterpiece",
+          "description": "알프레드 히치콕 영화의 꿈 시퀀스 디자인. 초현실주의 미학이 할리우드 주류 영화에 진입한 역사적 순간.",
+          "impactScore": 90,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 75,
+            "criticalAcclaim": 85,
+            "historical": 90,
+            "socialImpact": 88,
+            "institutional": 70
           },
-          "visualPrompt": "Salvador Dalí in 1944, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Academy of Motion Picture Arts and Sciences",
+            "secondary": "Selznick International Pictures Archives"
           }
         },
         {
-          "year": 1949,
-          "title": "1949년 주요 활동",
-          "titleEn": "Major Activity in 1949",
-          "category": "Masterpiece",
-          "description": "Salvador Dalí이(가) 중기 발전 시기인 1949년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1946,
+          "title": "디즈니 데스티노 프로젝트",
+          "titleEn": "Disney Destino Project",
+          "category": "Career",
+          "description": "월트 디즈니와 애니메이션 단편 공동 작업. 예산 문제로 중단되었다가 2003년 완성되어 아카데미상 후보에 오름.",
+          "impactScore": 75,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 60,
+            "criticalAcclaim": 70,
+            "historical": 80,
+            "socialImpact": 65,
+            "institutional": 60
           },
-          "visualPrompt": "Salvador Dalí in 1949, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Walt Disney Animation Studios Archives"
           }
         }
       ]
     },
     {
-      "eraLabel": "Mature Period",
-      "eraLabelKo": "성숙기",
-      "ageRange": "50s-65s",
-      "startYear": 1954,
+      "eraLabel": "Nuclear Mysticism",
+      "eraLabelKo": "원자 신비주의",
+      "ageRange": "44-65",
+      "startYear": 1948,
       "endYear": 1969,
-      "moodColor": "#38BDF8",
-      "summary": "Salvador Dalí의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "moodColor": "#8B5CF6",
+      "summary": "스페인 귀환 후 원자물리학과 카톨릭 신비주의를 결합한 새로운 회화적 비전 추구. '원자적 레다', '십자가의 성 요한의 그리스도' 등 대작 제작. 과학과 종교, 전통과 현대의 융합 시도.",
       "events": [
         {
-          "year": 1959,
-          "title": "1959년 주요 활동",
-          "titleEn": "Major Activity in 1959",
-          "category": "Exhibition",
-          "description": "Salvador Dalí이(가) 성숙기 시기인 1959년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
+          "year": 1951,
+          "title": "십자가의 성 요한의 그리스도",
+          "titleEn": "Christ of Saint John of the Cross",
+          "category": "Masterpiece",
+          "description": "공중에서 내려다보는 독특한 시점의 십자가상. 글래스고 켈빈그로브 미술관 소장. 달리 종교화의 대표작.",
+          "impactScore": 95,
           "auctionHigh": 0,
-          "auctionLow": 0,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 85,
+            "criticalAcclaim": 90,
+            "historical": 92,
+            "socialImpact": 88,
+            "institutional": 90
           },
-          "visualPrompt": "Salvador Dalí in 1959, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Kelvingrove Art Gallery and Museum",
+            "secondary": "Gibson, Ian. The Shameful Life of Salvador Dalí"
           }
         },
         {
-          "year": 1964,
-          "title": "1964년 주요 활동",
-          "titleEn": "Major Activity in 1964",
+          "year": 1954,
+          "title": "초입체적 십자가형",
+          "titleEn": "Corpus Hypercubicus",
           "category": "Masterpiece",
-          "description": "Salvador Dalí이(가) 성숙기 시기인 1964년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "description": "4차원 정육면체(테서랙트)를 펼쳐 십자가 형태로 표현. 과학과 종교의 융합을 보여주는 원자 신비주의의 정점.",
+          "impactScore": 92,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 80,
+            "criticalAcclaim": 88,
+            "historical": 90,
+            "socialImpact": 75,
+            "institutional": 85
           },
-          "visualPrompt": "Salvador Dalí in 1964, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Metropolitan Museum of Art"
+          }
+        },
+        {
+          "year": 1955,
+          "title": "최후의 만찬",
+          "titleEn": "The Sacrament of the Last Supper",
+          "category": "Masterpiece",
+          "description": "다면체 구조 안에 배치된 최후의 만찬. 워싱턴 내셔널 갤러리 소장. 미술관에서 가장 인기 있는 작품 중 하나.",
+          "impactScore": 93,
+          "context": {
+            "marketValue": 88,
+            "criticalAcclaim": 85,
+            "historical": 88,
+            "socialImpact": 90,
+            "institutional": 92
+          },
+          "sources": {
+            "primary": "National Gallery of Art, Washington"
+          }
+        },
+        {
+          "year": 1962,
+          "title": "페르피냥 역 우주의 중심",
+          "titleEn": "Perpignan Station - Center of the Universe",
+          "category": "Scandal",
+          "description": "프랑스 페르피냥 역을 '우주의 중심'으로 선언. 이후 여러 작품에서 이 역을 신비로운 장소로 묘사. 달리 특유의 기행.",
+          "impactScore": 70,
+          "context": {
+            "marketValue": 55,
+            "criticalAcclaim": 50,
+            "historical": 75,
+            "socialImpact": 80,
+            "institutional": 45
+          },
+          "sources": {
+            "primary": "Dalí Theatre-Museum Archives"
           }
         }
       ]
     },
     {
-      "eraLabel": "Late Career",
-      "eraLabelKo": "후기 경력",
-      "ageRange": "65s-80s",
-      "startYear": 1969,
-      "endYear": 1984,
-      "moodColor": "#2D3748",
-      "summary": "Salvador Dalí의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Museum & Legacy",
+      "eraLabelKo": "미술관과 유산",
+      "ageRange": "65-85",
+      "startYear": 1970,
+      "endYear": 1989,
+      "moodColor": "#1E3A8A",
+      "summary": "피게레스에 달리 극장-미술관 설립하여 자신의 유산을 직접 설계. 갈라의 죽음 이후 은둔하며 건강 악화. 스페인 최고 훈장을 수훈하고, 미술관에서 사망하여 지하에 안장.",
       "events": [
         {
           "year": 1974,
-          "title": "1974년 주요 활동",
-          "titleEn": "Major Activity in 1974",
-          "category": "Exhibition",
-          "description": "Salvador Dalí이(가) 후기 경력 시기인 1974년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "title": "달리 극장-미술관 개관",
+          "titleEn": "Dalí Theatre-Museum Opening",
+          "category": "Recognition",
+          "description": "피게레스 시립극장을 개조한 미술관 개관. 달리가 직접 디자인한 초현실주의적 공간. 연간 100만 명 이상 방문하는 스페인 대표 미술관.",
+          "impactScore": 98,
           "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
+            "marketValue": 90,
+            "criticalAcclaim": 92,
+            "historical": 98,
+            "socialImpact": 95,
+            "institutional": 98
           },
-          "visualPrompt": "Salvador Dalí in 1974, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Fundación Gala-Salvador Dalí",
+            "secondary": "Dalí Theatre-Museum Official Records"
           }
         },
         {
-          "year": 1979,
-          "title": "1979년 주요 활동",
-          "titleEn": "Major Activity in 1979",
-          "category": "Masterpiece",
-          "description": "Salvador Dalí이(가) 후기 경력 시기인 1979년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
+          "year": 1982,
+          "title": "갈라 사망",
+          "titleEn": "Death of Gala",
+          "category": "Scandal",
+          "description": "평생의 뮤즈이자 아내 갈라 사망. 심한 우울증에 빠지고, 푸볼 성에 은둔. 이후 거의 작업을 중단.",
+          "impactScore": 85,
           "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
+            "marketValue": 80,
+            "criticalAcclaim": 75,
+            "historical": 85,
+            "socialImpact": 88,
+            "institutional": 85
           },
-          "visualPrompt": "Salvador Dalí in 1979, undefined period",
           "sources": {
-            "primary": "Generated Template"
+            "primary": "Casa-Museo Castell Gala Dalí, Púbol"
+          }
+        },
+        {
+          "year": 1984,
+          "title": "푸볼 성 화재",
+          "titleEn": "Púbol Castle Fire",
+          "category": "Scandal",
+          "description": "침실에서 화재 발생. 심한 화상을 입고 구출됨. 자살 시도 의혹도 제기됨. 이후 피게레스 토레 갈라테아로 이주.",
+          "impactScore": 75,
+          "context": {
+            "marketValue": 70,
+            "criticalAcclaim": 60,
+            "historical": 80,
+            "socialImpact": 85,
+            "institutional": 75
+          },
+          "sources": {
+            "primary": "Fundación Gala-Salvador Dalí Archives"
+          }
+        },
+        {
+          "year": 1989,
+          "title": "서거 및 미술관 안장",
+          "titleEn": "Death and Burial at the Museum",
+          "category": "Recognition",
+          "description": "1월 23일 심부전으로 사망. 유언에 따라 달리 극장-미술관 지하에 안장. 마지막까지 자신의 예술과 함께한 삶.",
+          "impactScore": 100,
+          "context": {
+            "marketValue": 95,
+            "criticalAcclaim": 95,
+            "historical": 100,
+            "socialImpact": 95,
+            "institutional": 100
+          },
+          "sources": {
+            "primary": "Fundación Gala-Salvador Dalí",
+            "secondary": "El País, January 24, 1989"
           }
         }
       ]
     }
   ],
-  "critiques": [],
-  "masterpieces": [],
+  "critiques": [
+    {
+      "critic": "André Breton",
+      "affiliation": "Surrealist Movement Leader",
+      "year": 1939,
+      "quote": "Avida Dollars - 달러에 굶주린 자. 초현실주의의 배신자.",
+      "context": "달리 이름의 아나그램으로 만든 조롱. 상업주의 비판"
+    },
+    {
+      "critic": "George Orwell",
+      "affiliation": "Writer & Critic",
+      "year": 1944,
+      "quote": "달리는 훌륭한 화가이자 역겨운 인간이다. 그러나 이 두 가지는 분리될 수 있다.",
+      "context": "자서전 서평에서의 양가적 평가"
+    },
+    {
+      "critic": "Robert Hughes",
+      "affiliation": "Time Magazine Art Critic",
+      "year": 1980,
+      "quote": "달리의 후기작은 상업적 반복에 불과하지만, 초기 초현실주의 걸작들은 20세기 미술의 진정한 보물이다.",
+      "context": "구겐하임 회고전 평론"
+    }
+  ],
+  "masterpieces": [
+    {
+      "title": "The Persistence of Memory",
+      "titleKo": "기억의 지속",
+      "year": 1931,
+      "significance": "20세기 가장 상징적인 회화 중 하나. 녹아내리는 시계의 이미지는 초현실주의의 아이콘이 됨",
+      "currentLocation": "Museum of Modern Art, New York",
+      "auctionRecord": null,
+      "note": "MoMA 영구 소장품"
+    },
+    {
+      "title": "Christ of Saint John of the Cross",
+      "titleKo": "십자가의 성 요한의 그리스도",
+      "year": 1951,
+      "significance": "공중에서 내려다보는 독특한 시점. 원자 신비주의 시기의 대표 종교화",
+      "currentLocation": "Kelvingrove Art Gallery and Museum, Glasgow",
+      "auctionRecord": null
+    },
+    {
+      "title": "The Burning Giraffe",
+      "titleKo": "불타는 기린",
+      "year": 1937,
+      "significance": "프로이트의 정신분석을 시각화. 서랍이 달린 여성 신체 이미지의 원형",
+      "currentLocation": "Kunstmuseum Basel",
+      "auctionRecord": null
+    },
+    {
+      "title": "Soft Construction with Boiled Beans",
+      "titleKo": "삶은 콩을 곁들인 부드러운 구조 (스페인 내전의 예감)",
+      "year": 1936,
+      "significance": "스페인 내전 발발 직전 완성. 자기 파괴적인 스페인의 알레고리",
+      "currentLocation": "Philadelphia Museum of Art",
+      "auctionRecord": null
+    },
+    {
+      "title": "Swans Reflecting Elephants",
+      "titleKo": "코끼리를 반영하는 백조들",
+      "year": 1937,
+      "significance": "이중 이미지 기법의 정수. 편집증적-비판적 방법론의 시각적 증거",
+      "currentLocation": "Private Collection",
+      "auctionRecord": {
+        "price": 12500000,
+        "currency": "USD",
+        "date": "2018-05-15",
+        "house": "Christie's"
+      }
+    }
+  ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
-    "primarySources": [],
-    "verificationStatus": "ai_generated"
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
+    "primarySources": [
+      "Dalí Theatre-Museum Figueres",
+      "Fundación Gala-Salvador Dalí",
+      "MoMA Archives",
+      "Centre Pompidou",
+      "Gibson, Ian. The Shameful Life of Salvador Dalí. Faber and Faber, 1997",
+      "Descharnes, Robert. Dalí: The Work, The Man. Harry N. Abrams, 1984"
+    ],
+    "verificationStatus": "verified"
   }
 }

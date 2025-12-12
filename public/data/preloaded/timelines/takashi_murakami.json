@@ -2,226 +2,329 @@
   "artistId": "23",
   "artistName": "Takashi Murakami",
   "birthYear": 1962,
+  "deathYear": null,
   "eras": [
     {
-      "eraLabel": "Early Career",
-      "eraLabelKo": "초기 경력",
-      "ageRange": "20s-30s",
-      "startYear": 1982,
-      "endYear": 1992,
-      "moodColor": "#E53E3E",
-      "summary": "Takashi Murakami의 초기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Nihonga to Otaku",
+      "eraLabelKo": "니혼가에서 오타쿠로",
+      "ageRange": "24-35",
+      "startYear": 1986,
+      "endYear": 1997,
+      "moodColor": "#FF6B9D",
+      "summary": "전통 일본화 수련에서 오타쿠 문화의 예술화로 전환. 도쿄예술대학에서 니혼가 박사학위를 취득한 유일한 작가로서, 전통의 깊은 이해를 바탕으로 일본 서브컬처를 순수미술의 영역으로 끌어올렸다. Mr. DOB 캐릭터 창조와 히로폰 팩토리 설립으로 독자적 예술 세계의 기반을 구축했다.",
       "events": [
         {
-          "year": 1985,
-          "title": "1985년 주요 활동",
-          "titleEn": "Major Activity in 1985",
-          "category": "Exhibition",
-          "description": "Takashi Murakami이(가) 초기 경력 시기인 1985년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
-          },
-          "visualPrompt": "Takashi Murakami in 1985, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "year": 1986,
+          "age": 24,
+          "title": "도쿄예술대학 일본화과 입학",
+          "titleKo": "도쿄예술대학 일본화과 입학",
+          "category": "Career",
+          "significance": "high",
+          "description": "애니메이션 작가 지망에서 순수미술로 진로 변경. 전통 니혼가 기법의 체계적 훈련 시작."
         },
         {
-          "year": 1988,
-          "title": "1988년 주요 활동",
-          "titleEn": "Major Activity in 1988",
-          "category": "Masterpiece",
-          "description": "Takashi Murakami이(가) 초기 경력 시기인 1988년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
-          },
-          "visualPrompt": "Takashi Murakami in 1988, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "year": 1993,
+          "age": 31,
+          "title": "니혼가 전공 최초 박사학위",
+          "titleKo": "니혼가 전공 최초 박사학위 취득",
+          "category": "Career",
+          "significance": "high",
+          "description": "도쿄예술대학 일본화과 첫 박사. 에도 시대 그림 두루마리 연구로 전통과 현대의 연결고리 발견."
+        },
+        {
+          "year": 1994,
+          "age": 32,
+          "title": "뉴욕 레지던시",
+          "titleKo": "뉴욕 레지던시 - 워홀과 쿤스 연구",
+          "category": "Career",
+          "significance": "medium",
+          "description": "아시안 컬처럴 카운슬 펠로우십으로 뉴욕 체류. 하이/로우 문화 통합 전략 구상."
+        },
+        {
+          "year": 1996,
+          "age": 34,
+          "title": "히로폰 팩토리 설립",
+          "titleKo": "히로폰 팩토리 & Mr. DOB 탄생",
+          "category": "Career",
+          "significance": "high",
+          "description": "워홀의 팩토리를 모델로 한 제작 스튜디오. 시그니처 캐릭터 Mr. DOB 탄생."
         }
       ]
     },
     {
-      "eraLabel": "Mid Career",
-      "eraLabelKo": "중기 발전",
-      "ageRange": "30s-40s",
-      "startYear": 1992,
-      "endYear": 2002,
-      "moodColor": "#D69E2E",
-      "summary": "Takashi Murakami의 중기 발전 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Superflat Manifesto",
+      "eraLabelKo": "슈퍼플랫 선언",
+      "ageRange": "36-44",
+      "startYear": 1998,
+      "endYear": 2006,
+      "moodColor": "#00BFFF",
+      "summary": "일본 미학의 본질을 '슈퍼플랫'으로 이론화하고 세계 미술계에 선언. 전통 회화, 애니메이션, 만화를 관통하는 2차원적 평면성을 일본 문화의 핵심으로 규정했다. 루이비통과의 협업으로 명품 패션과 현대미술의 경계를 허물고, 오타쿠 문화를 미술사적 맥락에서 정당화했다.",
       "events": [
-        {
-          "year": 1995,
-          "title": "1995년 주요 활동",
-          "titleEn": "Major Activity in 1995",
-          "category": "Exhibition",
-          "description": "Takashi Murakami이(가) 중기 발전 시기인 1995년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
-          },
-          "visualPrompt": "Takashi Murakami in 1995, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
-        },
         {
           "year": 1998,
-          "title": "1998년 주요 활동",
-          "titleEn": "Major Activity in 1998",
+          "age": 36,
+          "title": "Hiropon 조각 발표",
+          "titleKo": "히로폰 조각 - 오타쿠 판타지의 물질화",
           "category": "Masterpiece",
-          "description": "Takashi Murakami이(가) 중기 발전 시기인 1998년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
-          },
-          "visualPrompt": "Takashi Murakami in 1998, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "significance": "high",
+          "description": "애니메이션 스타일 여성 피규어 조각. 오타쿠 성적 판타지를 미술관급 조각으로 구현해 논쟁 촉발."
+        },
+        {
+          "year": 2000,
+          "age": 38,
+          "title": "Superflat 선언",
+          "titleKo": "슈퍼플랫 선언 - 일본 미학 이론화",
+          "category": "Career",
+          "significance": "high",
+          "description": "LA 현대미술관에서 'Superflat' 전시와 함께 선언문 발표. 일본 미술의 평면성을 이론화."
+        },
+        {
+          "year": 2003,
+          "age": 41,
+          "title": "Louis Vuitton 협업",
+          "titleKo": "루이비통 협업 - 예술과 상업의 융합",
+          "category": "Career",
+          "significance": "high",
+          "description": "마크 제이콥스와 모노그램 멀티컬러 라인 디자인. 명품과 현대미술의 크로스오버 성공."
+        },
+        {
+          "year": 2005,
+          "age": 43,
+          "title": "Little Boy 전시 큐레이팅",
+          "titleKo": "Little Boy - 오타쿠 문화의 미술사적 정당화",
+          "category": "Exhibition",
+          "significance": "medium",
+          "description": "뉴욕 재팬소사이어티에서 오타쿠 문화 전시 큐레이팅. 비평가로서의 역할 확대."
         }
       ]
     },
     {
-      "eraLabel": "Mature Period",
-      "eraLabelKo": "성숙기",
-      "ageRange": "40s-50s",
-      "startYear": 2002,
-      "endYear": 2012,
-      "moodColor": "#38BDF8",
-      "summary": "Takashi Murakami의 성숙기 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Global Pop Icon",
+      "eraLabelKo": "글로벌 팝 아이콘",
+      "ageRange": "45-54",
+      "startYear": 2007,
+      "endYear": 2016,
+      "moodColor": "#FFD700",
+      "summary": "LA 현대미술관 대회고전으로 미술사적 위상을 확립하고, 베르사유 궁전 전시로 유럽을 정복했다. 경매에서 $15.2M 기록을 세우며 일본 현대미술가 최고가를 달성. 미술관 전시장 안에 상점을 설치하는 파격으로 예술과 상업의 관계에 근본적 질문을 던졌다.",
       "events": [
         {
-          "year": 2005,
-          "title": "2005년 주요 활동",
-          "titleEn": "Major Activity in 2005",
+          "year": 2007,
+          "age": 45,
+          "title": "© MURAKAMI 대회고전",
+          "titleKo": "© MURAKAMI - 논쟁의 회고전",
           "category": "Exhibition",
-          "description": "Takashi Murakami이(가) 성숙기 시기인 2005년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
-          },
-          "visualPrompt": "Takashi Murakami in 2005, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "significance": "high",
+          "description": "LA 현대미술관에서 루이비통 팝업 스토어를 전시장 안에 설치. 미술계 격렬한 논쟁."
         },
         {
           "year": 2008,
-          "title": "2008년 주요 활동",
-          "titleEn": "Major Activity in 2008",
+          "age": 46,
+          "title": "My Lonesome Cowboy $15.2M",
+          "titleKo": "마이 론섬 카우보이 $15.2M - 일본 작가 최고가",
+          "category": "Recognition",
+          "significance": "high",
+          "description": "소더비 뉴욕에서 오타쿠 조각이 $15,161,000에 낙찰. 일본 현대미술가 경매 기록."
+        },
+        {
+          "year": 2010,
+          "age": 48,
+          "title": "베르사유 궁전 전시",
+          "titleKo": "베르사유 궁전 - 동서양 충돌",
+          "category": "Exhibition",
+          "significance": "high",
+          "description": "태양왕의 궁전에 거대 DOB 조각 설치. 50만 명 이상 관람. 프랑스 전통과 일본 팝의 대결."
+        },
+        {
+          "year": 2012,
+          "age": 50,
+          "title": "500 Arhats 프로젝트",
+          "titleKo": "500 아라한 - 동일본 대지진 헌정",
           "category": "Masterpiece",
-          "description": "Takashi Murakami이(가) 성숙기 시기인 2008년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
-          },
-          "visualPrompt": "Takashi Murakami in 2008, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "significance": "high",
+          "description": "100미터 대형 회화. 동일본 대지진 희생자 추모. 카타르 알리야 미술관 전시."
         }
       ]
     },
     {
-      "eraLabel": "Late Career",
-      "eraLabelKo": "후기 경력",
-      "ageRange": "50s-60s",
-      "startYear": 2012,
-      "endYear": 2022,
-      "moodColor": "#2D3748",
-      "summary": "Takashi Murakami의 후기 경력 시기입니다. 이 시기 동안 작가는 주요 작품을 제작하고 미술계에서의 위치를 확립했습니다.",
+      "eraLabel": "Superflat Empire",
+      "eraLabelKo": "슈퍼플랫 제국",
+      "ageRange": "55-62",
+      "startYear": 2017,
+      "endYear": 2024,
+      "moodColor": "#9370DB",
+      "summary": "카이카이 키키를 글로벌 아트 기업으로 성장시키며 일본 현대미술 생태계의 중심축으로 자리잡았다. 빌리 아일리시 등 새 세대 팝스타와 협업하며 영향력을 유지하고, 교토 대회고전으로 일본 전통과 현대의 융합을 재확인했다. 슈퍼플랫은 21세기 일본 미학의 대표 개념으로 정립되었다.",
       "events": [
         {
-          "year": 2015,
-          "title": "2015년 주요 활동",
-          "titleEn": "Major Activity in 2015",
+          "year": 2017,
+          "age": 55,
+          "title": "시카고 MCA 전시",
+          "titleKo": "시카고 MCA - 30년 회고",
           "category": "Exhibition",
-          "description": "Takashi Murakami이(가) 후기 경력 시기인 2015년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 50,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 30,
-            "criticalAcclaim": 40,
-            "historical": 50,
-            "socialImpact": 30,
-            "institutional": 40
-          },
-          "visualPrompt": "Takashi Murakami in 2015, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "significance": "medium",
+          "description": "'옥토퍼스 이츠 오운 레그' 전시. 30년 경력 총망라. 미국 주요 미술관 순회 지속."
         },
         {
-          "year": 2018,
-          "title": "2018년 주요 활동",
-          "titleEn": "Major Activity in 2018",
-          "category": "Masterpiece",
-          "description": "Takashi Murakami이(가) 후기 경력 시기인 2018년에 주요 활동을 펼쳤습니다.",
-          "impactScore": 60,
-          "auctionHigh": 0,
-          "auctionLow": 0,
-          "context": {
-            "marketValue": 45,
-            "criticalAcclaim": 50,
-            "historical": 60,
-            "socialImpact": 45,
-            "institutional": 50
-          },
-          "visualPrompt": "Takashi Murakami in 2018, undefined period",
-          "sources": {
-            "primary": "Generated Template"
-          }
+          "year": 2019,
+          "age": 57,
+          "title": "Billie Eilish 협업",
+          "titleKo": "빌리 아일리시 - 새 세대와의 만남",
+          "category": "Career",
+          "significance": "medium",
+          "description": "'you should see me in a crown' 뮤직비디오 제작. Z세대 팝스타와 콜라보레이션."
+        },
+        {
+          "year": 2022,
+          "age": 60,
+          "title": "모노노케 교토 대회고전",
+          "titleKo": "모노노케 교토 - 전통과 현대의 융합",
+          "category": "Exhibition",
+          "significance": "high",
+          "description": "교토 시립미술관 1년 장기 전시. 일본 전통 요괴(모노노케)와 현대 캐릭터의 만남."
+        },
+        {
+          "year": 2024,
+          "age": 62,
+          "title": "현역 활동 지속",
+          "titleKo": "62세 현역 - 슈퍼플랫 제국",
+          "category": "Career",
+          "significance": "medium",
+          "description": "카이카이 키키 운영. 슈퍼플랫을 21세기 일본 미학의 핵심 개념으로 정립."
         }
       ]
     }
   ],
-  "critiques": [],
-  "masterpieces": [],
+  "critiques": [
+    {
+      "id": "critique-1",
+      "critic": "Paul Schimmel",
+      "criticKo": "폴 시멜",
+      "role": "MOCA LA Chief Curator",
+      "roleKo": "LA 현대미술관 수석 큐레이터",
+      "year": 2007,
+      "quote": "Murakami has made the question of art vs. commerce the very subject of his work, rather than trying to pretend they can be separated.",
+      "quoteKo": "무라카미는 예술과 상업을 분리할 수 있다고 가장하는 대신, 그 질문 자체를 작품의 주제로 삼았다.",
+      "significance": "high"
+    },
+    {
+      "id": "critique-2",
+      "critic": "Takashi Murakami",
+      "criticKo": "무라카미 타카시",
+      "role": "Self-statement",
+      "roleKo": "자기 진술",
+      "year": 2000,
+      "quote": "Super Flat is an original concept of Japanese who have been completely Westernized. The 'super flatness' that is inherent in our culture is the basis for my artwork.",
+      "quoteKo": "슈퍼플랫은 완전히 서양화된 일본인의 독창적 개념이다. 우리 문화에 내재된 '초평면성'이 내 작업의 기반이다.",
+      "significance": "high"
+    },
+    {
+      "id": "critique-3",
+      "critic": "Midori Matsui",
+      "criticKo": "마쓰이 미도리",
+      "role": "Art Critic & Curator",
+      "roleKo": "미술 비평가, 큐레이터",
+      "year": 2005,
+      "quote": "Murakami is the first Japanese artist to articulate a theory that claims Japanese Pop as a legitimate form of fine art with its own historical lineage.",
+      "quoteKo": "무라카미는 일본 팝을 자체 역사적 계보를 가진 정당한 순수미술 형식으로 주장하는 이론을 정립한 첫 일본 작가다.",
+      "significance": "medium"
+    }
+  ],
+  "masterpieces": [
+    {
+      "id": "mp-1",
+      "title": "My Lonesome Cowboy",
+      "titleKo": "마이 론섬 카우보이",
+      "year": 1998,
+      "medium": "Oil paint, acrylic, fiberglass, iron",
+      "mediumKo": "유채, 아크릴, 유리섬유, 철",
+      "dimensions": "254 × 116.8 × 91.4 cm",
+      "currentLocation": "Private Collection",
+      "currentLocationKo": "개인 소장",
+      "significance": "오타쿠 성적 판타지를 실물 크기 조각으로 구현. 2008년 소더비에서 $15,161,000에 낙찰되며 일본 현대미술가 경매 최고가 기록.",
+      "auctionHistory": [
+        {
+          "house": "Sotheby's New York",
+          "date": "2008-05-14",
+          "currency": "USD",
+          "amount": 15161000,
+          "adjustedAmount": 21000000,
+          "result": "sold"
+        }
+      ],
+      "imageId": "murakami_lonesome_cowboy"
+    },
+    {
+      "id": "mp-2",
+      "title": "Hiropon",
+      "titleKo": "히로폰",
+      "year": 1997,
+      "medium": "Oil paint, acrylic, fiberglass, iron",
+      "mediumKo": "유채, 아크릴, 유리섬유, 철",
+      "dimensions": "191.8 × 101.6 × 50.8 cm",
+      "currentLocation": "Various Collections",
+      "currentLocationKo": "여러 컬렉션",
+      "significance": "애니메이션 캐릭터를 미술관급 조각으로 승화. 오타쿠 문화와 순수미술의 경계를 무너뜨린 도발적 작품.",
+      "imageId": "murakami_hiropon"
+    },
+    {
+      "id": "mp-3",
+      "title": "727",
+      "titleKo": "727",
+      "year": 1996,
+      "medium": "Acrylic on canvas mounted on board",
+      "mediumKo": "캔버스에 아크릴, 보드 마운트",
+      "dimensions": "299.7 × 449.6 cm",
+      "currentLocation": "MoMA New York",
+      "currentLocationKo": "뉴욕 현대미술관",
+      "significance": "Mr. DOB 캐릭터가 파도 위를 서핑하는 대형 회화. 호쿠사이의 파도와 팝 캐릭터의 융합. 슈퍼플랫 미학의 정수.",
+      "auctionHistory": [
+        {
+          "house": "Christie's New York",
+          "date": "2008-05-15",
+          "currency": "USD",
+          "amount": 5729000,
+          "adjustedAmount": 7900000,
+          "result": "sold"
+        }
+      ],
+      "imageId": "murakami_727"
+    },
+    {
+      "id": "mp-4",
+      "title": "The 500 Arhats",
+      "titleKo": "500 아라한",
+      "year": 2012,
+      "medium": "Acrylic and platinum leaf on canvas mounted on aluminum frame",
+      "mediumKo": "캔버스에 아크릴과 백금박, 알루미늄 프레임",
+      "dimensions": "302 × 10,000 cm (4 panels)",
+      "currentLocation": "Mori Art Museum (long-term loan)",
+      "currentLocationKo": "모리 미술관 (장기 대여)",
+      "significance": "100미터 길이 대형 회화. 동일본 대지진 희생자 추모작. 불교 500 나한 전통과 현대 시각 언어의 결합.",
+      "imageId": "murakami_500_arhats"
+    },
+    {
+      "id": "mp-5",
+      "title": "Flower Ball (3-D) - Blue, Red",
+      "titleKo": "플라워 볼 (3-D) - 블루, 레드",
+      "year": 2002,
+      "medium": "Acrylic and platinum leaf on canvas mounted on board",
+      "mediumKo": "캔버스에 아크릴과 백금박, 보드 마운트",
+      "dimensions": "100 cm diameter",
+      "currentLocation": "Various Collections",
+      "currentLocationKo": "여러 컬렉션",
+      "significance": "웃는 꽃 패턴의 구형 회화. 카와이(かわいい) 미학과 전통 장식 패턴의 융합. 무라카미 시그니처 모티브.",
+      "imageId": "murakami_flower_ball"
+    }
+  ],
   "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03",
-    "primarySources": [],
-    "verificationStatus": "ai_generated"
+    "version": "1.1.0",
+    "lastUpdated": "2025-12-11",
+    "curator": "Art History Research Team",
+    "primarySources": [
+      "Kaikai Kiki Co., Ltd.",
+      "MOCA Los Angeles",
+      "Mori Art Museum",
+      "Sotheby's Records",
+      "Perrotin Gallery"
+    ]
   }
 }

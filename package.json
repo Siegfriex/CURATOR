@@ -10,20 +10,28 @@
     "preview": "vite preview",
     "generate:timelines": "tsx scripts/generateTimelineData.ts",
     "generate:comparisons": "tsx scripts/generateComparisonData.ts",
-    "generate:all": "npm run generate:timelines && npm run generate:comparisons"
+    "generate:all": "npm run generate:timelines && npm run generate:comparisons",
+    "esp32:build": "powershell -ExecutionPolicy Bypass -File scripts/build-esp32.ps1",
+    "esp32:upload": "powershell -ExecutionPolicy Bypass -File scripts/upload-esp32.ps1"
   },
   "dependencies": {
     "@google/genai": "^1.30.0",
+    "@serialport/parser-readline": "^13.0.0",
+    "@serialport/stream": "^13.0.0",
     "firebase": "^10.14.1",
     "framer-motion": "^11.13.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-markdown": "^10.1.0",
     "recharts": "^3.4.1",
-    "tone": "^14.7.77"
+    "serialport": "^13.0.0",
+    "tone": "^14.7.77",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
+    "@types/serialport": "^8.0.5",
+    "@types/ws": "^8.18.1",
     "@vitejs/plugin-react": "^5.0.0",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
